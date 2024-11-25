@@ -26,7 +26,7 @@
 			if ($password === $Client['Password']) {
 				// redirect to index if successful yung login
 				$_SESSION["username"] = $username;
-				header("Location: http://localhost/Cherubim%20Of%20Heaven/index.php");
+				header("Location: index.php");
 				exit();
 			}
 		}
