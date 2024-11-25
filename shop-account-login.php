@@ -23,7 +23,7 @@
 			$Client = $result->fetch_assoc();
 	
 			// password verification 
-			if ($password === $Client['Password']) {
+			if ($password === $Client['Password'] || password_verify($password, $Client['Password'])) {
 				// redirect to index if successful yung login
 				$_SESSION["username"] = $username;
 				header("Location: index.php");
