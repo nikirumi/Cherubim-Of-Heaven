@@ -1,45 +1,6 @@
+
 <!DOCTYPE html>
 <html class="no-js">
-
-<?php 
-
-	include ("connect.php"); 
-	include ("check_session.php");
-	session_start();
-
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-		
-		$username = filter_var($_POST['username'], FILTER_SANITIZE_SPECIAL_CHARS);
-		$password = filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS);
-	
-		// SQL QUERY
-		$stmt = $conn->prepare("SELECT * FROM CLIENT WHERE Username = ? LIMIT 1");
-		$stmt->bind_param("s", $username);
-		$stmt->execute();
-		$result = $stmt->get_result();
-	
-		// check if the user exists
-		if ($result->num_rows > 0) {
-			$Client = $result->fetch_assoc();
-	
-			// password verification 
-			if ($password === $Client['Password']) {
-				// redirect to index if successful yung login
-				$_SESSION["username"] = $username;
-				header("Location: index.php");
-				exit();
-			}
-		}
-	
-		//error message if nag fail yung login
-		//$error = "Invalid username or password.";
-	
-		$stmt->close();
-	}
-	$conn->close();
-
-?>
-
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -47,20 +8,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="format-detection" content="telephone=no">
 
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animations.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
-
 </head>
 
 <body>
-
 	<div class="preloader">
 		<div class="preloader_image"></div>
 	</div>
+
+	<!-- search modal -->
 	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
@@ -75,10 +38,14 @@
 		</div>
 	</div>
 
+	<!-- Unyson messages modal -->
 	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
 		<div class="fw-messages-wrap ls p-normal">
+
 		</div>
 	</div><!-- eof .modal -->
+
+	<!-- wrappers for visual page editor and boxed version of template -->
 	<div id="canvas">
 		<div id="box_wrapper">
 
@@ -101,7 +68,7 @@
 							<div class="col-xl-9 col-lg-8 col-md-7 col-1">
 								<div class="nav-wrap">
 
-									<!-- main nav start -->
+										<!-- main nav start -->
 								<nav class="top-nav">
 									<ul class="nav sf-menu">
 										<li class="active">
@@ -266,13 +233,16 @@
 						<div class="row">
 
 							<div class="col-md-12 text-center text-lg-left">
-								<h1 class="color-main">Account - Login</h1>
+								<h1 class="color-main">Account Details</h1>
 								<ol class=" breadcrumb">
 									<li class="breadcrumb-item">
 										<a href="index.php">Home</a>
 									</li>
+									<li class="breadcrumb-item">
+										<a href="#">Shop</a>
+									</li>
 									<li class="breadcrumb-item active">
-										Account - Login
+										Account Details
 									</li>
 								</ol>
 							</div>
@@ -283,52 +253,131 @@
 			</div>
 
 
-			<section class="ls s-py-55 s-pt-lg-100 s-pb-lg-95 s-pt-xl-150 s-pb-xl-145">
+			<section class="ls s-py-55 s-pt-lg-95 s-pb-lg-100 s-pt-xl-145 s-pb-xl-150">
 				<div class="container">
 					<div class="row">
 						<main class="col-lg-12">
 							<article>
+								<header class="entry-header mb-30">
+									<h1 class="entry-title">Account details</h1>
+									<span class="edit-link">
+										<a class="post-edit-link" href="#">Edit
+											<span class="screen-reader-text"> "My account"
+											</span>
+										</a>
+									</span>
+								</header>
 								<!-- .entry-header -->
 								<div class="entry-content">
 									<div class="woocommerce">
+										<!-- <nav class="woocommerce-MyAccount-navigation p-60 hero-bg">
+											<ul>
+												<li>
+													<a href="shop-account-dashboard.php">Dashboard</a>
+												</li>
+												<li>
+													<a href="shop-account-orders.php">Orders</a>
+												</li>
+												<li>
+													<a href="shop-account-downloads.php">Downloads</a>
+												</li>
+												<li>
+													<a href="shop-account-addresses.php">Addresses</a>
+												</li>
+												<li class="is-active">
+													<a href="shop-account-details.php">Account details</a>
+												</li>
+												<li>
+													<a href="shop-account-login.php">Logout</a>
+												</li>
+											</ul>
+										</nav> -->
 
-										<form class="woocomerce-form woocommerce-form-login login" method="post">
-											<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-												<label for="username">Username or email address <span class="required">*</span>
-												</label>
-												<input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="" placeholder="Username or email address">
-											</p>
-											<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-												<label for="password">Password <span class="required">*</span>
-												</label>
-												<input class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" placeholder="Password">
-											</p>
-											<div class="divider-40"></div>
-											<p class="form-row text-center">
-												<button type="submit" class="woocommerce-Button btn btn-maincolor" name="login">Login</button>
-												<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
-													<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever">
-													<span>Remember me</span>
-												</label>
-											</p>
-											<p class="woocommerce-LostPassword lost_password text-center">
-												<a href="shop-account-password-reset.php">Forgot your password?</a>
-											</p>
 
-											<p class="woocommerce-LostPassword lost_password text-center">
-												<a href="registration.php">Don't have an account yet? Click to Register</a>
-											</p>
+										<div class="woocommerce-MyAccount-content">
 
-										</form>
+											<form class="woocommerce-EditAccountForm edit-account" method="post">
+
+
+												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+													<label for="account_first_name">First name <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="First name">
+												</p>
+												<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+													<label for="account_last_name">Middle name <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_middle_name" id="account_middle_name" value="" placeholder="Middle name">
+												</p>
+                                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+													<label for="account_last_name">Last name <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" value="" placeholder="Last name">
+												</p>
+
+                                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+													<label for="account_last_name">Contact Number <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="contact_number" id="contact_number" value="" placeholder="Contact Number">
+												</p>
+
+                                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+													<label for="account_last_name">Age <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="age" id="age" value="" placeholder="Age">
+												</p>
+
+                                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+													<label for="account_last_name">Gender <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="gender" id="gender" value="" placeholder="Gender">
+												</p>
+
+												<div class="clear">
+
+												</div>
+
+												
+
+												<fieldset class="account-edit">
+
+                                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="password_current">Email</label>
+														<input type="email" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="account_email" id="account_email" placeholder="Email">
+													</p>
+
+
+                                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="password_current">Username</label>
+														<input type="text" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="username" id="username" placeholder="Username">
+													</p>
+													
+
+													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="password_current">Password</label>
+														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password" id="password" placeholder="Password">
+													</p>
+													
+													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+														<label for="password_2">Confirm Password</label>
+														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
+													</p>
+												</fieldset>
+												<div class="clear"></div>
+												<div class="divider-20"></div>
+												<p>
+													<button type="submit" class="woocommerce-Button btn btn-maincolor" name="save_account_details"><span>REGISTER</span></button>
+												</p>
+											</form>
+
+										</div>
 									</div>
 								</div>
 								<!-- .entry-content -->
 							</article>
 
-
 						</main>
 					</div>
-
 				</div>
 			</section>
 
@@ -436,7 +485,7 @@
 										<i class="fa fa-envelope"></i>
 									</div>
 									<p class="media-body">
-										<a href="#"><span class="__cf_email__" data-cfemail="c0ada5ada5aeb4af80a5b8a1adb0aca5eea3afad">[email&#160;protected]</span></a>
+										<a href=""><span class="__cf_email__" data-cfemail="b1dcd4dcd4dfc5def1d4c9d0dcc1ddd49fd2dedc">[email&#160;protected]</span></a>
 									</p>
 								</div>
 
@@ -476,3 +525,64 @@
 
 </body>
 </html>
+
+<?php 
+
+
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+		
+		$username = filter_var($_POST['username'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $first_name = filter_var($_POST['account_first_name'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $middle_name = filter_var($_POST['account_middle_name'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $last_name = filter_var($_POST['account_last_name'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $email = filter_var($_POST['account_email'], FILTER_SANITIZE_EMAIL);
+        $age = filter_var($_POST['age'], FILTER_SANITIZE_NUMBER_INT);
+        $gender = filter_var($_POST['gender'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $contact_number = filter_var($_POST['contact_number'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $password = filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $confirm_password = filter_var($_POST['confirm_password'], FILTER_SANITIZE_SPECIAL_CHARS);
+
+        
+
+        // $Client_ID = '';
+
+        // $query = "SELECT Client_ID FROM CLIENT ORDER BY Client_ID DESC LIMIT 1";
+        // $result = $conn->query($query);
+        // $row = $result->fetch_assoc();
+
+        // if ($row) {
+        //     $lastID = intval(substr($row['Client_ID'], 2));
+        //     $newID = 'C-' . str_pad($lastID + 1, 3, '0', STR_PAD_LEFT);
+        // } 
+        // else {
+        //     $newID = 'C-001';
+        // }
+        // $Client_ID = $newID;
+
+        $Client_ID = "C004";
+
+
+	
+        if (empty($first_name) || empty($last_name) || empty($email) || empty($age) || empty($gender) || empty($username) || empty($password) || empty($confirm_password)) {
+            echo "Please fill in all required fields!";
+        } 
+        else if ($password !== $confirm_password) {
+            echo "Passwords do not match!";
+        } else{
+            $hash = password_hash($password, PASSWORD_DEFAULT);
+        }
+
+        $stmt = $conn->prepare("INSERT INTO client VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" );
+
+        $stmt->bind_param("ssssssisss", $Client_ID, $username, $hash, $first_name, $middle_name, $last_name, $age, $gender, $contact_number, $email);
+
+        try {
+            $stmt->execute();
+            header("Location: shop-account-login.php");
+            exit(); // make sure the script stops after redirection
+        } catch (mysqli_sql_exception $e) {
+            echo "Error: That username or email might already be taken!";
+        }
+	}
+	$conn->close();
+?>
