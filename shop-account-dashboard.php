@@ -286,7 +286,7 @@
 													<a href="shop-account-details.php">Account details</a>
 												</li>
 												<li>
-													<a href="shop-account-login.php">Logout</a>
+													<a href="logout.php">Logout</a>
 												</li>
 											</ul>
 										</nav>
