@@ -294,7 +294,7 @@
 
 										<div class="woocommerce-MyAccount-content">
 
-											<p>Hello <strong>admin</strong> (not <strong>admin</strong>? <a href="shop-account-login.php">Log
+											<p>Hello <strong>admin</strong> (not <strong>admin</strong>? <a href="logout.php">Log
 													out</a>)
 											</p>
 

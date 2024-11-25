@@ -14,6 +14,7 @@
 
     else {
         echo "";
+        $login_text = "Login";
     }
 
 ?>
