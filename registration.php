@@ -302,35 +302,35 @@
 												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 													<label for="account_first_name">First name <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="First name">
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="First name" required>
 												</p>
 												<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
 													<label for="account_last_name">Middle name <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_middle_name" id="account_middle_name" value="" placeholder="Middle name">
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_middle_name" id="account_middle_name" value="" placeholder="Middle name" required>
 												</p>
                                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
 													<label for="account_last_name">Last name <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" value="" placeholder="Last name">
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" value="" placeholder="Last name" required>
 												</p>
 
                                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
 													<label for="account_last_name">Contact Number <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="contact_number" id="contact_number" value="" placeholder="Contact Number">
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="contact_number" id="contact_number" value="" placeholder="Contact Number" required>
 												</p>
 
                                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
 													<label for="account_last_name">Age <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="age" id="age" value="" placeholder="Age">
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="age" id="age" value="" placeholder="Age" required>
 												</p>
 
                                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
 													<label for="account_last_name">Gender <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="gender" id="gender" value="" placeholder="Gender">
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="gender" id="gender" value="" placeholder="Gender" required>
 												</p>
 
 												<div class="clear">
@@ -343,24 +343,24 @@
 
                                                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_current">Email</label>
-														<input type="email" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="account_email" id="account_email" placeholder="Email">
+														<input type="email" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="account_email" id="account_email" placeholder="Email" required>
 													</p>
 
 
                                                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_current">Username</label>
-														<input type="text" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="username" id="username" placeholder="Username">
+														<input type="text" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="username" id="username" placeholder="Username" required>
 													</p>
 													
 
 													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_current">Password</label>
-														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password" id="password" placeholder="Password">
+														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password" id="password" placeholder="Password" required>
 													</p>
 													
 													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_2">Confirm Password</label>
-														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
+														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
 													</p>
 												</fieldset>
 												<div class="clear"></div>
@@ -528,6 +528,7 @@
 
 <?php 
 
+	include ("connect.php");
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		
@@ -542,47 +543,44 @@
         $password = filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS);
         $confirm_password = filter_var($_POST['confirm_password'], FILTER_SANITIZE_SPECIAL_CHARS);
 
-        
+        $Client_ID = '';
 
-        // $Client_ID = '';
+        $query = "SELECT Client_ID FROM CLIENT ORDER BY Client_ID DESC LIMIT 1";
+    	$result = $conn->query($query);
+        $row = $result->fetch_assoc();
 
-        // $query = "SELECT Client_ID FROM CLIENT ORDER BY Client_ID DESC LIMIT 1";
-        // $result = $conn->query($query);
-        // $row = $result->fetch_assoc();
-
-        // if ($row) {
-        //     $lastID = intval(substr($row['Client_ID'], 2));
-        //     $newID = 'C-' . str_pad($lastID + 1, 3, '0', STR_PAD_LEFT);
-        // } 
-        // else {
-        //     $newID = 'C-001';
-        // }
-        // $Client_ID = $newID;
-
-        $Client_ID = "C004";
-
-
-	
-        if (empty($first_name) || empty($last_name) || empty($email) || empty($age) || empty($gender) || empty($username) || empty($password) || empty($confirm_password)) {
-            echo "Please fill in all required fields!";
+        if ($row) {
+             $lastID = intval(substr($row['Client_ID'], 2));
+             $newID = 'C-' . str_pad($lastID + 1, 3, '0', STR_PAD_LEFT);
         } 
-        else if ($password !== $confirm_password) {
+        
+		else {
+             $newID = 'C-001';
+        }
+
+        $Client_ID = $newID;
+        
+		if ($password !== $confirm_password) {
             echo "Passwords do not match!";
-        } else{
+        } 
+		
+		else{
             $hash = password_hash($password, PASSWORD_DEFAULT);
-        }
 
-        $stmt = $conn->prepare("INSERT INTO client VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" );
+			$stmt = $conn->prepare("INSERT INTO client VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" );
 
-        $stmt->bind_param("ssssssisss", $Client_ID, $username, $hash, $first_name, $middle_name, $last_name, $age, $gender, $contact_number, $email);
+			$stmt->bind_param("ssssssisss", $Client_ID, $username, $hash, $first_name, $middle_name, $last_name, $age, $gender, $contact_number, $email);
 
-        try {
-            $stmt->execute();
-            header("Location: shop-account-login.php");
-            exit(); // make sure the script stops after redirection
-        } catch (mysqli_sql_exception $e) {
-            echo "Error: That username or email might already be taken!";
-        }
+			try {
+				$stmt->execute();
+				header("Location: shop-account-login.php");
+				exit(); // make sure the script stops after redirection
+			} 
+			
+			catch (mysqli_sql_exception $e) {
+				echo "Error: That username or email might already be taken!";
+			}
+		}
 	}
 	$conn->close();
 ?>
