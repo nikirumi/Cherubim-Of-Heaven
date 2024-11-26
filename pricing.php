@@ -15,6 +15,60 @@
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 </head>
+	<?php
+		$curl = curl_init();
+
+		curl_setopt_array($curl, [
+			CURLOPT_URL => "https://api.paymongo.com/v1/links",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "POST",
+			CURLOPT_POSTFIELDS => json_encode([
+				'data' => [
+					'attributes' => [
+						'amount' => 10000,
+						'description' => 'pay',
+						'remarks' => 'gcash'
+					]
+				]
+			]),
+			CURLOPT_HTTPHEADER => [
+				"accept: application/json",
+				"authorization: Basic c2tfdGVzdF8xa2ZZanYxcHpuUldaSldDWXZ6UEp2Qlg6",
+				"content-type: application/json"
+			],
+		]);
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			echo "cURL Error #:" . $err;
+		} else {
+			// Decode the response JSON and extract the payment link
+			$responseData = json_decode($response, true);
+			$paymentLink = $responseData['data']['attributes']['checkout_url'] ?? '#'; // Get the checkout_url
+		}
+	?>
+
+	<script>
+		// Pass the PHP payment link to JavaScript
+		const paymentLink = "<?php echo $paymentLink; ?>"; // PHP variable embedded in JavaScript
+
+		// Function to open the payment link
+		function openPaymentLink() {
+			if (paymentLink !== '#') { // Check if payment link is available
+				window.open(paymentLink, '_blank'); // Open the link in a new tab
+			} else {
+				alert('Payment link not available.');
+			}
+		}
+	</script>
 
 <body>
 	<div class="preloader">
@@ -286,7 +340,7 @@
 									</ul>
 								</div>
 								<div class="plan-button">
-									<a href="#" class="btn btn-maincolor">Get Started</a>
+									<a href="#" onclick="openPaymentLink()" class="btn btn-maincolor">Get Started</a>
 								</div>
 							</div>
 						</div>
@@ -315,7 +369,7 @@
 									</ul>
 								</div>
 								<div class="plan-button">
-									<a href="#" class="btn btn-maincolor">Get Started</a>
+									<a href="#" onclick="openPaymentLink()" class="btn btn-maincolor">Get Started</a>
 								</div>
 							</div>
 						</div>
@@ -344,7 +398,7 @@
 									</ul>
 								</div>
 								<div class="plan-button">
-									<a href="#" class="btn btn-maincolor">Get Started</a>
+									<a href="#" onclick="openPaymentLink()" class="btn btn-maincolor">Get Started</a>
 								</div>
 							</div>
 						</div>
