@@ -91,13 +91,13 @@
         </div>   
         
         <script>
-        // JavaScript to prevent form submission and show alert when Transaction_ID is not found
+        
         document.getElementById('transaction-form').onsubmit = function(event) {
             var transaction_ID = document.getElementById('transaction_ID').value;
             if (transaction_ID === '') {
                 alert('Transaction ID cannot be empty!');
-                event.preventDefault();  // Stop the form submission
-                return false;  // Prevent default behavior
+                event.preventDefault();  
+                return false; 
             }
         };
          </script>
