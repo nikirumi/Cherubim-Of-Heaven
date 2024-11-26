@@ -746,7 +746,7 @@
 													<span>$ </span>55
 												</span>
 											</div>
-											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor"><span>Add to cart</span></button>
+											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor" method = "POST" target = "add-to-cart.php" name = "Roses"><span>Add to cart</span></button>
 
 										</div>
 									</form>

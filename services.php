@@ -284,10 +284,10 @@
 											<i class="color-main ico-cremation"></i>
 										</div>
 										<h6>
-											<a href="service-single.php">Cremations</a>
+											<a href="service-single.php">Caskets and Urns</a>
 										</h6>
 										<p>
-											Caskets are not required for cremation unless one is desired
+											We provide a selection of caskets and urns
 										</p>
 									</div>
 								</div><!-- .col-* -->
