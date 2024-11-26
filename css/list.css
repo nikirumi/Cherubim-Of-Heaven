@@ -6,6 +6,7 @@ h1{
     margin-bottom: 15px;
 }
 
+
 p{
     margin: 0%;
 }
@@ -15,15 +16,18 @@ html, body {
    
     display: flex;
     flex-direction: column;
+    background-color: rgb(224, 213, 213);
+
 }
 
 #nav{
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     width: 100%;
     height: 80px;
     background-color: #141e3c;
+    
 }
 
 #nav-elements{
@@ -31,6 +35,37 @@ html, body {
     align-items: center;
     justify-content: start;
     margin-left: 30px ;
+}
+
+a {
+    justify-content: center;
+    width: 100px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    margin: 20px 10px;
+    background-color: #141e3c;
+    color: #baad7b; /* Text color */
+    text-decoration: none; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 4px 4px 1px rgba(0, 0, 0, 1), -1px -1px 1px rgba(233, 233, 233, 0.7); /* Subtle inset shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #baad7b; 
+    color: #141e3c; /* Brighter text on hover */
+    /* Adjusting box-shadow to match hover background */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4), 0px 4px 12px rgba(233, 233, 233, 0.5); /* More pronounced shadow */
+}
+
+
+#back-button{
+     background-color: #141e3c;
+     margin-right: 30px ;
 }
 
 #down {
@@ -117,29 +152,7 @@ input{
     border: none;
 }
 
-a{
-    justify-content: center;
-    width: 200px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    padding: 10px 40px;
-    margin: 20px 10px;
-    background-color:  rgb(224, 213, 213);
-    color: #486173; /* Text color */
-    text-decoration: none; 
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(233, 233, 233, 0.7); /* Subtle inset shadow */
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-}
 
-a:hover {
-    background-color: #486173; 
-    color: #ffffff;/* Brighter background on hover */
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow on hover */
-}
 
 #base{
     display: flex;
@@ -152,8 +165,9 @@ a:hover {
 #delete-row{
     width: 95%;
     display: flex;
-    align-items: center;
-    justify-content: start;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
     padding: 0px;
     margin: 0%;
     height: 100px;
@@ -164,8 +178,18 @@ form{
     margin: 0%;
 }
 
+#delete-row p{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
 #delete{
     background-color: rgb(184, 24, 24);
+    border-radius: 7px;
+}
+
+#toggle{
+    background-color: rgb(34, 153, 44);
     border-radius: 7px;
 }
 
@@ -177,7 +201,7 @@ table {
     
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 35px 0;
 }
 
 th, td {

@@ -27,9 +27,9 @@
                 <form action="/submit" method="post">          
                 <h1>Hello, Admin!</h1>
 
-                <a href="account-list.php" target="_blank">ACCOUNT LIST</a>
-                <a href="item-list.php">ITEM LIST</a>
-                <a href="transaction-list.php" target="_blank">TRANSACTION LIST</a>
+                <a href="account-list.php" >ACCOUNT LIST</a>
+                <a href="item-list.php" >ITEM LIST</a>
+                <a href="transaction-list.php" >TRANSACTION LIST</a>
 
 
 

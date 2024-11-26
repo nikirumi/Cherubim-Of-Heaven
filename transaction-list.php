@@ -7,8 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Transaction List </title>
-        <link rel="stylesheet" href="css/item-list.css" class="color-switcher-link">
-        <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
+        <link rel="stylesheet" href="css/list.css" class="color-switcher-link">
     </head>
 
     
@@ -21,6 +20,8 @@
                     <span class="logo-subtext">Funeral Service</span>
                 </div>
             </div>
+
+            <div id="back-button"> <a href="admin.php" >Main Menu</a> </div>
         </div>
 
         <div id="down">
@@ -33,9 +34,11 @@
                     </div>
 
                     <div id="delete-row">
-                        <input type="text" class="form-control" name="transaction_ID" id="transaction_ID" value="" placeholder="Transaction ID">
-                        <!-- <input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" name="password" id="password" value="" placeholder="Password"> -->
-                        <button id="delete" type="submit" class="woocommerce-Button btn btn-maincolor" name="toggle_status">Toggle Status</button>
+                        <p>Enter ID and toggle status:</p>
+                        <div>
+                            <input type="text" class="form-control" name="transaction_ID" id="transaction_ID" value="" placeholder="Transaction ID">
+                            <button id="toggle" type="submit" class="woocommerce-Button btn btn-maincolor" name="toggle_status">Toggle Status</button>
+                        </div>
                     </div>
                 
                     

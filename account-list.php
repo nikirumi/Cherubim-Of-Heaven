@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Account List </title>
-        <link rel="stylesheet" href="css/item-list.css" class="color-switcher-link">
+        <link rel="stylesheet" href="css/list.css" class="color-switcher-link">
         <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
     </head>
 
@@ -21,6 +21,8 @@
                     <span class="logo-subtext">Funeral Service</span>
                 </div>
             </div>
+
+            <div id="back-button"> <a href="admin.php">Main Menu</a> </div>
         </div>
 
         
@@ -36,9 +38,11 @@
                     </div>
 
                     <div id="delete-row">
-                        <input type="text" class="form-control" name="client_ID" id="client_ID" value="" placeholder="Client ID">
-                        <!-- <input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" name="password" id="password" value="" placeholder="Password"> -->
-                        <button id="delete" type="submit" class="woocommerce-Button btn btn-maincolor" name="login">Delete</button>
+                        <p>Enter Client ID and click delete to remove:</p>
+                        <div>
+                            <input type="text" class="form-control" name="client_ID" id="client_ID" value="" placeholder="Client ID">
+                            <button id="delete" type="submit" class="woocommerce-Button btn btn-maincolor" name="login">Delete</button>
+                        </div>
                     </div>
                 
                     
@@ -67,8 +71,6 @@
                         <tbody>
 
                             <?php
-                                include ("connect.php");
-
                                 // nireretrieve records from the CLIENT table
                                 $query = "SELECT * FROM client"; 
                                 $result = mysqli_query($conn, $query);
