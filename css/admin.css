@@ -1,0 +1,141 @@
+h1{
+    font-size: 70px;
+    color: #39576d ;
+}
+
+p{
+    margin: 0%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0; 
+    display: flex; 
+}
+
+#left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    background-color: #141e3c;
+}
+
+#right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(224, 213, 213);
+}
+
+.size{
+    font-size: 100px;
+    color: #baad7b;
+}
+
+.logo-text {
+	font-size: 50px;
+	margin-bottom: 2px;
+	margin-top: -10px;
+	padding: 0 10px;
+}
+
+.color-main {
+	color: #baad7b;
+}
+
+.logo-subtext {
+	color: #9aa7b1 !important;
+	font-size: 30px;
+	letter-spacing: 0.48em;
+	line-height: 1;
+	padding: 0 7px;
+}
+
+.row{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+label{
+    width: 500px;
+    height: 30px;
+}
+
+input{
+    padding: 5px 20px;
+    color: white;
+    background-color:#ffffff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 4px 0 rgb(0, 0, 0), inset -1px -1px 8px 0 rgb(175, 175, 175);
+    width: 500px;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.form-control {
+	background-color: transparent;
+	border: 0;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
+	color: #486173;
+	font-size: 16px;
+	height: 50px;
+	padding-bottom: 9px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 8px;
+	width: 300px;
+}
+
+.btn {
+	border-radius: 50px;
+	border-width: 2px;
+	font-size: 16px;
+    color: #ffffff;
+    background-color: #baad7b;
+	letter-spacing: 0;
+	min-width: 170px;
+	padding: 11px 39px;
+	text-transform: none;
+    border: none;
+}
+
+a{
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    margin: 20px 10px;
+    background-color:  rgb(224, 213, 213);
+    color: #486173; /* Text color */
+    text-decoration: none; 
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(233, 233, 233, 0.7); /* Subtle inset shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #486173; 
+    color: #ffffff;/* Brighter background on hover */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow on hover */
+}
