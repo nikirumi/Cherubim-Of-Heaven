@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html class="no-js">
 
+<?php
+	session_start();
+	include ("connect.php");
+	include ("check_session.php");
+?>
 
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
@@ -294,13 +299,29 @@
 
 										<div class="woocommerce-MyAccount-content">
 
-											<p>Hello <strong>admin</strong> (not <strong>admin</strong>? <a href="logout.php">Log
-													out</a>)
-											</p>
+											<!-- PALATANDAAN -->
 
-											<p>From your account dashboard you can view your <a href="shop-account-orders.php">recent orders</a>,
-												manage your <a href="shop-account-address.php">shipping and billing addresses</a> and <a href="shop-account-details.php">edit your password and account details</a>.
-											</p>
+											<?php
+
+												if ($username) {
+													echo "
+													<p>Hello <strong>admin</strong> (not <strong>admin</strong>? <a href='logout.php'>Log
+													out</a>)
+													</p> ";
+												}
+
+												else {
+													echo "
+													<p>No account yet?<a href='registration.php'> Click here.</a>
+													</p> ";
+												}
+												
+												$conn->close();
+											?>
+
+											<p>From your account dashboard you can view your <a href='shop-account-orders.php'>recent orders</a>,
+														manage your <a href='shop-account-address.php'>shipping and billing addresses</a> and <a href='shop-account-details.php'>edit your password and account details</a>.
+													</p>
 
 										</div>
 									</div>
