@@ -312,7 +312,7 @@
 
 												else {
 													echo "
-													<p>No account yet?<a href='registration.php'> Click here.</a>
+													<p>Please <a href = 'shop-account-login.php'>Sign in. </a>No account yet?<a href='registration.php'> Click here.</a>
 													</p> ";
 												}
 												
