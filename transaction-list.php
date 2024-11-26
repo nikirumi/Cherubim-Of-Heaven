@@ -27,7 +27,7 @@
 
             <div id="base">
 
-                <form action="" method="post">          
+                <form id="transaction-form" action="" method="post">          
                     <div>
                         <h1>TRANSACTION LIST</h1>
                     </div>
@@ -35,7 +35,7 @@
                     <div id="delete-row">
                         <input type="text" class="form-control" name="transaction_ID" id="transaction_ID" value="" placeholder="Transaction ID">
                         <!-- <input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" name="password" id="password" value="" placeholder="Password"> -->
-                        <button id="delete" type="submit" class="woocommerce-Button btn btn-maincolor" name="login">Delete</button>
+                        <button id="delete" type="submit" class="woocommerce-Button btn btn-maincolor" name="toggle_status">Toggle Status</button>
                     </div>
                 
                     
@@ -71,15 +71,15 @@
                                 }
 
                                 $counter = 1; 
-                                while ($row = mysqli_fetch_assoc($result)) {
+                                while ($row = mysqli_fetch_assoc($result)) { // ginagawa nyang associative array each row
                                     echo "<tr>";
-                                    echo "<td>" . $counter++ . "</td>";  // Row number
-                                    echo "<td>" . $row['Transaction_ID'] . "</td>";  // Transaction ID
-                                    echo "<td>" . $row['Client_ID'] . "</td>";  // Client ID
-                                    echo "<td>" . $row['Transaction_date'] . "</td>";  // Transaction Date
-                                    echo "<td>" . $row['Total_amount'] . "</td>";  // Total Amount
-                                    echo "<td>" . $row['Payment_method'] . "</td>";  // Payment Method
-                                    echo "<td>" . $row['Payment_status'] . "</td>";  // Payment Status
+                                    echo "<td>" . $counter++ . "</td>"; 
+                                    echo "<td>" . $row['Transaction_ID'] . "</td>";  
+                                    echo "<td>" . $row['Client_ID'] . "</td>"; 
+                                    echo "<td>" . $row['Transaction_date'] . "</td>";  
+                                    echo "<td>" . $row['Total_amount'] . "</td>";  
+                                    echo "<td>" . $row['Payment_method'] . "</td>"; 
+                                    echo "<td>" . $row['Payment_status'] . "</td>";  
                                     echo "</tr>";
                                 }
                             ?>
@@ -88,7 +88,20 @@
                     </table>
                 </div>             
             </div>
-        </div>     
+        </div>   
+        
+        <script>
+        // JavaScript to prevent form submission and show alert when Transaction_ID is not found
+        document.getElementById('transaction-form').onsubmit = function(event) {
+            var transaction_ID = document.getElementById('transaction_ID').value;
+            if (transaction_ID === '') {
+                alert('Transaction ID cannot be empty!');
+                event.preventDefault();  // Stop the form submission
+                return false;  // Prevent default behavior
+            }
+        };
+         </script>
+
     </body>
 </html>
 
@@ -96,18 +109,39 @@
 
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $client_ID = filter_var($_POST['client_ID'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $transaction_ID = filter_var($_POST['transaction_ID'], FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $stmt = $conn->prepare("DELETE FROM client WHERE Client_ID = ?" );
-        $stmt -> bind_param("s",$client_ID);
+        $stmt = $conn->prepare(" SELECT Payment_status FROM transaction WHERE Transaction_ID = ?" );
+        $stmt -> bind_param("s",$transaction_ID);
 
         if ($stmt->execute()) {
-            echo "<script>window.location.href='account-list.php';</script>";
-        } else {
-            $message = "Error: " . $stmt->error;
-            $message_type = "error";
-        }
-    }
+
+            $stmt->bind_result($payment_status);
+
+            if($stmt->fetch()){
+
+                $stmt->free_result();
+
+                if($payment_status === "Paid"){
+                    $stmt_update = $conn->prepare("UPDATE transaction SET Payment_status = 'Not Paid' WHERE Transaction_ID = ?");
+                } 
+                else if ($payment_status === "Not Paid") {
+                    $stmt_update = $conn->prepare("UPDATE transaction SET Payment_status = 'Paid' WHERE Transaction_ID = ?");
+                }
+
+                $stmt_update->bind_param("s", $transaction_ID);
+
+                if ($stmt_update->execute()) {
+                    //echo "<script>alert('Payment status updated successfully!');</script>";
+                    echo "<script>window.location.href='transaction-list.php';</script>";
+                } else {
+                    echo "Error updating status: " . $stmt_update->error;
+                }
+            } else {
+                echo "<script>alert('Transaction ID not found!');</script>";
+            }
+        } 
+    } 
 ?>
 
 

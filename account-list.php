@@ -1,5 +1,5 @@
 <?php
-    include ("connect.php");
+    include ("connect.php"); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -91,10 +91,8 @@
                                     echo "<td>" . $row['Gender'] . "</td>";
                                     echo "<td>" . $row['Contact_Number'] . "</td>"; 
                                     echo "<td>" . $row['Email_Address'] . "</td>"; 
-                                    
                                 }
                             ?>
-                            
                         </tbody>
                     </table>
                 </div>             
