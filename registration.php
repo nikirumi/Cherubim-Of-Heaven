@@ -570,16 +570,22 @@
 			$stmt = $conn->prepare("INSERT INTO client VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" );
 
 			$stmt->bind_param("ssssssisss", $Client_ID, $username, $hash, $first_name, $middle_name, $last_name, $age, $gender, $contact_number, $email);
+			
+			if (!$stmt) {
+				die("Error preparing statement: " . $conn->error);
+			}
 
 			try {
 				$stmt->execute();
-				header("Location: shop-account-login.php");
+				echo "<script>window.location.href='shop-account-login.php';</script>";
+				//header("Location: shop-account-login.php");
 				exit(); // make sure the script stops after redirection
 			} 
 			
 			catch (mysqli_sql_exception $e) {
 				echo "Error: That username or email might already be taken!";
 			}
+			$stmt->close();
 		}
 	}
 	$conn->close();
