@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html class="no-js">
+	
+<?php session_start(); 
+	  include("connect.php");
+?>
+
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -390,6 +395,63 @@
 											</td>
 										</tr>
 
+										<?php
+
+											// Check if the cart is not empty
+											if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+												foreach ($_SESSION['cart'] as $service_id => $item) {
+													$service_name = $item['name'];
+													$service_price = $item['price'];
+													$quantity = $item['quantity'];
+													$subtotal = $service_price * $quantity; // Calculate subtotal
+
+													// Display each cart item in a table row
+													?>
+													
+													<tr class="cart_item">
+														<td class="product-remove">
+															<a href="remove_item.php?service_id=<?php echo $service_id; ?>" class="remove" aria-label="Remove this item">
+																<i class="fs-14 ico-trash color-main"></i>
+															</a>
+														</td>
+
+														<td class="product-thumbnail">
+															<a href="shop-product-right.php">
+																<img width="180" height="180" src="images/shop/03.jpg" class="" alt="<?php echo $service_name; ?>">
+															</a>
+														</td>
+
+														<td class="product-name" data-title="Product">
+															<a href="shop-product-right.php"><?php echo $service_name; ?></a>
+														</td>
+
+														<td class="product-price" data-title="Price">
+															<span class="amount">
+																<span>$</span><?php echo number_format($service_price, 2); ?>
+															</span>
+														</td>
+
+														<td class="product-quantity product" data-title="Quantity">
+															<div class="quantity">
+																<input type="button" value="+" class="plus">
+																<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="<?php echo $quantity; ?>" title="Qty" size="4">
+																<input type="button" value="-" class="minus">
+															</div>
+														</td>
+
+														<td class="product-subtotal" data-title="Total">
+															<span class="amount">
+																<span>$</span><?php echo number_format($subtotal, 2); ?>
+															</span>
+														</td>
+													</tr>
+
+													<?php
+												}
+											} else {
+												echo "<tr><td colspan='6'>Your cart is empty.</td></tr>";
+											}
+											?>
 
 										<tr>
 											<td colspan="6" class="actions">
