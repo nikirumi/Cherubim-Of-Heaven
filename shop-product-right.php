@@ -6,6 +6,12 @@
 <html class="no-js">
 <!--<![endif]-->
 
+<?php
+
+	include("connect.php");
+	include("add-to-cart.php");
+
+?>
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
 <head>
@@ -727,7 +733,7 @@
 										</ul>
 									</div>
 
-									<form>
+									<form method = "POST" action = "add-to-cart.php">
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
 												<div class="quantity single">
@@ -746,7 +752,7 @@
 													<span>$ </span>55
 												</span>
 											</div>
-											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor" method = "POST" target = "add-to-cart.php" name = "Roses"><span>Add to cart</span></button>
+											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor" name = "Roses"><span>Add to cart</span></button>
 
 										</div>
 									</form>

@@ -1,48 +1,60 @@
 <?php
-session_start();
-include 'connect.php';
+    include ("connect.php");
+    session_start();
 
-if (isset($_POST['Service_ID'])) {
-    $serviceID = $_POST['service_id'];
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 
-    $query = "SELECT Service_Name, Service_Description, Service_Price,Service_Type  FROM Memorial_Services WHERE ServiceID = ?";
-    $stmt = $connection->prepare($query);
-    $stmt->bind_param("i", $serviceID);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $service = $result->fetch_assoc();
-
-    if ($service) {
-        $serviceName = $service['Service_Name'];
-        $serviceDescription = $service['Service_Description'];
-        $servicePrice = $service['Service_Price'];
-        $serviceType = $service['StoService_Type'];
-
-        if (!isset($_SESSION['cart'])) {
-            $_SESSION['cart'] = [];
-        }
-
-        $cartKey = $productID;
-
-        if (isset($_SESSION['cart'][$cartKey])) {
-            if ($_SESSION['cart'][$cartKey]['quantity'] < $productStock) {
-                $_SESSION['cart'][$cartKey]['quantity']++;
-            } else {
-                echo "<p>Sorry, the stock is limited to $productStock items.</p>";
-            }
-        } else {
-            $_SESSION['cart'][$cartKey] = [
-                'product_id' => $productID,
-                'name' => $productName,
-                'category' => $productCategory,
-                'price' => $productPrice,
-                'stock' => $productStock,
-                'quantity' => 1
-            ];
-        }
+    // Initialize the cart if it doesn't exist
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];
     }
 
-    header('Location: cart.php');
-    exit;
-}
+    // Check if form data is submitted
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['Roses'])) {
+        // Retrieve product details from the form
+
+        $query = "SELECT Service_ID, Service_Name, Service_Price from memorial_services WHERE Service_Name = 'Roses'";
+        $result = $conn->query($query);
+
+        if ($result -> num_rows > 0) {
+
+            while ($row = $result->fetch_assoc()) {
+                $service_id = $row['Service_ID'];
+                $service_name = $row['Service_Name'];
+                $service_price = $row['Service_Price'];
+            }
+
+            $quantity = intval($_POST['quantity']);
+
+            // Check if item already exists in the cart
+            if (isset($_SESSION['cart'][$service_id])) {
+                // Update the quantity if it exists
+                $_SESSION['cart'][$service_id]['quantity'] += $quantity;
+            } 
+            
+            else {
+                // Add a new item to the cart
+                $_SESSION['cart'][$service_id] = [
+                    'name' => $service_name,
+                    'price' => $service_price,
+                    'quantity' => $quantity
+                ];
+            }
+
+            $_SESSION['cart'][$service_id] = [
+                'name' => $service_name,
+                'price' => $service_price,
+                'quantity' => $quantity
+            ];
+
+            // Success message
+            echo "Item added to cart!";
+            echo "$service_id and $quantity";
+        }
+
+
+    }
+
+    $conn->close();
 ?>
