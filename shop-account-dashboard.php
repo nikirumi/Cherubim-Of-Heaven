@@ -305,7 +305,7 @@
 
 												if ($username) {
 													echo "
-													<p>Hello <strong>admin</strong> (not <strong>admin</strong>? <a href='logout.php'>Log
+													<p>Hello <strong>$username</strong> (not <strong>$username</strong>? <a href='logout.php'>Log
 													out</a>)
 													</p> ";
 												}
