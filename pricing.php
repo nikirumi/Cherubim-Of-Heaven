@@ -29,7 +29,7 @@
 			CURLOPT_POSTFIELDS => json_encode([
 				'data' => [
 					'attributes' => [
-						'amount' => 10000,
+						'amount' => 49900,
 						'description' => 'pay',
 						'remarks' => 'gcash'
 					]
@@ -52,18 +52,111 @@
 		} else {
 			// Decode the response JSON and extract the payment link
 			$responseData = json_decode($response, true);
-			$paymentLink = $responseData['data']['attributes']['checkout_url'] ?? '#'; // Get the checkout_url
+			$paymentLink1 = $responseData['data']['attributes']['checkout_url'] ?? '#'; // Get the checkout_url
+		}
+
+		$curl2 = curl_init();
+
+		curl_setopt_array($curl, [
+			CURLOPT_URL => "https://api.paymongo.com/v1/links",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "POST",
+			CURLOPT_POSTFIELDS => json_encode([
+				'data' => [
+					'attributes' => [
+						'amount' => 79900,
+						'description' => 'pay',
+						'remarks' => 'gcash'
+					]
+				]
+			]),
+			CURLOPT_HTTPHEADER => [
+				"accept: application/json",
+				"authorization: Basic c2tfdGVzdF8xa2ZZanYxcHpuUldaSldDWXZ6UEp2Qlg6",
+				"content-type: application/json"
+			],
+		]);
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			echo "cURL Error #:" . $err;
+		} else {
+			// Decode the response JSON and extract the payment link
+			$responseData = json_decode($response, true);
+			$paymentLink2 = $responseData['data']['attributes']['checkout_url'] ?? '#'; // Get the checkout_url
+		}
+
+		$curl3 = curl_init();
+
+		curl_setopt_array($curl, [
+			CURLOPT_URL => "https://api.paymongo.com/v1/links",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "POST",
+			CURLOPT_POSTFIELDS => json_encode([
+				'data' => [
+					'attributes' => [
+						'amount' => 99900,
+						'description' => 'pay',
+						'remarks' => 'gcash'
+					]
+				]
+			]),
+			CURLOPT_HTTPHEADER => [
+				"accept: application/json",
+				"authorization: Basic c2tfdGVzdF8xa2ZZanYxcHpuUldaSldDWXZ6UEp2Qlg6",
+				"content-type: application/json"
+			],
+		]);
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			echo "cURL Error #:" . $err;
+		} else {
+			// Decode the response JSON and extract the payment link
+			$responseData = json_decode($response, true);
+			$paymentLink3 = $responseData['data']['attributes']['checkout_url'] ?? '#'; // Get the checkout_url
 		}
 	?>
 
 	<script>
 		// Pass the PHP payment link to JavaScript
-		const paymentLink = "<?php echo $paymentLink; ?>"; // PHP variable embedded in JavaScript
+		const paymentLink1 = "<?php echo $paymentLink1; ?>"; // PHP variable embedded in JavaScript
+		const paymentLink2 = "<?php echo $paymentLink2; ?>";
+		const paymentLink3 = "<?php echo $paymentLink3 ?>";
 
 		// Function to open the payment link
-		function openPaymentLink() {
-			if (paymentLink !== '#') { // Check if payment link is available
-				window.open(paymentLink, '_blank'); // Open the link in a new tab
+		function openPaymentLink1() {
+			if (paymentLink3 !== '#') { // Check if payment link is available
+				window.open(paymentLink1, '_blank'); // Open the link in a new tab
+			} else {
+				alert('Payment link not available.');
+			}
+		}function openPaymentLink2() {
+			if (paymentLink3 !== '#') { // Check if payment link is available
+				window.open(paymentLink2, '_blank'); // Open the link in a new tab
+			} else {
+				alert('Payment link not available.');
+			}
+		}
+		function openPaymentLink3() {
+			if (paymentLink3 !== '#') { // Check if payment link is available
+				window.open(paymentLink3, '_blank'); // Open the link in a new tab
 			} else {
 				alert('Payment link not available.');
 			}
@@ -324,8 +417,8 @@
 								</div>
 								<div class="price-wrap color-darkgrey">
 									<h6>
-										<span class="plan-sign">$</span>
-										<span class="plan-price">35</span>
+										<span class="plan-sign">₱</span>
+										<span class="plan-price">499</span>
 									</h6>
 								</div>
 								<div class="plan-description letter-spacing">
@@ -340,7 +433,7 @@
 									</ul>
 								</div>
 								<div class="plan-button">
-									<a href="#" onclick="openPaymentLink()" class="btn btn-maincolor">Get Started</a>
+									<a href="#" onclick="openPaymentLink1()" class="btn btn-maincolor">Get Started</a>
 								</div>
 							</div>
 						</div>
@@ -353,8 +446,8 @@
 								</div>
 								<div class="price-wrap color-darkgrey">
 									<h6>
-										<span class="plan-sign">$</span>
-										<span class="plan-price">55</span>
+										<span class="plan-sign">₱</span>
+										<span class="plan-price">799</span>
 									</h6>
 								</div>
 								<div class="plan-description letter-spacing">
@@ -369,7 +462,7 @@
 									</ul>
 								</div>
 								<div class="plan-button">
-									<a href="#" onclick="openPaymentLink()" class="btn btn-maincolor">Get Started</a>
+									<a href="#" onclick="openPaymentLink2()" class="btn btn-maincolor">Get Started</a>
 								</div>
 							</div>
 						</div>
@@ -382,8 +475,8 @@
 								</div>
 								<div class="price-wrap color-darkgrey">
 									<h6>
-										<span class="plan-sign">$</span>
-										<span class="plan-price">99</span>
+										<span class="plan-sign">₱</span>
+										<span class="plan-price">999</span>
 									</h6>
 								</div>
 								<div class="plan-description letter-spacing">
@@ -398,7 +491,7 @@
 									</ul>
 								</div>
 								<div class="plan-button">
-									<a href="#" onclick="openPaymentLink()" class="btn btn-maincolor">Get Started</a>
+									<a href="#" onclick="openPaymentLink3()" class="btn btn-maincolor">Get Started</a>
 								</div>
 							</div>
 						</div>
