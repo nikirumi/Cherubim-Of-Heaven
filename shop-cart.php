@@ -434,8 +434,10 @@
 														<td class="product-quantity product" data-title="Quantity">
 															<div class="quantity">
 																<input type="button" value="+" class="plus">
+																<i class="fa fa-angle-up" aria-hidden="true"></i>
 																<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="<?php echo $quantity; ?>" title="Qty" size="4">
 																<input type="button" value="-" class="minus">
+																<i class="fa fa-angle-down" aria-hidden="true"></i>
 															</div>
 														</td>
 
