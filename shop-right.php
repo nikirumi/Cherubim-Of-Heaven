@@ -270,10 +270,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -292,10 +292,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -314,10 +314,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -336,10 +336,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -358,10 +358,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -380,10 +380,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -402,10 +402,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -424,10 +424,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -446,10 +446,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -553,7 +553,7 @@
 											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>34
+											<span class="woocommerce-Price-currencySymbol">₱</span>34
 										</span>
 									</li>
 									<li>
@@ -572,12 +572,12 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
+												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
+											<span class="woocommerce-Price-currencySymbol">₱</span>
 											34
 										</span>
 									</li>
@@ -598,12 +598,12 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
+												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
+											<span class="woocommerce-Price-currencySymbol">₱</span>
 											34
 										</span>
 									</li>
@@ -619,10 +619,10 @@
 									<div class="price_slider_wrapper">
 
 										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="">
-											<span class="from">$20.00</span>
+											<span class="from">₱20.00</span>
 											<div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 14%; width: 65%;">
 											</div>
-											<span class="to">$700.00</span>
+											<span class="to">₱700.00</span>
 											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 12%;">
 
 											</span>
