@@ -8,8 +8,33 @@
 
 <?php
 
+	session_start();
 	include("connect.php");
-	include("add-to-cart.php");
+	//include("add-to-cart.php");
+
+	// Get the product ID from the URL
+	$product_id = isset($_GET['id']) ? ($_GET['id']) : 0;
+
+	// Fetch product details from the database
+	$stmt = $conn->prepare("SELECT Service_ID, Service_Name, Service_Price, Service_Description FROM memorial_services WHERE Service_ID = $product_id");
+	//$stmt->bind_param("s", $product_id);
+	$stmt->execute();
+	$result = $stmt->get_result();
+
+	if ($result->num_rows > 0) {
+		$row = $result->fetch_assoc();
+		$service_id = $row['Service_ID'];
+		$service_name = $row['Service_Name'];
+		$service_price = $row['Service_Price'];
+		$service_description = $row['Service_Description'];
+	} 
+	
+	else {
+		echo "Product not found.";
+		exit();
+	}
+
+	$conn->close();
 
 ?>
 
@@ -716,21 +741,10 @@
 								</div>
 
 								<div class="summary entry-summary text-center text-md-left">
-
-									<h6 class="product_title single_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
+									<h6 class="product_title single_title"><?php echo $service_name; ?></h6>
+									<p><?php echo $service_description; ?></p>
 									<div class="woocommerce-product-rating">
-										<div class="star-rating">
-											<span style="width:72.6%">Rated <strong class="rating">4.33</strong> out of 5 based on <span class="rating">3</span> customer ratings</span>
-										</div>
-									</div>
-									<div class="divider-20 d-none d-lg-block"></div>
-									<div>
-										<ul class="list-styled">
-											<li>Mauris eu lobortis arcu, sed dapibus era</li>
-											<li>Aenean ut ultrices felis</li>
-											<li>Nam vel scelerisque erat, non fringilla</li>
-											<li>Praesent rhoncus, magna sed mollis</li>
-										</ul>
+										<!-- Your rating system here -->
 									</div>
 
 									<form method="POST" action="add-to-cart.php">
@@ -739,29 +753,23 @@
 												<div class="quantity single">
 													<input type="button" value="+" class="plus">
 													<i class="fa fa-angle-up" aria-hidden="true"></i>
-													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" title="Qty" size="4">
+													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" size="4">
 													<input type="button" value="-" class="minus">
 													<i class="fa fa-angle-down" aria-hidden="true"></i>
 												</div>
 												<span class="price">
-													<del>
-														<span><span>₱ </span>34</span>
-													</del>
-													<span>₱ </span>55
+													<span>₱ </span><?php echo $service_price; ?>
 												</span>
 											</div>
-											
+
 											<!-- Hidden input to pass the product name dynamically -->
-											<input type="hidden" name="product_name" value="Roses">
+											<input type="hidden" name="product_name" value="<?php echo $service_name; ?>">
 
 											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
 												<span>Add to cart</span>
 											</button>
 										</div>
 									</form>
-
-
-
 								</div>
 								<!-- .summary -->
 

@@ -285,24 +285,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/02.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Bouquet Romantic</h2>
 												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>34
-														</span>
-													</del>
-													<span>₱ </span>55
+													<del><span><span>₱ </span>500</span></del>
+													<span>₱ </span>300
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='S-002'" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
+
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
 											<img src="images/shop/03.jpg" alt="">
