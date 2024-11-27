@@ -3,7 +3,6 @@
 
 <?php 
 
-	session_start();
 	include ("connect.php"); 
 	include ("check_session.php");
 	$conn->close();

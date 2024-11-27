@@ -5,7 +5,6 @@
 
 	include ("connect.php"); 
 	include ("check_session.php");
-	session_start();
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		

@@ -1,5 +1,6 @@
 <?php
     include ("connect.php");
+    include ("check_session.php");
     session_start();
 
     error_reporting(E_ALL);
@@ -14,47 +15,54 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['Roses'])) {
         // Retrieve product details from the form
 
-        $query = "SELECT Service_ID, Service_Name, Service_Price from memorial_services WHERE Service_Name = 'Roses'";
-        $result = $conn->query($query);
+        if (isset($username)) {
 
-        if ($result -> num_rows > 0) {
+            $query = "SELECT Service_ID, Service_Name, Service_Price from memorial_services WHERE Service_Name = 'Roses'";
+            $result = $conn->query($query);
 
-            while ($row = $result->fetch_assoc()) {
-                $service_id = $row['Service_ID'];
-                $service_name = $row['Service_Name'];
-                $service_price = $row['Service_Price'];
-            }
+            if ($result -> num_rows > 0) {
 
-            $quantity = intval($_POST['quantity']);
+                while ($row = $result->fetch_assoc()) {
+                    $service_id = $row['Service_ID'];
+                    $service_name = $row['Service_Name'];
+                    $service_price = $row['Service_Price'];
+                }
 
-            // Check if item already exists in the cart
-            if (isset($_SESSION['cart'][$service_id])) {
-                // Update the quantity if it exists
-                $_SESSION['cart'][$service_id]['quantity'] += $quantity;
-            } 
-            
-            else {
-                // Add a new item to the cart
+                $quantity = intval($_POST['quantity']);
+
+                // Check if item already exists in the cart
+                if (isset($_SESSION['cart'][$service_id])) {
+                    // Update the quantity if it exists
+                    $_SESSION['cart'][$service_id]['quantity'] += $quantity;
+                } 
+                
+                else {
+                    // Add a new item to the cart
+                    $_SESSION['cart'][$service_id] = [
+                        'name' => $service_name,
+                        'price' => $service_price,
+                        'quantity' => $quantity
+                    ];
+                }
+
                 $_SESSION['cart'][$service_id] = [
                     'name' => $service_name,
                     'price' => $service_price,
                     'quantity' => $quantity
                 ];
+
+                // Success message
+                header ("Location: shop-cart.php");
             }
 
-            $_SESSION['cart'][$service_id] = [
-                'name' => $service_name,
-                'price' => $service_price,
-                'quantity' => $quantity
-            ];
+        }
 
-            // Success message
-            echo "Item added to cart!";
-            echo "$service_id and $quantity";
+        else {
+            header ("Location: shop-account-login.php");
         }
 
 
-    }
+    }   
 
     $conn->close();
 ?>
