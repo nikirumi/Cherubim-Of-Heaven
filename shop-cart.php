@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html class="no-js">
 	
-<?php session_start(); 
+<?php 
+
+	  include("check_session.php");
 	  include("connect.php");
+
 ?>
 
 <head>
@@ -405,6 +408,18 @@
 													$quantity = $item['quantity'];
 													$subtotal = $service_price * $quantity; // Calculate subtotal
 
+													$intValue = (int) preg_replace('/\D/', '', $service_id);
+													$image_name = '';
+
+													if ($intValue < 10) {
+														$image_name = "0" . $intValue;
+													}
+
+													else {
+														$image_name = $intValue;
+													}
+
+
 													// Display each cart item in a table row
 													?>
 													
@@ -417,7 +432,7 @@
 
 														<td class="product-thumbnail">
 															<a href="shop-product-right.php">
-																<img width="180" height="180" src="images/shop/03.jpg" class="" alt="<?php echo $service_name; ?>">
+																<img width="180" height="180" src="images/shop/<?php echo $image_name?>.jpg" class="" alt="<?php echo $service_name; ?>">
 															</a>
 														</td>
 
