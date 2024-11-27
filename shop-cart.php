@@ -5,25 +5,24 @@
 
 	  include("check_session.php");
 	  include("connect.php");
+	  
 	  error_reporting(E_ALL);
       ini_set('display_errors', 1);
-	  echo '<pre>';
-	  print_r($_SESSION);  // Print session data to check if the item is marked
-      echo '</pre>';
 
 	  ob_start();
 
+	  
 	  if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_cart'])) {
 		if (isset($_POST['quantity'])) {
 
 			foreach ($_POST['quantity'] as $service_id => $new_quantity) {
-				$new_quantity = intval($new_quantity); // Ensure it's an integer
+				$new_quantity = intval($new_quantity); 
 	
 				if ($new_quantity > 0) {
-					// Update the cart quantity
 					$_SESSION['cart'][$service_id]['quantity'] = $new_quantity;
-				} else {
-					// Remove the item if quantity is set to 0
+				} 
+				
+				else {
 					unset($_SESSION['cart'][$service_id]);
 				}
 			}
@@ -32,24 +31,14 @@
 
 		foreach ($_SESSION['cart'] as $service_id => $item) {
 			if (isset($item['removed']) && $item['removed'] === true) {
-				unset($_SESSION['cart'][$service_id]); // Permanently remove the item from session
+				unset($_SESSION['cart'][$service_id]);
 			}
 		}
 		
-		// Redirect to prevent form resubmission
 		header("Location: shop-cart.php");
 		exit();
-	}
 
-	/*if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-		// Loop through the cart items and set removed flag to false (reset removal on refresh)
-		foreach ($_SESSION['cart'] as $service_id => &$item) {
-			// Reset 'removed' to false if it exists
-			if (isset($item['removed'])) {
-				$item['removed'] = false;
-			}
-		}
-	}*/
+	}
 
 ?>
 
