@@ -733,7 +733,7 @@
 										</ul>
 									</div>
 
-									<form method = "POST" action = "add-to-cart.php">
+									<form method="POST" action="add-to-cart.php">
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
 												<div class="quantity single">
@@ -745,17 +745,21 @@
 												</div>
 												<span class="price">
 													<del>
-														<span>
-															<span>$ </span>34
-														</span>
+														<span><span>$ </span>34</span>
 													</del>
 													<span>$ </span>55
 												</span>
 											</div>
-											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor" name = "Roses"><span>Add to cart</span></button>
+											
+											<!-- Hidden input to pass the product name dynamically -->
+											<input type="hidden" name="product_name" value="Roses">
 
+											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
+												<span>Add to cart</span>
+											</button>
 										</div>
 									</form>
+
 
 
 								</div>
