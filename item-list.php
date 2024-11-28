@@ -190,7 +190,6 @@
                 else{
 
                     if(!empty($_POST['service_name'])){
-                    
                         $service_name = filter_var($_POST['service_name'], FILTER_SANITIZE_SPECIAL_CHARS);
                         $stmt = $conn->prepare("UPDATE memorial_services SET Service_Name = ? WHERE Service_ID = ?");
                         $stmt->bind_param("ss", $service_name, $service_ID); 

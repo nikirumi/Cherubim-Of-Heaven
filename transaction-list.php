@@ -7,7 +7,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Transaction List </title>
-        <link rel="stylesheet" href="css/list.css" class="color-switcher-link">
+        <link rel="stylesheet" href="css/lists.css" class="color-switcher-link">
     </head>
 
     
@@ -34,11 +34,31 @@
                     </div>
 
                     <div id="delete-row">
+
+                    
+
                         <p>Enter ID and toggle status:</p>
                         <div>
-                            <input type="text" class="form-control" name="transaction_ID" id="transaction_ID" value="" placeholder="Transaction ID">
+
+                        <input class="boxDesign" type="text" class="form-control" name="transaction_ID" id="transaction_ID" value="" placeholder="Transaction ID">
+
+                        <select  class="boxDesign"  name="payment_status" id="payment_status">
+                            <option class="boxDesign" value="" disabled selected>Select Payment Status</option>
+                            <option class="boxDesign" value="Paid">Paid</option>
+                            <option class="boxDesign" value="Not Paid">Not Paid</option>
+        
+                        </select>
+
+                        <select  class="boxDesign"  name="service_status" id="service_status">
+                            <option class="boxDesign" value="" disabled selected>Select Progress Status</option>
+                            <option class="boxDesign" value="On Going">On Going</option>
+                            <option class="boxDesign" value="Completed">Completed</option>
+                        </select>
+
+                            
                             <button id="toggle" type="submit" class="woocommerce-Button btn btn-maincolor" name="toggle_status">Toggle Status</button>
                         </div>
+
                     </div>
                 
                     
@@ -56,6 +76,7 @@
                                 <th>Total Amount</th>
                                 <th>Payment Method</th>
                                 <th>Payment Status</th>
+                                <th>Status</th>
                             </tr>
 
                         </thead>
@@ -66,7 +87,22 @@
                                 include ("connect.php");
 
                                 // nireretrieve records from the CLIENT table
-                                $query = "SELECT * FROM transaction"; 
+                                
+
+                                $query = " SELECT 
+                                                t.Transaction_ID, 
+                                                t.Client_ID, 
+                                                t.Transaction_date, 
+                                                t.Total_amount, 
+                                                t.Payment_method, 
+                                                t.Payment_status, 
+                                                sp.Service_ID, 
+                                                sp.Service_status 
+                                            FROM 
+                                                transaction t 
+                                            LEFT JOIN 
+                                                service_progress sp ON t.Transaction_ID = sp.Transaction_ID";
+
                                 $result = mysqli_query($conn, $query);
                                 
                                 if (!$result) {
@@ -83,6 +119,7 @@
                                     echo "<td>" . $row['Total_amount'] . "</td>";  
                                     echo "<td>" . $row['Payment_method'] . "</td>"; 
                                     echo "<td>" . $row['Payment_status'] . "</td>";  
+                                    echo "<td>" . $row['Service_status'] . "</td>";
                                     echo "</tr>";
                                 }
                             ?>
@@ -109,41 +146,60 @@
 </html>
 
 
-
 <?php
+
+
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
         $transaction_ID = filter_var($_POST['transaction_ID'], FILTER_SANITIZE_SPECIAL_CHARS);
 
-        $stmt = $conn->prepare(" SELECT Payment_status FROM transaction WHERE Transaction_ID = ?" );
-        $stmt -> bind_param("s",$transaction_ID);
+        $stmt = $conn->prepare("SELECT * FROM transaction WHERE Transaction_ID = ? LIMIT 1");
+        $stmt->bind_param("s", $transaction_ID);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-        if ($stmt->execute()) {
+        if ($result->num_rows > 0){
 
-            $stmt->bind_result($payment_status);
-
-            if($stmt->fetch()){
-
-                $stmt->free_result();
-
-                if($payment_status === "Paid"){
-                    $stmt_update = $conn->prepare("UPDATE transaction SET Payment_status = 'Not Paid' WHERE Transaction_ID = ?");
-                } 
-                else if ($payment_status === "Not Paid") {
-                    $stmt_update = $conn->prepare("UPDATE transaction SET Payment_status = 'Paid' WHERE Transaction_ID = ?");
-                }
-
-                $stmt_update->bind_param("s", $transaction_ID);
-
-                if ($stmt_update->execute()) {
-                    //echo "<script>alert('Payment status updated successfully!');</script>";
+            if(!empty($_POST['payment_status'])){
+                $payment_status = filter_var($_POST['payment_status'], FILTER_SANITIZE_SPECIAL_CHARS);
+                $stmt = $conn->prepare("UPDATE transaction SET Payment_status = ? where Transaction_ID = ?" );
+                $stmt->bind_param("ss", $payment_status, $transaction_ID);
+    
+                if ($stmt->execute()) {
+                    echo "<script>alert('Status Updated!');</script>";
                     echo "<script>window.location.href='transaction-list.php';</script>";
-                } else {
-                    echo "Error updating status: " . $stmt_update->error;
                 }
-            } else {
-                echo "<script>alert('Transaction ID not found!');</script>";
+                else {
+                    echo "<script>alert('Error: " . $stmt->error . "');</script>";
+                }
+    
             }
-        } 
+    
+            if(!empty($_POST['service_status'])){
+                $service_status = filter_var($_POST['service_status'], FILTER_SANITIZE_SPECIAL_CHARS);
+                $stmt = $conn->prepare("UPDATE service_progress SET Service_status = ? where Transaction_ID = ?" );
+                $stmt->bind_param("ss", $service_status, $transaction_ID);
+    
+                if ($stmt->execute()) {
+                    echo "<script>alert('Status Updated!');</script>";
+                    echo "<script>window.location.href='transaction-list.php';</script>";
+                }
+                else {
+                    echo "<script>alert('Error: " . $stmt->error . "');</script>";
+                }
+            } 
+
+        }
+        else {
+            echo "<script>alert('ID does not exist');</script>";
+            echo "<script>window.location.href='transaction-list.php';</script>";
+            exit();
+        }
+
+        
+
+        
     } 
 ?>
 

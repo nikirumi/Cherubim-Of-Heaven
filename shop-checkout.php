@@ -299,8 +299,8 @@
 
 							</form>
 
-							<div class="woocommerce-info">Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a>
-							</div>
+							<!-- <div class="woocommerce-info">Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a>
+							</div> -->
 
 							<form class="checkout_coupon" method="post" style="display: none;">
 

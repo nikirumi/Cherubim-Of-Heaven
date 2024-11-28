@@ -125,14 +125,14 @@ label{
     height: 30px;
 }
 
-input{
+.boxDesign{
     background-color: transparent;
     padding: 5px 20px;
     border: none;
     box-shadow: inset 5px 5px 4px 0 rgb(0, 0, 0), inset -1px -1px 8px 0 rgb(175, 175, 175);
     box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
     width: 300px;
-    height: 30px;
+    height: 40px;
     color: #486173;
 	font-size: 16px;
     margin-right: 20px;
