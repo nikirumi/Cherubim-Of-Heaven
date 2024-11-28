@@ -173,9 +173,8 @@
                 else {
                     echo "<script>alert('Error: " . $stmt->error . "');</script>";
                 }
-    
             }
-    
+            
             if(!empty($_POST['service_status'])){
                 $service_status = filter_var($_POST['service_status'], FILTER_SANITIZE_SPECIAL_CHARS);
                 $stmt = $conn->prepare("UPDATE service_progress SET Service_status = ? where Transaction_ID = ?" );
@@ -189,17 +188,12 @@
                     echo "<script>alert('Error: " . $stmt->error . "');</script>";
                 }
             } 
-
         }
         else {
             echo "<script>alert('ID does not exist');</script>";
             echo "<script>window.location.href='transaction-list.php';</script>";
             exit(); //es
         }
-
-        
-
-        
     } 
 ?>
 

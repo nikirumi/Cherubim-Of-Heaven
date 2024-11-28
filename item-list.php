@@ -123,6 +123,23 @@
     </body>
 </html>
 
+
+
+
+
+<script>       
+        document.getElementById('transaction-form').onsubmit = function(event) {
+            var transaction_ID = document.getElementById('service_ID').value;
+            if (transaction_ID === '') {
+                alert('ID field cannot be empty!');
+                event.preventDefault();  
+                return false; 
+            }
+        };
+</script>
+
+
+
 <?php
     $query = "SELECT * FROM client"; 
     $result = $conn->query($query);
@@ -190,6 +207,7 @@
                 else{
 
                     if(!empty($_POST['service_name'])){
+                    
                         $service_name = filter_var($_POST['service_name'], FILTER_SANITIZE_SPECIAL_CHARS);
                         $stmt = $conn->prepare("UPDATE memorial_services SET Service_Name = ? WHERE Service_ID = ?");
                         $stmt->bind_param("ss", $service_name, $service_ID); 
@@ -240,6 +258,9 @@
                     }
                 }                     
             }
+            else {
+                echo "<script>alert('ID field must have a value to update.');</script>";
+            }   
         }
 
         //dilit
@@ -247,28 +268,43 @@
 
             $service_ID = filter_var($_POST['service_ID'], FILTER_SANITIZE_SPECIAL_CHARS);
 
-            if (!empty($service_ID)) {
-                $stmt = $conn->prepare("DELETE FROM memorial_goods WHERE MG_Service_ID = ?");
-                $stmt->bind_param("s", $service_ID);
+            $stm = $conn->prepare("SELECT * FROM memorial_services WHERE Service_ID = ? LIMIT 1");
+            $stm->bind_param("s", $transaction_ID);
+            $stm->execute();
+            $result = $stm->get_result();
 
-                // if hindi nadedelete yung associated service table ----------------------
-                // $stmt->execute();
-                // echo "<script>alert('Item successfully deleted');</script>";
-                // echo "<script>window.location.href='item-list.php';</script>";
-                // $stmt->close();
+                if (!empty($service_ID)) {
 
-                // if nadedelete yung associated service table ----------------------
-                if($stmt->execute()){
-                    $stmt2 = $conn->prepare("DELETE FROM memorial_services WHERE Service_ID = ?");
-                    $stmt2->bind_param("s", $service_ID);
-                    $stmt2->execute();
-                    echo "<script>alert('Item successfully deleted');</script>";
-                    echo "<script>window.location.href='item-list.php';</script>";
-                     $stmt->close();
+                    if ($result->num_rows > 0){
+
+                        $stmt = $conn->prepare("DELETE FROM memorial_goods WHERE MG_Service_ID = ?");
+                        $stmt->bind_param("s", $service_ID);
+
+                        // if hindi nadedelete yung associated service table ----------------------
+                        // $stmt->execute();
+                        // echo "<script>alert('Item successfully deleted');</script>";
+                        // echo "<script>window.location.href='item-list.php';</script>";
+                        // $stmt->close();
+
+                        // if nadedelete yung associated service table ----------------------
+                        if($stmt->execute()){
+                            $stmt2 = $conn->prepare("DELETE FROM memorial_services WHERE Service_ID = ?");
+                            $stmt2->bind_param("s", $service_ID);
+                            $stmt2->execute();
+                            echo "<script>alert('Item successfully deleted');</script>";
+                            echo "<script>window.location.href='item-list.php';</script>";
+                            $stmt->close();
+                        }
+                        else {
+                            echo "<script>alert('ID does not exist');</script>";
+                            echo "<script>window.location.href='item-list.php';</script>";
+                            exit(); //es
+                        }    
+                    } 
                 }
-            } else {
-                echo "<script>alert('Please provide a valid Service ID');</script>";
-            }           
+                else {
+                    echo "<script>alert('ID field must have a value');</script>";
+                }                 
         }        
     }
 ?>
