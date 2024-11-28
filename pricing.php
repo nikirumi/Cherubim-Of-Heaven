@@ -142,13 +142,13 @@
 
 		// Function to open the payment link
 		function openPaymentLink1() {
-			if (paymentLink3 !== '#') { // Check if payment link is available
+			if (paymentLink1 !== '#') { // Check if payment link is available
 				window.open(paymentLink1, '_blank'); // Open the link in a new tab
 			} else {
 				alert('Payment link not available.');
 			}
 		}function openPaymentLink2() {
-			if (paymentLink3 !== '#') { // Check if payment link is available
+			if (paymentLink2 !== '#') { // Check if payment link is available
 				window.open(paymentLink2, '_blank'); // Open the link in a new tab
 			} else {
 				alert('Payment link not available.');
