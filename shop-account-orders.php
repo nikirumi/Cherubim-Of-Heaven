@@ -366,7 +366,7 @@
 																	<span class='woocommerce-Price-amount amount'><span class='woocommerce-Price-currencySymbol'>₱</span>$totalAmount</span>
 																</td>
 																<td style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions with-btn' data-title='Actions'>
-																	<a style='margin-left: -50px' href='shop-account-order-single.php?id='$transID'' class='woocommerce-button btn btn-maincolor view'>View</a>
+																	<a style='margin-left: -50px' href='shop-account-order-single.php?id=$transID' class='woocommerce-button btn btn-maincolor view'>View</a>
 																</td>
 															</tr>";
 														}
