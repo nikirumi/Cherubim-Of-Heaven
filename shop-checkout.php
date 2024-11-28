@@ -394,6 +394,13 @@
 
 												}
 
+												else {
+													$barangay = "";
+													$purok = "";
+													$h_num = "";
+													$s_name = "";
+												}
+
 												//stmt->close();
 												
 											?>
@@ -424,7 +431,7 @@
 														<abbr class="required" title="required">*</abbr>
 													</label>
 													<select name="billing_barangay" id="billing_barangay" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
-															<option value="<?php echo htmlspecialchars($barangay); ?>"><?php echo htmlspecialchars($barangay); ?></option>
+															<option value="<?php echo htmlspecialchars($barangay ? $barangay : ''); ?>"><?php echo htmlspecialchars($barangay ? $barangay : 'Select a Barangay around Hagonoy, Bulacan...'); ?></option>
 															<option value="Abulalas">Abulalas</option>
 															<option value="Balagtas">Balagtas</option>
 															<option value="Carillo">Carillo</option>
@@ -455,21 +462,21 @@
 													<label for="billing_address_1" class="">Purok
 														<abbr class="required" title="required">*</abbr>
 													</label>
-													<input type="text" class="input-text form-control" name="billing_purok" id="billing_purok" placeholder="Purok" value="<?php echo htmlspecialchars($purok); ?>" autocomplete="address-line1">
+													<input required type="text" class="input-text form-control" name="billing_purok" id="billing_purok" placeholder="Purok" value="<?php echo htmlspecialchars($purok ? $purok : ''); ?>" autocomplete="address-line1">
 												</p>
 												
 												<p class="form-row form-row-wide address-field validate-required" id="billing_address_1_field" data-priority="50">
 													<label for="billing_address_1" class="">House Number / Unit
 														<abbr class="required" title="required">*</abbr>
 													</label>
-													<input type="text" class="input-text form-control" name="billing_hnum" id="billing_hnum" placeholder="House Number / Unit" value="<?php echo htmlspecialchars($h_num); ?>" autocomplete="address-line1">
+													<input type="text" class="input-text form-control" name="billing_hnum" id="billing_hnum" placeholder="House Number / Unit" value="<?php echo htmlspecialchars($h_num ? $h_num : ''); ?>" autocomplete="address-line1">
 												</p>
 
 												<p class="form-row form-row-wide address-field validate-required" id="billing_address_1_field" data-priority="50">
 													<label for="billing_address_1" class="">Street Name / Subdivision / Building
 														<abbr class="required" title="required">*</abbr>
 													</label>
-													<input type="text" class="input-text form-control" name="billing_sname" id="billing_sname" placeholder="Street Name / Subdivision / Building" value="<?php echo htmlspecialchars($s_name); ?>" autocomplete="address-line1">
+													<input type="text" class="input-text form-control" name="billing_sname" id="billing_sname" placeholder="Street Name / Subdivision / Building" value="<?php echo htmlspecialchars($s_name ? $s_name : ''); ?>" autocomplete="address-line1">
 												</p>
 
 											</div>
