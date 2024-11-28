@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html class="no-js">
+
+<?php
+
+	include ("check_session.php");
+
+?>
+
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -261,7 +268,7 @@
 								<header class="entry-header mb-30">
 									<h1 class="entry-title">Addresses</h1>
 									<span class="edit-link">
-										<a class="post-edit-link" href="#">Edit
+										<a class="post-edit-link" href="shop-account-address-edit.php">Edit
 											<span class="screen-reader-text"> "My account"
 											</span>
 										</a>
@@ -301,8 +308,8 @@
 
 												<div class="u-column1 col-1 woocommerce-Address">
 													<header class="woocommerce-Address-title title">
-														<h6>Billing address</h6>
-														<a href="shop-account-address-edit.php" class="edit">Edit</a>
+														<h6>General address</h6>
+														<a href="shop-account-address-edit.php" class="edit" hidden>Edit</a>
 													</header>
 													<address>
 														John Doe
@@ -317,15 +324,15 @@
 													</address>
 												</div>
 
-												<div class="u-column2 col-2 woocommerce-Address">
+												<!--<div class="u-column2 col-2 woocommerce-Address">
 													<header class="woocommerce-Address-title title">
-														<h6>Shipping address</h6>
+														<h6>Add Adress</h6>
 														<a href="shop-account-address-edit.php" class="edit">Edit</a>
 													</header>
 													<address>
-														You have not set up this type of address yet.
+														Coming soon.
 													</address>
-												</div>
+												</div>-->
 
 
 											</div>
