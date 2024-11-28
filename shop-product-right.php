@@ -6,39 +6,8 @@
 <html class="no-js">
 <!--<![endif]-->
 
-<?php
 
-	session_start();
-	include("connect.php");
-	//include("add-to-cart.php");
-
-	// Get the product ID from the URL
-	$product_id = isset($_GET['id']) ? ($_GET['id']) : 0;
-
-	// Fetch product details from the database
-	$stmt = $conn->prepare("SELECT Service_ID, Service_Name, Service_Price, Service_Description FROM memorial_services WHERE Service_ID = $product_id");
-	//$stmt->bind_param("s", $product_id);
-	$stmt->execute();
-	$result = $stmt->get_result();
-
-	if ($result->num_rows > 0) {
-		$row = $result->fetch_assoc();
-		$service_id = $row['Service_ID'];
-		$service_name = $row['Service_Name'];
-		$service_price = $row['Service_Price'];
-		$service_description = $row['Service_Description'];
-	} 
-	
-	else {
-		echo "Product not found.";
-		exit();
-	}
-
-	$conn->close();
-
-?>
-
-<!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
+<!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
 <head>
 	<title>Memento - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -115,7 +84,7 @@
 					<div class="container-fluid">
 						<div class="row align-items-center">
 							<div class="col-xl-3 col-lg-4 col-md-5 col-11">
-								<a href="index.php" class="logo">
+								<a href="index.html" class="logo">
 									<img src="images/logo.png" alt="">
 									<div class="d-flex flex-column">
 										<h4 class="logo-text color-main">Memento</h4>
@@ -130,111 +99,111 @@
 									<nav class="top-nav">
 										<ul class="nav sf-menu">
 											<li class="active">
-												<a href="index-2.php">Home</a>
+												<a href="index-2.html">Home</a>
 												<ul>
 													<li>
-														<a href="index-2.php">MultiPage</a>
+														<a href="index-2.html">MultiPage</a>
 													</li>
 													<li>
-														<a href="index_static.php">Static Intro</a>
+														<a href="index_static.html">Static Intro</a>
 													</li>
 													<li>
-														<a href="index_singlepage.php">Single Page</a>
+														<a href="index_singlepage.html">Single Page</a>
 													</li>
 												</ul>
 											</li>
 
 											<li>
-												<a href="home-blocks.php">Home Blocks</a>
+												<a href="home-blocks.html">Home Blocks</a>
 											</li>
 											<li>
-												<a href="about.php">Pages</a>
+												<a href="about.html">Pages</a>
 												<ul>
 													<li>
-														<a href="about.php">About</a>
+														<a href="about.html">About</a>
 													</li>
 
 													<li>
-														<a href="services.php">Our Services</a>
+														<a href="services.html">Our Services</a>
 														<ul>
 															<li>
-																<a href="services.php">Services 1</a>
+																<a href="services.html">Services 1</a>
 															</li>
 															<li>
-																<a href="services2.php">Services 2</a>
+																<a href="services2.html">Services 2</a>
 															</li>
 															<li>
-																<a href="services3.php">Services 3</a>
+																<a href="services3.html">Services 3</a>
 															</li>
 															<li>
-																<a href="service-single.php">Single Service</a>
+																<a href="service-single.html">Single Service</a>
 															</li>
 														</ul>
 													</li>
 
 													<li>
-														<a href="plan-ahead.php">Plan Ahead</a>
+														<a href="plan-ahead.html">Plan Ahead</a>
 													</li>
 
 													<li>
-														<a href="pricing.php">Pricing</a>
+														<a href="pricing.html">Pricing</a>
 													</li>
 
 													<!-- shop -->
 													<li>
-														<a href="shop-right.php">Shop</a>
+														<a href="shop-right.html">Shop</a>
 														<ul>
 															<li>
-																<a href="shop-account-dashboard.php">Account</a>
+																<a href="shop-account-dashboard.html">Account</a>
 																<ul>
 
 																	<li>
-																		<a href="shop-account-details.php">Account details</a>
+																		<a href="shop-account-details.html">Account details</a>
 																	</li>
 																	<li>
-																		<a href="shop-account-addresses.php">Addresses</a>
+																		<a href="shop-account-addresses.html">Addresses</a>
 																	</li>
 																	<li>
-																		<a href="shop-account-address-edit.php">Edit Address</a>
+																		<a href="shop-account-address-edit.html">Edit Address</a>
 																	</li>
 																	<li>
-																		<a href="shop-account-orders.php">Orders</a>
+																		<a href="shop-account-orders.html">Orders</a>
 																	</li>
 																	<li>
-																		<a href="shop-account-order-single.php">Single Order</a>
+																		<a href="shop-account-order-single.html">Single Order</a>
 																	</li>
 																	<li>
-																		<a href="shop-account-downloads.php">Downloads</a>
+																		<a href="shop-account-downloads.html">Downloads</a>
 																	</li>
 																	<li>
-																		<a href="shop-account-password-reset.php">Password Reset</a>
+																		<a href="shop-account-password-reset.html">Password Reset</a>
 																	</li>
 																	<li>
-																		<a href="shop-account-login.php">Login/Logout</a>
+																		<a href="shop-account-login.html">Login/Logout</a>
 																	</li>
 
 																</ul>
 															</li>
 															<li>
-																<a href="shop-right.php">Right Sidebar</a>
+																<a href="shop-right.html">Right Sidebar</a>
 															</li>
 															<li>
-																<a href="shop-left.php">Left Sidebar</a>
+																<a href="shop-left.html">Left Sidebar</a>
 															</li>
 															<li>
-																<a href="shop-product-right.php">Product Right Sidebar</a>
+																<a href="shop-product-right.html">Product Right Sidebar</a>
 															</li>
 															<li>
-																<a href="shop-product-left.php">Product Left Sidebar</a>
+																<a href="shop-product-left.html">Product Left Sidebar</a>
 															</li>
 															<li>
-																<a href="shop-cart.php">Cart</a>
+																<a href="shop-cart.html">Cart</a>
 															</li>
 															<li>
-																<a href="shop-checkout.php">Checkout</a>
+																<a href="shop-checkout.html">Checkout</a>
 															</li>
 															<li>
-																<a href="shop-order-received.php">Order Received</a>
+																<a href="shop-order-received.html">Order Received</a>
 															</li>
 
 														</ul>
@@ -243,53 +212,53 @@
 
 													<!-- features -->
 													<li>
-														<a href="shortcodes_iconbox.php">Shortcodes</a>
+														<a href="shortcodes_iconbox.html">Shortcodes</a>
 														<ul>
 															<li>
-																<a href="shortcodes_typography.php">Typography</a>
+																<a href="shortcodes_typography.html">Typography</a>
 															</li>
 															<li>
-																<a href="shortcodes_buttons.php">Buttons</a>
+																<a href="shortcodes_buttons.html">Buttons</a>
 															</li>
 															<li>
-																<a href="shortcodes_iconbox.php">Icon Boxes</a>
+																<a href="shortcodes_iconbox.html">Icon Boxes</a>
 															</li>
 															<li>
-																<a href="shortcodes_progress.php">Progress</a>
+																<a href="shortcodes_progress.html">Progress</a>
 															</li>
 															<li>
-																<a href="shortcodes_tabs.php">Tabs &amp; Collapse</a>
+																<a href="shortcodes_tabs.html">Tabs &amp; Collapse</a>
 															</li>
 															<li>
-																<a href="shortcodes_bootstrap.php">Bootstrap Elements</a>
+																<a href="shortcodes_bootstrap.html">Bootstrap Elements</a>
 															</li>
 															<li>
-																<a href="shortcodes_animation.php">Animation</a>
+																<a href="shortcodes_animation.html">Animation</a>
 															</li>
 															<li>
-																<a href="shortcodes_icons.php">Template Icons</a>
+																<a href="shortcodes_icons.html">Template Icons</a>
 															</li>
 															<li>
-																<a href="shortcodes_socialicons.php">Social Icons</a>
+																<a href="shortcodes_socialicons.html">Social Icons</a>
 															</li>
 														</ul>
 													</li>
 													<!-- eof shortcodes -->
 
 													<li>
-														<a href="shortcodes_widgets_default.php">Widgets</a>
+														<a href="shortcodes_widgets_default.html">Widgets</a>
 														<ul>
 															<li>
-																<a href="shortcodes_widgets_in_columns.php">All Widgets</a>
+																<a href="shortcodes_widgets_in_columns.html">All Widgets</a>
 															</li>
 															<li>
-																<a href="shortcodes_widgets_default.php">Default Widgets</a>
+																<a href="shortcodes_widgets_default.html">Default Widgets</a>
 															</li>
 															<li>
-																<a href="shortcodes_widgets_shop.php">Shop Widgets</a>
+																<a href="shortcodes_widgets_shop.html">Shop Widgets</a>
 															</li>
 															<li>
-																<a href="shortcodes_widgets_custom.php">Custom Widgets</a>
+																<a href="shortcodes_widgets_custom.html">Custom Widgets</a>
 															</li>
 														</ul>
 
@@ -298,28 +267,28 @@
 
 													<!-- events -->
 													<li>
-														<a href="events-left.php">Events</a>
+														<a href="events-left.html">Events</a>
 														<ul>
 															<li>
-																<a href="events-left.php">Left Sidebar</a>
+																<a href="events-left.html">Left Sidebar</a>
 															</li>
 															<li>
-																<a href="events-right.php">Right Sidebar</a>
+																<a href="events-right.html">Right Sidebar</a>
 															</li>
 															<li>
-																<a href="events-full.php">Full Width</a>
+																<a href="events-full.html">Full Width</a>
 															</li>
 															<li>
-																<a href="event-single-left.php">Single Event</a>
+																<a href="event-single-left.html">Single Event</a>
 																<ul>
 																	<li>
-																		<a href="event-single-left.php">Left Sidebar</a>
+																		<a href="event-single-left.html">Left Sidebar</a>
 																	</li>
 																	<li>
-																		<a href="event-single-right.php">Right Sidebar</a>
+																		<a href="event-single-right.html">Right Sidebar</a>
 																	</li>
 																	<li>
-																		<a href="event-single-full.php">Full Width</a>
+																		<a href="event-single-full.html">Full Width</a>
 																	</li>
 																</ul>
 															</li>
@@ -328,61 +297,61 @@
 													<!-- eof events -->
 
 													<li>
-														<a href="team.php">Team</a>
+														<a href="team.html">Team</a>
 														<ul>
 															<li>
-																<a href="team.php">Team List</a>
+																<a href="team.html">Team List</a>
 															</li>
 															<li>
-																<a href="team-single.php">Team Member</a>
+																<a href="team-single.html">Team Member</a>
 															</li>
 														</ul>
 													</li>
 
 													<li>
-														<a href="about-founder.php">About Founder</a>
+														<a href="about-founder.html">About Founder</a>
 													</li>
 
 													<!-- gallery -->
 													<li>
-														<a href="gallery-regular.php">Gallery</a>
+														<a href="gallery-regular.html">Gallery</a>
 														<ul>
 															<!-- Gallery image only -->
 															<li>
-																<a href="gallery-regular.php">Gallery Regular</a>
+																<a href="gallery-regular.html">Gallery Regular</a>
 																<ul>
 																	<li>
-																		<a href="gallery-regular-2-cols.php">2 columns</a>
+																		<a href="gallery-regular-2-cols.html">2 columns</a>
 																	</li>
 																	<li>
-																		<a href="gallery-regular.php">3 columns</a>
+																		<a href="gallery-regular.html">3 columns</a>
 																	</li>
 																	<li>
-																		<a href="gallery-regular-4-cols-fullwidth.php">4 columns</a>
+																		<a href="gallery-regular-4-cols-fullwidth.html">4 columns</a>
 																	</li>
 
 																</ul>
 															</li>
 															<li>
-																<a href="gallery-regular-2.php">Gallery Regular 2</a>
+																<a href="gallery-regular-2.html">Gallery Regular 2</a>
 															</li>
 															<li>
-																<a href="gallery-regular-3.php">Gallery Regular 3</a>
+																<a href="gallery-regular-3.html">Gallery Regular 3</a>
 															</li>
 															<!-- eof Gallery image only -->
 
 															<!-- Gallery with title -->
 															<li>
-																<a href="gallery-title.php">Gallery Title</a>
+																<a href="gallery-title.html">Gallery Title</a>
 																<ul>
 																	<li>
-																		<a href="gallery-title-2-cols.php">2 columns</a>
+																		<a href="gallery-title-2-cols.html">2 columns</a>
 																	</li>
 																	<li>
-																		<a href="gallery-title.php">3 column</a>
+																		<a href="gallery-title.html">3 column</a>
 																	</li>
 																	<li>
-																		<a href="gallery-title-4-cols-fullwidth.php">4 columns</a>
+																		<a href="gallery-title-4-cols-fullwidth.html">4 columns</a>
 																	</li>
 																</ul>
 															</li>
@@ -390,16 +359,16 @@
 
 															<!-- Gallery with excerpt -->
 															<li>
-																<a href="gallery-excerpt.php">Gallery Excerpt</a>
+																<a href="gallery-excerpt.html">Gallery Excerpt</a>
 																<ul>
 																	<li>
-																		<a href="gallery-excerpt-2-cols.php">2 columns</a>
+																		<a href="gallery-excerpt-2-cols.html">2 columns</a>
 																	</li>
 																	<li>
-																		<a href="gallery-excerpt.php">3 column</a>
+																		<a href="gallery-excerpt.html">3 column</a>
 																	</li>
 																	<li>
-																		<a href="gallery-excerpt-4-cols-fullwidth.php">4 columns</a>
+																		<a href="gallery-excerpt-4-cols-fullwidth.html">4 columns</a>
 																	</li>
 																</ul>
 															</li>
@@ -407,18 +376,18 @@
 
 
 															<li>
-																<a href="gallery-tiled.php">Tiled Gallery</a>
+																<a href="gallery-tiled.html">Tiled Gallery</a>
 															</li>
 															<!-- Gallery item -->
 
 															<li>
-																<a href="gallery-single.php">Gallery Single</a>
+																<a href="gallery-single.html">Gallery Single</a>
 																<ul>
 																	<li>
-																		<a href="gallery-single.php">Gallery Single</a>
+																		<a href="gallery-single.html">Gallery Single</a>
 																	</li>
 																	<li>
-																		<a href="gallery-single2.php">Gallery Single 2</a>
+																		<a href="gallery-single2.html">Gallery Single 2</a>
 																	</li>
 																</ul>
 															</li>
@@ -427,29 +396,29 @@
 													</li>
 													<!-- eof Gallery -->
 													<li>
-														<a href="our-story.php">Our Story</a>
+														<a href="our-story.html">Our Story</a>
 													</li>
 													<li>
-														<a href="careers.php">Careers</a>
-													</li>
-
-													<li>
-														<a href="comingsoon.php">Comingsoon</a>
+														<a href="careers.html">Careers</a>
 													</li>
 
 													<li>
-														<a href="faq.php">FAQ</a>
+														<a href="comingsoon.html">Comingsoon</a>
+													</li>
+
+													<li>
+														<a href="faq.html">FAQ</a>
 														<ul>
 															<li>
-																<a href="faq.php">FAQ</a>
+																<a href="faq.html">FAQ</a>
 															</li>
 															<li>
-																<a href="faq2.php">FAQ 2</a>
+																<a href="faq2.html">FAQ 2</a>
 															</li>
 														</ul>
 													</li>
 													<li>
-														<a href="404.php">404</a>
+														<a href="404.html">404</a>
 													</li>
 
 												</ul>
@@ -457,48 +426,48 @@
 											<!-- eof pages -->
 											<!-- blog -->
 											<li>
-												<a href="blog-right.php">Blog</a>
+												<a href="blog-right.html">Blog</a>
 												<ul>
 
 													<li>
-														<a href="blog-right.php">Right Sidebar</a>
+														<a href="blog-right.html">Right Sidebar</a>
 													</li>
 													<li>
-														<a href="blog-left.php">Left Sidebar</a>
+														<a href="blog-left.html">Left Sidebar</a>
 													</li>
 													<li>
-														<a href="blog-full.php">Without Sidebar</a>
+														<a href="blog-full.html">Without Sidebar</a>
 													</li>
 													<li>
-														<a href="blog-grid.php">Blog Grid</a>
+														<a href="blog-grid.html">Blog Grid</a>
 													</li>
 
 													<li>
-														<a href="blog-single-right.php">Post</a>
+														<a href="blog-single-right.html">Post</a>
 														<ul>
 															<li>
-																<a href="blog-single-right.php">Right Sidebar</a>
+																<a href="blog-single-right.html">Right Sidebar</a>
 															</li>
 															<li>
-																<a href="blog-single-left.php">Left Sidebar</a>
+																<a href="blog-single-left.html">Left Sidebar</a>
 															</li>
 															<li>
-																<a href="blog-single-full.php">No Sidebar</a>
+																<a href="blog-single-full.html">No Sidebar</a>
 															</li>
 														</ul>
 													</li>
 
 													<li>
-														<a href="blog-single-video-right.php">Video Post</a>
+														<a href="blog-single-video-right.html">Video Post</a>
 														<ul>
 															<li>
-																<a href="blog-single-video-right.php">Right Sidebar</a>
+																<a href="blog-single-video-right.html">Right Sidebar</a>
 															</li>
 															<li>
-																<a href="blog-single-video-left.php">Left Sidebar</a>
+																<a href="blog-single-video-left.html">Left Sidebar</a>
 															</li>
 															<li>
-																<a href="blog-single-video-full.php">No Sidebar</a>
+																<a href="blog-single-video-full.html">No Sidebar</a>
 															</li>
 														</ul>
 													</li>
@@ -515,22 +484,22 @@
 															<a href="#">Headers</a>
 															<ul>
 																<li>
-																	<a href="header1.php">Header Type 1</a>
+																	<a href="header1.html">Header Type 1</a>
 																</li>
 																<li>
-																	<a href="header2.php">Header Type 2</a>
+																	<a href="header2.html">Header Type 2</a>
 																</li>
 																<li>
-																	<a href="header3.php">Header Type 3</a>
+																	<a href="header3.html">Header Type 3</a>
 																</li>
 																<li>
-																	<a href="header4.php">Header Type 4</a>
+																	<a href="header4.html">Header Type 4</a>
 																</li>
 																<li>
-																	<a href="header5.php">Header Type 5</a>
+																	<a href="header5.html">Header Type 5</a>
 																</li>
 																<li>
-																	<a href="header6.php">Header Type 6</a>
+																	<a href="header6.html">Header Type 6</a>
 																</li>
 															</ul>
 														</li>
@@ -538,92 +507,92 @@
 															<a href="#">Side Menus</a>
 															<ul>
 																<li>
-																	<a href="header-side.php">Push Left</a>
+																	<a href="header-side.html">Push Left</a>
 																</li>
 																<li>
-																	<a href="header-side-right.php">Push Right</a>
+																	<a href="header-side-right.html">Push Right</a>
 																</li>
 																<li>
-																	<a href="header-side-slide.php">Slide Left</a>
+																	<a href="header-side-slide.html">Slide Left</a>
 																</li>
 																<li>
-																	<a href="header-side-slide-right.php">Slide Right</a>
+																	<a href="header-side-slide-right.html">Slide Right</a>
 																</li>
 																<li>
-																	<a href="header-side-sticked.php">Sticked Left</a>
+																	<a href="header-side-sticked.html">Sticked Left</a>
 																</li>
 																<li>
-																	<a href="header-side-sticked-right.php">Sticked Right</a>
+																	<a href="header-side-sticked-right.html">Sticked Right</a>
 																</li>
 															</ul>
 														</li>
 														<li class="mega-menu-col">
-															<a href="title1.php">Title Sections</a>
+															<a href="title1.html">Title Sections</a>
 															<ul>
 																<li>
-																	<a href="title1.php">Title section 1</a>
+																	<a href="title1.html">Title section 1</a>
 																</li>
 																<li>
-																	<a href="title2.php">Title section 2</a>
+																	<a href="title2.html">Title section 2</a>
 																</li>
 																<li>
-																	<a href="title3.php">Title section 3</a>
+																	<a href="title3.html">Title section 3</a>
 																</li>
 																<li>
-																	<a href="title4.php">Title section 4</a>
+																	<a href="title4.html">Title section 4</a>
 																</li>
 																<li>
-																	<a href="title5.php">Title section 5</a>
+																	<a href="title5.html">Title section 5</a>
 																</li>
 																<li>
-																	<a href="title6.php">Title section 6</a>
+																	<a href="title6.html">Title section 6</a>
 																</li>
 															</ul>
 														</li>
 														<li class="mega-menu-col">
-															<a href="footer1.php#footer">Footers</a>
+															<a href="footer1.html#footer">Footers</a>
 															<ul>
 																<li>
-																	<a href="footer1.php#footer">Footer Type 1</a>
+																	<a href="footer1.html#footer">Footer Type 1</a>
 																</li>
 																<li>
-																	<a href="footer2.php#footer">Footer Type 2</a>
+																	<a href="footer2.html#footer">Footer Type 2</a>
 																</li>
 																<li>
-																	<a href="footer3.php#footer">Footer Type 3</a>
+																	<a href="footer3.html#footer">Footer Type 3</a>
 																</li>
 																<li>
-																	<a href="footer4.php#footer">Footer Type 4</a>
+																	<a href="footer4.html#footer">Footer Type 4</a>
 																</li>
 																<li>
-																	<a href="footer5.php#footer">Footer Type 5</a>
+																	<a href="footer5.html#footer">Footer Type 5</a>
 																</li>
 																<li>
-																	<a href="footer6.php#footer">Footer Type 6</a>
+																	<a href="footer6.html#footer">Footer Type 6</a>
 																</li>
 															</ul>
 														</li>
 														<li class="mega-menu-col">
-															<a href="copyright1.php#copyright">Copyright</a>
+															<a href="copyright1.html#copyright">Copyright</a>
 
 															<ul>
 																<li>
-																	<a href="copyright1.php#copyright">Copyright 1</a>
+																	<a href="copyright1.html#copyright">Copyright 1</a>
 																</li>
 																<li>
-																	<a href="copyright2.php#copyright">Copyright 2</a>
+																	<a href="copyright2.html#copyright">Copyright 2</a>
 																</li>
 																<li>
-																	<a href="copyright3.php#copyright">Copyright 3</a>
+																	<a href="copyright3.html#copyright">Copyright 3</a>
 																</li>
 																<li>
-																	<a href="copyright4.php#copyright">Copyright 4</a>
+																	<a href="copyright4.html#copyright">Copyright 4</a>
 																</li>
 																<li>
-																	<a href="copyright5.php#copyright">Copyright 5</a>
+																	<a href="copyright5.html#copyright">Copyright 5</a>
 																</li>
 																<li>
-																	<a href="copyright6.php#copyright">Copyright 6</a>
+																	<a href="copyright6.html#copyright">Copyright 6</a>
 																</li>
 															</ul>
 														</li>
@@ -634,22 +603,22 @@
 											<!-- eof features -->
 											<!-- contacts -->
 											<li>
-												<a href="contact.php">Contacts</a>
+												<a href="contact.html">Contacts</a>
 												<ul>
 													<li>
-														<a href="contact.php">Contact 1</a>
+														<a href="contact.html">Contact 1</a>
 													</li>
 													<li>
-														<a href="contact2.php">Contact 2</a>
+														<a href="contact2.html">Contact 2</a>
 													</li>
 													<li>
-														<a href="contact3.php">Contact 3</a>
+														<a href="contact3.html">Contact 3</a>
 													</li>
 													<li>
-														<a href="contact4.php">Contact 4</a>
+														<a href="contact4.html">Contact 4</a>
 													</li>
 													<li>
-														<a href="contact5.php">Contact 5</a>
+														<a href="contact5.html">Contact 5</a>
 													</li>
 												</ul>
 											</li>
@@ -685,7 +654,7 @@
 								<h1 class="color-main">Shop Product Right Sidebar</h1>
 								<ol class=" breadcrumb">
 									<li class="breadcrumb-item">
-										<a href="index.php">Home</a>
+										<a href="index.html">Home</a>
 									</li>
 									<li class="breadcrumb-item">
 										<a href="#">Shop</a>
@@ -741,35 +710,48 @@
 								</div>
 
 								<div class="summary entry-summary text-center text-md-left">
-									<h6 class="product_title single_title"><?php echo $service_name; ?></h6>
-									<p><?php echo $service_description; ?></p>
+
+									<h6 class="product_title single_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
 									<div class="woocommerce-product-rating">
-										<!-- Your rating system here -->
+										<div class="star-rating">
+											<span style="width:72.6%">Rated <strong class="rating">4.33</strong> out of 5 based on <span class="rating">3</span> customer ratings</span>
+										</div>
+									</div>
+									<div class="divider-20 d-none d-lg-block"></div>
+									<div>
+										<ul class="list-styled">
+											<li>Mauris eu lobortis arcu, sed dapibus era</li>
+											<li>Aenean ut ultrices felis</li>
+											<li>Nam vel scelerisque erat, non fringilla</li>
+											<li>Praesent rhoncus, magna sed mollis</li>
+										</ul>
 									</div>
 
-									<form method="POST" action="add-to-cart.php">
+									<form>
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
 												<div class="quantity single">
 													<input type="button" value="+" class="plus">
 													<i class="fa fa-angle-up" aria-hidden="true"></i>
-													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" size="4">
+													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" title="Qty" size="4">
 													<input type="button" value="-" class="minus">
 													<i class="fa fa-angle-down" aria-hidden="true"></i>
 												</div>
 												<span class="price">
-													<span>₱ </span><?php echo $service_price; ?>
+													<del>
+														<span>
+															<span>$ </span>34
+														</span>
+													</del>
+													<span>$ </span>55
 												</span>
 											</div>
+											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor"><span>Add to cart</span></button>
 
-											<!-- Hidden input to pass the product name dynamically -->
-											<input type="hidden" name="product_name" value="<?php echo $service_name; ?>">
-
-											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
-												<span>Add to cart</span>
-											</button>
 										</div>
 									</form>
+
+
 								</div>
 								<!-- .summary -->
 
@@ -938,17 +920,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/01.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>Bouquet 25 red roses</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -960,17 +942,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/02.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>Bouquet Romantic</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -982,17 +964,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/03.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>51 multicolored tulips</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1004,17 +986,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/04.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>Bouquet Spring</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1026,17 +1008,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/05.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>Bouquet "Charm"</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1048,17 +1030,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/06.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>Spring bouquet </h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1070,17 +1052,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/07.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>Romantic bouquet</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1092,17 +1074,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/08.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>51 white and pink</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1114,17 +1096,17 @@
 											<div class="product-inner box-shadow">
 												<img src="images/shop/09.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.html"></a>
 												</div>
 												<div class="item-content">
 													<h2>Bouquet "Silver"</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>$ </span>34
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>$ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1160,30 +1142,46 @@
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php" class="active">Funeral</a>
+										<a href="shop-right.html" class="active">Funeral</a> 
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.php">Eco Funeral</a>
+										<a href="shop-right.html">Eco Funeral</a> 
 											</li>
 											<li class="cat-item">
-												<a href="shop-right.php">Memmorial Park</a>
+										<a href="shop-right.html">Memmorial Park</a> 
 											</li>
 										</ul>
 									</li>
+
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Mortuary</a>
+										<a href="shop-right.html" class="active">Memmorial Products</a>
+										<ul class="children">
+											<li class="cat-item">
+												<a href="shop-right.html"> Bouquet</a>
+											</li>
+											<li class="cat-item">
+												<a href="shop-right-caskets.html">Castkets</a> 	
+											</li>
+											<li class="cat-item">
+												<a href="shop-right-urns.html">Urns </a>
+											</li>
+										</ul>
+									</li>
+
+									<li class="cat-item cat-parent">
+										<a href="shop-right.html">Mortuary</a>
 									</li>
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Cremations</a>
+										<a href="shop-right.html">Cremations</a>
 									</li>
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Burrial</a>
+										<a href="shop-right.html">Burrial</a>
 									</li>
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Plan Ahead</a>
+										<a href="shop-right.html">Plan Ahead</a>
 									</li>
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Ship Outs</a>
+										<a href="shop-right.html">Ship Outs</a>
 									</li>
 								</ul>
 							</div>
@@ -1195,7 +1193,7 @@
 
 								<ul class="product_list_widget">
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.html">
 											<img src="images/shop/05.jpg" alt="">
 											<span class="product-title">Bouquet "Charm"</span>
 										</a>
@@ -1209,11 +1207,11 @@
 											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>34
+											<span class="woocommerce-Price-currencySymbol">$</span>34
 										</span>
 									</li>
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.html">
 											<img src="images/shop/08.jpg" alt="">
 											<span class="product-title">51 white and pink</span>
 										</a>
@@ -1228,18 +1226,18 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
+												<span class="woocommerce-Price-currencySymbol">$</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
+											<span class="woocommerce-Price-currencySymbol">$</span>
 											34
 										</span>
 									</li>
 
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.html">
 											<img src="images/shop/01.jpg" alt="">
 											<span class="product-title">Bouquet 25 red roses</span>
 										</a>
@@ -1254,12 +1252,12 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
+												<span class="woocommerce-Price-currencySymbol">$</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
+											<span class="woocommerce-Price-currencySymbol">$</span>
 											34
 										</span>
 									</li>
@@ -1274,11 +1272,11 @@
 								<form method="get" action="https://html.modernwebtemplates.com/">
 									<div class="price_slider_wrapper">
 
-										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="">
-											<span class="from">₱20.00</span>
+										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+											<span class="from">$20.00</span>
 											<div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 14%; width: 65%;">
 											</div>
-											<span class="to">₱700.00</span>
+											<span class="to">$700.00</span>
 											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 12%;">
 
 											</span>
@@ -1311,7 +1309,7 @@
 						<div class="col-md-6 col-xl-3 animate" data-animation="fadeInUp">
 
 							<div class="widget widget_text">
-								<a href="index.php" class="logo">
+								<a href="index.html" class="logo">
 									<img src="images/logo.png" alt="">
 									<div class="d-flex flex-column">
 										<h4 class="logo-text color-main">Memento</h4>
@@ -1450,5 +1448,5 @@
 </body>
 
 
-<!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:32 GMT -->
+<!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:32 GMT -->
 </html>

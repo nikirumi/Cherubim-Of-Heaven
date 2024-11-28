@@ -261,12 +261,12 @@
 								<ul class="products">
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/01.jpg" alt="">
+											<img src="images/Caskets/1.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet 25 red roses</h2>
+												<h2>Silver Casket</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -283,12 +283,12 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/02.jpg" alt="">
+											<img src="images/Caskets/2.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet Romantic</h2>
+												<h2>Dark Brown Casket</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -305,12 +305,12 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/03.jpg" alt="">
+											<img src="images/Caskets/3.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>51 multicolored tulips</h2>
+												<h2>Azure Casket</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -327,12 +327,12 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/04.jpg" alt="">
+											<img src="images/Caskets/4.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet Spring</h2>
+												<h2>White Casket</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -349,12 +349,12 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/05.jpg" alt="">
+											<img src="images/Caskets/5.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet "Charm"</h2>
+												<h2>Wooden Brown</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -371,12 +371,12 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/06.jpg" alt="">
+											<img src="images/Caskets/6.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>Spring bouquet </h2>
+												<h2>Black Casket</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -393,12 +393,12 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/07.jpg" alt="">
+											<img src="images/Caskets/7.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>Romantic bouquet</h2>
+												<h2>Mahogany Casket</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -415,12 +415,12 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/08.jpg" alt="">
+											<img src="images/Caskets/8.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>51 white and pink</h2>
+												<h2>Maroon Casket</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -437,12 +437,12 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/09.jpg" alt="">
+											<img src="images/Caskets/9.jpg" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.html"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet "Silver"</h2>
+												<h2>Oak Casket</h2>
 												<span class="price">
 													<del>
 														<span>
@@ -504,19 +504,19 @@
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
 									<li class="cat-item cat-parent">
-										<a href="shop-right.html" class="active">Funeral</a> 
+										 <a href="shop-right.html" class="active">Funeral</a> 
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.html">Eco Funeral</a>
+												<a href="shop-right.html">Eco Funeral</a> 
 											</li>
 											<li class="cat-item">
-											<a href="shop-right.html">Memorial Park</a>
+												<a href="shop-right.html">Memmorial Park</a> 
 											</li>
 										</ul>
 									</li>
 
 									<li class="cat-item cat-parent">
-										<a href="shop-right.html" class="active">Memorial Products</a>
+										<a href="shop-right.html" class="active">Memmorial Products</a>
 										<ul class="children">
 											<li class="cat-item">
 												<a href="shop-right.html"> Bouquet</a>
@@ -556,8 +556,8 @@
 								<ul class="product_list_widget">
 									<li>
 										<a href="shop-product-right.html">
-											<img src="images/shop/05.jpg" alt="">
-											<span class="product-title">Bouquet "Charm"</span>
+											<img src="images/Caskets/9.jpg" alt="">
+											<span class="product-title">Oak Casket</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -574,8 +574,8 @@
 									</li>
 									<li>
 										<a href="shop-product-right.html">
-											<img src="images/shop/08.jpg" alt="">
-											<span class="product-title">51 white and pink</span>
+											<img src="images/Caskets/2.jpg" alt="">
+											<span class="product-title">Dark Brown Casket</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -600,8 +600,8 @@
 
 									<li>
 										<a href="shop-product-right.html">
-											<img src="images/shop/01.jpg" alt="">
-											<span class="product-title">Bouquet 25 red roses</span>
+											<img src="images/Caskets/4.jpg" alt="">
+											<span class="product-title">White Casket</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
