@@ -276,43 +276,45 @@
 
             $service_ID = filter_var($_POST['service_ID'], FILTER_SANITIZE_SPECIAL_CHARS);
 
+            //pang check lang if kung may id sa database
             $stm = $conn->prepare("SELECT * FROM memorial_services WHERE Service_ID = ? LIMIT 1");
             $stm->bind_param("s", $transaction_ID);
             $stm->execute();
             $result = $stm->get_result();
 
-                if (!empty($service_ID)) {
+            if (!empty($service_ID)) {
 
-                    if ($result->num_rows > 0){
+                if ($result->num_rows > 0){
 
-                        $stmt = $conn->prepare("DELETE FROM memorial_goods WHERE MG_Service_ID = ?");
-                        $stmt->bind_param("s", $service_ID);
+                    $stmt = $conn->prepare("DELETE FROM memorial_goods WHERE MG_Service_ID = ?");
+                    $stmt->bind_param("s", $service_ID);
 
-                        // if hindi nadedelete yung associated service table ----------------------
-                        // $stmt->execute();
-                        // echo "<script>alert('Item successfully deleted');</script>";
-                        // echo "<script>window.location.href='item-list.php';</script>";
-                        // $stmt->close();
+                    // if hindi nadedelete yung associated service table ----------------------
+                    // $stmt->execute();
+                    // echo "<script>alert('Item successfully deleted');</script>";
+                    // echo "<script>window.location.href='item-list.php';</script>";
+                    // $stmt->close();
 
-                        // if nadedelete yung associated service table ----------------------
-                        if($stmt->execute()){
-                            $stmt2 = $conn->prepare("DELETE FROM memorial_services WHERE Service_ID = ?");
-                            $stmt2->bind_param("s", $service_ID);
-                            $stmt2->execute();
-                            echo "<script>alert('Item successfully deleted');</script>";
-                            echo "<script>window.location.href='item-list.php';</script>";
-                            $stmt->close();
-                        }
-                        else {
-                            echo "<script>alert('ID does not exist');</script>";
-                            echo "<script>window.location.href='item-list.php';</script>";
-                            exit(); //es
-                        }    
-                    } 
-                }
+                    // if nadedelete yung associated service table ----------------------
+                    if($stmt->execute()){
+                        $stmt2 = $conn->prepare("DELETE FROM memorial_services WHERE Service_ID = ?");
+                        $stmt2->bind_param("s", $service_ID);
+                        $stmt2->execute();
+                        echo "<script>alert('Item successfully deleted');</script>";
+                        echo "<script>window.location.href='item-list.php';</script>";
+                        $stmt->close();
+                    }
+                    
+                } 
                 else {
-                    echo "<script>alert('ID field must have a value');</script>";
-                }                 
+                    echo "<script>alert('ID does not exist');</script>";
+                    echo "<script>window.location.href='item-list.php';</script>";
+                    exit(); //es
+                }    
+            }
+            else {
+                echo "<script>alert('ID field must have a value');</script>";
+            }                 
         }        
     }
 ?>

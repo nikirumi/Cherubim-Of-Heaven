@@ -66,8 +66,8 @@
         
                 // password verification 
                 if ($password === $Admin['Password']) {
-                    $_SESSION['logged_in'] = true;
-                    $_SESSION['username'] = $Admin['Username'];
+                    $_SESSION['admin_logged_in'] = true;
+                    $_SESSION['admin_username'] = $Admin['Username'];
                     echo "<script>alert('Log in Successful');</script>";
                     echo "<script>window.location.href='admin.php';</script>";
                     exit();
