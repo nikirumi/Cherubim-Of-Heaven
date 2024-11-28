@@ -61,14 +61,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 label{
@@ -116,9 +108,9 @@ input{
     border: none;
 }
 
-a{
+.aa{
     justify-content: center;
-    width: 200px;
+    width: 210px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -138,4 +130,27 @@ a:hover {
     background-color: #486173; 
     color: #ffffff;/* Brighter background on hover */
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Smaller shadow on hover */
+}
+
+#aaa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button.aa {
+    padding: 10px 40px;
+    font-size: 16px; /* Ensure consistent font size */
+    background-color: rgb(156, 50, 50);
+    color: #d8d8d8;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(233, 233, 233, 0.7);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 210px;
+    height: 60px;
+    width: auto; /* Remove fixed width if you want to auto-size based on text */
+    
 }

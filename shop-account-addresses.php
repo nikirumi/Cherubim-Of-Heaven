@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js">
-
-<?php
-
-	include ("check_session.php");
-
-?>
-
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -268,7 +261,7 @@
 								<header class="entry-header mb-30">
 									<h1 class="entry-title">Addresses</h1>
 									<span class="edit-link">
-										<a class="post-edit-link" href="shop-account-address-edit.php">Edit
+										<a class="post-edit-link" href="#">Edit
 											<span class="screen-reader-text"> "My account"
 											</span>
 										</a>
@@ -305,95 +298,34 @@
 
 											<div class="u-columns woocommerce-Addresses col2-set addresses">
 
+
 												<div class="u-column1 col-1 woocommerce-Address">
 													<header class="woocommerce-Address-title title">
-														<h6>General address</h6>
-														<a href="shop-account-address-edit.php" class="edit" hidden>Edit</a>
-													</header>
-													<?php
-											
-														if ($username) {
-
-															$sql = "SELECT Fname, Mname, Lname, Barangay, Purok, H_num, S_name FROM CLIENT WHERE Username = ?";
-															$stmt = $conn->prepare($sql);
-															$stmt->bind_param("s", $username); // 's' means the parameter is a string
-															$stmt->execute();
-															$result = $stmt->get_result();
-
-															if ($result->num_rows > 0) {
-																
-																$row = $result->fetch_assoc();
-																$fname = $row['Fname'];
-																$mname = $row['Mname'];
-																$lname = $row['Lname'];
-																$barangay = $row['Barangay'];
-																$purok = $row['Purok'];
-																$h_num = $row['H_num'];
-																$s_name = $row['S_name'];
-
-																$fullName = $fname . " " . $mname . " " . $lname;
-
-																echo "
-															
-																<address>
-																	$fullName
-																	<br>
-																";
-
-																if (!empty($barangay) || !empty($purok) || !empty($h_num) || !empty($s_name)) {
-																	
-																	echo "
-																	$barangay
-																	<br>
-																	$purok
-																	<br>
-																	$h_num
-																	<br>
-																	$s_name
-																</address>
-																";
-
-																}
-
-																else {
-
-																	echo "
-															
-																<address>You have no addresses. Click <a href='shop-account-address-edit.php' class='edit'>here</a> to add your address.</address>
-	
-																";
-
-																}
-
-															}	
-
-														}
-
-														else {
-															
-															echo "
-															
-																<address>Please <a href='shop-account-login.php' class='edit'>sign in</a>. To create a new account, click <a href='shop-account-address-edit.php' class='edit'>here</a>.</address>
-	
-															";
-
-														}
-
-														$conn->close();
-													
-													?>
-													
-												</div>
-
-												<!--<div class="u-column2 col-2 woocommerce-Address">
-													<header class="woocommerce-Address-title title">
-														<h6>Add Adress</h6>
+														<h6>Billing address</h6>
 														<a href="shop-account-address-edit.php" class="edit">Edit</a>
 													</header>
 													<address>
-														Coming soon.
+														John Doe
+														<br>
+														Baker Street, 231
+														<br>
+														London
+														<br>
+														Great Britain
+														<br>
+														12000
 													</address>
-												</div>-->
+												</div>
+
+												<div class="u-column2 col-2 woocommerce-Address">
+													<header class="woocommerce-Address-title title">
+														<h6>Shipping address</h6>
+														<a href="shop-account-address-edit.php" class="edit">Edit</a>
+													</header>
+													<address>
+														You have not set up this type of address yet.
+													</address>
+												</div>
 
 
 											</div>

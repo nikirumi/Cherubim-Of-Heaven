@@ -39,10 +39,10 @@
 
                     <div class="input-row">
                         <div>
-                            <input type="text" class="normal" name="service_ID" id="service_ID" value="" placeholder="ID">
-                            <input type="text" class="long" name="service_name" id="service_name" value="" placeholder="Item Name">
-                            <input type="text" class="normal" name="price" id="price" value="" placeholder="Price">
-                            <input type="text" class="normal" name="quantity" id="quantity" value="" placeholder="Quantity">
+                            <input type="text" class="normal" name="service_ID" id="service_ID"  placeholder="ID">
+                            <input type="text" class="long" name="service_name" id="service_name"  placeholder="Item Name">
+                            <input type="text" class="normal" name="price" id="price"  placeholder="Price">
+                            <input type="text" class="normal" name="quantity" id="quantity"  placeholder="Quantity">
 
                             
 
@@ -67,6 +67,8 @@
                             <button id="delete" type="submit" class=" btn" name="delete">Delete</button>
                         </div>
                     </div>
+                
+                    
                 </form>
 
                 <div id="table">
@@ -89,7 +91,7 @@
 
                         <tbody>
 
-                            <?php
+                        <?php
                                 // nireretrieve records from the CLIENT table
                             $stmt = "SELECT mg.MG_Service_ID, ms.Service_ID, ms.Service_Name, ms.Service_Description, ms.Service_Price, mg.Quantity, mg.Size 
                                         FROM MEMORIAL_GOODS mg 
@@ -113,15 +115,23 @@
                                 echo "<td>" . $row['Size'] . "</td>"; 
                             }
                             ?>
-
-                           
                         </tbody>
                     </table>
-                </div>                           
+                </div>             
             </div>
         </div>     
     </body>
 </html>
+
+<?php
+    $query = "SELECT * FROM client"; 
+    $result = $conn->query($query);
+
+    if (!$result) {
+        die("Error fetching data: " . mysqli_error($conn));
+    }
+
+?>
 
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -179,14 +189,6 @@
                 }
                 else{
 
-                    $service_name = filter_var($_POST['service_name'], FILTER_SANITIZE_SPECIAL_CHARS);
-                    $stmt = $conn->prepare("UPDATE memorial_services SET Service_Name = ? WHERE Service_ID = ?");
-                    $stmt->bind_param("ss", $service_name, $service_ID); 
-                    $stmt->execute();
-                    echo "<script>alert('Update Successful');</script>";
-                    echo "<script>window.location.href='item-list.php';</script>";
-                    $stmt->close();
-
                     if(!empty($_POST['service_name'])){
                     
                         $service_name = filter_var($_POST['service_name'], FILTER_SANITIZE_SPECIAL_CHARS);
@@ -197,8 +199,7 @@
                         echo "<script>window.location.href='item-list.php';</script>";
                         $stmt->close();
                     }
-    
-               
+                  
                     if (!empty($_POST['description'])) {
                         $description = filter_var($_POST['description'], FILTER_SANITIZE_SPECIAL_CHARS);
                         $stmt = $conn->prepare("UPDATE memorial_services SET Service_Description = ? WHERE Service_ID = ?");
@@ -273,6 +274,5 @@
     }
 ?>
 
- 
 
 
