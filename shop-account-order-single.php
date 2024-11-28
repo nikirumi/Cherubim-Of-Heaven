@@ -1,3 +1,70 @@
+<?php 
+	include("connect.php");
+	$service_id = isset($_GET['id']) ? ($_GET['id']) : 0;										 	
+					
+	if ($service_id != 0) {
+		// Prepare the SQL query to fetch related records for the transaction
+		$stmt = $conn->prepare("SELECT t.Transaction_ID, t.Client_ID, t.Transaction_date, t.Total_amount, t.Payment_method, t.Payment_status, t.Retrieval_Method, t.General_Address,
+		                            c.Username, c.Fname, c.Lname, c.Contact_Number, c.Email_Address, c.Purok, c.Barangay, c.H_num, c.S_name,
+		                            sp.Service_ID, sp.Start_Datetime, sp.End_Datetime, sp.Service_status,
+		                            ms.Service_Name, ms.Service_Description, ms.Service_Price, ms.Service_Type
+		                        FROM transaction t
+		                        JOIN client c ON t.Client_ID = c.Client_ID
+		                        JOIN service_progress sp ON t.Transaction_ID = sp.Transaction_ID
+		                        JOIN MEMORIAL_SERVICES ms ON sp.Service_ID = ms.Service_ID
+		                        WHERE t.Transaction_ID = ?");
+		
+		$stmt->bind_param("s", $service_id); 
+		$stmt->execute();
+		
+		$result = $stmt->get_result();
+		
+		if ($result->num_rows > 0) {
+			
+			$row = $result->fetch_assoc();
+
+			$totalAmount = (float)$row['Total_amount'];
+		    $servicePrice = (float)$row['Service_Price'];
+		    $numberOfOrder = $totalAmount / $servicePrice;
+			
+			$transaction_date = new DateTime($row['Transaction_date']);
+			$formatted_date = $transaction_date->format('d-m-Y'); 
+			// echo "Transaction ID: " . $row['Transaction_ID'] . "<br>";
+			// echo "Client ID: " . $row['Client_ID'] . "<br>";
+			// echo "Client Name: " . $row['Fname'] . " " . $row['Lname'] . "<br>";
+			// echo "Contact Number: " . $row['Contact_Number'] . "<br>";
+			// echo "Email Address: " . $row['Email_Address'] . "<br>";
+			// echo "Barangay: " . $row['Barangay'] . "<br>";
+			// echo "Purok: " . $row['Purok'] . "<br>";
+			// echo "House Number: " . $row['H_num'] . "<br>";
+			// echo "Street Name: " . $row['S_name'] . "<br>";
+			// echo "Transaction Date: " . $formatted_date . "<br>";
+			// echo "Total Amount: " . $row['Total_amount'] . "<br>";
+			// echo "Payment Method: " . $row['Payment_method'] . "<br>";
+			// echo "Payment Status: " . $row['Payment_status'] . "<br>";
+			// echo "Retrieval Method: " . $row['Retrieval_Method'] . "<br>";
+			// echo "General Address: " . $row['General_Address'] . "<br>";
+
+			
+			// echo "Service Name: " . $row['Service_Name'] . "<br>";
+			// echo "Service Description: " . $row['Service_Description'] . "<br>";
+			// echo "Service Price: " . $row['Service_Price'] . "<br>";
+			// echo "Service Type: " . $row['Service_Type'] . "<br>";
+			// echo "Service Status: " . $row['Service_status'] . "<br>";
+			// echo "Service Start Date: " . $row['Start_Datetime'] . "<br>";
+			// echo "Service End Date: " . $row['End_Datetime'] . "<br>";
+		} else {
+			echo "No transaction found for this ID.";
+		}
+		
+		
+		$stmt->close();
+	} else {
+		echo "Invalid Service ID.";
+	}
+?>
+
+
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -239,6 +306,8 @@
 									<li class="breadcrumb-item">
 										<a href="#">Shop</a>
 									</li>
+
+						
 									<li class="breadcrumb-item active">
 										Shop Single Order
 									</li>
@@ -257,7 +326,12 @@
 						<main class="col-lg-12">
 							<article id="post-1708" class="post-1708 page type-page status-publish hentry">
 								<header class="entry-header mb-30">
-									<h1 class="entry-title">Order #1722</h1> <span class="edit-link">
+									<h1 class="entry-title"> Order
+										 <?php 
+																					 	
+											 echo $service_id 
+										 ?>
+									</h1> <span class="edit-link">
 										<a class="post-edit-link" href="#">Edit<span class="screen-reader-text"> "My account"</span>
 										</a>
 									</span>
@@ -290,12 +364,12 @@
 
 
 										<div class="woocommerce-MyAccount-content">
-											<p>Order #
-												<mark class="order-number">1722</mark>
-												was placed on
-												<mark class="order-date">March 8, 2024</mark>
+											<p>Order #<?php echo $service_id ?>
+												<mark class="order-number"></mark>
+												was placed on <?php echo $formatted_date ?>
+												<mark class="order-date"> </mark>
 												and is currently
-												<mark class="order-status">Completed</mark>
+												<mark class="order-status"><?php echo $row['Service_status']; ?></mark>
 												.
 											</p>
 
@@ -317,47 +391,47 @@
 														<tr class="woocommerce-table__line-item order_item">
 
 															<td class="woocommerce-table__product-name product-name">
-																<a href="shop-product-right.php">Downloadable Product #1</a>
-																<strong class="product-quantity">× 1</strong>
-																<ul class="wc-item-downloads">
-																	<li>
-																		<strong class="wc-item-download-label">Download:</strong>
-																		<a href="#">File</a>
-																	</li>
-																	<li>
-																		<strong class="wc-item-download-label">Download:</strong>
-																		<a href="#">File</a>
-																	</li>
-																</ul>
+																
+																
+																	
+																		<b>Name:</b> <?php echo "  " . $row['Service_Name'] . "<br>"?>
+
+																		<b>Type:</b> <?php echo "   " . $row['Service_Type'] . "<br>"  ?>
+
+																		<b>Description:</b> <?php echo "  " . $row['Service_Description'] . "<br>"  ?>
+
+																		<b>Quantity:</b> <?php echo "  " . $numberOfOrder . "<br>"  ?>
+																	
+																	
+																
 															</td>
 
 															<td class="woocommerce-table__product-total product-total">
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">$</span>12.00
+																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $row['Service_Price']  ?>
 																</span>
 															</td>
 
 														</tr>
 
 													</tbody>
-
 													<tfoot>
 														<tr>
 															<th scope="row">Subtotal:</th>
 															<td>
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">$</span>12.00</span>
+																	<span class="woocommerce-Price-currencySymbol">₱</span></span><?php echo $row['Total_amount']?></span>
 															</td>
 														</tr>
 														<tr>
 															<th scope="row">Payment method:</th>
-															<td>Cash on delivery</td>
+															<td><?php echo $row['Payment_method']  ?></td>
 														</tr>
 														<tr>
 															<th scope="row">Total:</th>
 															<td>
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">$</span>12.00</span>
+																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $row['Total_amount']  ?>
 															</td>
 														</tr>
 													</tfoot>
@@ -380,12 +454,12 @@
 														<tbody>
 															<tr>
 																<th>Email:</th>
-																<td><a href="#" class="__cf_email__" data-cfemail="c2a3a6afabac82b6a7b1b6eca1adaf">[email&#160;protected]</a></td>
+																<td><?php echo $row['Email_Address']  ?></td>
 															</tr>
 
 															<tr>
 																<th>Phone:</th>
-																<td>+1300551555</td>
+																<td><?php echo $row['Contact_Number']  ?></td>
 															</tr>
 
 
@@ -396,7 +470,14 @@
 														<h6 class="woocommerce-column__title">Billing address</h6>
 
 														<address>
-															John Doe<br>Baker Street, 231<br>London<br>Great Britain<br>12000
+															<?php
+															echo  $row['Barangay'] . "<br>";
+															echo  $row['Purok'] . "<br>";
+															echo  $row['H_num'] . "<br>";
+															echo  $row['S_name'] . "<br>";														
+															?>
+
+															
 														</address>
 													</div>
 
