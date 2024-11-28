@@ -6,6 +6,39 @@
 	  include("check_session.php");
 	  include("connect.php");
 
+	  error_reporting(E_ALL);
+      ini_set('display_errors', 1);
+
+	  ob_start();
+
+	  if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_cart'])) {
+		if (isset($_POST['quantity'])) {
+
+			foreach ($_POST['quantity'] as $service_id => $new_quantity) {
+				$new_quantity = intval($new_quantity); 
+	
+				if ($new_quantity > 0) {
+					$_SESSION['cart'][$service_id]['quantity'] = $new_quantity;
+				} 
+				
+				else {
+					unset($_SESSION['cart'][$service_id]);
+				}
+			}
+
+		}
+
+		foreach ($_SESSION['cart'] as $service_id => $item) {
+			if (isset($item['removed']) && $item['removed'] === true) {
+				unset($_SESSION['cart'][$service_id]);
+			}
+		}
+		
+		header("Location: shop-cart.php");
+		exit();
+
+	}
+
 ?>
 
 <head>

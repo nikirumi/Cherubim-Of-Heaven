@@ -277,7 +277,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -295,7 +295,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='S-002'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -318,7 +318,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -340,7 +340,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -362,7 +362,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -384,7 +384,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -406,7 +406,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -428,7 +428,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -450,7 +450,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
