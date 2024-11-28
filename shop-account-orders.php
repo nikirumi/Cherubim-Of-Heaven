@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html class="no-js">
+
+<?php 
+
+	include("check_session.php"); 
+	
+	$clientID = '';
+	
+	if ($username) {
+		$findClient = "SELECT Client_ID FROM client WHERE Username = ? LIMIT 1";
+		$stmt = $conn->prepare($findClient);
+		$stmt->bind_param("s", $username);
+		$stmt->execute();
+		$clientResult = $stmt->get_result();
+		$stmt->close();
+
+		if ($clientResult->num_rows > 0) {
+			$row = $clientResult->fetch_assoc(); 
+			$clientID = $row['Client_ID'];											
+		}	
+	}
+
+?>
+
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -289,63 +312,89 @@
 
 										<div class="woocommerce-MyAccount-content">
 
-											<div class="woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info">
-												<a class="woocommerce-Button btn btn-maincolor" href="shop-right.php">Go shop</a>
-												No order has been made yet.
-											</div>
+										<?php
 
-											<table class="woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table">
-												<thead>
-													<tr>
-														<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number"><span class="nobr">Order</span></th>
-														<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-date"><span class="nobr">Date</span></th>
-														<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-status"><span class="nobr">Status</span></th>
-														<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-total"><span class="nobr">Total</span></th>
-														<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-actions text-center"><span class="nobr">Actions</span></th>
-													</tr>
-												</thead>
+											if (!empty($clientID)) {
+												$findTrans = "SELECT Transaction_ID, Transaction_Date, Payment_Status, Total_Amount FROM transaction WHERE Client_ID = ?";
+												$stmt = $conn->prepare($findTrans);
 
-												<tbody>
-													<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order">
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Order">
-															<a href="shop-account-order-single.php">#1719</a>
+												if ($stmt) {
+													$stmt->bind_param("s", $clientID);
+													$stmt->execute();
+													$transResult = $stmt->get_result();
+													$stmt->close();
 
-														</td>
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Date">
-															<time datetime="2024-03-06T08:55:39+00:00">March 6, 2024</time>
+													// Check if any transactions were found
+													if ($transResult->num_rows > 0) {
+														// Display the table headers
+														echo "
+														<table class='woocommerce-orders-table woocommerce-MyAccount-orders shop_table shop_table_responsive my_account_orders account-orders-table'>
+															<thead>
+																<tr>
+																	<th style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__header woocommerce-orders-table__header-order-number'><span class='nobr'>Order</span></th>
+																	<th style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__header woocommerce-orders-table__header-order-date'><span class='nobr'>Date</span></th>
+																	<th style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__header woocommerce-orders-table__header-order-status'><span class='nobr'>Status</span></th>
+																	<th style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__header woocommerce-orders-table__header-order-total'><span class='nobr'>Total</span></th>
+																	<th style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__header woocommerce-orders-table__header-order-actions text-center'><span class='nobr'>Actions</span></th>
+																</tr>
+															</thead>
+															<tbody>";
 
-														</td>
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
-															Processing
-														</td>
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Total">
-															<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>45.00</span> for 4 items
-														</td>
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions with-btn" data-title="Actions">
-															<a href="shop-account-order-single.php" class="woocommerce-button btn btn-maincolor view">View</a></td>
-													</tr>
+														// Loop through each transaction result and display it in the table
+														while ($row = $transResult->fetch_assoc()) {
+															$transID = $row['Transaction_ID'];
+															$transactionDate = $row['Transaction_Date'];
+															$paymentStatus = $row['Payment_Status'];
+															$totalAmount = $row['Total_Amount'];
 
-													<tr class="woocommerce-orders-table__row woocommerce-orders-table__row--status-on-hold order">
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number" data-title="Order">
-															<a href="shop-account-order-single.php">#106</a>
+															// Format the transaction date to remove the time
+															$formattedDate = date("F j, Y", strtotime($transactionDate));  // Example: March 6, 2024
 
-														</td>
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date" data-title="Date">
-															<time datetime="2024-03-22T13:34:43+00:00">March 22, 2024</time>
+															// Output the transaction row
+															echo "
+															<tr class='woocommerce-orders-table__row woocommerce-orders-table__row--status-processing order'>
+																<td style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__cell woocommerce-orders-table__cell-order-number' data-title='Order'>
+																	<a href='shop-account-order-single.php'>#$transID</a>
+																</td>
+																<td style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__cell woocommerce-orders-table__cell-order-date' data-title='Date'>
+																	<time datetime='" . date("Y-m-d", strtotime($transactionDate)) . "'>$formattedDate</time>
+																</td>
+																<td style='text-align: center; vertical-align: middle;' lass='woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status' data-title='Status'>
+																	$paymentStatus
+																</td>
+																<td style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total' data-title='Total'>
+																	<span class='woocommerce-Price-amount amount'><span class='woocommerce-Price-currencySymbol'>₱</span>$totalAmount</span>
+																</td>
+																<td style='text-align: center; vertical-align: middle;' class='woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions with-btn' data-title='Actions'>
+																	<a style='margin-left: -50px' href='shop-account-order-single.php?id='$transID'' class='woocommerce-button btn btn-maincolor view'>View</a>
+																</td>
+															</tr>";
+														}
 
-														</td>
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-status" data-title="Status">
-															On hold
-														</td>
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-total" data-title="Total">
-															<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>100.00</span> for 4 items
-														</td>
-														<td class="woocommerce-orders-table__cell woocommerce-orders-table__cell-order-actions with-btn" data-title="Actions">
-															<a href="shop-account-order-single.php" class="woocommerce-button btn btn-maincolor view">View</a></td>
-													</tr>
+														// Close the table
+														echo "
+															</tbody>
+														</table>";
 
-												</tbody>
-											</table>
+													} else {
+														echo "
+														<div class='woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info'>
+															<a class='woocommerce-Button btn btn-maincolor' href='shop-right.php'>Go Shop</a>
+															No transactions found.
+														</div>";
+													}
+												} else {
+													echo "Error preparing statement.";
+												}
+											} else {
+												echo "
+												<div class='woocommerce-message woocommerce-message--info woocommerce-Message woocommerce-Message--info woocommerce-info'>
+													<a class='woocommerce-Button btn btn-maincolor' href='shop-account-login.php'>Sign In</a>
+													No account signed in.
+												</div>";
+											}
+											?>
+
 
 										</div>
 									</div>
