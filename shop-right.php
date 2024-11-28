@@ -270,14 +270,14 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>34
+															<span>$ </span>34
 														</span>
 													</del>
-													<span>₱ </span>55
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
@@ -290,16 +290,19 @@
 											<div class="item-content">
 												<h2>Bouquet Romantic</h2>
 												<span class="price">
-													<del><span><span>₱ </span>500</span></del>
-													<span>₱ </span>300
+													<del>
+														<span>
+															<span>$ </span>34
+														</span>
+													</del>
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="shop-product-right.php?id='S-002'" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
-
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
 											<img src="images/shop/03.jpg" alt="">
@@ -311,14 +314,14 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>34
+															<span>$ </span>34
 														</span>
 													</del>
-													<span>₱ </span>55
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
@@ -333,14 +336,14 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>34
+															<span>$ </span>34
 														</span>
 													</del>
-													<span>₱ </span>55
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
@@ -355,14 +358,14 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>34
+															<span>$ </span>34
 														</span>
 													</del>
-													<span>₱ </span>55
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
@@ -377,14 +380,14 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>34
+															<span>$ </span>34
 														</span>
 													</del>
-													<span>₱ </span>55
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
@@ -399,14 +402,14 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>34
+															<span>$ </span>34
 														</span>
 													</del>
-													<span>₱ </span>55
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
@@ -421,14 +424,14 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>34
+															<span>$ </span>34
 														</span>
 													</del>
-													<span>₱ </span>55
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
@@ -443,14 +446,14 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>34
+															<span>$ </span>34
 														</span>
 													</del>
-													<span>₱ </span>55
+													<span>$ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 											</div>
 										</div>
 									</li>
@@ -501,16 +504,32 @@
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php" class="active">Funeral</a>
+										<a href="shop-right.php" class="active">Funeral</a> 
 										<ul class="children">
 											<li class="cat-item">
 												<a href="shop-right.php">Eco Funeral</a>
 											</li>
 											<li class="cat-item">
-												<a href="shop-right.php">Memmorial Park</a>
+											<a href="shop-right.php">Memorial Park</a>
 											</li>
 										</ul>
 									</li>
+
+									<li class="cat-item cat-parent">
+										<a href="shop-right.php" class="active">Memorial Products</a>
+										<ul class="children">
+											<li class="cat-item">
+												<a href="shop-right.php"> Bouquet</a>
+											</li>
+											<li class="cat-item">
+												<a href="shop-right-caskets.php">Castkets</a> 	
+											</li>
+											<li class="cat-item">
+												<a href="shop-right-urns.php">Urns </a>
+											</li>
+										</ul>
+									</li>
+
 									<li class="cat-item cat-parent">
 										<a href="shop-right.php">Mortuary</a>
 									</li>
@@ -550,7 +569,7 @@
 											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>34
+											<span class="woocommerce-Price-currencySymbol">$</span>34
 										</span>
 									</li>
 									<li>
@@ -569,12 +588,12 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
+												<span class="woocommerce-Price-currencySymbol">$</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
+											<span class="woocommerce-Price-currencySymbol">$</span>
 											34
 										</span>
 									</li>
@@ -595,12 +614,12 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
+												<span class="woocommerce-Price-currencySymbol">$</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
+											<span class="woocommerce-Price-currencySymbol">$</span>
 											34
 										</span>
 									</li>
@@ -616,10 +635,10 @@
 									<div class="price_slider_wrapper">
 
 										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="">
-											<span class="from">₱20.00</span>
+											<span class="from">$20.00</span>
 											<div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 14%; width: 65%;">
 											</div>
-											<span class="to">₱700.00</span>
+											<span class="to">$700.00</span>
 											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 12%;">
 
 											</span>

@@ -18,14 +18,14 @@
 
 		if ($stmt->execute()) {
 			//echo "New record created successfully!";
-			header("shop-account-addresses.php");
+			header("Location: shop-account-addresses.php");
 		} 
 		
 		else {
 			echo "Error: " . $stmt->error;
 		}
 
-		//stmt->close();
+		stmt->close();
 
 	}
 
