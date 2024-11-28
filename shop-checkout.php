@@ -10,6 +10,10 @@
 		exit();
 	}
 
+	if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
+		header("Location: shop-right.php");
+	}
+
 ?>
 
 <head>
@@ -27,6 +31,31 @@
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paymentMethods = document.querySelectorAll('input[name="payment_method"]');
+
+            // Function to toggle payment box visibility
+            function togglePaymentBox() {
+                paymentMethods.forEach(method => {
+                    const paymentBox = document.querySelector(`.payment_box.${method.id}`);
+                    if (method.checked) {
+                        paymentBox.style.display = "block";
+                    } else {
+                        paymentBox.style.display = "none";
+                    }
+                });
+            }
+
+            // Add change event listeners to each radio button
+            paymentMethods.forEach(method => {
+                method.addEventListener('change', togglePaymentBox);
+            });
+
+            // Initial call to set the correct display state on page load
+            togglePaymentBox();
+        });
+    </script>
 
 </head>
 
@@ -329,7 +358,7 @@
 								</div>
 							</form>
 
-							<form name="checkout" method="post" class="checkout woocommerce-checkout" action="#" enctype="multipart/form-data" novalidate="novalidate">
+							<form name="checkout" method="post" class="checkout woocommerce-checkout" action="place-order.php" enctype="multipart/form-data" novalidate="novalidate">
 
 
 								<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">
@@ -394,7 +423,7 @@
 													<label for="billing_country" class="">Country
 														<abbr class="required" title="required">*</abbr>
 													</label>
-													<select name="billing_country" id="billing_country" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+													<select name="billing_barangay" id="billing_barangay" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
 															<option value="<?php echo htmlspecialchars($barangay); ?>"><?php echo htmlspecialchars($barangay); ?></option>
 															<option value="Abulalas">Abulalas</option>
 															<option value="Balagtas">Balagtas</option>
@@ -533,20 +562,20 @@
 									<div id="payment" class="woocommerce-checkout-payment">
 										<ul class="wc_payment_methods payment_methods methods">
 											<li class="wc_payment_method payment_method_cheque">
-												<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="cheque" checked="checked" data-order_button_text="">
+												<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="Other" checked="checked" data-order_button_text="">
 
 												<label for="payment_method_cheque">
 													Other payment methods </label>
-												<div class="payment_box payment_method_cheque" style="display: none;">
-													<p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store
-														Postcode.</p>
-												</div>
 											</li>
 											<li class="wc_payment_method payment_method_cod">
-												<input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="cod" data-order_button_text="">
+												<input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="COD" data-order_button_text="">
 
 												<label for="payment_method_cod">
 													Cash on delivery </label>
+
+												<div class="payment_box payment_method_cheque" style="display: none;">
+													<p>Use other available payment methods.</p>
+												</div>
 												<div class="payment_box payment_method_cod" style="display: block;">
 													<p>Pay with cash upon delivery.</p>
 												</div>
