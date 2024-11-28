@@ -10,61 +10,7 @@
 		exit();
 	}
 
-
-	$curl = curl_init();
-
-		curl_setopt_array($curl, [
-			CURLOPT_URL => "https://api.paymongo.com/v1/links",
-			CURLOPT_RETURNTRANSFER => true,
-			CURLOPT_ENCODING => "",
-			CURLOPT_MAXREDIRS => 10,
-			CURLOPT_TIMEOUT => 30,
-			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-			CURLOPT_CUSTOMREQUEST => "POST",
-			CURLOPT_POSTFIELDS => json_encode([
-				'data' => [
-					'attributes' => [
-						'amount' => $subtotalAll + 00,
-						'description' => 'pay',
-						'remarks' => 'gcash'
-					]
-				]
-			]),
-			CURLOPT_HTTPHEADER => [
-				"accept: application/json",
-				"authorization: Basic c2tfdGVzdF8xa2ZZanYxcHpuUldaSldDWXZ6UEp2Qlg6",
-				"content-type: application/json"
-			],
-		]);
-
-		$response = curl_exec($curl);
-		$err = curl_error($curl);
-
-		curl_close($curl);
-
-		if ($err) {
-			echo "cURL Error #:" . $err;
-		} else {
-			// Decode the response JSON and extract the payment link
-			$responseData = json_decode($response, true);
-			$paymentLink = $responseData['data']['attributes']['checkout_url'] ?? '#'; // Get the checkout_url
-		}
 ?>
-
-<script>
-
-		const paymentLink = "<?php echo $paymentLink; ?>"; // PHP variable embedded in JavaScript
-		
-
-		// Function to open the payment link
-		function openPaymentLink() {
-			if (paymentLink1 !== '#') { // Check if payment link is available
-				window.open(paymentLink, '_blank'); // Open the link in a new tab
-			} else {
-				alert('Payment link not available.');
-			}
-		}
-</script>
 
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
@@ -325,7 +271,7 @@
 							<div class="woocommerce-info">Returning customer? <a href="#" class="showlogin">Click here to login</a>
 							</div>
 
-							<form class="woocomerce-form woocommerce-form-login login" method="post">
+							<form class="woocomerce-form woocommerce-form-login login" method="post" style="">
 
 
 								<p>If you have shopped with us before, please enter your details in the boxes below. If you are a new customer,
@@ -574,10 +520,9 @@
 												<th>Total</th>
 												<td>
 													<strong>
-                        <span class="woocommerce-Price-amount amount">
-                            <span
-                                    class="woocommerce-Price-currencySymbol">₱</span><?php echo $subtotalAll; ?></span>
-                    </strong>
+													    <span class="woocommerce-Price-amount amount">
+														<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $subtotalAll; ?></span>
+												    </strong>
 												</td>
 											</tr>
 
@@ -591,7 +536,7 @@
 												<input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="cheque" checked="checked" data-order_button_text="">
 
 												<label for="payment_method_cheque">
-													Check payments </label>
+													Other payment methods </label>
 												<div class="payment_box payment_method_cheque" style="display: none;">
 													<p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store
 														Postcode.</p>
@@ -615,7 +560,7 @@
 												class="button alt" name="woocommerce_checkout_update_totals" value="Update totals" /&gt;
 											</noscript>
 
-											<button type="submit" class="btn btn-outline-maincolor small-button" name="woocommerce_checkout_place_order" onclick="openPaymentLink()">Place order</button>
+											<button type="submit" class="btn btn-outline-maincolor small-button" name="woocommerce_checkout_place_order">Place order</button>
 
 										</div>
 									</div>

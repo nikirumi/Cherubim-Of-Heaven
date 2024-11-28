@@ -237,10 +237,24 @@
 								</span>
 
 								<a href="#" class="d-none d-md-block btn btn-small btn-outline-maincolor mr-2">Time Capsule </a>
-								<a href="shop-account-login.php" >
-    <img src="images/profile-icon.png" alt="User" style="width: 40px; height: 40px;">
-</a>
+								
+								<?php
 
+								if ($username) {
+									echo "
+									<a href='shop-account-dashboard.php' >
+										<img src='images/profile-icon.png' alt='User' style='width: 40px; height: 40px;'>
+									</a>
+									";
+								}
+
+								else {
+									echo "
+									<a href='shop-account-login.php' class='d-none d-md-block btn btn-small btn-maincolor'>Login</a>
+									";
+								}
+
+								?>
 
 							</div>
 
