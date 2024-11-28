@@ -358,7 +358,7 @@
 								</div>
 							</form>
 
-							<form name="checkout" method="post" class="checkout woocommerce-checkout" action="place-order.php" enctype="multipart/form-data" novalidate="novalidate">
+							<form name="checkout" method="post" class="checkout woocommerce-checkout" action="place-order.php" enctype="multipart/form-data">
 
 
 								<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">
@@ -378,7 +378,7 @@
 											
 												$sql = "SELECT Fname, Lname, Barangay, Purok, H_num, S_name from CLIENT WHERE Username = ?";
 												$stmt = $conn->prepare($sql);
-												$stmt->bind_param("s", $username); // 's' means the parameter is a string
+												$stmt->bind_param("s", $username);
 												$stmt->execute();
 												$result = $stmt->get_result();
 
@@ -421,16 +421,11 @@
 													<input readonly tabindex="-1" type="text" class="input-text form-control" name="billing_last_name" id="billing_last_name" placeholder="Last name" value="<?php echo htmlspecialchars($lname); ?>" autocomplete="family-name">
 												</p>
 
-												<!--<p class="form-row form-row-wide" id="billing_company_field" data-priority="30">
-													<label for="billing_company" class="">Company name</label>
-													<input type="text" class="input-text form-control" name="billing_company" id="billing_company" placeholder="Company name" value="" autocomplete="organization">
-												</p>-->
-
 												<p class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated" id="billing_country_field" data-priority="40">
 													<label for="billing_country" class="">Country
 														<abbr class="required" title="required">*</abbr>
 													</label>
-													<select name="billing_barangay" id="billing_barangay" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
+													<select required name="billing_barangay" id="billing_barangay" class="country_to_state country_select  select2-hidden-accessible" autocomplete="country" tabindex="-1" aria-hidden="true">
 															<option value="<?php echo htmlspecialchars($barangay ? $barangay : ''); ?>"><?php echo htmlspecialchars($barangay ? $barangay : 'Select a Barangay around Hagonoy, Bulacan...'); ?></option>
 															<option value="Abulalas">Abulalas</option>
 															<option value="Balagtas">Balagtas</option>
@@ -469,14 +464,14 @@
 													<label for="billing_address_1" class="">House Number / Unit
 														<abbr class="required" title="required">*</abbr>
 													</label>
-													<input type="text" class="input-text form-control" name="billing_hnum" id="billing_hnum" placeholder="House Number / Unit" value="<?php echo htmlspecialchars($h_num ? $h_num : ''); ?>" autocomplete="address-line1">
+													<input required type="text" class="input-text form-control" name="billing_hnum" id="billing_hnum" placeholder="House Number / Unit" value="<?php echo htmlspecialchars($h_num ? $h_num : ''); ?>" autocomplete="address-line1">
 												</p>
 
 												<p class="form-row form-row-wide address-field validate-required" id="billing_address_1_field" data-priority="50">
 													<label for="billing_address_1" class="">Street Name / Subdivision / Building
 														<abbr class="required" title="required">*</abbr>
 													</label>
-													<input type="text" class="input-text form-control" name="billing_sname" id="billing_sname" placeholder="Street Name / Subdivision / Building" value="<?php echo htmlspecialchars($s_name ? $s_name : ''); ?>" autocomplete="address-line1">
+													<input required type="text" class="input-text form-control" name="billing_sname" id="billing_sname" placeholder="Street Name / Subdivision / Building" value="<?php echo htmlspecialchars($s_name ? $s_name : ''); ?>" autocomplete="address-line1">
 												</p>
 
 											</div>
