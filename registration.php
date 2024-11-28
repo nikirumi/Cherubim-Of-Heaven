@@ -258,8 +258,8 @@
 					<div class="row">
 						<main class="col-lg-12">
 							<article>
+
 								<header class="entry-header mb-30">
-									<h1 class="entry-title">Account details</h1>
 									<span class="edit-link">
 										<a class="post-edit-link" href="#">Edit
 											<span class="screen-reader-text"> "My account"
@@ -267,6 +267,7 @@
 										</a>
 									</span>
 								</header>
+								
 								<!-- .entry-header -->
 								<div class="entry-content">
 									<div class="woocommerce">
@@ -298,18 +299,23 @@
 
 											<form class="woocommerce-EditAccountForm edit-account" method="post">
 
+											<h1 class="entry-title">Personal Information</h1>
+
 
 												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 													<label for="account_first_name">First name <span class="required">*</span>
 													</label>
 													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="First name" required>
 												</p>
+
 												<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
 													<label for="account_last_name">Middle name <span class="required">*</span>
 													</label>
 													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_middle_name" id="account_middle_name" value="" placeholder="Middle name" required>
 												</p>
-                                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+												
+												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+
 													<label for="account_last_name">Last name <span class="required">*</span>
 													</label>
 													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" value="" placeholder="Last name" required>
@@ -321,7 +327,7 @@
 													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="contact_number" id="contact_number" value="" placeholder="Contact Number" required>
 												</p>
 
-                                                <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 													<label for="account_last_name">Age <span class="required">*</span>
 													</label>
 													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="age" id="age" value="" placeholder="Age" required>
@@ -333,26 +339,60 @@
 													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="gender" id="gender" value="" placeholder="Gender" required>
 												</p>
 
-												<div class="clear">
-
-												</div>
-
-												
-
-												<fieldset class="account-edit">
-
-                                                    <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+												<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_current">Email</label>
 														<input type="email" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="account_email" id="account_email" placeholder="Email" required>
 													</p>
 
+												<h1 class="entry-title">Address</h1>
+
+												<!-- <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+												<label for="account_last_name"> <span class="required">*</span>
+													</label>
+													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="barangay" id="barangay" value="" placeholder="Barangay" required>
+												</p> -->
+
+												<select  class="leftMargin woocommerce-form-row form-row-wide"  name="barangay" id="barangay">
+													<option class="boxDesign" value="" disabled selected>Select a barangay around Hagonoy, Bulacan</option>
+													<option class="boxDesign" value="Barangay1">Barangay1</option>
+													<option class="boxDesign" value="Barangay2">Barangay2</option>
+													<option class="boxDesign" value="Barangay3">Barangay3</option>
+													<option class="boxDesign" value="Barangay4">Barangay4</option>
+													<option class="boxDesign" value="Barangay5">Barangay5</option>
+													
+												</select>
+
+												<p class="woocommerce-form-row  form-row form-row-wide">
+												<label for="account_last_name"> <span class="required">*</span>
+													</label>
+													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="purok" id="purok" value="" placeholder="Purok" required>
+												</p>
+
+												<p class="woocommerce-form-row  form-row form-row-wide">
+												<label for="account_last_name"> <span class="required">*</span>
+													</label>
+													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="h_num" id="h_num" value="" placeholder="House Number" required>
+												</p>
+
+												<p class="woocommerce-form-row form-row form-row-wide">
+												<label for="account_last_name"> <span class="required">*</span>
+													</label>
+													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="s_name" id="s_name" value="" placeholder="Street Name" required>
+												</p>
+
+												<div class="clear">
+
+												</div>
+
+												<fieldset class="account-edit">
+
+												<h1 class="entry-title">Account Credentials</h1>
 
                                                     <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_current">Username</label>
 														<input type="text" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="username" id="username" placeholder="Username" required>
 													</p>
 													
-
 													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_current">Password</label>
 														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password" id="password" placeholder="Password" required>
@@ -542,6 +582,10 @@
         $contact_number = filter_var($_POST['contact_number'], FILTER_SANITIZE_SPECIAL_CHARS);
         $password = filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS);
         $confirm_password = filter_var($_POST['confirm_password'], FILTER_SANITIZE_SPECIAL_CHARS);
+		$barangay = filter_var($_POST['barangay'], FILTER_SANITIZE_SPECIAL_CHARS);
+		$purok = filter_var($_POST['purok'], FILTER_SANITIZE_SPECIAL_CHARS);
+		$h_num = filter_var($_POST['h_num'], FILTER_SANITIZE_SPECIAL_CHARS);
+		$s_name = filter_var($_POST['s_name'], FILTER_SANITIZE_SPECIAL_CHARS);
 
         $Client_ID = '';
 
@@ -567,9 +611,9 @@
 		else{
             $hash = password_hash($password, PASSWORD_DEFAULT);
 
-			$stmt = $conn->prepare("INSERT INTO client VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)" );
+			$stmt = $conn->prepare("INSERT INTO client VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?)" );
 
-			$stmt->bind_param("ssssssisss", $Client_ID, $username, $hash, $first_name, $middle_name, $last_name, $age, $gender, $contact_number, $email);
+			$stmt->bind_param("ssssssisssssss", $Client_ID, $username, $hash, $first_name, $middle_name, $last_name, $age, $gender, $contact_number, $email, $barangay, $purok, $h_num, $s_name);
 			
 			if (!$stmt) {
 				die("Error preparing statement: " . $conn->error);
