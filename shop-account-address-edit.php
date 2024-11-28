@@ -5,6 +5,30 @@
 
 	include("check_session.php");
 
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+		
+		$barangay = htmlspecialchars(trim($_POST['shipping_barangay']));
+		$purok = htmlspecialchars(trim($_POST['shipping_purok']));
+		$unit = htmlspecialchars(trim($_POST['shipping_unit']));
+		$street = htmlspecialchars(trim($_POST['shipping_street']));
+
+		//$stmt = $conn->prepare("INSERT INTO CLIENT (Barangay, Purok, H_num, S_name) VALUES (?, ?, ?, ?) WHERE Username = '$username'");
+		$stmt = $conn->prepare("UPDATE CLIENT SET Barangay = ?, Purok = ?, H_num = ?, S_name = ? WHERE Username = ?");
+		$stmt->bind_param("sssss", $barangay, $purok, $unit, $street, $username);
+
+		if ($stmt->execute()) {
+			//echo "New record created successfully!";
+			header("shop-account-addresses.php");
+		} 
+		
+		else {
+			echo "Error: " . $stmt->error;
+		}
+
+		//stmt->close();
+
+	}
+
 ?>
 
 <head>
@@ -301,11 +325,11 @@
 
 
 										<div class="woocommerce-MyAccount-content">
-											<form>
+											<form method = "POST">
 												<h6>General Address</h6>
 												<div class="woocommerce-address-fields">
 													<div class="woocommerce-address-fields__field-wrapper">
-														<p class="form-row form-row-first validate-required" id="shipping_first_name_field" data-priority="10">
+														<!--<p class="form-row form-row-first validate-required" id="shipping_first_name_field" data-priority="10">
 															<label for="shipping_first_name" class="">First name
 																<abbr class="required" title="required">*</abbr>
 															</label>
@@ -317,7 +341,7 @@
 															</label>
 															<input type="text" class="input-text form-control" name="shipping_last_name" id="shipping_last_name" placeholder="Last name" value="" autocomplete="family-name">
 														</p>
-														<!--<p class="form-row form-row-wide" id="shipping_company_field" data-priority="30">
+														<p class="form-row form-row-wide" id="shipping_company_field" data-priority="30">
 															<label for="shipping_company" class="">Company name</label>
 															<input type="text" class="input-text form-control" name="shipping_company" id="shipping_company" placeholder="Company name" value="" autocomplete="organization">
 														</p>-->
