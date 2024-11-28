@@ -57,7 +57,7 @@
 					<div class="container-fluid">
 						<div class="row align-items-center">
 							<div class="col-xl-3 col-lg-4 col-md-5 col-11">
-								<a href="index.html" class="logo">
+								<a href="index.php" class="logo">
 									<img src="images/logo.png" alt="">
 									<div class="d-flex flex-column">
 										<h4 class="logo-text color-main">Cherubim Of Heaven</h4>
@@ -72,86 +72,86 @@
 								<nav class="top-nav">
 									<ul class="nav sf-menu">
 										<li class="active">
-											<a href="index.html">Home</a>
+											<a href="index.php">Home</a>
 										</li>
 
 										<li>
-											<a href="home-blocks.html">Contents</a>
+											<a href="home-blocks.php">Contents</a>
 										</li>
 										<li>
-											<a href="about.html">Pages</a>
+											<a href="about.php">Pages</a>
 											<ul>
 												<li>
-													<a href="about.html">About</a>
+													<a href="about.php">About</a>
 												</li>
 
 												<li>
-													<a href="services.html">Our Services</a>
+													<a href="services.php">Our Services</a>
 												</li>
 
 												<li>
-													<a href="plan-ahead.html">Plan Ahead</a>
+													<a href="plan-ahead.php">Plan Ahead</a>
 												</li>
 
 												<li>
-													<a href="pricing.html">Pricing</a>
+													<a href="pricing.php">Pricing</a>
 												</li>
 
 												<!-- shop -->
 												<li>
-													<a href="shop-right.html">Shop</a>
+													<a href="shop-right.php">Shop</a>
 													<ul>
 														<li>
-															<a href="shop-account-dashboard.html">Account</a>
+															<a href="shop-account-dashboard.php">Account</a>
 															<ul>
 
 																<li>
-																	<a href="shop-account-details.html">Account details</a>
+																	<a href="shop-account-details.php">Account details</a>
 																</li>
 																<li>
-																	<a href="shop-account-addresses.html">Addresses</a>
+																	<a href="shop-account-addresses.php">Addresses</a>
 																</li>
 																<li>
-																	<a href="shop-account-address-edit.html">Edit Address</a>
+																	<a href="shop-account-address-edit.php">Edit Address</a>
 																</li>
 																<li>
-																	<a href="shop-account-orders.html">Orders</a>
+																	<a href="shop-account-orders.php">Orders</a>
 																</li>
 																<li>
-																	<a href="shop-account-order-single.html">Single Order</a>
+																	<a href="shop-account-order-single.php">Single Order</a>
 																</li>
 																<li>
-																	<a href="shop-account-downloads.html">Downloads</a>
+																	<a href="shop-account-downloads.php">Downloads</a>
 																</li>
 																<li>
-																	<a href="shop-account-password-reset.html">Password Reset</a>
+																	<a href="shop-account-password-reset.php">Password Reset</a>
 																</li>
 																<li>
-																	<a href="shop-account-login.html">Login/Logout</a>
+																	<a href="shop-account-login.php">Login/Logout</a>
 																</li>
 
 															</ul>
 														</li>
 														<li>
-															<a href="shop-right.html">Right Sidebar</a>
+															<a href="shop-right.php">Right Sidebar</a>
 														</li>
 														<li>
-															<a href="shop-left.html">Left Sidebar</a>
+															<a href="shop-left.php">Left Sidebar</a>
 														</li>
 														<li>
-															<a href="shop-product-right.html">Product Right Sidebar</a>
+															<a href="shop-product-right.php">Product Right Sidebar</a>
 														</li>
 														<li>
-															<a href="shop-product-left.html">Product Left Sidebar</a>
+															<a href="shop-product-left.php">Product Left Sidebar</a>
 														</li>
 														<li>
-															<a href="shop-cart.html">Cart</a>
+															<a href="shop-cart.php">Cart</a>
 														</li>
 														<li>
-															<a href="shop-checkout.html">Checkout</a>
+															<a href="shop-checkout.php">Checkout</a>
 														</li>
 														<li>
-															<a href="shop-order-received.html">Order Received</a>
+															<a href="shop-order-received.php">Order Received</a>
 														</li>
 
 													</ul>
@@ -159,36 +159,36 @@
 
 												<!-- events -->
 												<li>
-													<a href="events-full.html">Events</a>
+													<a href="events-full.php">Events</a>
 												</li>
 												<!-- eof events -->
 
 												<li>
-													<a href="team.html">Team</a>
+													<a href="team.php">Team</a>
 													<ul>
 														<li>
-															<a href="team.html">Team List</a>
+															<a href="team.php">Team List</a>
 														</li>
 														<li>
-															<a href="team-single.html">Team Member</a>
+															<a href="team-single.php">Team Member</a>
 														</li>
 													</ul>
 												</li>
 
 												<!-- gallery -->
 												<li>
-													<a href="gallery-regular.html">Gallery</a>
+													<a href="gallery-regular.php">Gallery</a>
 												</li>
 
 												<li>
-													<a href="comingsoon.html">Comingsoon</a>
+													<a href="comingsoon.php">Comingsoon</a>
 												</li>
 
 												<li>
-													<a href="faq2.html">FAQ</a>
+													<a href="faq2.php">FAQ</a>
 												</li>
 												<li>
-													<a href="404.html">404</a>
+													<a href="404.php">404</a>
 												</li>
 
 											</ul>
@@ -196,13 +196,13 @@
 										<!-- eof pages -->
 										<!-- blog -->
 										<li>
-											<a href="blog-right.html">Blog</a>
+											<a href="blog-right.php">Blog</a>
 										</li>
 										<!-- eof blog -->
 
 										<!-- contacts -->
 										<li>
-											<a href="contact.html">Contacts</a>
+											<a href="contact.php">Contacts</a>
 										</li>
 
 										<!-- eof contacts -->
@@ -236,7 +236,7 @@
 								<h1 class="color-main">Shop Right Sidebar</h1>
 								<ol class=" breadcrumb">
 									<li class="breadcrumb-item">
-										<a href="index.html">Home</a>
+										<a href="index.php">Home</a>
 									</li>
 									<li class="breadcrumb-item">
 										<a href="#">Shop</a>
@@ -263,17 +263,17 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/01.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Bouquet 25 red roses</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -285,17 +285,13 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/02.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Bouquet Romantic</h2>
 												<span class="price">
-													<del>
-														<span>
-															<span>$ </span>34
-														</span>
-													</del>
-													<span>$ </span>55
+													<del><span><span>₱ </span>500</span></del>
+													<span>₱ </span>300
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -303,21 +299,22 @@
 											</div>
 										</div>
 									</li>
+
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
 											<img src="images/shop/03.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>51 multicolored tulips</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -329,17 +326,17 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/04.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Bouquet Spring</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -351,17 +348,17 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/05.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Bouquet "Charm"</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -373,17 +370,17 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/06.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Spring bouquet </h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -395,17 +392,17 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/07.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Romantic bouquet</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -417,17 +414,17 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/08.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>51 white and pink</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -439,17 +436,17 @@
 										<div class="product-inner box-shadow">
 											<img src="images/shop/09.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.html"></a>
+												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Bouquet "Silver"</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>34
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -467,16 +464,16 @@
 										<span class="page-numbers current">1</span>
 									</li>
 									<li>
-										<a class="page-numbers" href="shop-right.html">2</a>
+										<a class="page-numbers" href="shop-right.php">2</a>
 									</li>
 									<li>
-										<a class="page-numbers dots" href="shop-right.html">...</a>
+										<a class="page-numbers dots" href="shop-right.php">...</a>
 									</li>
 									<li>
-										<a class="page-numbers" href="shop-right.html">5</a>
+										<a class="page-numbers" href="shop-right.php">5</a>
 									</li>
 									<li>
-										<a class="next page-numbers" href="shop-right.html"><i class="fa fa-angle-right"></i></a>
+										<a class="next page-numbers" href="shop-right.php"><i class="fa fa-angle-right"></i></a>
 									</li>
 								</ul>
 							</nav>
@@ -504,46 +501,30 @@
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
 									<li class="cat-item cat-parent">
-										<a href="shop-right.html" class="active">Funeral</a> 
+										<a href="shop-right.php" class="active">Funeral</a>
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.html">Eco Funeral</a>
+												<a href="shop-right.php">Eco Funeral</a>
 											</li>
 											<li class="cat-item">
-											<a href="shop-right.html">Memorial Park</a>
+												<a href="shop-right.php">Memmorial Park</a>
 											</li>
 										</ul>
 									</li>
-
 									<li class="cat-item cat-parent">
-										<a href="shop-right.html" class="active">Memorial Products</a>
-										<ul class="children">
-											<li class="cat-item">
-												<a href="shop-right.html"> Bouquet</a>
-											</li>
-											<li class="cat-item">
-												<a href="shop-right-caskets.html">Castkets</a> 	
-											</li>
-											<li class="cat-item">
-												<a href="shop-right-urns.html">Urns </a>
-											</li>
-										</ul>
-									</li>
-
-									<li class="cat-item cat-parent">
-										<a href="shop-right.html">Mortuary</a>
+										<a href="shop-right.php">Mortuary</a>
 									</li>
 									<li class="cat-item cat-parent">
-										<a href="shop-right.html">Cremations</a>
+										<a href="shop-right.php">Cremations</a>
 									</li>
 									<li class="cat-item cat-parent">
-										<a href="shop-right.html">Burrial</a>
+										<a href="shop-right.php">Burrial</a>
 									</li>
 									<li class="cat-item cat-parent">
-										<a href="shop-right.html">Plan Ahead</a>
+										<a href="shop-right.php">Plan Ahead</a>
 									</li>
 									<li class="cat-item cat-parent">
-										<a href="shop-right.html">Ship Outs</a>
+										<a href="shop-right.php">Ship Outs</a>
 									</li>
 								</ul>
 							</div>
@@ -555,7 +536,7 @@
 
 								<ul class="product_list_widget">
 									<li>
-										<a href="shop-product-right.html">
+										<a href="shop-product-right.php">
 											<img src="images/shop/05.jpg" alt="">
 											<span class="product-title">Bouquet "Charm"</span>
 										</a>
@@ -569,11 +550,11 @@
 											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>34
+											<span class="woocommerce-Price-currencySymbol">₱</span>34
 										</span>
 									</li>
 									<li>
-										<a href="shop-product-right.html">
+										<a href="shop-product-right.php">
 											<img src="images/shop/08.jpg" alt="">
 											<span class="product-title">51 white and pink</span>
 										</a>
@@ -588,18 +569,18 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
+												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
+											<span class="woocommerce-Price-currencySymbol">₱</span>
 											34
 										</span>
 									</li>
 
 									<li>
-										<a href="shop-product-right.html">
+										<a href="shop-product-right.php">
 											<img src="images/shop/01.jpg" alt="">
 											<span class="product-title">Bouquet 25 red roses</span>
 										</a>
@@ -614,12 +595,12 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
+												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
+											<span class="woocommerce-Price-currencySymbol">₱</span>
 											34
 										</span>
 									</li>
@@ -634,11 +615,11 @@
 								<form method="get" action="#">
 									<div class="price_slider_wrapper">
 
-										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-											<span class="from">$20.00</span>
+										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="">
+											<span class="from">₱20.00</span>
 											<div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 14%; width: 65%;">
 											</div>
-											<span class="to">$700.00</span>
+											<span class="to">₱700.00</span>
 											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 12%;">
 
 											</span>
@@ -671,7 +652,7 @@
 						<div class="col-md-6 col-xl-3 animate" data-animation="fadeInUp">
 
 							<div class="widget widget_text">
-								<a href="index.html" class="logo">
+								<a href="index.php" class="logo">
 									<img src="images/logo.png" alt="">
 									<div class="d-flex flex-column">
 										<h4 class="logo-text color-main">Cherubim Of Heaven</h4>
