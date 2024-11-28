@@ -12,7 +12,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin </title>
-        <link rel="stylesheet" href="css/aadmin.css" class="color-switcher-link">
+        <link rel="stylesheet" href="css/admin1.css" class="color-switcher-link">
     </head>
 
     <body>

@@ -1,6 +1,15 @@
 <?php
     include ("connect.php");
 ?>
+
+<?php
+    session_start();
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+        header('Location: admin-login.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -34,8 +43,6 @@
                     </div>
 
                     <div id="delete-row">
-
-                    
 
                         <p>Enter ID and toggle status:</p>
                         <div>
@@ -174,7 +181,7 @@
                     echo "<script>alert('Error: " . $stmt->error . "');</script>";
                 }
             }
-            
+
             if(!empty($_POST['service_status'])){
                 $service_status = filter_var($_POST['service_status'], FILTER_SANITIZE_SPECIAL_CHARS);
                 $stmt = $conn->prepare("UPDATE service_progress SET Service_status = ? where Transaction_ID = ?" );

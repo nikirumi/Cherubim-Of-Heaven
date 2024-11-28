@@ -1,6 +1,8 @@
 h1{
     font-size: 70px;
     color: #39576d ;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 p{
@@ -110,7 +112,7 @@ input{
 
 .aa{
     justify-content: center;
-    width: 210px;
+    width: 150px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -124,6 +126,8 @@ input{
     font-size: 16px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(233, 233, 233, 0.7); /* Subtle inset shadow */
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+
 }
 
 a:hover {
@@ -152,5 +156,12 @@ button.aa {
     width: 210px;
     height: 60px;
     width: auto; /* Remove fixed width if you want to auto-size based on text */
-    
+}
+
+
+#textField{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

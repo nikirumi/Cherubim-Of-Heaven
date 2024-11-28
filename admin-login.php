@@ -10,7 +10,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin-Login</title>
-        <link rel="stylesheet" href="css/admin.css" class="color-switcher-link">
+        <link rel="stylesheet" href="css/admin1.css" class="color-switcher-link">
         <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
     </head>
     <body>
@@ -26,16 +26,17 @@
 
         <div id="right">
 
-            <div id="contact-form">
+            <div id="#aaa">
 
-                <form action="admin-login.php" method="post">          
+                <form action="admin-login.php" method="post">        
+
                 <h1>Admin Login</h1>
 
-                <input type="text" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" value="" placeholder="Username">
-                <input type="password" class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" name="password" id="password" value="" placeholder="Password">
-
+                <div id="textField">
+                <input type="text" class="form-control " name="username" id="username" value="" placeholder="Username">
+                <input type="password" class="form-control " name="password" id="password" value="" placeholder="Password">
                 <button type="submit" class="woocommerce-Button btn btn-maincolor" name="login">Login</button>
-
+                </div>
                 </form>
                
             </div>
