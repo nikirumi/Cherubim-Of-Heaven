@@ -316,130 +316,27 @@
 									</thead>
 									<tbody>
 
-										<tr class="cart_item">
-
-											<td class="product-remove">
-												<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-											</td>
-
-											<td class="product-thumbnail">
-												<a href="shop-product-right.php">
-													<img width="180" height="180" src="images/shop/01.jpg" class="" alt="">
-												</a>
-											</td>
-
-											<td class="product-name" data-title="Product">
-												<a href="shop-product-right.php">Premium Quality</a>
-											</td>
-
-											<td class="product-price" data-title="Price">
-												<span class="amount">
-													<span>$</span>12.00
-												</span>
-											</td>
-
-											<td class="product-quantity product" data-title="Quantity">
-												<div class="quantity">
-													<input type="button" value="+" class="plus">
-													<i class="fa fa-angle-up" aria-hidden="true"></i>
-													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" title="Qty" size="4">
-													<input type="button" value="-" class="minus">
-													<i class="fa fa-angle-down" aria-hidden="true"></i>
-												</div>
-											</td>
-
-											<td class="product-subtotal" data-title="Total">
-												<span class="amount">
-													<span>$</span>12.00
-												</span>
-											</td>
-										</tr>
-										<tr class="cart_item">
-
-											<td class="product-remove">
-												<a href="#" class="remove" aria-label="Remove this item" data-product_id="76" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-											</td>
-
-											<td class="product-thumbnail">
-												<a href="shop-product-right.php">
-													<img width="180" height="180" src="images/shop/02.jpg" class="" alt="">
-												</a>
-											</td>
-
-											<td class="product-name" data-title="Product">
-												<a href="shop-product-right.php">Woo Ninja</a>
-											</td>
-
-											<td class="product-price" data-title="Price">
-												<span class="amount">
-													<span>$</span>15.00
-												</span>
-											</td>
-
-											<td class="product-quantity product" data-title="Quantity">
-												<div class="quantity">
-													<input type="button" value="+" class="plus">
-													<i class="fa fa-angle-up" aria-hidden="true"></i>
-													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" title="Qty" size="4">
-													<input type="button" value="-" class="minus">
-													<i class="fa fa-angle-down" aria-hidden="true"></i>
-												</div>
-											</td>
-
-											<td class="product-subtotal" data-title="Total">
-												<span class="amount">
-													<span>$</span>15.00
-												</span>
-											</td>
-										</tr>
-										<tr class="cart_item">
-
-											<td class="product-remove">
-												<a href="#" class="remove" aria-label="Remove this item" data-product_id="90" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-											</td>
-
-											<td class="product-thumbnail">
-												<a href="shop-product-right.php">
-													<img width="180" height="180" src="images/shop/03.jpg" class="" alt="">
-												</a>
-											</td>
-
-											<td class="product-name" data-title="Product">
-												<a href="shop-product-right.php">Woo Album #3</a>
-											</td>
-
-											<td class="product-price" data-title="Price">
-												<span class="amount">
-													<span>$</span>9.00
-												</span>
-											</td>
-
-											<td class="product-quantity product" data-title="Quantity">
-												<div class="quantity">
-													<input type="button" value="+" class="plus">
-													<i class="fa fa-angle-up" aria-hidden="true"></i>
-													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" title="Qty" size="4">
-													<input type="button" value="-" class="minus">
-													<i class="fa fa-angle-down" aria-hidden="true"></i>
-												</div>
-											</td>
-
-											<td class="product-subtotal" data-title="Total">
-												<span class="amount">
-													<span>$</span>18.00
-												</span>
-											</td>
-										</tr>
-
 										<?php
 
 											// Check if the cart is not empty
+											$subtotalAll = 0;
 											if (isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
 												foreach ($_SESSION['cart'] as $service_id => $item) {
+													
+													if (isset($item['removed']) && $item['removed'] === true) {
+														continue;
+													}
+
+													//$item['removed'] = false;
+
 													$service_name = $item['name'];
 													$service_price = $item['price'];
 													$quantity = $item['quantity'];
+
+													//$_SESSION['cart'][$service_id]['removed'] = false;
+
 													$subtotal = $service_price * $quantity; // Calculate subtotal
+													$subtotalAll += $subtotal; 
 
 													$intValue = (int) preg_replace('/\D/', '', $service_id);
 													$image_name = '';
@@ -452,15 +349,13 @@
 														$image_name = $intValue;
 													}
 
-
-													// Display each cart item in a table row
 													?>
 													
 													<tr class="cart_item">
 														<td class="product-remove">
-															<a href="remove_item.php?service_id=<?php echo $service_id; ?>" class="remove" aria-label="Remove this item">
-																<i class="fs-14 ico-trash color-main"></i>
-															</a>
+														<a href="remove_item.php?service_id=<?php echo $service_id; ?>" aria-label="Remove this item">
+															<i class="fs-14 ico-trash color-main"></i>
+														</a>
 														</td>
 
 														<td class="product-thumbnail">
@@ -475,7 +370,7 @@
 
 														<td class="product-price" data-title="Price">
 															<span class="amount">
-																<span>$</span><?php echo number_format($service_price, 2); ?>
+																<span>₱</span><?php echo number_format($service_price, 2); ?>
 															</span>
 														</td>
 
@@ -483,7 +378,7 @@
 															<div class="quantity">
 																<input type="button" value="+" class="plus">
 																<i class="fa fa-angle-up" aria-hidden="true"></i>
-																<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="<?php echo $quantity; ?>" title="Qty" size="4">
+																<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity[<?php echo $service_id; ?>]" value="<?php echo $quantity; ?>" title="Qty" size="4">
 																<input type="button" value="-" class="minus">
 																<i class="fa fa-angle-down" aria-hidden="true"></i>
 															</div>
@@ -491,16 +386,19 @@
 
 														<td class="product-subtotal" data-title="Total">
 															<span class="amount">
-																<span>$</span><?php echo number_format($subtotal, 2); ?>
+																<span>₱</span><?php echo number_format($subtotal, 2); ?>
 															</span>
 														</td>
 													</tr>
 
 													<?php
 												}
-											} else {
+											} 
+											
+											else {
 												echo "<tr><td colspan='6'>Your cart is empty.</td></tr>";
 											}
+
 											?>
 
 										<tr>
@@ -538,10 +436,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -560,10 +458,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -582,10 +480,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -604,10 +502,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -626,10 +524,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -648,10 +546,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -670,10 +568,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -692,10 +590,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -714,10 +612,10 @@
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>34
 															</span>
 														</del>
-														<span>$ </span>55
+														<span>₱ </span>55
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -741,7 +639,7 @@
 												<th>Subtotal</th>
 												<td data-title="Subtotal">
 													<span class="amount">
-														<span>$</span>45.00
+														<span>₱</span><?php echo number_format($subtotalAll, 2); ?>
 													</span>
 												</td>
 											</tr>
@@ -751,10 +649,10 @@
 												<th>Total</th>
 												<td data-title="Total">
 													<strong>
-                        <span class="amount">
-                            <span>$</span>45.00
-                        </span>
-                    </strong>
+														<span class="amount">
+															<span>₱</span><?php echo number_format($subtotalAll, 2); ?>
+														</span>
+													</strong>
 												</td>
 											</tr>
 
