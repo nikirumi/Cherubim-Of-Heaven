@@ -11,7 +11,7 @@
     </head>
 
     
-    <body>
+    <body> 
         <div id="nav">
             <div id="nav-elements">
                 <img src="images/logo.png">
@@ -194,7 +194,7 @@
         else {
             echo "<script>alert('ID does not exist');</script>";
             echo "<script>window.location.href='transaction-list.php';</script>";
-            exit();
+            exit(); //es
         }
 
         
