@@ -1,14 +1,20 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
+        header('Location: admin-login.php');
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin </title>
-        <link rel="stylesheet" href="css/admin.css" class="color-switcher-link">
-        <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
+        <link rel="stylesheet" href="css/aadmin.css" class="color-switcher-link">
     </head>
 
-    
     <body>
 
         <div id="left">
@@ -24,25 +30,32 @@
 
             <div id="contact-form">
 
-                <form action="/submit" method="post">          
-                <h1>Hello, Admin!</h1>
+                <div id="aaa">          
+                    <h1>Hello, Admin!</h1>
 
-                <a href="account-list.php" >ACCOUNT LIST</a>
-                <a href="item-list.php" >ITEM LIST</a>
-                <a href="transaction-list.php" >TRANSACTION LIST</a>
+                    <a class="aa" href="account-list.php" >ACCOUNT LIST</a>
+                    <a class="aa" href="item-list.php" >ITEM LIST</a>
+                    <a class="aa" href="transaction-list.php" >TRANSACTION LIST</a>
 
+                    <form action="admin.php" method="post">
+                        <button class="aa" type="submit" name="logout">LOG OUT</button>
+                    </form>
 
-
-                </form>
-               
+                </div>               
             </div>
-
-        </div>
-        
+        </div>      
     </body>
-
 </html>
 
+<?php
+    if (isset($_POST['logout'])) {
+        session_unset(); // Clear all session variables
+        session_destroy(); // Destroy the session
+        header("Location: admin-login.php"); 
+        exit();
+    }
+
+?>
 
 
 
