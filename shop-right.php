@@ -503,26 +503,15 @@
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php" class="active">Funeral</a> 
-										<ul class="children">
-											<li class="cat-item">
-												<a href="shop-right.php">Eco Funeral</a>
-											</li>
-											<li class="cat-item">
-											<a href="shop-right.php">Memorial Park</a>
-											</li>
-										</ul>
-									</li>
 
-									<li class="cat-item cat-parent">
+								<li class="cat-item cat-parent">
 										<a href="shop-right.php" class="active">Memorial Products</a>
 										<ul class="children">
 											<li class="cat-item">
 												<a href="shop-right.php"> Bouquet</a>
 											</li>
 											<li class="cat-item">
-												<a href="shop-right-caskets.php">Castkets</a> 	
+												<a href="shop-right-caskets.php">Caskets</a> 	
 											</li>
 											<li class="cat-item">
 												<a href="shop-right-urns.php">Urns </a>
@@ -531,20 +520,17 @@
 									</li>
 
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Mortuary</a>
+										 <a href="shop-right.php" class="active">Spaces</a> 
+										<ul class="children">
+											<li class="cat-item">
+												<a href="shop-right.php">Funeral</a>
+											</li>
+											<li class="cat-item">
+												<a href="shop-right.php">Memorial Space</a> 
+											</li>
+										</ul>
 									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Cremations</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Burrial</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Plan Ahead</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Ship Outs</a>
-									</li>
+									
 								</ul>
 							</div>
 
