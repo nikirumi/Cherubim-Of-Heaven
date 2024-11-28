@@ -65,7 +65,7 @@
             if ($stmt === false) {
                 die('MySQL prepare error: ' . $conn->error);
             }
-            
+
             $stmt->bind_param("sssdssss", $trans_id, $client_id, $current_datetime, $total, $payment_method, $payment_status, $gen_add, $retrieval_method);
 
             if ($stmt->execute()) {
@@ -90,8 +90,7 @@
                     }
                 }
                 $stmt2->close();
-            }
-
+            } //haha
                 if (isset($_SESSION['cart'])) {
                     unset($_SESSION['cart']);
                     echo "Cart has been cleared after checkout.";
