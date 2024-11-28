@@ -303,8 +303,8 @@
 
 												<div class="u-column1 col-1 woocommerce-Address">
 													<header class="woocommerce-Address-title title">
-														<h6>Billing address</h6>
-														<a href="shop-account-address-edit.php" class="edit">Edit</a>
+														<h6>General Address</h6>
+														<a href="shop-account-address-edit.php" class="edit" hidden>Edit</a>
 													</header>
 													<?php
 											
