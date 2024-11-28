@@ -154,9 +154,6 @@
 
 
 <?php
-
-
-
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $transaction_ID = filter_var($_POST['transaction_ID'], FILTER_SANITIZE_SPECIAL_CHARS);
@@ -165,6 +162,7 @@
         $stmt->bind_param("s", $transaction_ID);
         $stmt->execute();
         $result = $stmt->get_result();
+        $end_datetime = date("Y-m-d H:i:s");
 
         if ($result->num_rows > 0){
 
@@ -188,6 +186,30 @@
                 $stmt->bind_param("ss", $service_status, $transaction_ID);
     
                 if ($stmt->execute()) {
+
+                    $stmt2 = $conn->prepare("SELECT * FROM service_progress WHERE Transaction_ID = ?");
+                    $stmt2->bind_param("s", $transaction_ID);
+
+                    if ($stmt2->execute()) {
+
+                        $result = $stmt2->get_result();
+                        $data = $result->fetch_assoc(); // Fetch the single row as an associative array
+
+                        if($data['Service_status'] === "Completed"){
+                            $stmt3 = $conn->prepare("UPDATE service_progress SET End_Datetime = ? where Transaction_ID = ?");
+                            $stmt3->bind_param("ss", $end_datetime, $transaction_ID);
+
+                            if ($stmt3->execute()) {
+                                echo "<script>alert('Status Updated and End Date/Time recorded!');</script>";
+                            } else {
+                                echo "Error updating End Datetime: " . $stmt3->error;
+                            }
+                        }
+                    } else {
+                        echo "Error: " . $stmt2->error;
+                    }
+
+
                     echo "<script>alert('Status Updated!');</script>";
                     echo "<script>window.location.href='transaction-list.php';</script>";
                 }

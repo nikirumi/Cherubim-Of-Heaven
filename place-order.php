@@ -15,6 +15,7 @@
             $payment_method = isset($_POST['payment_method']) ? $_POST['payment_method'] : '';
             $retrieval_method = "test";
             $payment_status = "Pending";
+            $service_status = "On Going";
 
             $gen_add =  $billing_hnum . " " . $billing_sname . ", " . $billing_purok . " " . $billing_barangay . ", Hagonoy, Bulacan";
 
@@ -45,6 +46,7 @@
             $trans_id = $newID;
 
             $current_datetime = date("Y-m-d H:i:s");
+            $start_datetime = date("Y-m-d H:i:s");
 
             $clientquery = "SELECT Client_ID FROM CLIENT WHERE Username = ?";
             $stmt = $conn->prepare($clientquery);
@@ -57,16 +59,38 @@
 
             $add_trans_query = "INSERT INTO transaction (Transaction_ID, Client_ID, Transaction_Date, Total_Amount, Payment_Method, Payment_Status, General_Address, Retrieval_Method) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
             $stmt = $conn->prepare($add_trans_query);
 
             if ($stmt === false) {
                 die('MySQL prepare error: ' . $conn->error);
             }
-
+            
             $stmt->bind_param("sssdssss", $trans_id, $client_id, $current_datetime, $total, $payment_method, $payment_status, $gen_add, $retrieval_method);
 
             if ($stmt->execute()) {
                 echo "Transaction successfully inserted!";
+
+                if (!empty($cart)) {
+                $add_service_query = "INSERT INTO service_progress (Transaction_ID, Service_ID, Start_Datetime, Service_status) 
+                                      VALUES (?, ?, ?, ?)";
+                $stmt2 = $conn->prepare($add_service_query);
+
+                if ($stmt2 === false) {
+                    die('MySQL prepare error: ' . $conn->error);
+                }
+
+                foreach ($cart as $service_id => $item) {
+                    $start_datetime = $current_datetime; // Same as transaction date
+                    $service_status = "On Going";
+                    $stmt2->bind_param("ssss", $trans_id, $service_id, $start_datetime, $service_status);
+
+                    if (!$stmt2->execute()) {
+                        echo "Error inserting into service_progress: " . $stmt2->error;
+                    }
+                }
+                $stmt2->close();
+            }
 
                 if (isset($_SESSION['cart'])) {
                     unset($_SESSION['cart']);
@@ -74,7 +98,7 @@
                 }
 
                 header("Location: index.php");
-            } 
+            }  
             
             else {
                 echo "Error: " . $stmt->error;
