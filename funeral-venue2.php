@@ -8,34 +8,45 @@
 
 <?php
 
-	session_start();
-	include("connect.php");
-	//include("add-to-cart.php");
+	include("check_session.php");
 
-	// Get the product ID from the URL
-	$product_id = isset($_GET['id']) ? ($_GET['id']) : 0;
+    $sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1 OFFSET 1;";
 
-	// Fetch product details from the database
-	$stmt = $conn->prepare("SELECT Service_ID, Service_Name, Service_Price, Service_Description FROM memorial_services WHERE Service_ID = $product_id");
-	//$stmt->bind_param("s", $product_id);
-	$stmt->execute();
-	$result = $stmt->get_result();
+    $result = $conn->query($sql);
 
-	if ($result->num_rows > 0) {
-		$row = $result->fetch_assoc();
-		$service_id = $row['Service_ID'];
-		$service_name = $row['Service_Name'];
-		$service_price = $row['Service_Price'];
-		$service_description = $row['Service_Description'];
-	} 
-	
-	else {
-		echo "Product not found.";
-		exit();
-	}
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $service_id = $row['service_id'];
 
-	$conn->close();
+        $sql = "SELECT Start_Datetime, End_Datetime FROM service_progress WHERE Service_status = 'On Going' AND Service_ID = ?";
+        $stmt = $conn->prepare($sql);
 
+        $stmt->bind_param("s", $service_id);  
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $disabledDates = array();
+        while ($row = $result->fetch_assoc()) {
+            $startDate = new DateTime($row['Start_Datetime']);
+            $endDate = new DateTime($row['End_Datetime']);
+
+            while ($startDate <= $endDate) {
+                $disabledDates[] = $startDate->format('m/d/Y');
+                $startDate->modify('+1 day');
+            }
+        }
+
+        echo "<script> var disabledDates = " . json_encode($disabledDates) . ";</script>";
+
+        $stmt->close();
+    } 
+    
+    else {
+        echo "No service found with the given type.";
+    }
+    
 ?>
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
@@ -51,12 +62,43 @@
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animations.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .datepicker-container {
+            margin-top: 20px;
+        }
+        #datepicker {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .book-button {
+            margin-top: 15px;
+            background-color: #d3b675;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .book-button:hover {
+            background-color: #bfa35d;
+        }
+    </style>
 
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
@@ -710,9 +752,9 @@
 
 								<div class="images" data-columns="5">
 									<figure>
-										<div data-thumb="images/shop/01.jpg">
-											<a href="images/shop/01.jpg">
-												<img src="images/shop/01.jpg" alt="" data-caption="" data-src="images/shop/01.jpg" data-large_image="images/shop/01.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										<div data-thumb="images/Funeral/02.jpg">
+											<a href="images/Funeral/02.jpg">
+												<img src="images/Funeral/02.jpg" alt="" data-caption="" data-src="images/Funeral/02.jpg" data-large_image="images/shop/01.jpg" data-large_image_width="1000" data-large_image_height="1000">
 											</a>
 										</div>
 										<div data-thumb="images/shop/02.jpg">
@@ -741,38 +783,112 @@
 								</div>
 
 								<div class="summary entry-summary text-center text-md-left">
-									<h6 class="product_title single_title"><?php echo $service_name; ?></h6>
-									<p><?php echo $service_description; ?></p>
-									<div class="woocommerce-product-rating">
-										<!-- Your rating system here -->
-									</div>
+									<h6 class="product_title single_title">Venue 2</h6>
+									<p>short desc po ito, yung long description doon sa baba. Tnx u nice <br><br> Bale dito siguro mga inclusions</p>
+									<div class="woocommerce-product-rating"></div>
 
-									<form method="POST" action="add-to-cart.php">
+									<form method="POST" action="book-venue.php" id="bookingForm">
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
-												<div class="quantity single">
-													<input type="button" value="+" class="plus">
-													<i class="fa fa-angle-up" aria-hidden="true"></i>
-													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" size="4">
-													<input type="button" value="-" class="minus">
-													<i class="fa fa-angle-down" aria-hidden="true"></i>
-												</div>
 												<span class="price">
-													<span>₱ </span><?php echo $service_price; ?>
+													<span>₱ </span>25,000 / day
 												</span>
 											</div>
 
-											<!-- Hidden input to pass the product name dynamically -->
-											<input type="hidden" name="product_name" value="<?php echo $service_name; ?>">
+											<div class="datepicker-container" style="margin: 10px 0;">
+												<label for="datepicker">Select Starting Date:</label>
+												<input readonly type="text" id="datepicker" name="booking_start_date" placeholder="Choose a start date" required>
+											</div>
+
+											<div class="datepicker-container" style="margin: 10px 0;">
+												<label for="end_datepicker">Select End Date:</label>
+												<input readonly type="text" id="end_datepicker" name="booking_end_date" placeholder="Choose an end date" required>
+											</div>
+
+											<?php
+											
+												$sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1 OFFSET 1;";
+
+												$result = $conn->query($sql);
+
+												if ($result->num_rows > 0) {
+													$row = $result->fetch_assoc();
+													$service_id = $row['service_id'];
+													echo "<input type='hidden' name='service_id' id='' value = $service_id>";
+												} 
+												else {
+													echo "No service found with the given type.";
+												}
+
+												$conn->close();
+
+											?>					
 
 											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
-												<span>Add to cart</span>
+												<span>Book</span>
 											</button>
+
 										</div>
 									</form>
+									
 								</div>
-								<!-- .summary -->
 
+								<script>
+									jQuery(document).ready(function($) {
+
+										var disabledDates = <?php echo json_encode($disabledDates); ?>;
+
+										$("#datepicker").datepicker({
+											dateFormat: "mm/dd/yy",
+											minDate: 0, 
+											showAnim: "slideDown",
+											beforeShowDay: function(date) {
+												var string = $.datepicker.formatDate('mm/dd/yy', date);
+												return [disabledDates.indexOf(string) == -1]; 
+											},
+											onSelect: function(selectedDate) {
+												var selectedStartDate = $.datepicker.parseDate('mm/dd/yy', selectedDate);
+										
+												$("#end_datepicker").prop("disabled", false);
+											
+												$("#end_datepicker").datepicker("option", "minDate", selectedStartDate);
+											
+												updateEndDatePicker(selectedStartDate);
+											}
+										});
+
+										$("#end_datepicker").datepicker({
+											dateFormat: "mm/dd/yy",
+											minDate: 0,
+											showAnim: "slideDown",
+											beforeShowDay: function(date) {
+												var string = $.datepicker.formatDate('mm/dd/yy', date);
+												return [disabledDates.indexOf(string) == -1];
+											}
+										});
+
+										$("#end_datepicker").prop("disabled", true);
+
+										function updateEndDatePicker(startDate) {
+											var endDatepicker = $("#end_datepicker");
+											var maxBookingDuration = 6;  
+											var maxEndDate = new Date(startDate);
+											maxEndDate.setDate(maxEndDate.getDate() + maxBookingDuration); 
+
+											endDatepicker.datepicker("option", "maxDate", maxEndDate);
+
+											endDatepicker.datepicker("option", "beforeShowDay", function(date) {
+												var string = $.datepicker.formatDate('mm/dd/yy', date);
+												if (disabledDates.indexOf(string) != -1 || date > maxEndDate) {
+													return [false];
+												}
+												return [true]; 
+											});
+										}
+									});
+								</script>
+
+								<!-- .summary -->
 
 								<div class="woocommerce-tabs wc-tabs-wrapper">
 									<h4 class="mb-25 text-center text-md-left">Description</h4>
@@ -1185,7 +1301,6 @@
 											</li>
 										</ul>
 									</li>
-								</ul>
 							</div>
 
 

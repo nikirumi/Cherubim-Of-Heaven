@@ -523,7 +523,7 @@
 										 <a href="shop-right.php" class="active">Spaces</a> 
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.php">Funeral</a>
+												<a href="shop-right-funeral.php">Funeral</a>
 											</li>
 											<li class="cat-item">
 												<a href="shop-right.php">Memorial Space</a> 

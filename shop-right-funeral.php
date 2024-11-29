@@ -263,7 +263,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Funeral/01.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="funeral-venue1.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Venue 1</h2>
@@ -285,7 +285,7 @@
 										<div class="product-inner box-shadow">
 											<img style="height: 180px;" src="images/Funeral/02.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
+												<a class="abs-link" title="" href="funeral-venue2.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Venue 2</h2>
@@ -307,7 +307,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Funeral/03.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="funeral-venue3.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Venue 3</h2>
@@ -392,7 +392,7 @@
 										 <a href="shop-right.php" class="active">Spaces</a> 
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.php">Funeral</a>
+												<a href="shop-right-funeral.php">Funeral</a>
 											</li>
 											<li class="cat-item">
 												<a href="shop-right.php">Memorial Space</a> 

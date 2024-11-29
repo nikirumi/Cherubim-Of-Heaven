@@ -10,25 +10,43 @@
 
 	include("check_session.php");
 
-	$sql = "SELECT Start_Datetime, End_Datetime FROM service_progress WHERE Service_status = 'Ongoing'";
-	$result = $conn->query($sql);
+    $sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1;";
 
-	// Array to hold the dates that need to be disabled in the datepicker
-	$disabledDates = array();
-	while ($row = $result->fetch_assoc()) {
-		$startDate = new DateTime($row['Start_Datetime']);
-		$endDate = new DateTime($row['End_Datetime']);
+    $result = $conn->query($sql);
 
-		// Loop through the range of dates and add them to the disabledDates array
-		while ($startDate <= $endDate) {
-			$disabledDates[] = $startDate->format('m/d/Y');
-			$startDate->modify('+1 day');
-		}
-	}
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $service_id = $row['service_id'];
 
-	// Pass the disabled dates to JavaScript
-	echo "<script> var disabledDates = " . json_encode($disabledDates) . ";</script>";
+        $sql = "SELECT Start_Datetime, End_Datetime FROM service_progress WHERE Service_status = 'On Going' AND Service_ID = ?";
+        $stmt = $conn->prepare($sql);
 
+        $stmt->bind_param("s", $service_id);  
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $disabledDates = array();
+        while ($row = $result->fetch_assoc()) {
+            $startDate = new DateTime($row['Start_Datetime']);
+            $endDate = new DateTime($row['End_Datetime']);
+
+            while ($startDate <= $endDate) {
+                $disabledDates[] = $startDate->format('m/d/Y');
+                $startDate->modify('+1 day');
+            }
+        }
+
+        echo "<script> var disabledDates = " . json_encode($disabledDates) . ";</script>";
+
+        $stmt->close();
+    } 
+    
+    else {
+        echo "No service found with the given type.";
+    }
+    
 ?>
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
@@ -769,7 +787,7 @@
 									<p>short desc po ito, yung long description doon sa baba. Tnx u nice <br><br> Bale dito siguro mga inclusions</p>
 									<div class="woocommerce-product-rating"></div>
 
-									<form method="POST" action="add-to-cart.php">
+									<form method="POST" action="book-venue.php" id="bookingForm">
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
 												<span class="price">
@@ -787,13 +805,32 @@
 												<input readonly type="text" id="end_datepicker" name="booking_end_date" placeholder="Choose an end date" required>
 											</div>
 
+											<?php
+											
+												$sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1";
+
+												$result = $conn->query($sql);
+
+												if ($result->num_rows > 0) {
+													$row = $result->fetch_assoc();
+													$service_id = $row['service_id'];
+													echo "<input type='hidden' name='service_id' id='' value = $service_id>";
+												} 
+												else {
+													echo "No service found with the given type.";
+												}
+
+												$conn->close();
+
+											?>					
+
 											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
 												<span>Book</span>
 											</button>
 
-											<input type="hidden" name="product_name" value="Venue 1">
 										</div>
 									</form>
+									
 								</div>
 
 								<script>
@@ -1238,33 +1275,32 @@
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php" class="active">Funeral</a>
+								<li class="cat-item cat-parent">
+										<a href="shop-right.php" class="active">Memorial Products</a>
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.php">Eco Funeral</a>
+												<a href="shop-right.php"> Bouquet</a>
 											</li>
 											<li class="cat-item">
-												<a href="shop-right.php">Memmorial Park</a>
+												<a href="shop-right-caskets.php">Caskets</a> 	
+											</li>
+											<li class="cat-item">
+												<a href="shop-right-urns.php">Urns </a>
 											</li>
 										</ul>
 									</li>
+
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Mortuary</a>
+										 <a href="shop-right.php" class="active">Spaces</a> 
+										<ul class="children">
+											<li class="cat-item">
+												<a href="shop-right-funeral.php">Funeral</a>
+											</li>
+											<li class="cat-item">
+												<a href="shop-right.php">Memorial Space</a> 
+											</li>
+										</ul>
 									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Cremations</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Burrial</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Plan Ahead</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Ship Outs</a>
-									</li>
-								</ul>
 							</div>
 
 
