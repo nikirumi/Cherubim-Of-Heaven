@@ -10,7 +10,7 @@
 
 	include("check_session.php");
 
-    $sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1;";
+    $sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1 OFFSET 2;";
 
     $result = $conn->query($sql);
 
@@ -48,7 +48,6 @@
     }
     
 ?>
-
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
 <head>
 	<title>Memento - Multipurpose Funeral Service HTML template</title>
@@ -752,9 +751,9 @@
 
 								<div class="images" data-columns="5">
 									<figure>
-										<div data-thumb="images/Funeral/01.jpg">
-											<a href="images/Funeral/01.jpg">
-												<img src="images/Funeral/01.jpg" alt="" data-caption="" data-src="images/Funeral/01.jpg" data-large_image="images/shop/01.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										<div data-thumb="images/Funeral/03.jpg">
+											<a href="images/Funeral/03.jpg">
+												<img src="images/Funeral/03.jpg" alt="" data-caption="" data-src="images/Funeral/03.jpg" data-large_image="images/shop/01.jpg" data-large_image_width="1000" data-large_image_height="1000">
 											</a>
 										</div>
 										<div data-thumb="images/shop/02.jpg">
@@ -783,7 +782,7 @@
 								</div>
 
 								<div class="summary entry-summary text-center text-md-left">
-									<h6 class="product_title single_title">Venue 1</h6>
+									<h6 class="product_title single_title">Venue 3</h6>
 									<p>short desc po ito, yung long description doon sa baba. Tnx u nice <br><br> Bale dito siguro mga inclusions</p>
 									<div class="woocommerce-product-rating"></div>
 
@@ -791,7 +790,7 @@
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
 												<span class="price">
-													<span>₱ </span>15,000 / day
+													<span>₱ </span>30,000 / day
 												</span>
 											</div>
 
@@ -807,7 +806,7 @@
 
 											<?php
 											
-												$sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1";
+												$sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1 OFFSET 2;";
 
 												$result = $conn->query($sql);
 
