@@ -1,41 +1,33 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
 <?php
 
 	session_start();
 	include("connect.php");
-	//include("add-to-cart.php");
 
-	// Get the product ID from the URL
-	$product_id = isset($_GET['id']) ? ($_GET['id']) : 0;
+	$service_id = isset($_GET['id']) ? ($_GET['id']) : 0;				
+    
+    $findSpaces = "SELECT 
+                    ms.MS_Service_ID, 
+                    ms.Space_Type,  
+                    ms.Space_Status,  
+                    msr.Service_ID, 
+                    msr.Service_Name, 
+                    msr.Service_Description,   
+                    msr.Service_Price,  
+                    msr.Service_Type
+                    FROM MEMORIAL_SPACE ms 
+                    JOIN MEMORIAL_SERVICES msr 
+                    ON ms.MS_Service_ID = msr.Service_ID
+                    WHERE ms.MS_Service_ID = ?"; // Filtering by MS_Service_ID
 
-	// Fetch product details from the database
-	$stmt = $conn->prepare("SELECT Service_ID, Service_Name, Service_Price, Service_Description FROM memorial_services WHERE Service_ID = $product_id");
-	//$stmt->bind_param("s", $product_id);
+    $stmt =$conn->prepare($findSpaces);
+    $stmt->bind_param("s", $service_id); 
 	$stmt->execute();
-	$result = $stmt->get_result();
 
-	if ($result->num_rows > 0) {
-		$row = $result->fetch_assoc();
-		$service_id = $row['Service_ID'];
-		$service_name = $row['Service_Name'];
-		$service_price = $row['Service_Price'];
-		$service_description = $row['Service_Description'];
-	} 
-	
-	else {
-		echo "Product not found.";
-		exit();
-	}
+    $result = $stmt->get_result();
 
-	$conn->close();
-
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+    }
 ?>
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
@@ -118,7 +110,7 @@
 								<a href="index.php" class="logo">
 									<img src="images/logo.png" alt="">
 									<div class="d-flex flex-column">
-										<h4 class="logo-text color-main">Memento</h4>
+										<h4 class="logo-text color-main">Cherubim of Heaven</h4>
 										<span class="logo-subtext">Funeral Service</span>
 									</div>
 								</a>
@@ -741,8 +733,10 @@
 								</div>
 
 								<div class="summary entry-summary text-center text-md-left">
-									<h6 class="product_title single_title"><?php echo $service_name; ?></h6>
-									<p><?php echo $service_description; ?></p>
+									<h6 class="product_title single_title"><?php  echo  $row['Service_Name']   ?>
+                                    </h6>
+									<p><?php echo $row['Service_Description'] ?></p>
+                                    <p><b><?php echo $row['Space_Status'] ?></b></p>
 									<div class="woocommerce-product-rating">
 										<!-- Your rating system here -->
 									</div>
@@ -758,12 +752,13 @@
 													<i class="fa fa-angle-down" aria-hidden="true"></i>
 												</div>
 												<span class="price">
-													<span>₱ </span><?php echo $service_price; ?>
+													<span>₱ </span><?php echo $row['Service_Price'] ?>
 												</span>
+                                                
 											</div>
 
 											<!-- Hidden input to pass the product name dynamically -->
-											<input type="hidden" name="product_name" value="<?php echo $service_name; ?>">
+											<input type="hidden" name="product_name" value="<?php  $row['Service_Name'] ?>">
 
 											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
 												<span>Add to cart</span>
