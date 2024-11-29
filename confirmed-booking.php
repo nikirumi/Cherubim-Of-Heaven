@@ -77,6 +77,11 @@
 
             // For SERVICE PROGRESS ito
 
+            $start_date_obj = DateTime::createFromFormat('m/d/Y', $start_date);
+            $end_date_obj = DateTime::createFromFormat('m/d/Y', $end_date);
+            $start_date_formatted = $start_date_obj ? $start_date_obj->format('Y-m-d') : '';
+            $end_date_formatted = $end_date_obj ? $end_date_obj->format('Y-m-d') : '';
+
             $add_prog = "INSERT INTO Service_Progress (Transaction_ID, Service_ID, Service_status, Start_Datetime, End_Datetime) 
                 VALUES (?, ?, ?, ?, ?)";
 
@@ -86,7 +91,7 @@
                 die('MySQL prepare error: ' . $conn->error);
             }
 
-            $stmt->bind_param("sssss", $trans_id, $service_id, $service_status, $start_date, $end_date);
+            $stmt->bind_param("sssss", $trans_id, $service_id, $service_status, $start_date_formatted, $end_date_formatted);
 
             if ($stmt->execute()) {
                 echo "Transaction successfully inserted!";

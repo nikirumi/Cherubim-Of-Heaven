@@ -263,7 +263,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Funeral/01.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="funeral-venue1.php"></a>
 											</div>
 											<div class="item-content">
 												<h2>Venue 1</h2>

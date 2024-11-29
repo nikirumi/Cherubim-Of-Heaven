@@ -10,7 +10,7 @@
 
 	include("check_session.php");
 
-	$sql = "SELECT Start_Datetime, End_Datetime FROM service_progress WHERE Service_status = 'Ongoing'";
+	$sql = "SELECT Start_Datetime, End_Datetime FROM service_progress WHERE Service_status = 'On Going'";
 	$result = $conn->query($sql);
 
 	// Array to hold the dates that need to be disabled in the datepicker
@@ -787,8 +787,24 @@
 												<input readonly type="text" id="end_datepicker" name="booking_end_date" placeholder="Choose an end date" required>
 											</div>
 
-											<!-- Hidden input for the service ID -->
-											<input type="hidden" name="service_id" id="S-100" value = "S-100">
+											<?php
+											
+												$sql = "SELECT service_id FROM memorial_services WHERE service_type = 'Funeral' LIMIT 1";
+
+												$result = $conn->query($sql);
+
+												if ($result->num_rows > 0) {
+													$row = $result->fetch_assoc();
+													$service_id = $row['service_id'];
+													echo "<input type='hidden' name='service_id' id='' value = $service_id>";
+												} 
+												else {
+													echo "No service found with the given type.";
+												}
+
+												$conn->close();
+
+											?>					
 
 											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
 												<span>Book</span>
