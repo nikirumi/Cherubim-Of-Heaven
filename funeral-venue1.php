@@ -769,7 +769,7 @@
 									<p>short desc po ito, yung long description doon sa baba. Tnx u nice <br><br> Bale dito siguro mga inclusions</p>
 									<div class="woocommerce-product-rating"></div>
 
-									<form method="POST" action="add-to-cart.php">
+									<form method="POST" action="book-venue.php" id="bookingForm">
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
 												<span class="price">
@@ -787,13 +787,16 @@
 												<input readonly type="text" id="end_datepicker" name="booking_end_date" placeholder="Choose an end date" required>
 											</div>
 
+											<!-- Hidden input for the service ID -->
+											<input type="hidden" name="service_id" id="S-100" value = "S-100">
+
 											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
 												<span>Book</span>
 											</button>
 
-											<input type="hidden" name="product_name" value="Venue 1">
 										</div>
 									</form>
+									
 								</div>
 
 								<script>
@@ -1238,33 +1241,32 @@
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php" class="active">Funeral</a>
+								<li class="cat-item cat-parent">
+										<a href="shop-right.php" class="active">Memorial Products</a>
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.php">Eco Funeral</a>
+												<a href="shop-right.php"> Bouquet</a>
 											</li>
 											<li class="cat-item">
-												<a href="shop-right.php">Memmorial Park</a>
+												<a href="shop-right-caskets.php">Caskets</a> 	
+											</li>
+											<li class="cat-item">
+												<a href="shop-right-urns.php">Urns </a>
 											</li>
 										</ul>
 									</li>
+
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Mortuary</a>
+										 <a href="shop-right.php" class="active">Spaces</a> 
+										<ul class="children">
+											<li class="cat-item">
+												<a href="shop-right-funeral.php">Funeral</a>
+											</li>
+											<li class="cat-item">
+												<a href="shop-right.php">Memorial Space</a> 
+											</li>
+										</ul>
 									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Cremations</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Burrial</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Plan Ahead</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Ship Outs</a>
-									</li>
-								</ul>
 							</div>
 
 
