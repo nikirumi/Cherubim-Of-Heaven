@@ -788,6 +788,7 @@
 									<form method="POST" action="add-to-cart.php">
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
+
 												<div class="quantity single">
 													<input type="button" value="+" class="plus">
 													<i class="fa fa-angle-up" aria-hidden="true"></i>
@@ -795,6 +796,7 @@
 													<input type="button" value="-" class="minus">
 													<i class="fa fa-angle-down" aria-hidden="true"></i>
 												</div>
+												
 												<span class="price">
 													<span>₱ </span><?php echo $service_price; ?>
 												</span>
@@ -1219,7 +1221,7 @@
 												<a href="shop-right-funeral.php">Funeral</a>
 											</li>
 											<li class="cat-item">
-												<a href="shop-right.php">Memorial Space</a> 
+												<a href="shop-right-space.php">Memorial Space</a> 
 											</li>
 										</ul>
 									</li>

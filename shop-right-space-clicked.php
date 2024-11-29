@@ -3,24 +3,24 @@
 	session_start();
 	include("connect.php");
 
-	$service_id = isset($_GET['id']) ? ($_GET['id']) : 0;				
+	$service_ID = isset($_GET['id']) ? ($_GET['id']) : 0;				
     
     $findSpaces = "SELECT 
-                    ms.MS_Service_ID, 
+                    ms.MS_service_ID, 
                     ms.Space_Type,  
                     ms.Space_Status,  
-                    msr.Service_ID, 
+                    msr.service_ID, 
                     msr.Service_Name, 
                     msr.Service_Description,   
                     msr.Service_Price,  
                     msr.Service_Type
                     FROM MEMORIAL_SPACE ms 
                     JOIN MEMORIAL_SERVICES msr 
-                    ON ms.MS_Service_ID = msr.Service_ID
-                    WHERE ms.MS_Service_ID = ?"; // Filtering by MS_Service_ID
+                    ON ms.MS_service_ID = msr.service_ID
+                    WHERE ms.MS_service_ID = ?"; // Filtering by MS_service_ID
 
     $stmt =$conn->prepare($findSpaces);
-    $stmt->bind_param("s", $service_id); 
+    $stmt->bind_param("s", $service_ID); 
 	$stmt->execute();
 
     $result = $stmt->get_result();
@@ -28,6 +28,8 @@
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
     }
+
+    
 ?>
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
@@ -737,21 +739,27 @@
                                     </h6>
 									<p><?php echo $row['Service_Description'] ?></p>
                                     <p><b><?php echo $row['Space_Status'] ?></b></p>
+
 									<div class="woocommerce-product-rating">
 										<!-- Your rating system here -->
 									</div>
 
-									<form method="POST" action="add-to-cart.php">
+									<form method="POST" action="purchase-space.php">
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
 												<div class="quantity single">
+
 													<input type="button" value="+" class="plus">
 													<i class="fa fa-angle-up" aria-hidden="true"></i>
 													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" size="4">
 													<input type="button" value="-" class="minus">
 													<i class="fa fa-angle-down" aria-hidden="true"></i>
+
 												</div>
 												<span class="price">
+
+                                        <input type="hidden" name="service_ID" value="<?php echo $service_ID; ?>">
+
 													<span>₱ </span><?php echo $row['Service_Price'] ?>
 												</span>
                                                 
@@ -761,7 +769,7 @@
 											<input type="hidden" name="product_name" value="<?php  $row['Service_Name'] ?>">
 
 											<button type="submit" class="single_add_to_cart_button btn alt btn-big btn-maincolor">
-												<span>Add to cart</span>
+												<span>Purchase</span>
 											</button>
 										</div>
 									</form>
