@@ -4,7 +4,7 @@
 					
 	if ($service_id != 0) {
 		// Prepare the SQL query to fetch related records for the transaction
-		$stmt = $conn->prepare("SELECT t.Transaction_ID, t.Client_ID, t.Transaction_date, t.Total_amount, t.Payment_method, t.Payment_status, t.Retrieval_Method, t.General_Address,
+		$stmt = $conn->prepare("SELECT t.Transaction_ID, t.Client_ID, t.Transaction_Date, t.Total_Amount, t.Payment_Method, t.Payment_Status, t.Retrieval_Method, t.General_Address,
 		                            c.Username, c.Fname, c.Lname, c.Contact_Number, c.Email_Address, c.Purok, c.Barangay, c.H_num, c.S_name,
 		                            sp.Service_ID, sp.Start_Datetime, sp.End_Datetime, sp.Service_status,
 		                            ms.Service_Name, ms.Service_Description, ms.Service_Price, ms.Service_Type
@@ -13,7 +13,7 @@
 		                        JOIN service_progress sp ON t.Transaction_ID = sp.Transaction_ID
 		                        JOIN MEMORIAL_SERVICES ms ON sp.Service_ID = ms.Service_ID
 		                        WHERE t.Transaction_ID = ?");
-		
+
 		$stmt->bind_param("s", $service_id); 
 		$stmt->execute();
 		
@@ -23,12 +23,12 @@
 			
 			$row = $result->fetch_assoc();
 
-			$totalAmount = (float)$row['Total_amount'];
+			$totalAmount = (float)$row['Total_Amount'];
 		    $servicePrice = (float)$row['Service_Price'];
 		    $numberOfOrder = $totalAmount / $servicePrice;
 			
-			$transaction_date = new DateTime($row['Transaction_date']);
-			$formatted_date = $transaction_date->format('d-m-Y'); 
+			$Transaction_Date = new DateTime($row['Transaction_Date']);
+			$formatted_date = $Transaction_Date->format('d-m-Y'); 
 			// echo "Transaction ID: " . $row['Transaction_ID'] . "<br>";
 			// echo "Client ID: " . $row['Client_ID'] . "<br>";
 			// echo "Client Name: " . $row['Fname'] . " " . $row['Lname'] . "<br>";
@@ -39,9 +39,9 @@
 			// echo "House Number: " . $row['H_num'] . "<br>";
 			// echo "Street Name: " . $row['S_name'] . "<br>";
 			// echo "Transaction Date: " . $formatted_date . "<br>";
-			// echo "Total Amount: " . $row['Total_amount'] . "<br>";
-			// echo "Payment Method: " . $row['Payment_method'] . "<br>";
-			// echo "Payment Status: " . $row['Payment_status'] . "<br>";
+			// echo "Total Amount: " . $row['Total_Amount'] . "<br>";
+			// echo "Payment Method: " . $row['Payment_Method'] . "<br>";
+			// echo "Payment Status: " . $row['Payment_Status'] . "<br>";
 			// echo "Retrieval Method: " . $row['Retrieval_Method'] . "<br>";
 			// echo "General Address: " . $row['General_Address'] . "<br>";
 
@@ -327,8 +327,7 @@
 							<article id="post-1708" class="post-1708 page type-page status-publish hentry">
 								<header class="entry-header mb-30">
 									<h1 class="entry-title"> Order
-										 <?php 
-																					 	
+										 <?php 																					 	
 											 echo $service_id 
 										 ?>
 									</h1> <span class="edit-link">
@@ -420,18 +419,18 @@
 															<th scope="row">Subtotal:</th>
 															<td>
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">₱</span></span><?php echo $row['Total_amount']?></span>
+																	<span class="woocommerce-Price-currencySymbol">₱</span></span><?php echo $row['Total_Amount']?></span>
 															</td>
 														</tr>
 														<tr>
 															<th scope="row">Payment method:</th>
-															<td><?php echo $row['Payment_method']  ?></td>
+															<td><?php echo $row['Payment_Method']  ?></td>
 														</tr>
 														<tr>
 															<th scope="row">Total:</th>
 															<td>
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $row['Total_amount']  ?>
+																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $row['Total_Amount']  ?>
 															</td>
 														</tr>
 													</tfoot>
