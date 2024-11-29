@@ -1,5 +1,32 @@
 <!DOCTYPE html>
 <html class="no-js">
+
+<?php
+
+	include("check_session.php");
+
+	$sql = "SELECT Service_ID FROM memorial_services WHERE service_name LIKE '%Casket%'";
+	$result = $conn->query($sql);
+
+	$serviceIdArray = array();
+
+	if ($result->num_rows > 0) {
+		while ($row = $result->fetch_assoc()) {
+			$serviceIdArray[] = $row;
+		}
+		//var_dump($serviceIdArray[0]['Service_ID']);
+		echo htmlspecialchars($serviceIdArray[0]['Service_ID']);
+		var_dump(htmlspecialchars($serviceIdArray[0]['Service_ID']));
+	} 
+	
+	else {
+		echo "No casket services found.";
+	}
+
+	$conn->close();
+
+?>
+
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -263,17 +290,17 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/1.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+											<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[0]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Silver Casket</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>65,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>75,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -292,10 +319,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>35,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -314,10 +341,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>70,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>85,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -336,10 +363,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>60,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>75,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -358,10 +385,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>35,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>55,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -380,10 +407,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>80,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>95,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -402,10 +429,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>50,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>60,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -424,10 +451,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>30,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>50,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -446,10 +473,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>35,000
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>50,000
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -555,7 +582,7 @@
 											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>34
+											<span class="woocommerce-Price-currencySymbol">₱</span>34
 										</span>
 									</li>
 									<li>
@@ -574,12 +601,12 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
+												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
+											<span class="woocommerce-Price-currencySymbol">₱</span>
 											34
 										</span>
 									</li>
@@ -600,12 +627,12 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
+												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
 										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
+											<span class="woocommerce-Price-currencySymbol">₱</span>
 											34
 										</span>
 									</li>
@@ -621,10 +648,10 @@
 									<div class="price_slider_wrapper">
 
 										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-											<span class="from">$20.00</span>
+											<span class="from">₱20.00</span>
 											<div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 14%; width: 65%;">
 											</div>
-											<span class="to">$700.00</span>
+											<span class="to">₱700.00</span>
 											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 12%;">
 
 											</span>

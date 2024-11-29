@@ -10,6 +10,8 @@
 
 	session_start();
 	include("connect.php");
+	error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 	//include("add-to-cart.php");
 
 	// Get the product ID from the URL
@@ -34,7 +36,8 @@
 		exit();
 	}
 
-	$conn->close();
+	$stmt->close();
+	//$conn->close();
 
 ?>
 
@@ -710,31 +713,64 @@
 
 								<div class="images" data-columns="5">
 									<figure>
-										<div data-thumb="images/shop/01.jpg">
-											<a href="images/shop/01.jpg">
-												<img src="images/shop/01.jpg" alt="" data-caption="" data-src="images/shop/01.jpg" data-large_image="images/shop/01.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										
+									<?php
+									
+									$img1 = "images/shop/01.jpg";
+									$img2 = "images/shop/02.jpg";
+									$img3 = "images/shop/03.jpg";
+									$img4 = "images/shop/04.jpg";
+									$img5 = "images/shop/05.jpg";
+
+
+									if (strpos($service_name, 'Casket') !== false) {
+										$img1 = "images/Caskets/1.jpg";
+										$img2 = "images/Caskets/2.jpg";
+										$img3 = "images/Caskets/3.jpg";
+										$img4 = "images/Caskets/4.jpg";
+										$img5 = "images/Caskets/5.jpg";
+									} 
+									
+									elseif (strpos($service_name, 'Urn') !== false) {
+										$img1 = "images/Urns/1.jpg";
+										$img2 = "images/Urns/2.jpg";
+										$img3 = "images/Urns/3.jpg";
+										$img4 = "images/Urns/4.jpg";
+										$img5 = "images/Urns/5.jpg";
+									}
+
+									echo "
+
+										<div data-thumb='$img1'>
+											<a href='$img1'>
+												<img src='$img1' alt='' data-caption='' data-src='$img1' data-large_image='$img1' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
-										<div data-thumb="images/shop/02.jpg">
-											<a href="images/shop/02.jpg">
-												<img src="images/shop/02.jpg" alt="" data-caption="" data-src="images/shop/02.jpg" data-large_image="images/shop/02.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										<div data-thumb='$img2'>
+											<a href='$img2'>
+												<img src='$img2' alt='' data-caption='' data-src='$img2' data-large_image='$img2' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
-										<div data-thumb="images/shop/03.jpg">
-											<a href="images/shop/03.jpg">
-												<img src="images/shop/03.jpg" alt="" data-caption="" data-src="images/shop/03.jpg" data-large_image="images/shop/03.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										<div data-thumb='$img3'>
+											<a href='$img3'>
+												<img src='$img3' alt='' data-caption='' data-src='$img3' data-large_image='$img3' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
-										<div data-thumb="images/shop/04.jpg">
-											<a href="images/shop/04.jpg">
-												<img src="images/shop/04.jpg" alt="" data-caption="" data-src="images/shop/04.jpg" data-large_image="images/shop/04.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										<div data-thumb='$img4'>
+											<a href='$img4'>
+												<img src='$img4' alt='' data-caption='' data-src='$img4' data-large_image='$img4' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
-										<div data-thumb="images/shop/05.jpg">
-											<a href="images/shop/05.jpg">
-												<img src="images/shop/05.jpg" alt="" data-caption="" data-src="images/shop/05.jpg" data-large_image="images/shop/05.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										<div data-thumb='$img5'>
+											<a href='$img5'>
+												<img src='$img5' alt='' data-caption='' data-src='$img5' data-large_image='$img5' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
+
+										";
+										
+										$conn->close();
+									?>	
 
 
 									</figure>
@@ -742,7 +778,9 @@
 
 								<div class="summary entry-summary text-center text-md-left">
 									<h6 class="product_title single_title"><?php echo $service_name; ?></h6>
-									<p><?php echo $service_description; ?></p>
+									<div class="star-rating">
+										<span style="width:80%">Rated <strong class="rating">4</strong> out of 5</span>
+									</div>
 									<div class="woocommerce-product-rating">
 										<!-- Your rating system here -->
 									</div>
@@ -786,7 +824,7 @@
 									</ul>
 
 									<div class="panel wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-										<h6>Labore et dolore</h6>
+										<h6><?php echo $service_name; ?></h6>
 										<p>At vero eos et accusam et justo duo dolores etea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.</p>
 										<p>Ermod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimat. Etiam ut bibendum leo, quis pulvinar orci. Phasellus nec eros purus. Sed consequat facilisis ligula. Nulla tristique erat mauris, et tristique nibh lacinia..</p>
 									</div>
