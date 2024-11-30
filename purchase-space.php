@@ -560,53 +560,47 @@
                                                 </div>
                                 
                                                 <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
-
                                                     <div class="datepicker-container" style="margin: 10px 0;">								
                                                     <input readonly type="text" id="datepicker" name="b_bdate" placeholder="Date of Birth" required>
                                                     </div>
-                                                </p>
+                                                
                                                     
-                                                <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+                                                
                                                     <div class="datepicker-container" style="margin: 10px 0;">												
                                                     <input readonly type="text" id="end_datepicker" name="b_ddate" placeholder="Date of Death">
                                                     </div>
                                                 </p>
                                                 
-												
-
+											
                                                 <!-- script action para sa datepicker -->
                                                 <script>
-                                                    jQuery(document).ready(function($) {
-                                                        // Initialize the datepickers
-                                                        $("#datepicker").datepicker({
-                                                            dateFormat: "mm/dd/yy",
-                                                            showAnim: "slideDown",
-                                                            onSelect: function(selectedDate) {
-                                                                var selectedStartDate = $.datepicker.parseDate('mm/dd/yy', selectedDate);
-                                                                $("#end_datepicker").prop("disabled", false);
-                                                                $("#end_datepicker").datepicker("option", "minDate", selectedStartDate);
-                                                            }
-                                                        });
+													jQuery(document).ready(function($) {
+														// Initialize the datepickers
+														$("#datepicker").datepicker({
+															dateFormat: "mm/dd/yy",
+															showAnim: "slideDown"
+														});
 
-                                                        $("#end_datepicker").datepicker({
-                                                            dateFormat: "mm/dd/yy",
-                                                            showAnim: "slideDown"
-                                                        });
+														$("#end_datepicker").datepicker({
+															dateFormat: "mm/dd/yy",
+															showAnim: "slideDown"
+														});
 
-                                                        $("#end_datepicker").prop("disabled", true); // Initially disabled
+														$("#end_datepicker").prop("disabled", true); // Initially disabled
 
-                                                        // Disable/Enable Date of Death input based on Beneficiary Status
-                                                        $("input[name='b_status']").on("change", function() {
-                                                            if ($(this).val() === "alive") {
-                                                                // If "Alive" is selected, disable the Date of Death field
-                                                                $("#end_datepicker").val("").prop("disabled", true); // Clear and disable
-                                                            } else if ($(this).val() === "dead") {
-                                                                // If "Dead" is selected, enable the Date of Death field
-                                                                $("#end_datepicker").prop("disabled", false); // Enable
-                                                            }
-                                                        });
-                                                    });
-                                                </script>
+														// Disable/Enable Date of Death input based on Beneficiary Status
+														$("input[name='b_status']").on("change", function() {
+															if ($(this).val() === "alive") {
+																// If "Alive" is selected, disable the Date of Death field
+																$("#end_datepicker").val("").prop("disabled", true); // Clear and disable
+															} else if ($(this).val() === "dead") {
+																// If "Dead" is selected, enable the Date of Death field
+																$("#end_datepicker").prop("disabled", false); // Enable
+															}
+														});
+													});
+												</script>
+
 
 											</div>
 

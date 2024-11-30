@@ -29,6 +29,21 @@
         $row = $result->fetch_assoc();
     }
 
+	$img_link = "";
+	
+	if ($service_ID == "S-011"){
+		$img_link = "images/mausoleum.jpg";
+	}
+	else if ($service_ID == "S-012"){
+		$img_link = "images/openair.png";
+	}
+	else if ($service_ID == "S-013"){
+		$img_link = "images/lawnm.jpg";
+	}
+	else if ($service_ID == "S-014"){
+		$img_link = "images/apt.jpg";
+	}
+
     
 ?>
 
@@ -702,37 +717,14 @@
 						<main class="col-lg-7 col-xl-9">
 							<div class="product">
 
-								<div class="images" data-columns="5">
-									<figure>
-										<div data-thumb="images/shop/01.jpg">
-											<a href="images/shop/01.jpg">
-												<img src="images/shop/01.jpg" alt="" data-caption="" data-src="images/shop/01.jpg" data-large_image="images/shop/01.jpg" data-large_image_width="1000" data-large_image_height="1000">
-											</a>
-										</div>
-										<div data-thumb="images/shop/02.jpg">
-											<a href="images/shop/02.jpg">
-												<img src="images/shop/02.jpg" alt="" data-caption="" data-src="images/shop/02.jpg" data-large_image="images/shop/02.jpg" data-large_image_width="1000" data-large_image_height="1000">
-											</a>
-										</div>
-										<div data-thumb="images/shop/03.jpg">
-											<a href="images/shop/03.jpg">
-												<img src="images/shop/03.jpg" alt="" data-caption="" data-src="images/shop/03.jpg" data-large_image="images/shop/03.jpg" data-large_image_width="1000" data-large_image_height="1000">
-											</a>
-										</div>
-										<div data-thumb="images/shop/04.jpg">
-											<a href="images/shop/04.jpg">
-												<img src="images/shop/04.jpg" alt="" data-caption="" data-src="images/shop/04.jpg" data-large_image="images/shop/04.jpg" data-large_image_width="1000" data-large_image_height="1000">
-											</a>
-										</div>
-										<div data-thumb="images/shop/05.jpg">
-											<a href="images/shop/05.jpg">
-												<img src="images/shop/05.jpg" alt="" data-caption="" data-src="images/shop/05.jpg" data-large_image="images/shop/05.jpg" data-large_image_width="1000" data-large_image_height="1000">
-											</a>
-										</div>
+							<div class="images" data-columns="5">
+								<figure>
+									<a href="<?php echo $img_link; ?>">
+									<img src="<?php echo $img_link; ?>" alt="Memorial Image">
+									</a>
+								</figure>
+							</div>
 
-
-									</figure>
-								</div>
 
 								<div class="summary entry-summary text-center text-md-left">
 									<h6 class="product_title single_title"><?php  echo  $row['Service_Name']   ?>
@@ -740,9 +732,7 @@
 									<p><?php echo $row['Service_Description'] ?></p>
                                     <p><b><?php echo $row['Space_Status'] ?></b></p>
 
-									<div class="woocommerce-product-rating">
-										<!-- Your rating system here -->
-									</div>
+									
 
 									<form method="POST" action="purchase-space.php">
 										<div class="single_variation_wrap">

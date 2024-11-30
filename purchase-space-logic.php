@@ -143,8 +143,11 @@
                 $b_Mname = isset($_POST['b_Mname']) ? $_POST['b_Mname'] : '';
                 $b_Lname = isset($_POST['b_Lname']) ? $_POST['b_Lname'] : '';
                 $b_status = isset($_POST['b_status']) ? $_POST['b_status'] : '';
-                $b_bdate = isset($_POST['b_bdate']) ? $_POST['b_bdate'] : '';
-                $b_ddate = isset($_POST['b_ddate']) ? $_POST['b_ddate'] : '';
+                $b_bdate = isset($_POST['b_bdate']) ? date("Y-m-d", strtotime($_POST['b_bdate'])) : null;
+                $b_ddate = isset($_POST['b_ddate']) && !empty($_POST['b_ddate']) ? date("Y-m-d", strtotime($_POST['b_ddate'])) : null;
+
+
+                
 
                 $add_ben_query = "INSERT INTO beneficiary (Beneficiary_ID, MS_service_ID, Fname, Mname, Lname, Beneficiary_Status, Beneficiary_Birthdate, Beneficiary_Deathdate) 
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)";

@@ -320,7 +320,7 @@
 							                                  
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/Caskets/3.jpg" alt="">
+											<img src="images/mausoleum.jpg" alt="">
 											<div class="media-links">
                                                 
 												<a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $firstRow['Service_ID'] ?>"></a>
@@ -338,13 +338,13 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>" class="add-to-card btn btn-maincolor">Purchase</a>
 											</div>
 										</div>
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/Caskets/4.jpg" alt="">
+											<img src="images/openair.png" alt="">
 											<div class="media-links">
                                             <a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>"></a>
 
@@ -363,14 +363,38 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>" class="add-to-card btn btn-maincolor">Purchase</a>
+											</div>
+										</div>
+									</li>
+
+									<li class="product vertical-item content-padding">
+										<div class="product-inner box-shadow">
+											<img src="images/apt.jpg" alt="">
+											<div class="media-links">
+                                            <a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $fourthRow['Service_ID'] ?>"></a>
+
+											</div>
+											<div class="item-content">
+                                            <h2><?php  echo  $fourthRow['Service_Name']   ?></h2>
+                                            <span class="price">
+													<del>
+														<span>
+                                                             <span>₱ </span><?php  echo  $fourthRow['Service_Price']   ?>
+
+														</span>
+													</del>									
+												</span>
+											</div>
+											<div class="shop-btn">
+												<a href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>" class="add-to-card btn btn-maincolor">Purchase</a>
 											</div>
 										</div>
 									</li>
 									
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/Caskets/7.jpg" alt="">
+											<img src="images/lawnm.jpg" alt="">
 											<div class="media-links">
                                             <a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $thirdRow['Service_ID'] ?>"></a>
 
@@ -388,34 +412,12 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>" class="add-to-card btn btn-maincolor">Purchase</a>
 											</div>
 										</div>
 									</li>
 
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/8.jpg" alt="">
-											<div class="media-links">
-                                            <a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $fourthRow['Service_ID'] ?>"></a>
-
-											</div>
-											<div class="item-content">
-                                            <h2><?php  echo  $fourthRow['Service_Name']   ?></h2>
-                                            <span class="price">
-													<del>
-														<span>
-                                                             <span>₱ </span><?php  echo  $fourthRow['Service_Price']   ?>
-
-														</span>
-													</del>									
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-											</div>
-										</div>
-									</li>
+									
 								
 								</ul>
 							</div>
