@@ -312,7 +312,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/2.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[1]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Dark Brown Casket</h2>
@@ -334,7 +334,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/3.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[2]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Azure Casket</h2>
@@ -356,7 +356,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/4.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[3]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>White Casket</h2>
@@ -378,7 +378,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/5.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[4]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Wooden Brown</h2>
@@ -400,7 +400,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/6.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[5]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Black Casket</h2>
@@ -422,7 +422,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/7.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[6]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Mahogany Casket</h2>
@@ -444,7 +444,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/8.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[7]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Maroon Casket</h2>
@@ -466,7 +466,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Caskets/9.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[8]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Oak Casket</h2>

@@ -3,41 +3,48 @@
 
 <?php 
 
-	include ("connect.php"); 
-	include ("check_session.php");
+include("connect.php"); 
+include("check_session.php");
 
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-		
-		$username = filter_var($_POST['username'], FILTER_SANITIZE_SPECIAL_CHARS);
-		$password = filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS);
-	
-		// SQL QUERY
-		$stmt = $conn->prepare("SELECT * FROM CLIENT WHERE Username = ? LIMIT 1");
-		$stmt->bind_param("s", $username);
-		$stmt->execute();
-		$result = $stmt->get_result();
-	
-		// check if the user exists
-		if ($result->num_rows > 0) {
-			$Client = $result->fetch_assoc();
-	
-			// password verification 
-			if ($password === $Client['Password'] || password_verify($password, $Client['Password'])) {
-				// redirect to index if successful yung login
-				$_SESSION["username"] = $username;
-				header("Location: index.php");
-				exit();
-			}
-		}
-	
-		//error message if nag fail yung login
-		//$error = "Invalid username or password.";
-	
-		$stmt->close();
-	}
-	$conn->close();
+$errorMessage = ''; // Variable to hold error message
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Sanitize user inputs
+    $username = filter_var($_POST['username'], FILTER_SANITIZE_SPECIAL_CHARS);
+    $password = filter_var($_POST['password'], FILTER_SANITIZE_SPECIAL_CHARS);
+
+    // SQL Query to get user data
+    $stmt = $conn->prepare("SELECT * FROM CLIENT WHERE Username = ? LIMIT 1");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if the user exists
+    if ($result->num_rows > 0) {
+        $Client = $result->fetch_assoc();
+
+        // Password verification (use password_verify for hashed passwords)
+        if (password_verify($password, $Client['Password'])) {
+            // Successful login, set session and redirect
+            $_SESSION["username"] = $username;
+            header("Location: index.php");
+            exit();
+        } else {
+            // Incorrect password
+            $errorMessage = "Invalid username or password.";
+        }
+    } else {
+        // User not found
+        $errorMessage = "Invalid username or password.";
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
 ?>
+
+
 
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
@@ -52,6 +59,58 @@
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<style>
+
+		.popup-overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 9999;
+		}
+
+		.popup-content {
+		background: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		width: 400px;
+		height: 300px;
+		max-width: 80%;
+		margin: 100px auto;
+		position: relative;
+		text-align: center;
+		}
+
+		.close-btn {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		font-size: 20px;
+		cursor: pointer;
+		}
+
+		#openPopup {
+		padding: 10px 20px;
+		background-color: #007bff;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		}
+
+		#openPopup:hover {
+		background-color: #0056b3;
+		}
+
+		.hidden {
+			display: none !important;
+		}
+
+	</style>
 
 </head>
 
@@ -136,6 +195,9 @@
 														<li>
 															<a href="shop-account-dashboard.php">Account</a>
 															<ul>
+																<li>
+																	<a href="shop-account-dashboard.php">Dashboard</a>
+																</li>
 
 																<li>
 																	<a href="shop-account-details.php">Account details</a>
@@ -144,19 +206,7 @@
 																	<a href="shop-account-addresses.php">Addresses</a>
 																</li>
 																<li>
-																	<a href="shop-account-address-edit.php">Edit Address</a>
-																</li>
-																<li>
 																	<a href="shop-account-orders.php">Orders</a>
-																</li>
-																<li>
-																	<a href="shop-account-order-single.php">Single Order</a>
-																</li>
-																<li>
-																	<a href="shop-account-downloads.php">Downloads</a>
-																</li>
-																<li>
-																	<a href="shop-account-password-reset.php">Password Reset</a>
 																</li>
 																<li>
 																	<a href="shop-account-login.php">Login/Logout</a>
@@ -165,25 +215,10 @@
 															</ul>
 														</li>
 														<li>
-															<a href="shop-right.php">Right Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-left.php">Left Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-product-right.php">Product Right Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-product-left.php">Product Left Sidebar</a>
+															<a href="shop-right.php">Catalog</a>
 														</li>
 														<li>
 															<a href="shop-cart.php">Cart</a>
-														</li>
-														<li>
-															<a href="shop-checkout.php">Checkout</a>
-														</li>
-														<li>
-															<a href="shop-order-received.php">Order Received</a>
 														</li>
 
 													</ul>
@@ -292,6 +327,16 @@
 									<div class="woocommerce">
 
 										<form class="woocomerce-form woocommerce-form-login login" method="post">
+
+										<div id="popup" class="popup-overlay" style="display: <?php echo !empty($errorMessage) ? 'block' : 'none'; ?>">
+												<div class="popup-content">
+													<span id="closePopup" class="close-btn">&times;</span>
+													<h2>Attention</h2>
+													<p><?php echo $errorMessage; ?></p>
+													<!--<button id="closeButton">Okay</button>-->
+												</div>
+											</div>
+
 											<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 												<label for="username">Username or email address <span class="required">*</span>
 												</label>
@@ -319,6 +364,24 @@
 											</p>
 
 										</form>
+
+										<script>
+											document.addEventListener("DOMContentLoaded", function() {
+												const popup = document.getElementById("popup");
+												const closePopup = document.getElementById("closePopup");
+
+												closePopup.addEventListener("click", function() {
+													popup.style.display = "none";
+												});
+
+												window.addEventListener("click", function(event) {
+													if (event.target === popup) {
+														popup.style.display = "none";
+													}
+												});
+											});
+										</script>
+
 									</div>
 								</div>
 								<!-- .entry-content -->

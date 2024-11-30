@@ -1,5 +1,22 @@
 <!DOCTYPE html>
 <html class="no-js">
+
+<?php 
+
+	include ("check_session.php"); 
+
+	$visibility = '';
+
+	if ($username) {
+		$visibility = 'visible';
+	}
+
+	else {
+		$visibility = 'hidden';
+	}
+	
+?>
+
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -15,6 +32,59 @@
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<style>
+
+		.popup-overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 9999;
+		}
+
+		.popup-content {
+		background: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		width: 400px;
+		height: 300px;
+		max-width: 80%;
+		margin: 100px auto;
+		position: relative;
+		text-align: center;
+		}
+
+		.close-btn {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		font-size: 20px;
+		cursor: pointer;
+		}
+
+		#openPopup {
+		padding: 10px 20px;
+		background-color: #007bff;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		}
+
+		#openPopup:hover {
+		background-color: #0056b3;
+		}
+
+		.hidden {
+			display: none !important;
+		}
+
+	</style>
+
 </head>
 
 <body>
@@ -103,6 +173,9 @@
 														<li>
 															<a href="shop-account-dashboard.php">Account</a>
 															<ul>
+																<li>
+																	<a href="shop-account-dashboard.php">Dashboard</a>
+																</li>
 
 																<li>
 																	<a href="shop-account-details.php">Account details</a>
@@ -111,19 +184,7 @@
 																	<a href="shop-account-addresses.php">Addresses</a>
 																</li>
 																<li>
-																	<a href="shop-account-address-edit.php">Edit Address</a>
-																</li>
-																<li>
 																	<a href="shop-account-orders.php">Orders</a>
-																</li>
-																<li>
-																	<a href="shop-account-order-single.php">Single Order</a>
-																</li>
-																<li>
-																	<a href="shop-account-downloads.php">Downloads</a>
-																</li>
-																<li>
-																	<a href="shop-account-password-reset.php">Password Reset</a>
 																</li>
 																<li>
 																	<a href="shop-account-login.php">Login/Logout</a>
@@ -132,25 +193,10 @@
 															</ul>
 														</li>
 														<li>
-															<a href="shop-right.php">Right Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-left.php">Left Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-product-right.php">Product Right Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-product-left.php">Product Left Sidebar</a>
+															<a href="shop-right.php">Catalog</a>
 														</li>
 														<li>
 															<a href="shop-cart.php">Cart</a>
-														</li>
-														<li>
-															<a href="shop-checkout.php">Checkout</a>
-														</li>
-														<li>
-															<a href="shop-order-received.php">Order Received</a>
 														</li>
 
 													</ul>
@@ -259,12 +305,6 @@
 							<article>
 								<header class="entry-header mb-30">
 									<h1 class="entry-title">Account details</h1>
-									<span class="edit-link">
-										<a class="post-edit-link" href="#">Edit
-											<span class="screen-reader-text"> "My account"
-											</span>
-										</a>
-									</span>
 								</header>
 								<!-- .entry-header -->
 								<div class="entry-content">
@@ -274,17 +314,14 @@
 												<li>
 													<a href="shop-account-dashboard.php">Dashboard</a>
 												</li>
-												<li>
-													<a href="shop-account-orders.php">Orders</a>
-												</li>
-												<li>
-													<a href="shop-account-downloads.php">Downloads</a>
+												<li class="is-active">
+													<a href="shop-account-details.php">Account details</a>
 												</li>
 												<li>
 													<a href="shop-account-addresses.php">Addresses</a>
 												</li>
-												<li class="is-active">
-													<a href="shop-account-details.php">Account details</a>
+												<li>
+													<a href="shop-account-orders.php">Orders</a>
 												</li>
 												<li>
 													<a href="shop-account-login.php">Logout</a>
@@ -292,22 +329,148 @@
 											</ul>
 										</nav>
 
+										<?php
+										
+											$fname = "";
+											$mname = "";
+											$lname = "";
+											$contact = "";
+											$email = "";
+											$password = "";
 
-										<div class="woocommerce-MyAccount-content">
+											if (!$username) {
+												echo "
+													<p>Please <a href = 'shop-account-login.php'>Sign in. </a>No account yet?<a href='registration.php'> Click here.</a>
+													</p> ";
+											}
 
-											<form class="woocommerce-EditAccountForm edit-account" method="post">
+											else {
+
+												$getDetails = "SELECT Fname, Mname, Lname, Contact_Number, Email_Address, Password from CLIENT WHERE Username = ?";
+												$stmt = $conn->prepare($getDetails);
+
+												if ($stmt) {
+
+													$stmt->bind_param("s", $username); 
+													$stmt->execute();
+													$result = $stmt->get_result();
+
+													if ($result->num_rows > 0) {
+
+														$details = $result->fetch_assoc();
+											
+														$fname = $details['Fname'];
+														$mname = $details['Mname'];
+														$lname = $details['Lname'];
+														$contact = $details['Contact_Number'];
+														$email = $details['Email_Address'];
+														$password = $details['Password'];
+
+														echo "<input hidden type='password' name='password_current_db' value='$password'>";
+
+													} else {
+														// No rows found
+														echo "No records found.";
+													}
+											
+													$stmt->close();
+												}
+
+
+											}
+
+										?>
+										
+										<div class="woocommerce-MyAccount-content" style = "visibility:<?php echo $visibility; ?>">
+
+											<form class="woocommerce-EditAccountForm edit-account" method="post" action="edit-acc-details.php">
+
+												<div id="popup" class="popup-overlay">
+													<div class="popup-content">
+														<span id="closePopup" class="close-btn">&times;</span>
+														<h2>Attention</h2>
+														<p>This is a simple popup modal example.</p>
+														<!--<button id="closeButton">Okay</button>-->
+													</div>
+												</div>
+
+												<script>
+													document.addEventListener("DOMContentLoaded", function () {
+													document.getElementById("closePopup").addEventListener("click", function () {
+														document.getElementById("popup").style.display = "none"; // Hide popup
+													});
+
+													/*document.getElementById("closeButton").addEventListener("click", function () {
+														document.getElementById("popup").style.display = "none"; // Hide popup
+													});*/
+
+													window.addEventListener("click", function (event) {
+														const popup = document.getElementById("popup");
+														if (event.target === popup) {
+															popup.style.display = "none"; 
+														}
+													});
+
+													const form = document.querySelector(".woocommerce-EditAccountForm");
+													form.addEventListener("submit", function (event) {
+														const passwordCurrent = document.getElementById("password_current").value;
+														const newPassword = document.getElementById("password_1").value;
+														const confirmPassword = document.getElementById("password_2").value;
+
+														if (passwordCurrent === "" || newPassword !== confirmPassword) {
+															event.preventDefault();
+															alert("Please fill out all fields correctly.");
+															return;
+														}
+
+														fetch("verify-password.php", {
+															method: "POST",
+															body: new URLSearchParams({
+																passwordCurrent: passwordCurrent,
+															})
+														})
+														.then(response => response.json())
+														.then(data => {
+															if (data.success) {
+																form.submit();
+															} 
+															else {
+																document.getElementById("popup").style.display = "block"; 
+																document.querySelector(".popup-content p").innerText = "Incorrect current password. Please try again.";
+															}
+														})
+														.catch(error => {
+															console.error("Error verifying password:", error);
+															document.getElementById("popup").style.display = "block"; 
+															document.querySelector(".popup-content p").innerText = "An error occurred while verifying the password. Please try again.";
+														});
+														event.preventDefault();
+													});
+												});
+												</script>
 
 
 												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 													<label for="account_first_name">First name <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="" placeholder="First name">
+													<input readonly type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_first_name" id="account_first_name" value="<?php echo htmlspecialchars($fname); ?>" placeholder="First name">
 												</p>
 												<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+													<label for="account_middle_name">Middle name <span class="required">*</span>
+													</label>
+													<input readonly type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_middle_name" id="account_middle_name" value="<?php echo htmlspecialchars($mname); ?>" placeholder="Middle name">
+												</p>
+												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
 													<label for="account_last_name">Last name <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" value="" placeholder="Last name">
+													<input readonly type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" value="<?php echo htmlspecialchars($lname); ?>" placeholder="Last name">
 												</p>
+												<p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
+													<label for="account_contact">Contact number <span class="required">*</span>
+													</label>
+													<input readonly type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="account_contact" id="account_contact" value="<?php echo htmlspecialchars($contact); ?>" placeholder="Contact number">
+												</p>
+
 												<div class="clear">
 
 												</div>
@@ -315,7 +478,7 @@
 												<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 													<label for="account_email">Email address <span class="required">*</span>
 													</label>
-													<input type="email" class="form-control woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" value="admin@test.com">
+													<input readonly type="email" class="form-control woocommerce-Input woocommerce-Input--email input-text" name="account_email" id="account_email" value="<?php echo htmlspecialchars($email); ?>" placeholder="E-mail address">
 												</p>
 
 												<fieldset class="account-edit">
