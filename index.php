@@ -23,9 +23,91 @@
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
+	<style>
+
+		.popup-overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 9999;
+		}
+
+		.popup-content {
+		background: #fff;
+		padding: 20px;
+		border-radius: 10px;
+		width: 400px;
+		height: 400px;
+		max-width: 80%;
+		margin: 100px auto;
+		position: relative;
+		text-align: center;
+		}
+
+		.close-btn {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		font-size: 20px;
+		cursor: pointer;
+		}
+
+		#openPopup {
+		padding: 10px 20px;
+		background-color: #007bff;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		}
+
+		#openPopup:hover {
+		background-color: #0056b3;
+		}
+
+		.hidden {
+			display: none !important;
+		}
+
+	</style>
+
+
 </head>
 
 <body>
+
+<div id="popup" class="popup-overlay" style="display: <?php echo isset($_SESSION["loginSuccess"]) ? 'block' : 'none'; ?>">
+	<div class="popup-content">
+		<span id="closePopup" class="close-btn">&times;</span>
+		<h2>Hello, <?php echo $username; ?>.</h2>
+		<p>Logged in successfuly.</p>
+		<?php unset($_SESSION["username"]); ?>
+		<!--<button id="closeButton">Okay</button>-->
+	</div>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const popup = document.getElementById("popup");
+		const closePopup = document.getElementById("closePopup");
+
+		// Close popup when the close button is clicked
+		closePopup.addEventListener("click", function() {
+			popup.style.display = "none";
+		});
+
+		// Close the popup when clicking outside of the popup content
+		window.addEventListener("click", function(event) {
+			if (event.target === popup) {
+				popup.style.display = "none";
+			}
+		});
+	});
+</script>
 
 	<div class="preloader">
 		<div class="preloader_image"></div>

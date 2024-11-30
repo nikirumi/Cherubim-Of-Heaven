@@ -163,13 +163,18 @@
                 if ($stmt->execute()) {
 
                     echo "<script>alert('BENEFICIARY OKI');</script>";
-                    echo "<script>window.location.href='index.php';</script>";
-
+                    if ($payment_method === "Other") {
+                        header("Location: payment-gateway.php?transaction_id=" . urlencode($trans_id) . "&total=" . urlencode($total));
+                        exit();
+                    }
+                    
+                    else {
+                        header("Location: index.php");
+                    }
 
                 }
                 else{
                     echo "<script>alert('DI NAG ADD BENE');</script>";
-                    echo "<script>window.location.href='index.php';</script>";
                 }               
             }      
         }      

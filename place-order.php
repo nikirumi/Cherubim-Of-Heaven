@@ -96,7 +96,14 @@
                     echo "Cart has been cleared after checkout.";
                 }
 
-                header("Location: index.php");
+                if ($payment_method === "Other") {
+                    header("Location: payment-gateway.php?transaction_id=" . urlencode($trans_id) . "&total=" . urlencode($total));
+                    exit();
+                }
+                
+                else {
+                    header("Location: index.php");
+                }
             }  
             
             else {

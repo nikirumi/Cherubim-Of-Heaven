@@ -96,7 +96,14 @@
             if ($stmt->execute()) {
                 echo "Transaction successfully inserted!";
 
+                if ($payment_method === "Other") {
+                    header("Location: payment-gateway.php?transaction_id=" . urlencode($trans_id) . "&total=" . urlencode($total));
+                    exit();
+                }
+
+                else {
                 header("Location: index.php");
+                }
             }  
             
             else {
