@@ -716,11 +716,11 @@
 										
 									<?php
 									
-									$img1 = "images/shop/01.jpg";
-									$img2 = "images/shop/02.jpg";
-									$img3 = "images/shop/03.jpg";
-									$img4 = "images/shop/04.jpg";
-									$img5 = "images/shop/05.jpg";
+									$img1 = "images/Flowers/1.png";
+									$img2 = "images/Flowers/2.png";
+									$img3 = "images/Flowers/3.png";
+									$img4 = "images/Flowers/4.png";
+									$img5 = "images/Flowers/5.png";
 
 
 									if (strpos($service_name, 'Casket') !== false) {

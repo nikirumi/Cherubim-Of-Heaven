@@ -1,5 +1,32 @@
 <!DOCTYPE html>
 <html class="no-js">
+
+<?php
+
+	include("check_session.php");
+
+	$sql = "SELECT Service_ID FROM memorial_services WHERE service_name LIKE '%Flower%'";
+	$result = $conn->query($sql);
+
+	$serviceIdArray = array();
+
+	if ($result->num_rows > 0) {
+		while ($row = $result->fetch_assoc()) {
+			$serviceIdArray[] = $row;
+		}
+		//var_dump($serviceIdArray[0]['Service_ID']);
+		echo htmlspecialchars($serviceIdArray[0]['Service_ID']);
+		var_dump(htmlspecialchars($serviceIdArray[0]['Service_ID']));
+	} 
+	
+	else {
+		echo "No floral services found.";
+	}
+
+	$conn->close();
+
+?>
+
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -263,7 +290,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/1.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[0]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Spirited Funeral</h2>
@@ -283,7 +310,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/2.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[1]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2><br>Infinity Funeral & Condolence Flowers</h2>
@@ -304,7 +331,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/3.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[2]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Scented Dreams</h2>
@@ -325,7 +352,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/4.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[3]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Memory Lane</h2>
@@ -346,7 +373,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/5.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[4]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Forever Funeral & Condolence Flowers</h2>
@@ -367,7 +394,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/6.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[5]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2><br>Angel's Kiss</h2>
@@ -388,7 +415,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/7.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[6]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Rest In Peace Funeral & Condolence Flowers</h2>
@@ -409,7 +436,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/8.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[7]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2><br>Dearly Beloved</h2>
@@ -430,7 +457,7 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Flowers/9.png" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[8]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Purest Love Funeral & Condolence Flowers</h2>
@@ -517,7 +544,7 @@
 												<a href="shop-right-funeral.php">Funeral</a>
 											</li>
 											<li class="cat-item">
-												<a href="shop-right.php">Memorial Space</a> 
+												<a href="shop-right-space.php">Memorial Space</a> 
 											</li>
 										</ul>
 									</li>
