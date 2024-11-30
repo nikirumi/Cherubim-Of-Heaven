@@ -85,7 +85,7 @@
 		<span id="closePopup" class="close-btn">&times;</span>
 		<h2>Hello, <?php echo $username; ?>.</h2>
 		<p>Logged in successfuly.</p>
-		<?php unset($_SESSION["username"]); ?>
+		<?php unset($_SESSION["loginSuccess"]); ?>
 		<!--<button id="closeButton">Okay</button>-->
 	</div>
 </div>
