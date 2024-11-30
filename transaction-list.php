@@ -335,15 +335,14 @@
         </div>   
         
         <script>
-        
-        document.getElementById('transaction-form').onsubmit = function(event) {
-            var transaction_ID = document.getElementById('transaction_ID1').value;
-            if (transaction_ID === '') {
-                alert('Transaction ID cannot be empty!');
-                event.preventDefault();  
-                return false; 
-            }
-        };
+            document.getElementById('transaction-form').onsubmit = function(event) {
+                var transaction_ID = document.getElementById('transaction_ID1').value;
+                if (transaction_ID === '') {
+                    alert('Transaction ID cannot be empty!');
+                    event.preventDefault();  
+                    return false; 
+                }
+            };
          </script>
     </body>
 </html>

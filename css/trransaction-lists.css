@@ -267,6 +267,7 @@ tr:nth-child(even) {
     border-bottom: solid 3px #39576d ;
     margin-bottom: 10px;
     padding-bottom: 20px;
+    width: 100%;
 }
 
 .block {
