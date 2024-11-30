@@ -51,7 +51,7 @@
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
 <head>
-	<title>Memento - Multipurpose Funeral Service HTML template</title>
+	<title>Funeral Venue 1</title>
 	<meta charset="utf-8">
 	<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -160,7 +160,7 @@
 								<a href="index.php" class="logo">
 									<img src="images/logo.png" alt="">
 									<div class="d-flex flex-column">
-										<h4 class="logo-text color-main">Memento</h4>
+										<h4 class="logo-text color-main">Cherubim of Heaven</h4>
 										<span class="logo-subtext">Funeral Service</span>
 									</div>
 								</a>
@@ -724,7 +724,7 @@
 						<div class="row">
 
 							<div class="col-md-12 text-center text-lg-left">
-								<h1 class="color-main">Shop Product Right Sidebar</h1>
+								<h1 class="color-main">Funeral Venue 1</h1>
 								<ol class=" breadcrumb">
 									<li class="breadcrumb-item">
 										<a href="index.php">Home</a>
@@ -733,7 +733,7 @@
 										<a href="#">Shop</a>
 									</li>
 									<li class="breadcrumb-item active">
-										Shop Product Right Sidebar
+										Venue 1
 									</li>
 								</ol>
 							</div>
@@ -752,31 +752,17 @@
 
 								<div class="images" data-columns="5">
 									<figure>
-										<div data-thumb="images/Funeral/01.jpg">
-											<a href="images/Funeral/01.jpg">
-												<img src="images/Funeral/01.jpg" alt="" data-caption="" data-src="images/Funeral/01.jpg" data-large_image="images/shop/01.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										<div data-thumb="images/Funeral_Venues/v1.png">
+											<a href="images/Funeral_Venues/v1.png">
+												<img src="images/Funeral_Venues/v1.png" alt="" data-caption="" data-src="images/Funeral_Venues/v1.png" data-large_image="images/Funeral_Venues/v1.png" data-large_image_width="1000" data-large_image_height="1000">
 											</a>
 										</div>
-										<div data-thumb="images/shop/02.jpg">
-											<a href="images/shop/02.jpg">
-												<img src="images/shop/02.jpg" alt="" data-caption="" data-src="images/shop/02.jpg" data-large_image="images/shop/02.jpg" data-large_image_width="1000" data-large_image_height="1000">
+										<div data-thumb="images/Funeral_Venues/v1.1.png">
+											<a href="images/Funeral_Venues/v1.1.png">
+												<img src="images/Funeral_Venues/v1.1.png" alt="" data-caption="" data-src="images/Funeral_Venues/v1.1.png" data-large_image="images/Funeral_Venues/v1.1.png" data-large_image_width="1000" data-large_image_height="1000">
 											</a>
 										</div>
-										<div data-thumb="images/shop/03.jpg">
-											<a href="images/shop/03.jpg">
-												<img src="images/shop/03.jpg" alt="" data-caption="" data-src="images/shop/03.jpg" data-large_image="images/shop/03.jpg" data-large_image_width="1000" data-large_image_height="1000">
-											</a>
-										</div>
-										<div data-thumb="images/shop/04.jpg">
-											<a href="images/shop/04.jpg">
-												<img src="images/shop/04.jpg" alt="" data-caption="" data-src="images/shop/04.jpg" data-large_image="images/shop/04.jpg" data-large_image_width="1000" data-large_image_height="1000">
-											</a>
-										</div>
-										<div data-thumb="images/shop/05.jpg">
-											<a href="images/shop/05.jpg">
-												<img src="images/shop/05.jpg" alt="" data-caption="" data-src="images/shop/05.jpg" data-large_image="images/shop/05.jpg" data-large_image_width="1000" data-large_image_height="1000">
-											</a>
-										</div>
+										
 
 
 									</figure>
@@ -784,7 +770,7 @@
 
 								<div class="summary entry-summary text-center text-md-left">
 									<h6 class="product_title single_title">Venue 1</h6>
-									<p>short desc po ito, yung long description doon sa baba. Tnx u nice <br><br> Bale dito siguro mga inclusions</p>
+									<p>Cherubim of Heaven Memorial Park offers serene venues with seating for over 40 guests, and catering options. Perfect for intimate gatherings or larger ceremonies, we ensure a meaningful and dignified tribute for your loved ones.</p>
 									<div class="woocommerce-product-rating"></div>
 
 									<form method="POST" action="book-venue.php" id="bookingForm">
@@ -902,9 +888,12 @@
 									</ul>
 
 									<div class="panel wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-										<h6>Labore et dolore</h6>
-										<p>At vero eos et accusam et justo duo dolores etea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.</p>
-										<p>Ermod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimat. Etiam ut bibendum leo, quis pulvinar orci. Phasellus nec eros purus. Sed consequat facilisis ligula. Nulla tristique erat mauris, et tristique nibh lacinia..</p>
+									<h6>Serene Venues for Lasting Memories</h6>
+										<p>
+										Cherubim of Heaven Memorial Park offers a range of serene venues to honor and celebrate the life of your loved ones. Our thoughtfully designed spaces provide the perfect setting for memorial services, whether you are planning an intimate gathering or a larger ceremony. Held at our peaceful memorial park or a location of your choice, we ensure every detail reflects the dignity and love your family deserves.
+										</p>
+
+										<p>Cherubim of Heaven Memorial Park is a beautiful facility with seating capacity for over 40 guests. It’s fully equipped with parking, refreshments and catering as required. We can also provide for a range of specific needs to ensure your ceremony is comfortable and enjoyable.</p>
 									</div>
 									<div class="panel wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
 										<div id="reviews">
@@ -928,8 +917,7 @@
 																</p>
 
 																<div class="description">
-																	<p>Nice T-shirt, I got one in black. Goes with
-																		anything!</p>
+																<p>The venue at Cherubim of Heaven Memorial Park provided a peaceful and comforting atmosphere for our memorial service. Truly serene and well-maintained.</p>
 																</div>
 															</div>
 														</div>
@@ -953,7 +941,7 @@
 																</p>
 
 																<div class="description">
-																	<p>Very comfortable shirt, and I love the graphic!</p>
+																<p>The facilities were excellent—modern amenities like multimedia presentations and live webcasting made it easy to share the service with loved ones who couldn’t attend in person.</p>
 																</div>
 															</div>
 														</div>
@@ -977,8 +965,7 @@
 																</p>
 
 																<div class="description">
-																	<p>Great T-shirt quality, Great Design and Great
-																		Service.</p>
+																<p>Everything was thoughtfully arranged, from the seating to the refreshments. The staff ensured the event was smooth and dignified. Highly recommended.</p>
 																</div>
 															</div>
 														</div>
@@ -1052,19 +1039,19 @@
 									<ul class="products">
 										<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/01.jpg" alt="">
+												<img src="images/Flowers/1.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet 25 red roses</h2>
+													<h2><br><br>Spirited Funeral</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>6,499
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>₱ </span>6,499
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1074,19 +1061,19 @@
 										</li>
 										<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/02.jpg" alt="">
+												<img src="images/Flowers/2.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet Romantic</h2>
+													<h2><br><br><br>Infinity Funeral & Condolence Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>9,100
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>₱ </span>9,100
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1118,19 +1105,19 @@
 										</li>
 										<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/04.jpg" alt="">
+												<img src="images/Flowers/4.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet Spring</h2>
+													<h2><br><br>Memory Lane</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>5,299
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>₱ </span>5,299
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1140,19 +1127,19 @@
 										</li>
 										<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/05.jpg" alt="">
+												<img src="images/Flowers/5.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet "Charm"</h2>
+													<h2><br>Forever Funeral & Condolence Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>6,999
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>₱ </span>6,999
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1162,19 +1149,19 @@
 										</li>
 										<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/06.jpg" alt="">
+												<img src="images/Flowers/6.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Spring bouquet </h2>
+													<h2><br><br><br>Angel's Kiss</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>4,799
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>₱ </span>4,799
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1184,19 +1171,19 @@
 										</li>
 										<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/07.jpg" alt="">
+												<img src="images/Flowers/7.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Romantic bouquet</h2>
+													<h2><br><br>Rest In Peace Funeral & Condolence Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>6,839
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>₱ </span>6,839
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1206,19 +1193,19 @@
 										</li>
 										<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/08.jpg" alt="">
+												<img src="images/Flowers/8.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>51 white and pink</h2>
+													<h2><br><br><br>Dearly Beloved</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>10,999
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>₱ </span>10,999
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1228,19 +1215,19 @@
 										</li>
 										<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/09.jpg" alt="">
+												<img src="images/Flowers/9.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet "Silver"</h2>
+													<h2><br><br><br>Purest Love Funeral & Condolence Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>2,899
 															</span>
 														</del>
-														<span>₱ </span>55
+														<span>₱ </span>2,899
 													</span>
 												</div>
 												<div class="shop-btn">
@@ -1311,8 +1298,8 @@
 								<ul class="product_list_widget">
 									<li>
 										<a href="shop-product-right.php">
-											<img src="images/shop/05.jpg" alt="">
-											<span class="product-title">Bouquet "Charm"</span>
+											<img src="images/Flowers/1.png" alt="">
+											<span class="product-title">Spirited Funeral</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -1324,13 +1311,13 @@
 											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>34
+											<span class="woocommerce-Price-currencySymbol">PHP</span>6,499
 										</span>
 									</li>
 									<li>
 										<a href="shop-product-right.php">
-											<img src="images/shop/08.jpg" alt="">
-											<span class="product-title">51 white and pink</span>
+											<img src="images/Flowers/3.png" alt="">
+											<span class="product-title">Scented Dreams</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -1343,20 +1330,17 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
-												55
+												<span class="woocommerce-Price-currencySymbol">PHP</span>
+												4,699
 											</span>
 										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
-											34
-										</span>
+										
 									</li>
 
 									<li>
 										<a href="shop-product-right.php">
-											<img src="images/shop/01.jpg" alt="">
-											<span class="product-title">Bouquet 25 red roses</span>
+											<img src="images/Flowers/9.png" alt="">
+											<span class="product-title">Purest Love Funeral & Condolence Flowers</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -1369,14 +1353,11 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
-												55
+												<span class="woocommerce-Price-currencySymbol">PHP </span>
+												2,899
 											</span>
 										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
-											34
-										</span>
+										
 									</li>
 								</ul>
 							</div>
@@ -1429,7 +1410,7 @@
 								<a href="index.php" class="logo">
 									<img src="images/logo.png" alt="">
 									<div class="d-flex flex-column">
-										<h4 class="logo-text color-main">Memento</h4>
+										<h4 class="logo-text color-main">Cherubim of Heaven</h4>
 										<span class="logo-subtext">Funeral Service</span>
 									</div>
 								</a>
@@ -1538,7 +1519,7 @@
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-md-6 text-center text-md-left animate" data-animation="fadeInUp">
-							<p>&copy; Memento <span class="copyright_year">2019</span> - All Rights Reserved</p>
+							<p>&copy; Cherubim of Heaven <span class="copyright_year">2024</span> - All Rights Reserved</p>
 						</div>
 						<div class="col-md-6 text-center text-md-right animate" data-animation="fadeInUp">
 							<span class="social-icons">

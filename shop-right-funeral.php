@@ -261,7 +261,7 @@
 								<ul class="products">
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/Funeral/01.jpg" alt="">
+											<img src="images/Funeral_Venues/v1.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="funeral-venue1.php"></a>
 											</div>
@@ -271,6 +271,28 @@
 													<del>
 														<span>
 															<span>₱ </span>15,000
+														</span>
+													</del>
+													<span>₱ </span>15,000
+												</span>
+											</div>
+											<div class="shop-btn">
+												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+											</div>
+										</div>
+									</li>
+									<li class="product vertical-item content-padding">
+										<div class="product-inner box-shadow">
+											<img style="height: 180px;" src="images/Funeral_Venues/v2.png" alt="">
+											<div class="media-links">
+												<a class="abs-link" title="" href="funeral-venue2.php"></a>
+											</div>
+											<div class="item-content">
+												<h2>Venue 2</h2>
+												<span class="price">
+													<del>
+														<span>
+															<span>₱ </span>25,000
 														</span>
 													</del>
 													<span>₱ </span>25,000
@@ -283,29 +305,7 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img style="height: 180px;" src="images/Funeral/02.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="funeral-venue2.php"></a>
-											</div>
-											<div class="item-content">
-												<h2>Venue 2</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>25,000
-														</span>
-													</del>
-													<span>₱ </span>30,000
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Funeral/03.jpg" alt="">
+											<img src="images/Funeral_Venues/v3.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="funeral-venue3.php"></a>
 											</div>
@@ -314,10 +314,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>30,000
+															<span>₱ </span>45,000
 														</span>
 													</del>
-													<span>₱ </span>35,000
+													<span>₱ </span>45,000
 												</span>
 											</div>
 											<div class="shop-btn">
