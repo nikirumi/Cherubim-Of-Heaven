@@ -35,7 +35,7 @@
 
                     <a class="aa" href="account-list.php" >ACCOUNT LIST</a>
                     <a class="aa" href="item-list.php" >ITEM LIST</a>
-                    <a class="aa" href="transaction-list.php" >TRANSACTION LIST</a>
+                    <a class="aa" href="transaction-list.php" >TRANSACTION REPORTS</a>
 
                     <form action="admin.php" method="post">
                         <button class="aa" type="submit" name="logout">LOG OUT</button>
