@@ -505,15 +505,14 @@
 												continue;
 											}
 
-											//$item['removed'] = false;
-
 											$service_name = $item['name'];
 											$service_price = $item['price'];
 											$quantity = $item['quantity'];
 
-											//$_SESSION['cart'][$service_id]['removed'] = false;
+        									$arrProductId[] = $service_id; 
+											$arrStock[] = $quantity;  
 
-											$subtotal = $service_price * $quantity; // Calculate subtotal
+											$subtotal = $service_price * $quantity; 
 											$subtotalAll += $subtotal; 
 
 											$intValue = (int) preg_replace('/\D/', '', $service_id);
@@ -533,6 +532,11 @@
 
 										}
 						
+										foreach ($arrProductId as $index => $service_id) {
+											$stock = $arrStock[$index];
+											echo '<input type="hidden" name="service_id[]" value="' . htmlspecialchars($service_id) . '">';
+											echo '<input type="hidden" name="stock[]" value="' . htmlspecialchars($stock) . '">';
+										}
 										?>		
 
 										</tbody>

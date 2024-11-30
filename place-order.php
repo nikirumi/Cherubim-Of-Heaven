@@ -6,6 +6,30 @@
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
+            $service_ids = isset($_POST['service_id']) ? $_POST['service_id'] : [];
+            $stocks = isset($_POST['stock']) ? $_POST['stock'] : [];
+
+            if (!empty($service_ids) && !empty($stocks) && count($service_ids) === count($stocks)) {
+
+                foreach ($service_ids as $index => $service_id) {
+                    $stock = $stocks[$index]; 
+
+                    $update_query = "UPDATE memorial_goods SET Quantity = Quantity - ? WHERE MG_Service_ID = ?";
+                    $stmt = $conn->prepare($update_query);
+                    $stmt->bind_param("ss", $stock, $service_id);
+                    if ($stmt->execute()) {
+                        echo "Stock updated for service ID: $service_id<br>";
+                    } 
+                    else {
+                        echo "Error updating stock for service ID: $service_id<br>";
+                    }
+                    $stmt->close();
+                }
+            } 
+            else {
+                echo "Invalid input data.";
+            }
+
             $billing_first_name = isset($_POST['billing_first_name']) ? $_POST['billing_first_name'] : '';
             $billing_last_name = isset($_POST['billing_last_name']) ? $_POST['billing_last_name'] : '';
             $billing_barangay = isset($_POST['billing_barangay']) ? $_POST['billing_barangay'] : '';
@@ -91,6 +115,7 @@
                 }
                 $stmt2->close();
             } //haha
+            
                 if (isset($_SESSION['cart'])) {
                     unset($_SESSION['cart']);
                     echo "Cart has been cleared after checkout.";
@@ -102,7 +127,7 @@
                 }
                 
                 else {
-                    header("Location: index.php");
+                    //header("Location: index.php");
                 }
             }  
             
@@ -124,7 +149,7 @@
         header("Location: shop-account-login.php");
     }
 
-    conn->close();
+    $conn->close();
     
 
 ?>

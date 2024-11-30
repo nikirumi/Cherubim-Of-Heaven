@@ -18,8 +18,17 @@
 	$product_id = isset($_GET['id']) ? ($_GET['id']) : 0;
 
 	// Fetch product details from the database
-	$stmt = $conn->prepare("SELECT Service_ID, Service_Name, Service_Price, Service_Description FROM memorial_services WHERE Service_ID = $product_id");
-	//$stmt->bind_param("s", $product_id);
+	$stmt = $conn->prepare("SELECT 
+							s.Service_ID, 
+							s.Service_Name, 
+							s.Service_Price, 
+							s.Service_Description, 
+							g.Quantity 
+							FROM memorial_services s
+							JOIN Memorial_goods g ON s.Service_ID = g.MG_Service_ID 
+							WHERE s.Service_ID = $product_id");
+
+	//$stmt->bind_param("s", $product_id); 
 	$stmt->execute();
 	$result = $stmt->get_result();
 
@@ -29,8 +38,9 @@
 		$service_name = $row['Service_Name'];
 		$service_price = $row['Service_Price'];
 		$service_description = $row['Service_Description'];
+		$quantity = $row['Quantity'];  // Now you have the Quantity value from Memorial_goods
 	} 
-	
+
 	else {
 		echo "Product not found.";
 		exit();
@@ -781,6 +791,9 @@
 									<div class="star-rating">
 										<span style="width:80%">Rated <strong class="rating">4</strong> out of 5</span>
 									</div>
+									<span class="price">
+										<span>Stock: </span><?php echo $quantity; ?>
+									</span>
 									<div class="woocommerce-product-rating">
 										<!-- Your rating system here -->
 									</div>
@@ -792,7 +805,7 @@
 												<div class="quantity single">
 													<input type="button" value="+" class="plus">
 													<i class="fa fa-angle-up" aria-hidden="true"></i>
-													<input type="number" class="input-text qty text" step="1" min="1" max="1000" name="quantity" value="1" size="4">
+													<input type="number" class="input-text qty text" step="1" min="1" max="<?php echo $quantity; ?>" name="quantity" value="1" size="4">
 													<input type="button" value="-" class="minus">
 													<i class="fa fa-angle-down" aria-hidden="true"></i>
 												</div>
