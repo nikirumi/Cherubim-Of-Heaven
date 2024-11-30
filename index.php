@@ -280,7 +280,7 @@
 										<div class="intro_layers_wrapper">
 											<div class="intro_layers">
 												<div class="intro_layer" data-animation="fadeInDown">
-													<p class="intro_before_featured_word">today, tomorrow and beyond.
+													<p class="intro_before_featured_word">Today, Tomorrow and Beyond.
 													</p>
 												</div>
 												<div class="intro_layer" data-animation="fadeInDown">
@@ -317,7 +317,7 @@
 										<div class="intro_layers_wrapper">
 											<div class="intro_layers">
 												<div class="intro_layer" data-animation="fadeInDown">
-													<p class="intro_before_featured_word">today, tomorrow and beyond.
+													<p class="intro_before_featured_word">Today, Tomorrow and Beyond.
 													</p>
 												</div>
 												<div class="intro_layer" data-animation="fadeInDown">
@@ -357,7 +357,7 @@
 										<div class="intro_layers_wrapper">
 											<div class="intro_layers">
 												<div class="intro_layer" data-animation="fadeInDown">
-													<p class="intro_before_featured_word">today, tomorrow and beyond.
+													<p class="intro_before_featured_word">Today, Tomorrow and Beyond.
 													</p>
 												</div>
 												<div class="intro_layer" data-animation="fadeInDown">
@@ -408,14 +408,15 @@
 						</div>
 						<div class="col-12 col-xl-6 animate" data-animation="fadeInRight">
 							<div class="divider-60 hidden-divider"></div>
-							<p class="subtitle special-subtitle">today, tomorrow and beyond.</p>
+							<p class="subtitle special-subtitle">Today, Tomorrow and Beyond.</p>
 							<h3 class="special-heading"><span class="color-main">Experience </span>the Difference</h3>
 							<div class="divider-55 d-none d-lg-block"></div>
-							<p>Having established itself long ago as San Diego’s most prestigious funeral home and
-								cemetery, Greenwood Memorial Park, Mortuary and Crematory is truly a place like no
-								other.</p>
-							<p>Built in 1907 on a slight hill with an ocean view, Greenwood’s appeal began with its
-								location.</p>
+							<p>Cherubim of Heaven Memorial Park, located in the serene town of San Pedro, Hagonoy, Bulacan, stands as a tranquil and dignified resting place for your loved ones.</p>
+
+							<p>Dedicated to offering personalized memorial services since its establishment, Cherubim of Heaven provides a unique environment designed to honor and cherish life's most meaningful moments. Nestled in a peaceful location, the park is a place of solace and reflection, surrounded by natural beauty and a community-driven spirit.</p>
+
+							<p>Whether today, tomorrow, or in the years to come, Cherubim of Heaven Memorial Park is here to help you create lasting memories and provide a sense of peace and comfort.</p>
+
 							<div class="divider-40"></div>
 							<div class="media centered-media">
 								<div class="icon-styled color-main fs-40">
@@ -457,16 +458,15 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-lg-6">
-							<p class="subtitle special-subtitle">today, tomorrow and beyond.</p>
+							<p class="subtitle special-subtitle">Today, Tomorrow and Beyond.</p>
 							<h3 class="special-heading"><span class="color-main">Enjoy </span> our quality<br> services
 							</h3>
 						</div>
 						<div class="col-12 col-lg-6">
 							<div class="divider-11 d-none d-lg-block"></div>
-							<p>Over the years, it has expanded to include several chapels, a mortuary, crematory, three
-								mausoleums, a collection of international and rare vegetation and statuary.</p>
-							<p>Many prominent San Diego residents are laid to rest here and many of the markers tell a
-								fascinating story. </p>
+							<p>Over the years, Cherubim of Heaven Memorial Park has grown to provide a comprehensive range of memorial services, including burial plots, columbarium spaces, and beautifully designed venues for meaningful ceremonies.</p>
+
+							<p>The park features well-maintained landscapes, serene spaces for reflection, and personalized memorial options tailored to honor loved ones in unique and heartfelt ways. Each service and space reflects a dedication to creating a dignified and peaceful environment, ensuring families have a place to celebrate life and cherish memories for generations to come.</p>
 
 						</div>
 						<div class="divider-40 d-block d-lg-none"></div>
@@ -484,7 +484,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">San Diego Burial at Sea Captains</a>
+											<a href="service-single.php">Personalized Funeral Services</a>
 										</p>
 									</div>
 								</div>
@@ -497,7 +497,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">Funeral Your Way is a licensed California</a>
+											<a href="service-single.php">Comprehensive Memorial Options</a>
 										</p>
 									</div>
 								</div>
@@ -510,7 +510,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">One contact point for Cremation</a>
+											<a href="service-single.php">One Platform for Seamless Planning</a>
 										</p>
 									</div>
 								</div>
@@ -523,7 +523,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">Lorem ipsum dolor sit amet, conse</a>
+											<a href="service-single.php">Digital Time Capsules</a>
 										</p>
 									</div>
 								</div>
@@ -536,7 +536,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">adipiscing elit in vel elit scelerisque</a>
+											<a href="service-single.php">Virtual Park Tour</a>
 										</p>
 									</div>
 								</div>
@@ -549,7 +549,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">Eros tempor elementum ut ligula</a>
+											<a href="service-single.php">Honoring Legacies with Care and Compassion</a>
 										</p>
 									</div>
 								</div>
@@ -565,15 +565,14 @@
 					<div class="row">
 						<div class="col-12 col-lg-6 animate" data-animation="fadeInLeft">
 							<div class="divider-30 d-none d-xl-block"></div>
-							<p class="subtitle">today, tomorrow and beyond.</p>
+							<p class="subtitle">Today, Tomorrow and Beyond.</p>
 							<h3 class="special-heading"><span class="color-main">Recent </span>Obituaries</h3>
 							<div class="divider-60 d-none d-lg-block"></div>
 							<div class="row c-gutter-0">
 								<div class="col-12 col-md-10">
-									<p>For those unfamiliar with Belle Benchley, for example, it might come as a
-										surprise to stumble across a grave marker depicting the face of a gorilla.</p>
-									<p>Known as The Zoo Lady, Benchley was the director of the San Diego Zoo from 1927
-										to 1953.</p>
+									<p>For those unfamiliar with Maria Santos, it may come as a heartfelt surprise to see a memorial adorned with flowers and a rosary.</p>
+
+									<p>Known as a devoted mother and a pillar of her community, Maria’s life was a testament to love, faith, and service. Her memory continues to inspire and bring warmth to the hearts of those whose lives she touched.</p>
 									<div class="text-center text-lg-left">
 										<div class="divider-43 d-none d-lg-block"></div>
 										<a href="contact.php" class="btn btn-maincolor">Contact Us</a>
@@ -648,12 +647,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 col-lg-8 offset-lg-2">
-							<p class="subtitle">today, tomorrow and beyond.</p>
-							<h3 class="special-heading"><span class="color-main">Eco </span>Funeral</h3>
+							<p class="subtitle">Today, Tomorrow and Beyond.</p>
+							<h3 class="special-heading"><span class="color-main">Memorial Services  </span>for a Lasting Legacy</h3>
 							<div class="divider-60 d-none d-lg-block"></div>
-							<p>Cherubim Of Heaven is proud to offer green burials for those who are mindful of the environment.
-								This unique option is the perfect way to leave behind an honorable legacy and a
-								sustainable future for generations to come.</p>
+							<p>Cherubim of Heaven Memorial Park is proud to offer services that honor not only the departed but also the values they cherished. With serene burial plots, thoughtfully designed columbarium spaces, and digital time capsules, we help families create meaningful tributes while fostering a legacy of remembrance for future generations.</p>
 							<div class="divider-40 d-none d-lg-block"></div>
 							<a href="#" class="btn btn-maincolor mr-2">Shedule ceremony</a>
 							<a href="#" class="btn btn-outline-maincolor">Learn More</a>
@@ -665,7 +662,7 @@
 			<section id="blog" class="s-pt-55 s-pb-20 s-pt-lg-95 s-pb-lg-60 s-pt-xl-145 s-pb-xl-110 ls blog-section">
 				<div class="container">
 					<div class="col-12 text-center">
-						<p class="subtitle">today, tomorrow and beyond.</p>
+						<p class="subtitle">Today, Tomorrow and Beyond.</p>
 						<h3 class="special-heading"><span class="color-main">Latest </span>News</h3>
 						<div class="divider-65 d-none d-lg-block"></div>
 					</div>
@@ -841,7 +838,7 @@
 					<div class="col-md-6 text-center text-md-left animate" data-animation="moveFromRight">
 						<div class="divider-55 d-none-d-lg-block"></div>
 						<div class=" centered-content">
-							<p class="subtitle">today, tomorrow and beyond.</p>
+							<p class="subtitle">Today, Tomorrow and Beyond.</p>
 							<h3 class="special-heading"><span class="color-main">Contact </span>Us</h3>
 							<div class="divider-60 d-none d-lg-block"></div>
 							<h6 class="d-inline-block mt-0 mb-13">Email:</h6><span class=""> <a

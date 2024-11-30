@@ -261,20 +261,18 @@
 								<ul class="products">
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/01.jpg" alt="">
+											<img src="images/Flowers/1.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet 25 red roses</h2>
+												<h2>Spirited Funeral</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>6,499
 														</span>
 													</del>
-													<span>$ </span>55
-												</span>
 											</div>
 											<div class="shop-btn">
 												<a href="#" class="add-to-card btn btn-maincolor">View</a>
@@ -283,20 +281,19 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/02.jpg" alt="">
+											<img src="images/Flowers/2.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet Romantic</h2>
+												<h2><br>Infinity Funeral & Condolence Flowers</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>9,100
 														</span>
 													</del>
-													<span>$ </span>55
-												</span>
+													
 											</div>
 											<div class="shop-btn">
 												<a href="#" class="add-to-card btn btn-maincolor">View</a>
@@ -305,20 +302,19 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/03.jpg" alt="">
+											<img src="images/Flowers/3.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
-												<h2>51 multicolored tulips</h2>
+												<h2>Scented Dreams</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>4,699
 														</span>
 													</del>
-													<span>$ </span>55
-												</span>
+													
 											</div>
 											<div class="shop-btn">
 												<a href="#" class="add-to-card btn btn-maincolor">View</a>
@@ -327,20 +323,19 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/04.jpg" alt="">
+											<img src="images/Flowers/4.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet Spring</h2>
+												<h2>Memory Lane</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>5,299
 														</span>
 													</del>
-													<span>$ </span>55
-												</span>
+													
 											</div>
 											<div class="shop-btn">
 												<a href="#" class="add-to-card btn btn-maincolor">View</a>
@@ -349,20 +344,19 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/05.jpg" alt="">
+											<img src="images/Flowers/5.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet "Charm"</h2>
+												<h2>Forever Funeral & Condolence Flowers</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>6,999
 														</span>
 													</del>
-													<span>$ </span>55
-												</span>
+													
 											</div>
 											<div class="shop-btn">
 												<a href="#" class="add-to-card btn btn-maincolor">View</a>
@@ -371,20 +365,19 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/06.jpg" alt="">
+											<img src="images/Flowers/6.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
-												<h2>Spring bouquet </h2>
+												<h2><br>Angel's Kiss</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>4,799
 														</span>
 													</del>
-													<span>$ </span>55
-												</span>
+												
 											</div>
 											<div class="shop-btn">
 												<a href="#" class="add-to-card btn btn-maincolor">View</a>
@@ -393,20 +386,19 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/07.jpg" alt="">
+											<img src="images/Flowers/7.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
-												<h2>Romantic bouquet</h2>
+												<h2>Rest In Peace Funeral & Condolence Flowers</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>6,839
 														</span>
 													</del>
-													<span>$ </span>55
-												</span>
+													
 											</div>
 											<div class="shop-btn">
 												<a href="#" class="add-to-card btn btn-maincolor">View</a>
@@ -415,20 +407,19 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/08.jpg" alt="">
+											<img src="images/Flowers/8.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
-												<h2>51 white and pink</h2>
+												<h2><br>Dearly Beloved</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>10,999
 														</span>
 													</del>
-													<span>$ </span>55
-												</span>
+													
 											</div>
 											<div class="shop-btn">
 												<a href="#" class="add-to-card btn btn-maincolor">View</a>
@@ -437,19 +428,19 @@
 									</li>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/shop/09.jpg" alt="">
+											<img src="images/Flowers/9.png" alt="">
 											<div class="media-links">
 												<a class="abs-link" title="" href="shop-product-right.php"></a>
 											</div>
 											<div class="item-content">
-												<h2>Bouquet "Silver"</h2>
+												<h2>Purest Love Funeral & Condolence Flowers</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>PHP </span>2,899
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>$ </span>49
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -542,8 +533,8 @@
 								<ul class="product_list_widget">
 									<li>
 										<a href="shop-product-right.php">
-											<img src="images/shop/05.jpg" alt="">
-											<span class="product-title">Bouquet "Charm"</span>
+											<img src="images/Flowers/1.png" alt="">
+											<span class="product-title">Spirited Funeral</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -555,13 +546,13 @@
 											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>34
+											<span class="woocommerce-Price-currencySymbol">PHP</span>6,499
 										</span>
 									</li>
 									<li>
 										<a href="shop-product-right.php">
-											<img src="images/shop/08.jpg" alt="">
-											<span class="product-title">51 white and pink</span>
+											<img src="images/Flowers/3.png" alt="">
+											<span class="product-title">Scented Dreams</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -574,20 +565,17 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
-												55
+												<span class="woocommerce-Price-currencySymbol">PHP</span>
+												4,699
 											</span>
 										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
-											34
-										</span>
+										
 									</li>
 
 									<li>
 										<a href="shop-product-right.php">
-											<img src="images/shop/01.jpg" alt="">
-											<span class="product-title">Bouquet 25 red roses</span>
+											<img src="images/Flowers/9.png" alt="">
+											<span class="product-title">Purest Love Funeral & Condolence Flowers</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -600,14 +588,11 @@
 										</div>
 										<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
-												55
+												<span class="woocommerce-Price-currencySymbol">PHP </span>
+												2,899
 											</span>
 										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
-											34
-										</span>
+										
 									</li>
 								</ul>
 							</div>
