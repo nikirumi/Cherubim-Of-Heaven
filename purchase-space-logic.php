@@ -76,8 +76,8 @@
 
                 echo "Service Price: $service_price, Quantity: $quantity, Total: $total"; // Debugging output
 
-                $add_trans_query = "INSERT INTO transaction (Transaction_ID, Client_ID, Transaction_Date, Total_Amount, Payment_Method, Payment_Status, Retrieval_Method, General_Address) 
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+                $add_trans_query = "INSERT INTO transaction (Transaction_ID, Client_ID, Transaction_Date, Total_Amount, Payment_Method, Payment_Status, General_Address) 
+                    VALUES (?, ?, ?, ?, ?, ?, ?)";
 
                 $stmt = $conn->prepare($add_trans_query);
 
@@ -85,7 +85,7 @@
                     die('MySQL prepare error: ' . $conn->error);
                 }
 
-                $stmt->bind_param("sssdssss", $trans_id, $client_id, $current_datetime, $total, $payment_method, $payment_status, $retrieval_method, $gen_add);
+                $stmt->bind_param("sssdsss", $trans_id, $client_id, $current_datetime, $total, $payment_method, $payment_status, $gen_add);
 
                 if ($stmt->execute()) {
                     echo "Transaction successfully inserted!";

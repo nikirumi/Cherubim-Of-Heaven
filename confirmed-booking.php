@@ -52,8 +52,8 @@
             $client_id = $row['Client_ID']; // Fetch Client_ID from the result set
             $stmt->close();
 
-            $add_trans_query = "INSERT INTO transaction (Transaction_ID, Client_ID, Transaction_Date, Total_Amount, Payment_Method, Payment_Status, General_Address, Retrieval_Method) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $add_trans_query = "INSERT INTO transaction (Transaction_ID, Client_ID, Transaction_Date, Total_Amount, Payment_Method, Payment_Status, General_Address) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)";
 
             $stmt = $conn->prepare($add_trans_query);
 
@@ -61,7 +61,7 @@
                 die('MySQL prepare error: ' . $conn->error);
             }
 
-            $stmt->bind_param("sssdssss", $trans_id, $client_id, $current_datetime, $total, $payment_method, $payment_status, $gen_add, $retrieval_method);
+            $stmt->bind_param("sssdsss", $trans_id, $client_id, $current_datetime, $total, $payment_method, $payment_status, $gen_add);
 
             if ($stmt->execute()) {
                 echo "Transaction successfully inserted!";

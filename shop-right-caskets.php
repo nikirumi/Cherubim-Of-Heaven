@@ -280,10 +280,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>65,000
+															<span>₱ </span>64,999
 														</span>
 													</del>
-													<span>₱ </span>75,000
+													<span>₱ </span>74,999
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -302,10 +302,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>35,000
+															<span>₱ </span>34,999
 														</span>
 													</del>
-													<span>₱ </span>55,000
+													<span>₱ </span>54,999
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -324,10 +324,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>70,000
+															<span>₱ </span>69,999
 														</span>
 													</del>
-													<span>₱ </span>85,000
+													<span>₱ </span>84,999
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -346,10 +346,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>60,000
+															<span>₱ </span>59,999
 														</span>
 													</del>
-													<span>₱ </span>75,000
+													<span>₱ </span>74,999
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -368,10 +368,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>35,000
+															<span>₱ </span>34,999
 														</span>
 													</del>
-													<span>₱ </span>55,000
+													<span>₱ </span>54,999
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -390,10 +390,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>80,000
+															<span>₱ </span>79,999
 														</span>
 													</del>
-													<span>₱ </span>95,000
+													<span>₱ </span>94,999
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -412,10 +412,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>50,000
+															<span>₱ </span>49,999
 														</span>
 													</del>
-													<span>₱ </span>60,000
+													<span>₱ </span>59,999
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -434,10 +434,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>30,000
+															<span>₱ </span>29,999
 														</span>
 													</del>
-													<span>₱ </span>50,000
+													<span>₱ </span>49,999
 												</span>
 											</div>
 											<div class="shop-btn">
@@ -456,10 +456,10 @@
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span>35,000
+															<span>₱ </span>34,999
 														</span>
 													</del>
-													<span>₱ </span>50,000
+													<span>₱ </span>49,999
 												</span>
 											</div>
 											<div class="shop-btn">

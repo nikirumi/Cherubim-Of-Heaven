@@ -382,12 +382,12 @@
 
 											<div class="datepicker-container" style="margin: 10px 0;">
 												<label for="datepicker">Select Starting Date:</label>
-												<input readonly type="text" id="datepicker" name="booking_start_date" placeholder="Choose a start date" required>
+												<input autocomplete="off" type="text" id="datepicker" name="booking_start_date" placeholder="Choose a start date" required>
 											</div>
 
 											<div class="datepicker-container" style="margin: 10px 0;">
 												<label for="end_datepicker">Select End Date:</label>
-												<input readonly type="text" id="end_datepicker" name="booking_end_date" placeholder="Choose an end date" required>
+												<input autocomplete="off" type="text" id="end_datepicker" name="booking_end_date" placeholder="Choose an end date" required>
 											</div>
 
 											<?php
@@ -433,11 +433,11 @@
 											},
 											onSelect: function(selectedDate) {
 												var selectedStartDate = $.datepicker.parseDate('mm/dd/yy', selectedDate);
-										
+												
+												// Make end datepicker editable after selecting start date
+												$("#end_datepicker").prop("readonly", false); 
 												$("#end_datepicker").prop("disabled", false);
-											
 												$("#end_datepicker").datepicker("option", "minDate", selectedStartDate);
-											
 												updateEndDatePicker(selectedStartDate);
 											}
 										});
@@ -452,11 +452,12 @@
 											}
 										});
 
-										$("#end_datepicker").prop("disabled", true);
+										$("#end_datepicker").prop("disabled", true);  // Initially disabled
+										$("#end_datepicker").prop("readonly", true);  // Make it non-typeable
 
 										function updateEndDatePicker(startDate) {
 											var endDatepicker = $("#end_datepicker");
-											var maxBookingDuration = 6;  
+											var maxBookingDuration = 6;  // Limit of 6 days
 											var maxEndDate = new Date(startDate);
 											maxEndDate.setDate(maxEndDate.getDate() + maxBookingDuration); 
 
@@ -465,9 +466,9 @@
 											endDatepicker.datepicker("option", "beforeShowDay", function(date) {
 												var string = $.datepicker.formatDate('mm/dd/yy', date);
 												if (disabledDates.indexOf(string) != -1 || date > maxEndDate) {
-													return [false];
+													return [false];  // Disable unavailable dates
 												}
-												return [true]; 
+												return [true];  // Enable available dates
 											});
 										}
 									});

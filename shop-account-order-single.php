@@ -1,12 +1,16 @@
 <?php 
 	include("connect.php");
+
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+
 	$service_id = isset($_GET['id']) ? ($_GET['id']) : 0;										 	
 					
 	if ($service_id != 0) {
 		// Prepare the SQL query to fetch related records for the transaction
-		$stmt = $conn->prepare("SELECT t.Transaction_ID, t.Client_ID, t.Transaction_Date, t.Total_Amount, t.Payment_Method, t.Payment_Status, t.Retrieval_Method, t.General_Address,
+		$stmt = $conn->prepare("SELECT t.Transaction_ID, t.Client_ID, t.Transaction_Date, t.Total_Amount, t.Payment_Method, t.Payment_Status, t.General_Address,
 		                            c.Username, c.Fname, c.Lname, c.Contact_Number, c.Email_Address, c.Purok, c.Barangay, c.H_num, c.S_name,
-		                            sp.Service_ID, sp.Start_Datetime, sp.End_Datetime, sp.Service_status,
+		                            sp.Service_ID, sp.Start_Datetime, sp.End_Datetime, sp.Service_status, sp.Quantity,
 		                            ms.Service_Name, ms.Service_Description, ms.Service_Price, ms.Service_Type
 		                        FROM transaction t
 		                        JOIN client c ON t.Client_ID = c.Client_ID
@@ -20,15 +24,36 @@
 		$result = $stmt->get_result();
 		
 		if ($result->num_rows > 0) {
-			
-			$row = $result->fetch_assoc();
 
-			$totalAmount = (float)$row['Total_Amount'];
-		    $servicePrice = (float)$row['Service_Price'];
-		    $numberOfOrder = $totalAmount / $servicePrice;
+			while ($row = $result->fetch_assoc()) {
+				
+				$totalAmount = (float)$row['Total_Amount'];
+				$service_status = $row['Service_status'];
+				$p_method = $row['Payment_Method'];
+
+				$email = $row['Email_Address'];
+				$phone = $row['Contact_Number'];
+				$barangay = $row['Barangay'];
+				$purok = $row['Purok'];
+				$h_num = $row['H_num'];
+				$s_name = $row['S_name'];
+
+				
+				$Transaction_Date = new DateTime($row['Transaction_Date']);
+				$formatted_date = $Transaction_Date->format('d-m-Y'); 
+
+				$transaction_data[] = array(
+					'Service_Name' => $row['Service_Name'],
+					'Service_Type' => $row['Service_Type'],
+					'Service_Description' => $row['Service_Description'],
+					'Number_of_Orders' => (int)$row['Quantity'],
+					'Service_Price' => (float)$row['Service_Price']
+				);
+
+			}
+
+			//var_dump($transaction_data);
 			
-			$Transaction_Date = new DateTime($row['Transaction_Date']);
-			$formatted_date = $Transaction_Date->format('d-m-Y'); 
 			// echo "Transaction ID: " . $row['Transaction_ID'] . "<br>";
 			// echo "Client ID: " . $row['Client_ID'] . "<br>";
 			// echo "Client Name: " . $row['Fname'] . " " . $row['Lname'] . "<br>";
@@ -53,7 +78,9 @@
 			// echo "Service Status: " . $row['Service_status'] . "<br>";
 			// echo "Service Start Date: " . $row['Start_Datetime'] . "<br>";
 			// echo "Service End Date: " . $row['End_Datetime'] . "<br>";
-		} else {
+			
+		} 
+		else {
 			echo "No transaction found for this ID.";
 		}
 		
@@ -348,7 +375,7 @@
 												was placed on <?php echo $formatted_date ?>
 												<mark class="order-date"> </mark>
 												and is currently
-												<mark class="order-status"><?php echo $row['Service_status']; ?></mark>
+												<mark class="order-status"><?php echo $service_status; ?></mark>
 												.
 											</p>
 
@@ -367,31 +394,25 @@
 													</thead>
 
 													<tbody>
-														<tr class="woocommerce-table__line-item order_item">
+														
+														<?php foreach ($transaction_data as $transaction): ?>
 
-															<td class="woocommerce-table__product-name product-name">
-																
-																
-																	
-																		<b>Name:</b> <?php echo "  " . $row['Service_Name'] . "<br>"?>
+															<?php $mult = $transaction['Service_Price'] * $transaction['Number_of_Orders']; ?>
 
-																		<b>Type:</b> <?php echo "   " . $row['Service_Type'] . "<br>"  ?>
-
-																		<b>Description:</b> <?php echo "  " . $row['Service_Description'] . "<br>"  ?>
-
-																		<b>Quantity:</b> <?php echo "  " . $numberOfOrder . "<br>"  ?>
-																	
-																	
-																
-															</td>
-
-															<td class="woocommerce-table__product-total product-total">
-																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $row['Service_Price']  ?>
-																</span>
-															</td>
-
-														</tr>
+															<tr>
+																<td class="woocommerce-table__product-name product-name">
+																	<b>Name:</b> <?php echo htmlspecialchars($transaction['Service_Name']); ?><br>
+																	<b>Type:</b> <?php echo htmlspecialchars($transaction['Service_Type']); ?><br>
+																	<b>Description:</b> <?php echo htmlspecialchars($transaction['Service_Description']); ?><br>
+																	<b>Quantity:</b> <?php echo $transaction['Number_of_Orders']; ?><br>
+																</td>
+																<td class="woocommerce-table__product-total product-total">
+																	<span class="woocommerce-Price-amount amount">
+																		<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $mult; ?>
+																	</span>
+																</td>
+															</tr>
+														<?php endforeach; ?>
 
 													</tbody>
 													<tfoot>
@@ -399,18 +420,19 @@
 															<th scope="row">Subtotal:</th>
 															<td>
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">₱</span></span><?php echo $row['Total_Amount']?></span>
+																	<span class="woocommerce-Price-currencySymbol"></span></span><?php echo "₱$totalAmount"; ?></span>
 															</td>
 														</tr>
 														<tr>
 															<th scope="row">Payment method:</th>
-															<td><?php echo $row['Payment_Method']  ?></td>
+															<td><?php echo $p_method; ?></td>
 														</tr>
 														<tr>
 															<th scope="row">Total:</th>
 															<td>
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $row['Total_Amount']  ?>
+																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $totalAmount; ?>
+																</span>
 															</td>
 														</tr>
 													</tfoot>
@@ -433,12 +455,12 @@
 														<tbody>
 															<tr>
 																<th>Email:</th>
-																<td><?php echo $row['Email_Address']  ?></td>
+																<td><?php echo $email; ?></td>
 															</tr>
 
 															<tr>
 																<th>Phone:</th>
-																<td><?php echo $row['Contact_Number']  ?></td>
+																<td><?php echo $phone;  ?></td>
 															</tr>
 
 
@@ -450,10 +472,10 @@
 
 														<address>
 															<?php
-															echo  $row['Barangay'] . "<br>";
-															echo  $row['Purok'] . "<br>";
-															echo  $row['H_num'] . "<br>";
-															echo  $row['S_name'] . "<br>";														
+															echo  $barangay . "<br>";
+															echo  $purok . "<br>";
+															echo  $h_num . "<br>";
+															echo  $s_name . "<br>";														
 															?>
 
 															

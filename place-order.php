@@ -81,8 +81,8 @@
             $client_id = $row['Client_ID']; // Fetch Client_ID from the result set
             $stmt->close();
 
-            $add_trans_query = "INSERT INTO transaction (Transaction_ID, Client_ID, Transaction_Date, Total_Amount, Payment_Method, Payment_Status, General_Address, Retrieval_Method) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $add_trans_query = "INSERT INTO transaction (Transaction_ID, Client_ID, Transaction_Date, Total_Amount, Payment_Method, Payment_Status, General_Address) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)";
 
             $stmt = $conn->prepare($add_trans_query);
 
@@ -90,31 +90,39 @@
                 die('MySQL prepare error: ' . $conn->error);
             }
 
-            $stmt->bind_param("sssdssss", $trans_id, $client_id, $current_datetime, $total, $payment_method, $payment_status, $gen_add, $retrieval_method);
+            $stmt->bind_param("sssdsss", $trans_id, $client_id, $current_datetime, $total, $payment_method, $payment_status, $gen_add);
 
             if ($stmt->execute()) {
                 echo "Transaction successfully inserted!";
 
                 if (!empty($cart)) {
-                $add_service_query = "INSERT INTO service_progress (Transaction_ID, Service_ID, Start_Datetime, Service_status) 
-                                      VALUES (?, ?, ?, ?)";
-                $stmt2 = $conn->prepare($add_service_query);
+                    $add_service_query = "INSERT INTO service_progress (Transaction_ID, Service_ID, Start_Datetime, Service_status, Quantity) 
+                      VALUES (?, ?, ?, ?, ?)";
+                    $stmt2 = $conn->prepare($add_service_query);
 
-                if ($stmt2 === false) {
-                    die('MySQL prepare error: ' . $conn->error);
-                }
-
-                foreach ($cart as $service_id => $item) {
-                    $start_datetime = $current_datetime; // Same as transaction date
-                    $service_status = "On Going";
-                    $stmt2->bind_param("ssss", $trans_id, $service_id, $start_datetime, $service_status);
-
-                    if (!$stmt2->execute()) {
-                        echo "Error inserting into service_progress: " . $stmt2->error;
+                    if ($stmt2 === false) {
+                        die('MySQL prepare error: ' . $conn->error);
                     }
-                }
-                $stmt2->close();
-            } //haha
+
+                    $index = 0;
+
+                    foreach ($cart as $service_id => $item) {
+                        $start_datetime = $current_datetime; // Same as transaction date
+                        $service_status = "On Going";
+                        $qty = $stocks[$index]; // Fetching the quantity from the $stock array
+                        $qty = (int)$stocks[$index];
+                        var_dump($qty);
+                        
+                        $stmt2->bind_param("ssssi", $trans_id, $service_id, $start_datetime, $service_status, $qty);
+
+                        if (!$stmt2->execute()) {
+                            echo "Error inserting into service_progress: " . $stmt2->error;
+                        }
+
+                        $index++;
+                    }
+                    $stmt2->close();
+                } //haha
             
                 if (isset($_SESSION['cart'])) {
                     unset($_SESSION['cart']);
