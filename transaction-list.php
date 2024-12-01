@@ -352,13 +352,11 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if( isset($_POST['toggle_status']) ){
-
-            // Check if transaction_ID1 is provided
+     
             $transaction_ID1 = filter_var($_POST['transaction_ID1'], FILTER_SANITIZE_SPECIAL_CHARS);
 
-            // Only process if transaction_ID1 is not empty
             if (!empty($transaction_ID1)) {
-                // Prepare the statement to check if the Transaction_ID exists
+                
                 $stmt = $conn->prepare("SELECT * FROM transaction WHERE Transaction_ID = ? LIMIT 1");
                 $stmt->bind_param("s", $transaction_ID1);
                 $stmt->execute();
@@ -366,7 +364,7 @@
                 $end_datetime = date("Y-m-d H:i:s");
 
                 if ($result->num_rows > 0) {
-                    // Check and update payment status if provided
+                    // Check and update payment status if may laman
                     if (!empty($_POST['payment_status'])) {
                         $payment_status = filter_var($_POST['payment_status'], FILTER_SANITIZE_SPECIAL_CHARS);
                         $stmt = $conn->prepare("UPDATE transaction SET Payment_status = ? WHERE Transaction_ID = ?");
@@ -380,7 +378,7 @@
                         }
                     }
 
-                    // Check and update service status if provided
+                    // Check and update service status if may laman
                     if (!empty($_POST['service_status'])) {
                         $service_status = filter_var($_POST['service_status'], FILTER_SANITIZE_SPECIAL_CHARS);
                         $stmt = $conn->prepare("UPDATE service_progress SET Service_status = ? WHERE Transaction_ID = ?");

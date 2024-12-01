@@ -114,7 +114,7 @@
                             $counter = 1;
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>";
-                                echo "<td>" . $row['Service_ID'] . "</td>"; 
+                                echo "<td>" . $row['MG_Service_ID'] . "</td>"; 
                                 // echo "<td>" . $row['MG_Service_ID'] . "</td>"; 
                                 echo "<td>" . $row['Service_Name'] . "</td>"; 
                                 echo "<td>" . $row['Service_Description'] . "</td>"; 
@@ -278,7 +278,7 @@
 
             //pang check lang if kung may id sa database
             $stm = $conn->prepare("SELECT * FROM memorial_services WHERE Service_ID = ? LIMIT 1");
-            $stm->bind_param("s", $transaction_ID);
+            $stm->bind_param("s", $service_ID);
             $stm->execute();
             $result = $stm->get_result();
 
