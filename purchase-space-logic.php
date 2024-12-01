@@ -7,7 +7,7 @@
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $service_ID = isset($_POST['service_ID']) ? $_POST['service_ID'] : null;
-            $quantity = isset($_POST['quantity']) ? $_POST['quantity'] : null;
+            //$quantity = isset($_POST['quantity']) ? $_POST['quantity'] : null;
 
             if (isset($_POST['place_order'])) {
                 // Handle the form submission
@@ -72,9 +72,10 @@
                 }
 
                 $service_price = $row_price['Service_Price'];
-                $total = $quantity * $service_price;
+                $total = $service_price;
+                //$total = $quantity * $service_price;
 
-                echo "Service Price: $service_price, Quantity: $quantity, Total: $total"; // Debugging output
+                //echo "Service Price: $service_price, Quantity: $quantity, Total: $total"; // Debugging output
 
                 $add_trans_query = "INSERT INTO transaction (Transaction_ID, Client_ID, Transaction_Date, Total_Amount, Payment_Method, Payment_Status, General_Address) 
                     VALUES (?, ?, ?, ?, ?, ?, ?)";

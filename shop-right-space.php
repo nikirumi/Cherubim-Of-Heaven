@@ -42,10 +42,10 @@
     }
 
   
-    $ID1 = "S-011"; 
-    $ID2 = "S-012"; 
-    $ID3 = "S-013"; 
-    $ID4 = "S-014"; 
+    $ID1 = "S-031"; 
+    $ID2 = "S-032"; 
+    $ID3 = "S-033"; 
+    $ID4 = "S-034"; 
 
     $firstRow = displayAssoc($ID1); 
     $secondRow = displayAssoc($ID2); 

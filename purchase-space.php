@@ -8,13 +8,13 @@
 
 
 
-    $quantity = $_POST['quantity'];
+    //$quantity = $_POST['quantity'];
     
 
-    echo $quantity . "<br>";
+    //echo $quantity . "<br>";
 
     $service_ID = $_POST['service_ID'];
-    echo $service_ID;
+    //echo $service_ID;
 
 	if (!$username) {
 		header("Location: shop-account-login.php");
@@ -503,7 +503,7 @@
 												</p>
 
                                                 <input type="hidden" name="service_ID" value="<?php echo $service_ID; ?>">
-                                                <input type="hidden" name="quantity" value="<?php echo $quantity; ?>">
+                                               
 
 
 
@@ -634,19 +634,18 @@
                                                 // Fetch the memorial space data
                                                 $service_name = $row['Service_Name'];
                                                 $service_price = $row['Service_Price'];
-                                                
-                                                $subtotal = $service_price * $quantity;
-                                                $subtotalAll = $subtotal; // Since only one service, subtotal is the total
+
+                                                $subtotalAll = $service_price; // Since only one service, subtotal is the total
 
                                                 // Display the memorial space in the table
                                                 echo "
                                                 <tr class='cart_item'>
                                                     <td class='product-name'>
-                                                        $service_name&nbsp; <strong class='product-quantity'>× $quantity</strong>
+                                                        $service_name&nbsp; <strong class='product-quantity'>× 1</strong>
                                                     </td>
                                                     <td class='product-total'>
                                                         <span class='woocommerce-Price-amount amount'>
-                                                            <span class='woocommerce-Price-currencySymbol'>₱</span>$subtotal</span>
+                                                            <span class='woocommerce-Price-currencySymbol'>₱</span>$subtotalAll</span>
                                                     </td>
                                                 </tr>
                                                 ";
@@ -691,13 +690,13 @@
 												<input id="payment_method_cod" type="radio" class="input-radio" name="payment_method" value="COD" data-order_button_text="">
 
 												<label for="payment_method_cod">
-													Cash on delivery </label>
+													Cash </label>
 
 												<div class="payment_box payment_method_cheque" style="display: none;">
 													<p>Use other available payment methods.</p>
 												</div>
 												<div class="payment_box payment_method_cod" style="display: block;">
-													<p>Pay with cash upon delivery.</p>
+													<p>Visit our physical location and pay with cash.</p>
 												</div>
 											</li>
 										</ul>

@@ -31,16 +31,16 @@
 
 	$img_link = "";
 	
-	if ($service_ID == "S-011"){
+	if ($service_ID == "S-031"){
 		$img_link = "images/mausoleum.jpg";
 	}
-	else if ($service_ID == "S-012"){
+	else if ($service_ID == "S-032"){
 		$img_link = "images/openair.png";
 	}
-	else if ($service_ID == "S-013"){
+	else if ($service_ID == "S-033"){
 		$img_link = "images/lawnm.jpg";
 	}
-	else if ($service_ID == "S-014"){
+	else if ($service_ID == "S-034"){
 		$img_link = "images/apt.jpg";
 	}
 
@@ -283,7 +283,7 @@
 						<div class="row">
 
 							<div class="col-md-12 text-center text-lg-left">
-								<h1 class="color-main">Shop Product Right Sidebar</h1>
+								<h1 class="color-main">Catalog</h1>
 								<ol class=" breadcrumb">
 									<li class="breadcrumb-item">
 										<a href="index.php">Home</a>
@@ -292,7 +292,7 @@
 										<a href="#">Shop</a>
 									</li>
 									<li class="breadcrumb-item active">
-										Shop Product Right Sidebar
+										Catalog
 									</li>
 								</ol>
 							</div>
@@ -321,15 +321,19 @@
 								<div class="summary entry-summary text-center text-md-left">
 									<h6 class="product_title single_title"><?php  echo  $row['Service_Name']   ?>
                                     </h6>
+									<div class="star-rating">
+										<span style="width:80%">Rated <strong class="rating">4</strong> out of 5</span>
+									</div>
+									<span class="price">
+										<span>₱ </span><?php echo $row['Service_Price']; ?>
+									</span>
 									<p><?php echo $row['Service_Description'] ?></p>
                                     <p><b><?php echo $row['Space_Status'] ?></b></p>
-
-									
 
 									<form method="POST" action="purchase-space.php">
 										<div class="single_variation_wrap">
 											<div class="d-flex align-items-center">
-												<div class="quantity single">
+												<!--<div class="quantity single">
 
 													<input type="button" value="+" class="plus">
 													<i class="fa fa-angle-up" aria-hidden="true"></i>
@@ -337,13 +341,10 @@
 													<input type="button" value="-" class="minus">
 													<i class="fa fa-angle-down" aria-hidden="true"></i>
 
-												</div>
+												</div>-->
 												<span class="price">
 
                                         <input type="hidden" name="service_ID" value="<?php echo $service_ID; ?>">
-
-													<span>₱ </span><?php echo $row['Service_Price'] ?>
-												</span>
                                                 
 											</div>
 
@@ -1014,7 +1015,7 @@
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-md-6 text-center text-md-left animate" data-animation="fadeInUp">
-							<p>&copy; Memento <span class="copyright_year">2019</span> - All Rights Reserved</p>
+							<p>&copy; Cherubim of Heaven <span class="copyright_year">2024</span> - All Rights Reserved</p>
 						</div>
 						<div class="col-md-6 text-center text-md-right animate" data-animation="fadeInUp">
 							<span class="social-icons">
