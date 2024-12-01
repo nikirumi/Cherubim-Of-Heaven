@@ -201,7 +201,7 @@
 									<!--hidding includes on small devices. They are duplicated in topline-->
 									<ul class="top-includes d-none d-xl-block">
 										<li>
-											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">1-800-123-45-67</span>
+											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">(044) 762 4284</span>
 										</li>
 									</ul>
 
@@ -247,11 +247,11 @@
 							<article>
 								<header class="entry-header mb-30">
 									<h1 class="entry-title">My account</h1>
-									<span class="edit-link">
+									<!--<span class="edit-link">
 										<a class="post-edit-link" href="#">Edit
 											<span class="screen-reader-text"> "My account"</span>
 										</a>
-									</span>
+									</span>-->
 								</header><!-- .entry-header -->
 								<div class="entry-content">
 									<div class="woocommerce">
@@ -312,7 +312,8 @@
 				</div>
 			</section>
 
-			<footer class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
+			<footer
+				class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
 				<div class="container">
 					<div class="row">
 
@@ -327,7 +328,8 @@
 									</div>
 								</a>
 								<p>
-									We do accept cremains from throughout the United States and the world. Many of our families come from the Phoenix area as well as various
+									Our services are designed to accommodate diverse traditions and preferences, 
+									ensuring a meaningful experience for everyone.
 								</p>
 							</div>
 						</div>
@@ -342,7 +344,7 @@
 											Weekdays
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -351,7 +353,7 @@
 											Saturday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -360,7 +362,7 @@
 											Sunday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">Closed</span>
+											<span class="color-darkgrey">8:00 - 18:00</span>
 										</div>
 									</li>
 
@@ -384,7 +386,8 @@
 										<span class="screen-reader-text">Subscribe:</span>
 									</label>
 
-									<input id="mailchimp_email" name="email" type="email" class="form-control mailchimp_email" placeholder="Your Email">
+									<input id="mailchimp_email" name="email" type="email"
+										class="form-control mailchimp_email" placeholder="Your Email">
 
 									<button type="submit" class="search-submit">
 										<span class="screen-reader-text">Subscribe</span>
@@ -403,20 +406,23 @@
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-maps"></i>
 									</div>
-									<p class="media-body"> 808 Pickens Way<br> Cooper, TX 75432 </p>
+									<p class="media-body"> Purok 4 San Pedro<br>Hagonoy, Bulacan, Philippines </p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-phone"></i>
 									</div>
-									<p class="media-body">1-800-123-45-67</p>
+									<p class="media-body">(044) 762 4284</p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="fa fa-envelope"></i>
 									</div>
 									<p class="media-body">
-										<a href="#"><span class="__cf_email__" data-cfemail="2e434b434b405a416e4b564f435e424b004d4143">[email&#160;protected]</span></a>
+										<a
+											href="#"><span
+												class="__cf_email__"
+												data-cfemail="8de0e8e0e8e3f9e2cde8f5ece0fde1e8a3eee2e0">[email&#160;protected]</span></a>
 									</p>
 								</div>
 

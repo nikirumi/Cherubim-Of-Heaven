@@ -191,7 +191,7 @@
 									<!--hidding includes on small devices. They are duplicated in topline-->
 									<ul class="top-includes d-none d-xl-block">
 										<li>
-											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">1-800-123-45-67</span>
+											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">(044) 762 4284</span>
 										</li>
 									</ul>
 
@@ -246,8 +246,8 @@
 							<p class="subtitle special-subtitle">today, tomorrow and beyond.</p>
 							<h3 class="special-heading"><span class="color-main">Experience </span>the Difference</h3>
 							<div class="divider-55 d-none d-lg-block"></div>
-							<p>Having established itself long ago as San Diego’s most prestigious funeral home and cemetery, Greenwood Memorial Park, Mortuary and Crematory is truly a place like no other.</p>
-							<p>Built in 1907 on a slight hill with an ocean view, Greenwood’s appeal began with its location.</p>
+							<p>Cherubim of Heaven Memorial Park in Hagonoy, Bulacan, offers a peaceful and serene environment for families to honor their loved ones.</p>
+							<p>With its beautiful landscapes and focus on providing exceptional service, it creates a dignified space for reflection and remembrance.</p>
 							<div class="divider-40"></div>
 							<div class="media centered-media">
 								<div class="icon-styled color-main fs-40">
@@ -256,7 +256,7 @@
 
 								<div class="media-body">
 									<h6>
-										Plan Ahead - Pre-Plan
+										Plan Ahead - Discover our services
 									</h6>
 									<p>
 										You can make these important decisions in the privacy of your own home
@@ -293,8 +293,7 @@
 						</div>
 						<div class="col-12 col-lg-6">
 							<div class="divider-11 d-none d-lg-block"></div>
-							<p>Over the years, it has expanded to include several chapels, a mortuary, crematory, three mausoleums, a collection of international and rare vegetation and statuary.</p>
-							<p>Many prominent San Diego residents are laid to rest here and many of the markers tell a fascinating story. </p>
+							<p>Cherubim of Heaven Memorial Park in Hagonoy, Bulacan, has grown to include multiple chapels, mausoleums, and beautiful landscapes. The park’s peaceful setting, along with its dedication to service, provides families with a serene place to honor their loved ones, offering a range of options for memorialization.</p>
 
 						</div>
 						<div class="divider-40 d-block d-lg-none"></div>
@@ -310,7 +309,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">San Diego Burial at Sea Captains</a>
+											<a href="service-single.php">Personalized Funeral Services</a>
 										</p>
 									</div>
 								</div>
@@ -323,7 +322,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">Funeral Your Way is a licensed California</a>
+											<a href="service-single.php">Comprehensive Memorial Options</a>
 										</p>
 									</div>
 								</div>
@@ -336,7 +335,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">One contact point for Cremation</a>
+											<a href="service-single.php">One Platform for Seamless Planning</a>
 										</p>
 									</div>
 								</div>
@@ -349,7 +348,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">Lorem ipsum dolor sit amet, conse</a>
+											<a href="service-single.php">Digital Time Capsules</a>
 										</p>
 									</div>
 								</div>
@@ -362,7 +361,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">adipiscing elit in vel elit scelerisque</a>
+											<a href="service-single.php">Virtual Tour</a>
 										</p>
 									</div>
 								</div>
@@ -375,7 +374,7 @@
 									</div>
 									<div class="item-content hero-bg box-shadow relative-content">
 										<p class="big">
-											<a href="service-single.php">Eros tempor elementum ut ligula</a>
+											<a href="service-single.php">Honoring Legacies with Care and Compassion</a>
 										</p>
 									</div>
 								</div>
@@ -497,8 +496,8 @@
 							<div class="divider-60 d-none d-lg-block"></div>
 							<p>Cherubim Of Heaven is proud to offer green burials for those who are mindful of the environment. This unique option is the perfect way to leave behind an honorable legacy and a sustainable future for generations to come.</p>
 							<div class="divider-40 d-none d-lg-block"></div>
-							<a href="#" class="btn btn-maincolor mr-2">Shedule ceremony</a>
-							<a href="#" class="btn btn-outline-maincolor">Learn More</a>
+							<a href="shop-right-funeral.php" class="btn btn-maincolor mr-2">Shedule ceremony</a>
+							<a href="about.php" class="btn btn-outline-maincolor">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -528,10 +527,10 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">David D. Schneider</a>
+											<a href="team-single.php">Nathaniel Angelo Gatchalian</a>
 										</h6>
 										<p class="letter-spacing">
-											cofounder
+											Developer
 										</p>
 									</div>
 								</div>
@@ -551,10 +550,10 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Louise J. Neal</a>
+											<a href="team-single.php">Ivan Jethro Velasco</a>
 										</h6>
 										<p class="letter-spacing">
-											manager
+											Developer
 										</p>
 									</div>
 								</div>
@@ -574,10 +573,10 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Brad J. Tate</a>
+											<a href="team-single.php">Jerryco Adriano</a>
 										</h6>
 										<p class="letter-spacing">
-											support
+											Developer
 										</p>
 									</div>
 								</div>
@@ -597,10 +596,10 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Kimberly J. Myers</a>
+											<a href="team-single.php">Eunice Loren Pelonio</a>
 										</h6>
 										<p class="letter-spacing">
-											cofounder
+											UI/UX Designer
 										</p>
 									</div>
 								</div>
@@ -620,33 +619,10 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Danieacl M. Leverette</a>
+											<a href="team-single.php">Lowie Josh Roque</a>
 										</h6>
 										<p class="letter-spacing">
-											manager
-										</p>
-									</div>
-								</div>
-								<div class="vertical-item box-shadow content-padding padding-small text-center">
-									<div class="item-media">
-										<img src="images/team/06.jpg" alt="">
-										<div class="media-links">
-											<a class="abs-link" title="" href="team-single.php"></a>
-										</div>
-										<span class="social-icons content-hover">
-											<a href="#" class="fa fa-facebook" title="facebook"></a>
-											<a href="#" class="fa fa-paper-plane fs-14" title="telegram"></a>
-											<a href="#" class="fa fa-linkedin " title="linkedin"></a>
-											<a href="#" class="fa fa-instagram" title="instagram"></a>
-											<a href="#" class="fa fa-youtube-play" title="youtube-play"></a>
-										</span>
-									</div>
-									<div class="item-content">
-										<h6 class="team-name">
-											<a href="team-single.php">John S. Rollins</a>
-										</h6>
-										<p class="letter-spacing">
-											support
+											Support / Tester
 										</p>
 									</div>
 								</div>
@@ -656,7 +632,7 @@
 				</div>
 			</section>
 
-			<section id="about" class="ls ms s-pt-0 s-pb-20 s-pb-lg-0 c-gutter-70 text-center text-lg-left c-mb-40 c-mb-lg-0">
+			<!--<section id="about" class="ls ms s-pt-0 s-pb-20 s-pb-lg-0 c-gutter-70 text-center text-lg-left c-mb-40 c-mb-lg-0">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-lg-6 order-lg-2">
@@ -665,7 +641,7 @@
 							<div class="bg_image_half ds s-overlay"></div>
 							<img src="images/founder-01.png" alt="">
 						</div>
-						<!-- .col-* -->
+
 						<div class="col-lg-6 mb-10">
 							<div class="divider-20 d-none d-xl-block"></div>
 							<p class="subtitle special-subtitle">today, tomorrow and beyond.</p>
@@ -684,12 +660,12 @@
 								<img src="images/signature.png" alt="">
 							</div>
 						</div>
-						<!-- .col-* -->
+
 					</div>
 				</div>
-			</section>
+			</section>-->
 
-			<section class="ls s-pt-55 s-pt-lg-95 s-pt-xl-145 c-gutter-60">
+			<!--<section class="ls s-pt-55 s-pt-lg-95 s-pt-xl-145 c-gutter-60">
 				<div class="container">
 					<div class="row">
 						<div class="col-12 text-center">
@@ -719,9 +695,9 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
-			<section class="ls s-pt-50 s-pb-55 s-pt-lg-90 s-pb-lg-95 s-pt-xl-140 s-pb-xl-145">
+			<!--<section class="ls s-pt-50 s-pb-55 s-pt-lg-90 s-pb-lg-95 s-pt-xl-140 s-pb-xl-145">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
@@ -824,7 +800,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
 			<section class="ls ms page-map">
 				<div class="row c-gutter-0 align-items-center">
@@ -884,7 +860,7 @@
 							<h3 class="special-heading"><span class="color-main">Contact </span>Us</h3>
 							<div class="divider-60 d-none d-lg-block"></div>
 							<h6 class="d-inline-block mt-0 mb-13">Email:</h6><span class=""> <a href="#" class="__cf_email__" data-cfemail="d6bbb3bbb3b8a2b996b3aeb7bba6bab3f8b5b9bb">[email&#160;protected]</a></span><br>
-							<h6 class="d-inline-block mt-0 mb-13">Phone:</h6><span class=""> 1-800-123-45-67</span><br>
+							<h6 class="d-inline-block mt-0 mb-13">Phone:</h6><span class=""> (044) 762 4284</span><br>
 							<h6 class="d-inline-block mt-0">Hours:</h6><span class=""> Mon - Fr 9am-5pm</span>
 							<div class="divider-30 d-none d-lg-block"></div>
 							<form class="mt-20 contact-form small-form c-mb-10" method="post" action="#">
@@ -936,7 +912,8 @@
 				</div>
 			</section>
 
-			<footer class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
+			<footer
+				class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
 				<div class="container">
 					<div class="row">
 
@@ -951,7 +928,8 @@
 									</div>
 								</a>
 								<p>
-									We do accept cremains from throughout the United States and the world. Many of our families come from the Phoenix area as well as various
+									Our services are designed to accommodate diverse traditions and preferences, 
+									ensuring a meaningful experience for everyone.
 								</p>
 							</div>
 						</div>
@@ -966,7 +944,7 @@
 											Weekdays
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -975,7 +953,7 @@
 											Saturday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -984,7 +962,7 @@
 											Sunday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">Closed</span>
+											<span class="color-darkgrey">8:00 - 18:00</span>
 										</div>
 									</li>
 
@@ -1008,7 +986,8 @@
 										<span class="screen-reader-text">Subscribe:</span>
 									</label>
 
-									<input id="mailchimp_email" name="email" type="email" class="form-control mailchimp_email" placeholder="Your Email">
+									<input id="mailchimp_email" name="email" type="email"
+										class="form-control mailchimp_email" placeholder="Your Email">
 
 									<button type="submit" class="search-submit">
 										<span class="screen-reader-text">Subscribe</span>
@@ -1027,20 +1006,23 @@
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-maps"></i>
 									</div>
-									<p class="media-body"> 808 Pickens Way<br> Cooper, TX 75432 </p>
+									<p class="media-body"> Purok 4 San Pedro<br>Hagonoy, Bulacan, Philippines </p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-phone"></i>
 									</div>
-									<p class="media-body">1-800-123-45-67</p>
+									<p class="media-body">(044) 762 4284</p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="fa fa-envelope"></i>
 									</div>
 									<p class="media-body">
-										<a href="#"><span class="__cf_email__" data-cfemail="bdd0d8d0d8d3c9d2fdd8c5dcd0cdd1d893ded2d0">[email&#160;protected]</span></a>
+										<a
+											href="#"><span
+												class="__cf_email__"
+												data-cfemail="8de0e8e0e8e3f9e2cde8f5ece0fde1e8a3eee2e0">[email&#160;protected]</span></a>
 									</p>
 								</div>
 

@@ -190,7 +190,7 @@
 									<!--hidding includes on small devices. They are duplicated in topline-->
 									<ul class="top-includes d-none d-xl-block">
 										<li>
-											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">1-800-123-45-67</span>
+											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">(044) 762 4284</span>
 										</li>
 									</ul>
 
@@ -233,8 +233,8 @@
 												</div>
 
 												<div class="intro_layer slider-buttons" data-animation="fadeInDown">
-													<a href="#" class="btn btn-big btn-maincolor">Learn More</a>
-													<a href="#" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
+													<a href="about.php" class="btn btn-big btn-maincolor">Learn More</a>
+													<a href="contact.php" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
 												</div>
 											</div> <!-- eof .intro_layers -->
 										</div> <!-- eof .intro_layers_wrapper -->
@@ -264,7 +264,7 @@
 									</div>
 									<div class="card-body">
 										<h5 class="card-title">
-											<a href="#">Martha R. Foster</a>
+											<a href="#">Maria A. Santos</a>
 										</h5>
 										<p class="card-text">
 											October 7, 1927 - March 18, 2024
@@ -282,7 +282,7 @@
 									</div>
 									<div class="card-body">
 										<h5 class="card-title">
-											<a href="#">Jason V. Little</a>
+											<a href="#">Juan S. Dela Cruz</a>
 										</h5>
 										<p class="card-text">
 											October 7, 1946 - March 14, 2024
@@ -300,7 +300,7 @@
 									</div>
 									<div class="card-body">
 										<h5 class="card-title">
-											<a href="#">Yvette L. Fallon</a>
+											<a href="#">Priscilla F. Santos</a>
 										</h5>
 										<p class="card-text">
 											October 7, 1952 - March 05, 2024
@@ -318,7 +318,7 @@
 									</div>
 									<div class="card-body">
 										<h5 class="card-title">
-											<a href="#">Jason V. Little</a>
+											<a href="#">Juan S. Dela Cruz</a>
 										</h5>
 										<p class="card-text">
 											October 7, 1946 - March 14, 2024
@@ -340,7 +340,7 @@
 							<div class="divider-50 d-lg-none"></div>
 							<div class="divider-20"></div>
 							<div class="bg_image_half ds s-overlay"></div>
-							<img src="images/founder-01.png" alt="">
+							<img src="images/statue.png" alt="">
 						</div>
 						<!-- .col-* -->
 						<div class="col-lg-6 mb-10">
@@ -349,16 +349,16 @@
 							<h3 class="special-heading"><span class="color-main">Welcome </span>to Cherubim Of Heaven</h3>
 							<div class="divider-52 d-none d-lg-block"></div>
 							<p>
-								For those unfamiliar with Belle Benchley, for example, it might come as a surprise to stumble across a grave marker depicting the face of a gorilla.
+							Welcome to Cherubim of Heaven Memorial Park. Explore our site for services designed to honor your loved ones with dignity. Discover a tranquil space of remembrance, reflection, and care, open to families near and far.
 							</p>
 							<p>
-								Known as The Zoo Lady, Benchley was the director of the San Diego Zoo from 1927 to 1953
+								Let us guide you in preserving cherished memories and creating a lasting tribute that resonates with love, peace, and remembrance.
 							</p>
 							<div class="d-flex align-items-center justify-content-between">
-								<a href="#" class="btn btn-maincolor">Contact Us</a>
+								<a href="contact.php" class="btn btn-maincolor">Contact Us</a>
 								<span class="text-divider">or</span>
-								<a href="#" class="btn-link d-none d-sm-flex">Learn More</a>
-								<img src="images/signature.png" alt="">
+								<a href="about.php" class="btn-link d-none d-sm-flex">Learn More</a>
+								<img style = "rotate: -20deg;" src="images/signature2.png" alt="">
 							</div>
 						</div>
 						<!-- .col-* -->
@@ -371,56 +371,56 @@
 					<div class="row justify-content-between">
 						<div class="col-md-6  text-center text-md-left">
 							<p class="subtitle">today, tomorrow and beyond.</p>
-							<h3 class="special-heading"><span class="color-main">Alt </span>Services </h3>
+							<h3 class="special-heading"><span class="color-main">Memorial </span>Services </h3>
 							<div class="divider-60 d-none d-lg-block"></div>
 							<p>
-								For those unfamiliar with Belle Benchley, for example, it might come as a surprise to stumble across a grave
+							Explore our range of compassionate services designed to meet your family's needs, including memorial planning, cremation, interment options, and personalized tribute ceremonies.
 							</p>
 							<p>
-								Known as The Zoo Lady, Benchley was the director of the San Diego Zoo from 1927 to 1953, and guided its expansion from a small collection of animals to an innovative, world-class zoo.
+							We are here to guide you every step of the way, offering respectful care and a serene resting place for your loved ones.
 							</p>
 							<div class="divider-43 d-none d-lg-block"></div>
-							<a href="#" class="btn btn-maincolor">Contact Us</a>
+							<a href="contact.php" class="btn btn-maincolor">Contact Us</a>
 							<span class="divider-text">or</span>
-							<a href="#" class="btn-link">Learn More</a>
+							<a href="about.php" class="btn-link">Learn More</a>
 						</div>
 
 						<div class="col-md-5 service-menu">
 							<ul class="list-bordered">
 								<li>
-									<a href="service-single.php" class="icon-inline">
+									<a href="plan-ahead.php" class="icon-inline">
 										<i class="ico-planning color-main fs-30 mr-3"></i>
 										<h6>Plan Ahead</h6>
 									</a>
 								</li>
 								<li>
-									<a href="service-single.php" class="icon-inline">
+									<a href="shop-right-caskets.php" class="icon-inline">
 										<i class="ico-cremation color-main fs-30 mr-3"></i>
-										<h6>Cremations</h6>
+										<h6>Caskets and Urns</h6>
 									</a>
 								</li>
 								<li>
-									<a href="service-single.php" class="icon-inline">
-										<i class="ico-ship color-main fs-30 mr-3"></i>
-										<h6>Ship Outs</h6>
+									<a href="shop-right-space.php" class="icon-inline">
+									<span class="color-main fs-30 mr-3">&#x26B0;</span>
+										<h6>Memorial Spaces</h6>
 									</a>
 								</li>
 								<li>
-									<a href="service-single.php" class="icon-inline">
+									<a href="virtual-tour.html" class="icon-inline">
 										<i class="ico-favorites color-main fs-30 mr-3"></i>
-										<h6>Experience the Difference</h6>
+										<h6>Virtual Tour</h6>
 									</a>
 								</li>
 								<li>
-									<a href="service-single.php" class="icon-inline">
+									<a href="shop-right-funeral.php" class="icon-inline">
 										<i class="ico-grave color-main fs-30 mr-3"></i>
-										<h6>Burials</h6>
+										<h6>Funerals</h6>
 									</a>
 								</li>
 								<li>
-									<a href="service-single.php" class="icon-inline">
+									<a href="shop-right.php" class="icon-inline">
 										<i class="ico-bouquet color-main fs-30 mr-3"></i>
-										<h6>Gift and Flowers</h6>
+										<h6>Flowers</h6>
 									</a>
 								</li>
 
@@ -431,7 +431,7 @@
 				</div>
 			</section>
 
-			<section class="ls  ms s-pt-55 s-pb-30 s-pb-md-15 s-pt-lg-95 s-pb-lg-55 s-pt-xl-145 s-pb-xl-105 c-gutter-45">
+			<!--<section class="ls  ms s-pt-55 s-pb-30 s-pb-md-15 s-pt-lg-95 s-pb-lg-55 s-pt-xl-145 s-pb-xl-105 c-gutter-45">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -451,7 +451,8 @@
 											You can make these important decisions in the privacy of your
 										</p>
 									</div>
-								</div><!-- .col-* -->
+								</div> 
+
 								<div class="col-lg-4 col-md-6">
 									<div class="icon-box hero-bg box-shadow text-center">
 										<div class="icon-styled fs-40">
@@ -464,7 +465,8 @@
 											Caskets are not required for cremation unless one is desired
 										</p>
 									</div>
-								</div><!-- .col-* -->
+								</div>
+
 								<div class="col-lg-4 col-md-6">
 									<div class="icon-box hero-bg box-shadow text-center">
 										<div class="icon-styled fs-40">
@@ -477,7 +479,8 @@
 											We ship to all Regions in Mexico, Central America
 										</p>
 									</div>
-								</div><!-- .col-* -->
+								</div>
+								
 								<div class="col-lg-4 col-md-6">
 									<div class="icon-box hero-bg box-shadow text-center">
 										<div class="icon-styled fs-40">
@@ -490,7 +493,8 @@
 											We offer unique opportunities for families to create healing
 										</p>
 									</div>
-								</div><!-- .col-* -->
+								</div>
+
 								<div class="col-lg-4 col-md-6">
 									<div class="icon-box hero-bg box-shadow text-center">
 										<div class="icon-styled fs-40">
@@ -503,7 +507,8 @@
 											A formal or informal ceremony or ritual prior to burial
 										</p>
 									</div>
-								</div><!-- .col-* -->
+								</div>
+
 								<div class="col-lg-4 col-md-6">
 									<div class="icon-box hero-bg box-shadow text-center">
 										<div class="icon-styled fs-40">
@@ -516,35 +521,36 @@
 											Today, more people are recognizing that planning
 										</p>
 									</div>
-								</div><!-- .col-* -->
+								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
-			<section class="ls s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-65 s-pt-xl-145 s-pb-xl-115 c-mb-25 c-mb-lg-0 shop-section text-center text-lg-left">
+			<section style="background-color: #F7F6F3;" class="ls s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-65 s-pt-xl-145 s-pb-xl-115 c-mb-25 c-mb-lg-0 shop-section text-center text-lg-left">
 				<div class="container">
 					<div class="row justify-content-between">
 						<div class="col-12 col-lg-5">
 							<p class="subtitle special-subtitle">today, tomorrow and beyond.</p>
-							<h3 class="special-heading"><span class="color-main">Buy </span>Flowers<br> & Gifts</h3>
+							<h3 class="special-heading"><span class="color-main">Funeral </span>Products<br> & Other Services</h3>
 							<div class="divider-40"></div>
 							<ul class="nav nav-tabs flex-column vertical-tab" role="tablist">
 								<li class="nav-item">
-									<a class="nav-link active" id="tab01" data-toggle="tab" href="#tab01_pane" role="tab" aria-controls="tab01_pane" aria-expanded="true">Promotional bouquets</a>
+									<a class="nav-link active" id="tab01" data-toggle="tab" href="#tab01_pane" role="tab" aria-controls="tab01_pane" aria-expanded="true">Flowers</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" id="tab02" data-toggle="tab" href="#tab02_pane" role="tab" aria-controls="tab02_pane">New products</a>
+									<a class="nav-link" id="tab02" data-toggle="tab" href="#tab02_pane" role="tab" aria-controls="tab02_pane">Caskets</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" id="tab03" data-toggle="tab" href="#tab03_pane" role="tab" aria-controls="tab03_pane">Luxury bouquets</a>
+									<a class="nav-link" id="tab03" data-toggle="tab" href="#tab03_pane" role="tab" aria-controls="tab03_pane">Urns</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" id="tab04" data-toggle="tab" href="#tab04_pane" role="tab" aria-controls="tab04_pane">Flowers to beloved</a>
+									<a class="nav-link" id="tab04" data-toggle="tab" href="#tab04_pane" role="tab" aria-controls="tab04_pane">Funeral Booking</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" id="tab05" data-toggle="tab" href="#tab05_pane" role="tab" aria-controls="tab05_pane">Flower bouquets</a>
+									<a class="nav-link" id="tab05" data-toggle="tab" href="#tab05_pane" role="tab" aria-controls="tab05_pane">Memorial Spaces</a>
 								</li>
 							</ul>
 						</div>
@@ -553,46 +559,46 @@
 								<div class="tab-pane fade active show" id="tab01_pane" role="tabpanel" aria-labelledby="tab01">
 									<ul class="products">
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/01.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img src="images/Flowers/1.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id='S-001'"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet 25 red roses</h2>
+													<h2>Spirited Funeral <br>Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>6,499
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱ </span>8,999-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-product-right.php?id='S-001'" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/02.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img src="images/Flowers/2.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
 												</div>
-												<div class="item-content">
-													<h2>Bouquet Romantic</h2>
+												<div style="height: 210px;" class="item-content">
+													<h2>Infinity Funeral & <br>Condolence Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>9,100
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱  </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-product-right.php?id='S-002'" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -601,46 +607,46 @@
 								<div class="tab-pane" id="tab02_pane" role="tabpanel" aria-labelledby="tab01">
 									<ul class="products">
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/03.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img src="images/Caskets/1.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-right-caskets.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>51 multicolored tulips</h2>
+													<h2>Silver Casket</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>65,000
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱ </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-right-caskets.php" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/04.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img src="images/Caskets/2.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-right-caskets.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet Spring</h2>
+													<h2>Dark Brown Casket</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱ </span>35,000
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱  </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-right-caskets.php" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -649,46 +655,46 @@
 								<div class="tab-pane" id="tab03_pane" role="tabpanel" aria-labelledby="tab01">
 									<ul class="products">
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/05.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img src="images/Urns/1.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-right-urns.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet "Charm"</h2>
+													<h2>Radiant Gold Urn</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱  </span>9,999
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱  </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-right-urns" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/06.jpg" alt="">
+											<div style="background-color: white; width: 220px; height: 325px;" class="product-inner box-shadow">
+												<img src="images/Urns/2.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-right-urns.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Spring bouquet </h2>
+													<h2>Vintage Warm <br>Oak Urn </h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱  </span>6,999
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱  </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-right-urns.php" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -697,46 +703,46 @@
 								<div class="tab-pane" id="tab04_pane" role="tabpanel" aria-labelledby="tab01">
 									<ul class="products">
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/07.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img src="images/Funeral_Venues/v1.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-right-funeral.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Romantic bouquet</h2>
+													<h2>Venue 1</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱  </span>15,000 / day
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱  </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-right-funeral" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/08.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img style="width: 400px; height: 180px;" src="images/Funeral_Venues/v2.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-right-funeral.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>51 white and pink</h2>
+													<h2>Venue 2</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱  </span>25,000 / day
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱  </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-right-funeral.php" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -745,46 +751,46 @@
 								<div class="tab-pane" id="tab05_pane" role="tabpanel" aria-labelledby="tab01">
 									<ul class="products">
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/09.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img src="images/mausoleum.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-right-space.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet "Silver"</h2>
+													<h2>Mausoleum Space</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱  </span>150,000
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱  </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-right-space" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
 										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/01.jpg" alt="">
+											<div style="background-color: white;" class="product-inner box-shadow">
+												<img src="images/openair.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-right-space.php"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet 25 red roses</h2>
+													<h2>Open-Air Space</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>$ </span>34
+																<span>₱  </span>50,000
 															</span>
 														</del>
-														<span>$ </span>55
+														<!--<span>₱  </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-right-space.php" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -796,7 +802,7 @@
 				</div>
 			</section>
 
-			<section class="ls s-pt-0 s-pb-55 s-pt-lg-0 s-pb-lg-95 s-pb-xl-145">
+			<section style="margin-top: 50px;" class="ls s-pt-0 s-pb-55 s-pt-lg-0 s-pb-lg-95 s-pb-xl-145">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -969,7 +975,7 @@
 				</div>
 			</section>
 
-			<section class="ls s-pt-0 s-pb-55 s-pb-lg-95 s-pb-xl-145">
+			<!--<section style="background-color: #F7F6F3; padding-top: 80px;" class="ls s-pt-0 s-pb-55 s-pb-lg-95 s-pb-xl-145">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 text-center">
@@ -977,7 +983,7 @@
 							<h3 class="special-heading"><span class="color-main">Our </span>Team</h3>
 							<div class="divider-65 d-none d-lg-block"></div>
 							<div class="owl-carousel with-shadow" data-margin="45" data-responsive-lg="3" data-responsive-sm="2" data-responsive-xs="1" data-nav="fals " data-loop="true" data-autoplay="true">
-								<div class="vertical-item box-shadow content-padding padding-small text-center">
+								<div style="background-color: white;" class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
 										<img src="images/team/01.jpg" alt="">
 										<div class="media-links">
@@ -993,14 +999,14 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">David D. Schneider</a>
+											<a href="team-single.php">Nathaniel Angelo Gatchalian</a>
 										</h6>
 										<p class="letter-spacing">
-											cofounder
+											Leader
 										</p>
 									</div>
 								</div>
-								<div class="vertical-item box-shadow content-padding padding-small text-center">
+								<div style="background-color: white;" class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
 										<img src="images/team/02.jpg" alt="">
 										<div class="media-links">
@@ -1016,14 +1022,14 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Louise J. Neal</a>
+											<a href="team-single.php">Ivan Jethro Velasco</a>
 										</h6>
 										<p class="letter-spacing">
-											manager
+											Member
 										</p>
 									</div>
 								</div>
-								<div class="vertical-item box-shadow content-padding padding-small text-center">
+								<div style="background-color: white;" class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
 										<img src="images/team/03.jpg" alt="">
 										<div class="media-links">
@@ -1039,14 +1045,14 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Brad J. Tate</a>
+											<a href="team-single.php">Jerryco Adriano</a>
 										</h6>
 										<p class="letter-spacing">
-											support
+											Member
 										</p>
 									</div>
 								</div>
-								<div class="vertical-item box-shadow content-padding padding-small text-center">
+								<div style="background-color: white;" class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
 										<img src="images/team/04.jpg" alt="">
 										<div class="media-links">
@@ -1062,14 +1068,14 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Kimberly J. Myers</a>
+											<a href="team-single.php">Eunice Loren Pelonio</a>
 										</h6>
 										<p class="letter-spacing">
-											cofounder
+											Member
 										</p>
 									</div>
 								</div>
-								<div class="vertical-item box-shadow content-padding padding-small text-center">
+								<div style="background-color: white;" class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
 										<img src="images/team/05.jpg" alt="">
 										<div class="media-links">
@@ -1085,33 +1091,10 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Danieacl M. Leverette</a>
+											<a href="team-single.php">Lowie Josh Roque</a>
 										</h6>
 										<p class="letter-spacing">
-											manager
-										</p>
-									</div>
-								</div>
-								<div class="vertical-item box-shadow content-padding padding-small text-center">
-									<div class="item-media">
-										<img src="images/team/06.jpg" alt="">
-										<div class="media-links">
-											<a class="abs-link" title="" href="team-single.php"></a>
-										</div>
-										<span class="social-icons content-hover">
-											<a href="#" class="fa fa-facebook" title="facebook"></a>
-											<a href="#" class="fa fa-paper-plane fs-14" title="telegram"></a>
-											<a href="#" class="fa fa-linkedin " title="linkedin"></a>
-											<a href="#" class="fa fa-instagram" title="instagram"></a>
-											<a href="#" class="fa fa-youtube-play" title="youtube-play"></a>
-										</span>
-									</div>
-									<div class="item-content">
-										<h6 class="team-name">
-											<a href="team-single.php">John S. Rollins</a>
-										</h6>
-										<p class="letter-spacing">
-											support
+											Member
 										</p>
 									</div>
 								</div>
@@ -1119,9 +1102,9 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
-			<section class="ls ms s-pt-55 s-pb-55 s-py-lg-95 s-py-xl-145 container-px-0">
+			<!--<section class="ls ms s-pt-55 s-pb-55 s-py-lg-95 s-py-xl-145 container-px-0">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-12 text-center">
@@ -1225,9 +1208,9 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
-			<section class="ls s-pt-55 s-pb-10 s-py-lg-95 s-py-xl-145 choose-us-section text-center text-lg-left">
+			<!--<section class="ls s-pt-55 s-pb-10 s-py-lg-95 s-py-xl-145 choose-us-section text-center text-lg-left">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -1328,7 +1311,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 
 			<section class="ls ms c-gutter-0 text-center text-md-left side-form">
 				<div class="cover-image s-cover-left"></div><!-- half image background element -->
@@ -1343,7 +1326,7 @@
 							<p class="subtitle">today, tomorrow and beyond.</p>
 							<h3 class="special-heading"><span class="color-main">Plan </span>Ahead</h3>
 							<div class="divider-60 d-none d-lg-block"></div>
-							<p>For those unfamiliar with Belle Benchley, for example, it<br> might come as a surprise to stumble across a grave marker<br> depicting the face of a gorilla.</p>
+							<p>Planning ahead for memorial services ensures peace of mind during difficult times. Taking the time to explore options and select a plan allows for thoughtful choices that honor your wishes and can ease the burden on family members in the future.</p>
 							<div class="divider-45 d-none d-lg-block"></div>
 							<form class="mt-20 contact-form small-form c-mb-10" method="post" action="#">
 								<div class="row c-gutter-10">
@@ -1536,8 +1519,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
-							<p class="subtitle text-center">today, tomorrow and beyond.</p>
-							<h3 class="special-heading"><span class="color-main">Our Alt </span>Gallery</h3>
+							<!--<p class="subtitle text-center">today, tomorrow and beyond.</p>
+							<h3 class="special-heading"><span class="color-main">Our Alt </span>Gallery</h3>-->
 							<div class="divider-65 d-none d-lg-block"></div>
 							<div class="row isotope-wrapper masonry-layout c-mb-30 c-gutter-30">
 
@@ -1656,7 +1639,8 @@
 			</section>
 
 
-			<footer class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
+			<footer
+				class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
 				<div class="container">
 					<div class="row">
 
@@ -1671,7 +1655,8 @@
 									</div>
 								</a>
 								<p>
-									We do accept cremains from throughout the United States and the world. Many of our families come from the Phoenix area as well as various
+									Our services are designed to accommodate diverse traditions and preferences, 
+									ensuring a meaningful experience for everyone.
 								</p>
 							</div>
 						</div>
@@ -1686,7 +1671,7 @@
 											Weekdays
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -1695,7 +1680,7 @@
 											Saturday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -1704,7 +1689,7 @@
 											Sunday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">Closed</span>
+											<span class="color-darkgrey">8:00 - 18:00</span>
 										</div>
 									</li>
 
@@ -1728,7 +1713,8 @@
 										<span class="screen-reader-text">Subscribe:</span>
 									</label>
 
-									<input id="mailchimp_email" name="email" type="email" class="form-control mailchimp_email" placeholder="Your Email">
+									<input id="mailchimp_email" name="email" type="email"
+										class="form-control mailchimp_email" placeholder="Your Email">
 
 									<button type="submit" class="search-submit">
 										<span class="screen-reader-text">Subscribe</span>
@@ -1747,20 +1733,23 @@
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-maps"></i>
 									</div>
-									<p class="media-body"> 808 Pickens Way<br> Cooper, TX 75432 </p>
+									<p class="media-body"> Purok 4 San Pedro<br>Hagonoy, Bulacan, Philippines </p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-phone"></i>
 									</div>
-									<p class="media-body">1-800-123-45-67</p>
+									<p class="media-body">(044) 762 4284</p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="fa fa-envelope"></i>
 									</div>
 									<p class="media-body">
-										<a href="#"><span class="__cf_email__" data-cfemail="2c414941494258436c49544d415c4049024f4341">[email&#160;protected]</span></a>
+										<a
+											href="#"><span
+												class="__cf_email__"
+												data-cfemail="8de0e8e0e8e3f9e2cde8f5ece0fde1e8a3eee2e0">[email&#160;protected]</span></a>
 									</p>
 								</div>
 

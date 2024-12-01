@@ -298,7 +298,7 @@
 									<!--hidding includes on small devices. They are duplicated in topline-->
 									<ul class="top-includes d-none d-xl-block">
 										<li>
-											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">1-800-123-45-67</span>
+											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">(044) 762 4284</span>
 										</li>
 									</ul>
 
@@ -363,16 +363,22 @@
 
 								<div class="summary entry-summary text-center text-md-left">
 									<h6 class="product_title single_title">Venue 3</h6>
-									<p>Cherubim of Heaven Memorial Park offers serene venues for funeral services and receptions, with seating for up to 100 guests, parking, and catering options. We ensure every detail is handled with care and dignity for a meaningful ceremony.</p>
+									<div class="star-rating">
+										<span style="width:80%">Rated <strong class="rating">4</strong> out of 5</span>
+									</div>
+									<p><br>Cherubim of Heaven Memorial Park offers serene venues for funeral services and receptions, with seating for up to 100 guests, parking, and catering options. We ensure every detail is handled with care and dignity for a meaningful ceremony.</p>
+									<span class="price">
+										<span>₱ </span>45,000 / day
+									</span>
 									<div class="woocommerce-product-rating"></div>
 
-									<form method="POST" action="book-venue.php" id="bookingForm">
+									<form method="POST" action="book-venue.php" id="bookingForm" style="margin-top: -50px;">
 										<div class="single_variation_wrap">
-											<div class="d-flex align-items-center">
+											<!--<div class="d-flex align-items-center">
 												<span class="price">
 													<span>₱ </span>45,000 / day
 												</span>
-											</div>
+											</div>-->
 
 											<div class="datepicker-container" style="margin: 10px 0;">
 												<label for="datepicker">Select Starting Date:</label>
@@ -993,7 +999,8 @@
 				</div>
 			</section>
 
-			<footer class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
+			<footer
+				class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
 				<div class="container">
 					<div class="row">
 
@@ -1003,12 +1010,13 @@
 								<a href="index.php" class="logo">
 									<img src="images/logo.png" alt="">
 									<div class="d-flex flex-column">
-										<h4 class="logo-text color-main">Cherubim of Heaven</h4>
+										<h4 class="logo-text color-main">Cherubim Of Heaven</h4>
 										<span class="logo-subtext">Funeral Service</span>
 									</div>
 								</a>
 								<p>
-									We do accept cremains from throughout the United States and the world. Many of our families come from the Phoenix area as well as various
+									Our services are designed to accommodate diverse traditions and preferences, 
+									ensuring a meaningful experience for everyone.
 								</p>
 							</div>
 						</div>
@@ -1023,7 +1031,7 @@
 											Weekdays
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -1032,7 +1040,7 @@
 											Saturday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -1041,7 +1049,7 @@
 											Sunday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">Closed</span>
+											<span class="color-darkgrey">8:00 - 18:00</span>
 										</div>
 									</li>
 
@@ -1060,12 +1068,13 @@
 									We promise not to spam!
 								</p>
 
-								<form class="signup" action="https://html.modernwebtemplates.com/">
+								<form class="signup" action="#">
 									<label for="mailchimp_email">
 										<span class="screen-reader-text">Subscribe:</span>
 									</label>
 
-									<input id="mailchimp_email" name="email" type="email" class="form-control mailchimp_email" placeholder="Your Email">
+									<input id="mailchimp_email" name="email" type="email"
+										class="form-control mailchimp_email" placeholder="Your Email">
 
 									<button type="submit" class="search-submit">
 										<span class="screen-reader-text">Subscribe</span>
@@ -1084,20 +1093,23 @@
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-maps"></i>
 									</div>
-									<p class="media-body"> 808 Pickens Way<br> Cooper, TX 75432 </p>
+									<p class="media-body"> Purok 4 San Pedro<br>Hagonoy, Bulacan, Philippines </p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-phone"></i>
 									</div>
-									<p class="media-body">1-800-123-45-67</p>
+									<p class="media-body">(044) 762 4284</p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="fa fa-envelope"></i>
 									</div>
 									<p class="media-body">
-										<a href="https://html.modernwebtemplates.com/cdn-cgi/l/email-protection#a3cec6cec6cdd7cce3c6dbc2ced3cfc68dc0ccce"><span class="__cf_email__" data-cfemail="78151d151d160c17381d00191508141d561b1715">[email&#160;protected]</span></a>
+										<a
+											href="#"><span
+												class="__cf_email__"
+												data-cfemail="8de0e8e0e8e3f9e2cde8f5ece0fde1e8a3eee2e0">[email&#160;protected]</span></a>
 									</p>
 								</div>
 

@@ -374,7 +374,7 @@
 												</div>
 
 												<div class="intro_layer slider-buttons" data-animation="fadeInDown">
-													<a href="home-blocks.php" class="btn btn-big btn-maincolor">Learn More</a>
+													<a href="about.php" class="btn btn-big btn-maincolor">Learn More</a>
 													<a href="contact.php" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
 												</div>
 											</div> <!-- eof .intro_layers -->
@@ -411,8 +411,8 @@
 												</div>
 
 												<div class="intro_layer slider-buttons" data-animation="fadeInDown">
-													<a href="#" class="btn btn-big btn-maincolor">Learn More</a>
-													<a href="#" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
+													<a href="about.php" class="btn btn-big btn-maincolor">Learn More</a>
+													<a href="contact.php" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
 												</div>
 											</div> <!-- eof .intro_layers -->
 										</div> <!-- eof .intro_layers_wrapper -->
@@ -451,8 +451,8 @@
 												</div>
 
 												<div class="intro_layer slider-buttons" data-animation="fadeInDown">
-													<a href="#" class="btn btn-big btn-maincolor">Learn More</a>
-													<a href="#" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
+													<a href="about.php" class="btn btn-big btn-maincolor">Learn More</a>
+													<a href="contact.php" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
 												</div>
 											</div> <!-- eof .intro_layers -->
 										</div> <!-- eof .intro_layers_wrapper -->
@@ -652,7 +652,7 @@
 										<div class="divider-43 d-none d-lg-block"></div>
 										<a href="contact.php" class="btn btn-maincolor">Contact Us</a>
 										<span>or</span>
-										<a href="home-blocks.php" class="btn-link">Learn More</a>
+										<a href="about.php" class="btn-link">Learn More</a>
 										<div class="divider-5 d-none d-lg-block"></div>
 										<div class="divider-45 d-block d-lg-none"></div>
 									</div>
@@ -728,7 +728,7 @@
 							<p>Cherubim of Heaven Memorial Park is proud to offer services that honor not only the departed but also the values they cherished. With serene burial plots, thoughtfully designed columbarium spaces, and digital time capsules, we help families create meaningful tributes while fostering a legacy of remembrance for future generations.</p>
 							<div class="divider-40 d-none d-lg-block"></div>
 							<a href="shop-right-funeral.php" class="btn btn-maincolor mr-2">Shedule ceremony</a>
-							<a href="home-blocks.php" class="btn btn-outline-maincolor">Learn More</a>
+							<a href="about.php" class="btn btn-outline-maincolor">Learn More</a>
 						</div>
 					</div>
 				</div>
@@ -994,8 +994,8 @@
 									</div>
 								</a>
 								<p>
-									We do accept cremains from throughout the United States and the world. Many of our
-									families come from the Phoenix area as well as various
+									Our services are designed to accommodate diverse traditions and preferences, 
+									ensuring a meaningful experience for everyone.
 								</p>
 							</div>
 						</div>
@@ -1010,7 +1010,7 @@
 											Weekdays
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -1019,7 +1019,7 @@
 											Saturday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -1028,7 +1028,7 @@
 											Sunday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">Closed</span>
+											<span class="color-darkgrey">8:00 - 18:00</span>
 										</div>
 									</li>
 
@@ -1072,13 +1072,13 @@
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-maps"></i>
 									</div>
-									<p class="media-body"> 808 Pickens Way<br> Cooper, TX 75432 </p>
+									<p class="media-body"> Purok 4 San Pedro<br>Hagonoy, Bulacan, Philippines </p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-phone"></i>
 									</div>
-									<p class="media-body">1-800-123-45-67</p>
+									<p class="media-body">(044) 762 4284</p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">

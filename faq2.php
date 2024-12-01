@@ -193,7 +193,7 @@
 									<!--hidding includes on small devices. They are duplicated in topline-->
 									<ul class="top-includes d-none d-xl-block">
 										<li>
-											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">1-800-123-45-67</span>
+											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">(044) 762 4284</span>
 										</li>
 									</ul>
 
@@ -242,7 +242,7 @@
 									<div class="card-header" role="tab" id="collapse01_header">
 										<h6>
 											<a data-toggle="collapse" href="#collapse01" aria-expanded="true" aria-controls="collapse01">
-												What does Your Company Consulting do?
+												What services does Cherubim of Heaven Memorial Park, Inc. offer?
 											</a>
 										</h6>
 									</div>
@@ -250,13 +250,13 @@
 									<div id="collapse01" class="collapse show" role="tabpanel" aria-labelledby="collapse01_header" data-parent="#accordion01">
 										<div class="card-body">
 											<p>
-												Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+											Cherubim of Heaven provides a range of services, including traditional burial plots, above-ground memorial spaces, personalized memorials, and funeral services. We are committed to ensuring a peaceful and respectful environment for families to honor their loved ones.
 											</p>
-											<ul class="list1">
+											<!--<ul class="list1">
 												<li>It can answer common questions</li>
 												<li>It can demonstrate how a product or service works</li>
 												<li>It can discuss current trends</li>
-											</ul>
+											</ul>-->
 										</div>
 									</div>
 								</div>
@@ -265,13 +265,13 @@
 									<div class="card-header" role="tab" id="collapse02_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse02" aria-expanded="false" aria-controls="collapse02">
-												Lorem ipsum dolor sit amet elit?
+												How can I reserve a burial plot or memorial space?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse02" class="collapse" role="tabpanel" aria-labelledby="collapse02_header" data-parent="#accordion01">
 										<div class="card-body">
-											Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+											To reserve a burial plot or memorial space, you can visit our catalog in this website, or our physical office. You can contact our team through phone or email. Our staff will assist you in selecting the most suitable location, provide information on available options, and guide you through the reservation process.
 										</div>
 									</div>
 								</div>
@@ -280,13 +280,13 @@
 									<div class="card-header" role="tab" id="collapse04_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse04" aria-expanded="false" aria-controls="collapse04">
-												Integer venenatis tellus et est?
+												How do I arrange for a memorial service or funeral?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse04" class="collapse" role="tabpanel" aria-labelledby="collapse04_header" data-parent="#accordion01">
 										<div class="card-body">
-											Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable sunt aliqua put a bird on it squid single-origin coffee shoreditch et.
+											You can visit our catalog and book or schedule on our funeral venues. You can contact our office directly to schedule a meeting with our funeral directors, who will guide you through the entire process, from service planning to coordination, ensuring everything meets your needs and preferences.
 										</div>
 									</div>
 								</div>
@@ -295,13 +295,13 @@
 									<div class="card-header" role="tab" id="collapse05_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse05" aria-expanded="false" aria-controls="collapse05">
-												Maecenas vel libero ex nec sem eros?
+												How can I pre-plan my funeral services?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse05" class="collapse" role="tabpanel" aria-labelledby="collapse05_header" data-parent="#accordion01">
 										<div class="card-body">
-											Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+											Cherubim of Heaven Memorial Park offers pre-planning services to help ease the burden on your family. You can arrange your memorial services ahead of time, selecting burial plots, services, and personalization options. Our team will guide you through the process, providing support every step of the way to ensure that your wishes are honored.
 										</div>
 									</div>
 								</div>
@@ -310,13 +310,13 @@
 									<div class="card-header" role="tab" id="collapse06_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse06" aria-expanded="false" aria-controls="collapse06">
-												Etiam massa diam, malesuada ac purus?
+												Can I visit Cherubim of Heaven Memorial Park before making arrangements?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse06" class="collapse" role="tabpanel" aria-labelledby="collapse06_header" data-parent="#accordion01">
 										<div class="card-body">
-											Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable sunt aliqua put a bird on it squid single-origin coffee shoreditch et.
+										Absolutely! We encourage families to visit the memorial park before making any decisions. A tour of our facilities and available spaces can help you make a more informed choice. Our staff is available to guide you and answer any questions during your visit. You can also visit the virtual tour page on our website.
 										</div>
 									</div>
 								</div>
@@ -335,13 +335,17 @@
 									<div class="card-header" role="tab" id="collapse03_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse03" aria-expanded="false" aria-controls="collapse03">
-												Cras non tincidunt massa?
+												Can I visit the park at any time?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse03" class="collapse" role="tabpanel" aria-labelledby="collapse03_header" data-parent="#accordion02">
 										<div class="card-body">
-											Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable sunt aliqua put a bird on it squid single-origin coffee shoreditch et.
+											Cherubim of Heaven Memorial Park is open to visitors daily during business hours. We welcome families and guests to come and reflect, explore the serene surroundings, and pay respects to their loved ones.<br>
+											<ul class="list1">
+												<li>Monday - Saturday: 7:30 - 17:30</li>
+												<li>Sunday: 8:00 - 18:00</li>
+											</ul>
 										</div>
 									</div>
 								</div>
@@ -350,13 +354,13 @@
 									<div class="card-header" role="tab" id="collapse07_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse07" aria-expanded="false" aria-controls="collapse07">
-												Etiam suscipit arcu quis massa?
+												How can I contact your office for more information?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse07" class="collapse" role="tabpanel" aria-labelledby="collapse07_header" data-parent="#accordion02">
 										<div class="card-body">
-											Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+											You can reach our office by phone, email, or through our contact page on the website. Our team is available to assist with any questions or concerns about services, pre-planning, orders, and other inquiries.
 										</div>
 									</div>
 								</div>
@@ -365,13 +369,13 @@
 									<div class="card-header" role="tab" id="collapse08_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse08" aria-expanded="false" aria-controls="collapse08">
-												Maecenas ornare ante pharetra?
+												Do you offer grief support services?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse08" class="collapse" role="tabpanel" aria-labelledby="collapse08_header" data-parent="#accordion02">
 										<div class="card-body">
-											Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable sunt aliqua put a bird on it squid single-origin coffee shoreditch et.
+											Yes, Cherubim of Heaven Memorial Park offers grief support services to help families cope with their loss. You can visit our Blogs page. We provide resources and guidance during difficult times, ensuring that our community receives the care and support they need.
 										</div>
 									</div>
 								</div>
@@ -380,13 +384,13 @@
 									<div class="card-header" role="tab" id="collapse09_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse09" aria-expanded="false" aria-controls="collapse09">
-												Aliquam mattis vel tortor ac tristique?
+												What payment options do you offer for services and memorials?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse09" class="collapse" role="tabpanel" aria-labelledby="collapse09_header" data-parent="#accordion02">
 										<div class="card-body">
-											Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+										We accept various payment methods including credit cards, bank transfers for memorial services and products. Installment is not currently integrated on our website, but you can contact or visit us during business hours. Our staff will discuss the available options and help you choose the best payment plan for your needs.
 										</div>
 									</div>
 								</div>
@@ -394,13 +398,13 @@
 									<div class="card-header" role="tab" id="collapse10_header">
 										<h6>
 											<a class="collapsed" data-toggle="collapse" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
-												Sed aliquam fermentum mauris?
+												Can I pre-arrange services for myself or a loved one?
 											</a>
 										</h6>
 									</div>
 									<div id="collapse10" class="collapse" role="tabpanel" aria-labelledby="collapse10_header" data-parent="#accordion02">
 										<div class="card-body">
-											Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable sunt aliqua put a bird on it squid single-origin coffee shoreditch et.
+										Yes, we offer pre-arrangement services to help you plan ahead and ensure your wishes are met. Pre-arranging services allows families to make informed decisions and relieve their loved ones from making arrangements during difficult times. Our staff will guide you through all available options, including memorial space, services, and payment plans, ensuring everything is customized according to your preferences. Contact us to schedule a consultation for pre-arranging services.
 										</div>
 									</div>
 								</div>
@@ -411,7 +415,8 @@
 				</div>
 			</section>
 
-			<footer class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
+			<footer
+				class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
 				<div class="container">
 					<div class="row">
 
@@ -426,7 +431,8 @@
 									</div>
 								</a>
 								<p>
-									We do accept cremains from throughout the United States and the world. Many of our families come from the Phoenix area as well as various
+									Our services are designed to accommodate diverse traditions and preferences, 
+									ensuring a meaningful experience for everyone.
 								</p>
 							</div>
 						</div>
@@ -441,7 +447,7 @@
 											Weekdays
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -450,7 +456,7 @@
 											Saturday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -459,7 +465,7 @@
 											Sunday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">Closed</span>
+											<span class="color-darkgrey">8:00 - 18:00</span>
 										</div>
 									</li>
 
@@ -483,7 +489,8 @@
 										<span class="screen-reader-text">Subscribe:</span>
 									</label>
 
-									<input id="mailchimp_email" name="email" type="email" class="form-control mailchimp_email" placeholder="Your Email">
+									<input id="mailchimp_email" name="email" type="email"
+										class="form-control mailchimp_email" placeholder="Your Email">
 
 									<button type="submit" class="search-submit">
 										<span class="screen-reader-text">Subscribe</span>
@@ -502,20 +509,23 @@
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-maps"></i>
 									</div>
-									<p class="media-body"> 808 Pickens Way<br> Cooper, TX 75432 </p>
+									<p class="media-body"> Purok 4 San Pedro<br>Hagonoy, Bulacan, Philippines </p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-phone"></i>
 									</div>
-									<p class="media-body">1-800-123-45-67</p>
+									<p class="media-body">(044) 762 4284</p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="fa fa-envelope"></i>
 									</div>
 									<p class="media-body">
-										<a href="#"><span class="__cf_email__" data-cfemail="86ebe3ebe3e8f2e9c6e3fee7ebf6eae3a8e5e9eb">[email&#160;protected]</span></a>
+										<a
+											href="#"><span
+												class="__cf_email__"
+												data-cfemail="8de0e8e0e8e3f9e2cde8f5ece0fde1e8a3eee2e0">[email&#160;protected]</span></a>
 									</p>
 								</div>
 

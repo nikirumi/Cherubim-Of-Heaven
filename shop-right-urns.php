@@ -1,5 +1,32 @@
 <!DOCTYPE html>
 <html class="no-js">
+
+<?php
+
+	include("check_session.php");
+
+	$sql = "SELECT Service_ID FROM memorial_services WHERE service_name LIKE '%Urn%'";
+	$result = $conn->query($sql);
+
+	$serviceIdArray = array();
+
+	if ($result->num_rows > 0) {
+		while ($row = $result->fetch_assoc()) {
+			$serviceIdArray[] = $row;
+		}
+		//var_dump($serviceIdArray[0]['Service_ID']);
+		//echo htmlspecialchars($serviceIdArray[0]['Service_ID']);
+		//var_dump(htmlspecialchars($serviceIdArray[0]['Service_ID']));
+	} 
+	
+	else {
+		echo "No casket services found.";
+	}
+
+	$conn->close();
+
+?>
+
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
@@ -198,7 +225,7 @@
 									<!--hidding includes on small devices. They are duplicated in topline-->
 									<ul class="top-includes d-none d-xl-block">
 										<li>
-											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">1-800-123-45-67</span>
+											<i class="ico-phone color-main fs-14"></i> <span class="color-dark">(044) 762 4284</span>
 										</li>
 									</ul>
 
@@ -246,21 +273,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/1.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[0]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Radiant Gold Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>9,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>14,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[0]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -268,21 +295,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/2.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[1]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Vintage Warm Oak Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>6,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>9,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[1]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -290,21 +317,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/3.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[2]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Cobalt Mosaic Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>6,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>9,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[2]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -312,21 +339,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/4.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[3]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Auric Sterling Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>9,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>14,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[3]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -334,21 +361,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/5.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[4]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Celestial Angel Azure Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>19,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>24,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[4]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -356,21 +383,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/6.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[5]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Royal Blue Aurum Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>7,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>11,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[5]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -378,21 +405,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/7.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[6]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Marbled Lavender Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>24,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>29,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[6]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -400,21 +427,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/8.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[7]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Ocean's Gilded Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>12,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>16,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[7]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -422,21 +449,21 @@
 										<div class="product-inner box-shadow">
 											<img src="images/Urns/9.jpg" alt="">
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[8]['Service_ID']); ?>'"></a>
 											</div>
 											<div class="item-content">
 												<h2>Blue Noir Urn</h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>$ </span>34
+															<span>₱ </span>8,999
 														</span>
 													</del>
-													<span>$ </span>55
+													<span>₱ </span>11,999
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[8]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -633,7 +660,8 @@
 				</div>
 			</section>
 
-			<footer class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
+			<footer
+				class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
 				<div class="container">
 					<div class="row">
 
@@ -648,7 +676,8 @@
 									</div>
 								</a>
 								<p>
-									We do accept cremains from throughout the United States and the world. Many of our families come from the Phoenix area as well as various
+									Our services are designed to accommodate diverse traditions and preferences, 
+									ensuring a meaningful experience for everyone.
 								</p>
 							</div>
 						</div>
@@ -663,7 +692,7 @@
 											Weekdays
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -672,7 +701,7 @@
 											Saturday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">9:00 - 17:00</span>
+											<span class="color-darkgrey">7:30 - 17:30</span>
 										</div>
 									</li>
 
@@ -681,7 +710,7 @@
 											Sunday
 										</div>
 										<div class="col-6 text-md-right">
-											<span class="color-darkgrey">Closed</span>
+											<span class="color-darkgrey">8:00 - 18:00</span>
 										</div>
 									</li>
 
@@ -705,7 +734,8 @@
 										<span class="screen-reader-text">Subscribe:</span>
 									</label>
 
-									<input id="mailchimp_email" name="email" type="email" class="form-control mailchimp_email" placeholder="Your Email">
+									<input id="mailchimp_email" name="email" type="email"
+										class="form-control mailchimp_email" placeholder="Your Email">
 
 									<button type="submit" class="search-submit">
 										<span class="screen-reader-text">Subscribe</span>
@@ -724,20 +754,23 @@
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-maps"></i>
 									</div>
-									<p class="media-body"> 808 Pickens Way<br> Cooper, TX 75432 </p>
+									<p class="media-body"> Purok 4 San Pedro<br>Hagonoy, Bulacan, Philippines </p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="ico-phone"></i>
 									</div>
-									<p class="media-body">1-800-123-45-67</p>
+									<p class="media-body">(044) 762 4284</p>
 								</div>
 								<div class="media side-icon-box">
 									<div class="icon-styled color-main fs-14">
 										<i class="fa fa-envelope"></i>
 									</div>
 									<p class="media-body">
-										<a href="#"><span class="__cf_email__" data-cfemail="1d707870787369725d78657c706d7178337e7270">[email&#160;protected]</span></a>
+										<a
+											href="#"><span
+												class="__cf_email__"
+												data-cfemail="8de0e8e0e8e3f9e2cde8f5ece0fde1e8a3eee2e0">[email&#160;protected]</span></a>
 									</p>
 								</div>
 
