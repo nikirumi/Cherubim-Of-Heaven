@@ -280,7 +280,8 @@
 				<div class="container">
 					<div class="row">
 						<main class="col-lg-12">
-							<div class="woocommerce-info">Returning customer? <a href="#" class="showlogin">Click here to login</a>
+							<!--<div class="woocommerce-info">
+								Returning customer? <a href="#" class="showlogin">Click here to login</a>
 							</div>
 
 							<form class="woocomerce-form woocommerce-form-login login" method="post" style="">
@@ -340,15 +341,14 @@
 
 								</div>
 							</form>
+							-->
 
 							<form name="checkout" method="post" class="checkout woocommerce-checkout" action="place-order.php" enctype="multipart/form-data">
 
 
 								<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">
 									<ul class="woocommerce-error">
-										<li><strong>Billing First name</strong> is a required field.</li>
-										<li><strong>Billing Last name</strong> is a required field.</li>
-										<li>Please enter a valid postcode / ZIP.</li>
+										Thank you for entrusting us with this moment. Finalize your memorial order.
 									</ul>
 								</div>
 

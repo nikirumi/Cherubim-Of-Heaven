@@ -513,7 +513,7 @@
 							<div class="owl-carousel with-shadow" data-margin="45" data-responsive-lg="3" data-responsive-sm="2" data-responsive-xs="1" data-nav="fals " data-loop="true" data-autoplay="true">
 								<div class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
-										<img src="images/team/01.jpg" alt="">
+										<img src="images/nat.jpg" alt="">
 										<div class="media-links">
 											<a class="abs-link" title="" href="team-single.php"></a>
 										</div>
@@ -536,7 +536,7 @@
 								</div>
 								<div class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
-										<img src="images/team/02.jpg" alt="">
+										<img src="images/ivan.jpg" alt="">
 										<div class="media-links">
 											<a class="abs-link" title="" href="team-single.php"></a>
 										</div>
@@ -605,7 +605,7 @@
 								</div>
 								<div class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
-										<img src="images/team/05.jpg" alt="">
+										<img src="images/lowie.jpg" alt="">
 										<div class="media-links">
 											<a class="abs-link" title="" href="team-single.php"></a>
 										</div>

@@ -281,7 +281,7 @@
 					<div class="row">
 						<main class="col-lg-12">
 							<div class="woocommerce-message">
-								"Premium quality" removed. <a href="#">Undo?</a>
+								Almost there. Review your selections and continue to complete your order.
 							</div>
 
 							<form class="woocommerce-cart-form" action="#" method="post">
@@ -449,9 +449,9 @@
 											<td colspan="6" class="actions">
 
 												<div class="coupon">
-													<label for="coupon_code">Coupon:</label>
+													<!--<label for="coupon_code">Coupon:</label>
 													<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Coupon code">
-													<button type="submit" class="btn btn-small btn-maincolor" name="apply_coupon">Apply coupon</button>
+													<button type="submit" class="btn btn-small btn-maincolor" name="apply_coupon">Apply coupon</button>-->
 												</div>
 												<button type="submit" class="btn btn-small btn-outline-maincolor" name="update_cart">Update cart</button>
 											</td>
@@ -469,117 +469,117 @@
 									<div class="divider-55 d-none d-lg-block"></div>
 
 									<ul class="products">
-										<li class="product vertical-item content-padding">
+										<li style = "height: 457px;" class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/01.jpg" alt="">
+												<img src="images/Flowers/1.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id='S-001'"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet 25 red roses</h2>
+													<h2>Spirited Funeral</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>6,499
 															</span>
 														</del>
-														<span>₱ </span>55
+														<!--<span>₱ </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-product-right.php?id='S-001'" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
-										<li class="product vertical-item content-padding">
+										<li style = "height: 457px;" class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/02.jpg" alt="">
+												<img src="images/Flowers/2.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet Romantic</h2>
+													<h2>Infinity Funeral & Condolence Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>9,100
 															</span>
 														</del>
-														<span>₱ </span>55
+														<!--<span>₱ </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-product-right.php?id='S-002'" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
-										<li class="product vertical-item content-padding">
+										<li style = "height: 457px;" class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/03.jpg" alt="">
+												<img src="images/Flowers/3.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id='S-003'"></a>
 												</div>
 												<div class="item-content">
-													<h2>51 multicolored tulips</h2>
+													<h2>Scented Dreams Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>4,699
 															</span>
 														</del>
-														<span>₱ </span>55
+														<!--<span>₱ </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-product-right.php?id='S-003'" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
-										<li class="product vertical-item content-padding">
+										<li style = "height: 457px;" class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/04.jpg" alt="">
+												<img src="images/Flowers/4.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id='S-004'"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet Spring</h2>
+													<h2>Memory Lane Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>5,299
 															</span>
 														</del>
-														<span>₱ </span>55
+														<!--<span>₱ </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-product-right.php?id='S-004'" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
-										<li class="product vertical-item content-padding">
+										<li style = "height: 457px;" class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
-												<img src="images/shop/05.jpg" alt="">
+												<img src="images/Flowers/5.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-%40%40type.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id='S-005'"></a>
 												</div>
 												<div class="item-content">
-													<h2>Bouquet "Charm"</h2>
+													<h2>Forever Funeral & Condolence Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>34
+																<span>₱ </span>6,999
 															</span>
 														</del>
-														<span>₱ </span>55
+														<!--<span>₱ </span>55-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
+													<a href="shop-product-right.php?id='S-005'" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
-										<li class="product vertical-item content-padding">
+										<!--<li class="product vertical-item content-padding">
 											<div class="product-inner box-shadow">
 												<img src="images/shop/06.jpg" alt="">
 												<div class="media-links">
@@ -666,7 +666,7 @@
 													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
 												</div>
 											</div>
-										</li>
+										</li>-->
 									</ul>
 
 								</div>
@@ -706,8 +706,8 @@
 
 									<div class="wc-proceed-to-checkout">
 										<a href="shop-checkout.php" class="checkout-button alt wc-forward btn btn-maincolor">Proceed to checkout</a>
+										<a style="margin-left: 15px;" href="shop-right.php" class="checkout-button alt wc-forward btn btn-outline-maincolor">Find more products</a>
 									</div>
-
 
 								</div>
 							</div>

@@ -279,7 +279,7 @@
 				<div class="container">
 					<div class="row">
 						<main class="col-lg-12">
-							<div class="woocommerce-info">Returning customer? <a href="#" class="showlogin">Click here to login</a>
+							<!--<div class="woocommerce-info">Returning customer? <a href="#" class="showlogin">Click here to login</a>
 							</div>
 
 							<form class="woocomerce-form woocommerce-form-login login" method="post" style="">
@@ -338,15 +338,13 @@
 								<div class="clear">
 
 								</div>
-							</form>
+							</form>-->
 
 							<form name="booking" method="post" class="checkout woocommerce-checkout" action="confirmed-booking.php" enctype="multipart/form-data">
 
 								<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">
 									<ul class="woocommerce-error">
-										<li><strong>Billing First name</strong> is a required field.</li>
-										<li><strong>Billing Last name</strong> is a required field.</li>
-										<li>Please enter a valid postcode / ZIP.</li>
+										Thank you for choosing us to help with your memorial service arrangements. Please confirm the details of your booking before proceeding.
 									</ul>
 								</div>
 
@@ -511,8 +509,7 @@
                                                     
                                                     <tr class='cart_item'>
                                                         <td class='product-name'>
-                                                            $name&nbsp; <strong class='product-quantity'>× $days days <br> From $start_date <br>To $end_date</strong>
-                                                            <br><br><strong class='product-quantity'>Inclusions:</strong><br>Memorial Flowers <strong class='product-quantity'>x 10</strong
+                                                            $name&nbsp; <strong class='product-quantity'>× $days days <br><br> From $start_date <br>To $end_date</strong>
                                                         </td>
 
                                                         <td class='product-total'>

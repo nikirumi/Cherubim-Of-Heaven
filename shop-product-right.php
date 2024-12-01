@@ -317,29 +317,68 @@
 									<figure>
 										
 									<?php
-									
-									$img1 = "images/Flowers/1.png";
-									$img2 = "images/Flowers/2.png";
-									$img3 = "images/Flowers/3.png";
-									$img4 = "images/Flowers/4.png";
-									$img5 = "images/Flowers/5.png";
 
+										$keywords = ['flower', 'casket', 'urn'];
+										$extractedKeyword = '';
 
-									if (strpos($service_name, 'Casket') !== false) {
-										$img1 = "images/Caskets/1.jpg";
-										$img2 = "images/Caskets/2.jpg";
-										$img3 = "images/Caskets/3.jpg";
-										$img4 = "images/Caskets/4.jpg";
-										$img5 = "images/Caskets/5.jpg";
-									} 
-									
-									elseif (strpos($service_name, 'Urn') !== false) {
-										$img1 = "images/Urns/1.jpg";
-										$img2 = "images/Urns/2.jpg";
-										$img3 = "images/Urns/3.jpg";
-										$img4 = "images/Urns/4.jpg";
-										$img5 = "images/Urns/5.jpg";
-									}
+										foreach ($keywords as $keyword) {
+											if (stripos($service_name, $keyword) !== false) {
+												$extractedKeyword = $keyword;
+												break; // Stop once a match is found
+											}
+										}
+
+										if ($extractedKeyword !== '') {
+
+											$subQuery = "
+												SELECT row_num, Service_ID, Service_Name
+												FROM (
+													SELECT 
+														ROW_NUMBER() OVER (ORDER BY Service_ID) AS row_num, 
+														Service_ID, 
+														Service_Name
+													FROM memorial_services
+													WHERE Service_Name LIKE CONCAT('%', ?, '%')
+												) AS subquery
+												WHERE Service_ID = ?;
+											";
+
+											$stmtRow = $conn->prepare($subQuery);
+											$stmtRow->bind_param("ss", $extractedKeyword, $service_id); 
+
+											$stmtRow->execute();
+											$rowResult = $stmtRow->get_result();
+
+											$intValue = 0;
+											//$image_name = '';
+
+											if ($row = $rowResult->fetch_assoc()) {
+												$intValue = $row['row_num'];
+											} else {
+												echo "No matching record found.";
+											}
+
+											$stmtRow->close();
+										} else {
+											echo "No recognized keyword found in service name.";
+										}
+
+										$imgBasePath = "images/Flowers/"; 
+										$imageExtension = "png"; 
+
+										if (strpos($service_name, 'Casket') !== false) {
+											$imgBasePath = "images/Caskets/";
+											$imageExtension = "jpg"; 
+										} elseif (strpos($service_name, 'Urn') !== false) {
+											$imgBasePath = "images/Urns/";
+											$imageExtension = "jpg";
+										}
+
+										$img1 = $imgBasePath . $intValue . "." . $imageExtension;
+										$img2 = $imgBasePath . ($intValue + 1) . "." . $imageExtension;
+										$img3 = $imgBasePath . ($intValue + 2) . "." . $imageExtension;
+										$img4 = $imgBasePath . ($intValue + 3) . "." . $imageExtension;
+										$img5 = $imgBasePath . ($intValue + 4) . "." . $imageExtension;
 
 									echo "
 

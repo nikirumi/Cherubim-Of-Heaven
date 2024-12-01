@@ -310,7 +310,7 @@
 				<div class="container">
 					<div class="row">
 						<main class="col-lg-12">
-							<div class="woocommerce-info">Returning customer? <a href="#" class="showlogin">Click here to login</a>
+							<!--<div class="woocommerce-info">Returning customer? <a href="#" class="showlogin">Click here to login</a>
 							</div>
 
 							<form class="woocomerce-form woocommerce-form-login login" method="post" style="">
@@ -368,24 +368,21 @@
 								<div class="clear">
 
 								</div>
-							</form>
+							</form>-->
 
 							<form name="checkout" method="post" class="checkout woocommerce-checkout" action="purchase-space-logic.php" enctype="multipart/form-data">
 
                                 <div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">
-									<ul class="woocommerce-error">
-										<li>To purchase a space, additional informationm</li>
-										
-									</ul>
+									<p class="woocommerce-error">To purchase a space, additional information. Complete your purchase by providing payment and beneficiary details. Your memorial space will be secured.</p>
 								</div>
 
-								<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">
+								<!--<div class="woocommerce-NoticeGroup woocommerce-NoticeGroup-checkout">
 									<ul class="woocommerce-error">
 										<li><strong>Billing First name</strong> is a required field.</li>
 										<li><strong>Billing Last name</strong> is a required field.</li>
 										<li>Please enter a valid postcode / ZIP.</li>
 									</ul>
-								</div>
+								</div>-->
 
 
 								<div class="col2-set" id="customer_details">
