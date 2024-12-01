@@ -127,7 +127,8 @@
                 }
                 
                 else {
-                    //header("Location: index.php");
+                    $_SESSION["checkoutSuccess"] = true;
+                    header("Location: index.php");
                 }
             }  
             

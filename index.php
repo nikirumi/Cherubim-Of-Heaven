@@ -80,15 +80,25 @@
 
 <body>
 
-<div id="popup" class="popup-overlay" style="display: <?php echo isset($_SESSION["loginSuccess"]) ? 'block' : 'none'; ?>">
-	<div class="popup-content">
-		<span id="closePopup" class="close-btn">&times;</span>
-		<h2>Hello, <?php echo $username; ?>.</h2>
-		<p>Logged in successfuly.</p>
-		<?php unset($_SESSION["loginSuccess"]); ?>
-		<!--<button id="closeButton">Okay</button>-->
-	</div>
+<div id="popup" class="popup-overlay" style="display: <?php echo (isset($_SESSION["loginSuccess"]) || isset($_SESSION["checkoutSuccess"])) ? 'block' : 'none'; ?>">
+    <div class="popup-content">
+        <span id="closePopup" class="close-btn">&times;</span>
+            <?php 
+                if (isset($_SESSION["loginSuccess"])) {
+					echo "<h2>Hello, $username.</h2>";
+                    echo "<p>Logged in successfully.</p>";
+                    unset($_SESSION["loginSuccess"]);
+                } 
+				elseif (isset($_SESSION["checkoutSuccess"])) {
+					echo "<h2>Thank you for you purchase!</h2>";
+                    echo "<p>Checkout completed successfully.</p>";
+                    unset($_SESSION["checkoutSuccess"]);
+                }
+            ?>
+        <!--<button id="closeButton">Okay</button>-->
+    </div>
 </div>
+
 
 <script>
 	document.addEventListener("DOMContentLoaded", function() {

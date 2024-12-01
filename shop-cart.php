@@ -338,16 +338,77 @@
 													$subtotal = $service_price * $quantity; // Calculate subtotal
 													$subtotalAll += $subtotal; 
 
-													$intValue = (int) preg_replace('/\D/', '', $service_id);
-													$image_name = '';
+													$keywords = ['flower', 'casket', 'urn'];
+													$extractedKeyword = '';
 
-													if ($intValue < 10) {
+													// Extract the keyword from the service name
+													foreach ($keywords as $keyword) {
+														if (stripos($service_name, $keyword) !== false) {
+															$extractedKeyword = $keyword;
+															break;
+														}
+													}
+
+													if ($extractedKeyword !== '') {
+
+														$subQuery = "
+															SELECT row_num, Service_ID, Service_Name
+															FROM (
+																SELECT 
+																	ROW_NUMBER() OVER (ORDER BY Service_ID) AS row_num, 
+																	Service_ID, 
+																	Service_Name
+																FROM memorial_services
+																WHERE Service_Name LIKE CONCAT('%', ?, '%')
+															) AS subquery
+															WHERE Service_ID = ?;
+														";
+
+														$stmtRow = $conn->prepare($subQuery);
+														$stmtRow->bind_param("ss", $extractedKeyword, $service_id); 
+
+														$stmtRow->execute();
+														$rowResult = $stmtRow->get_result();
+
+														$intValue = 0;
+														$image_name = '';
+
+														if ($row = $rowResult->fetch_assoc()) {
+															$intValue = $row['row_num'];
+
+															if ($extractedKeyword === 'flower') {
+																$image_name = "images/Flowers/$intValue.png";
+															} 
+															elseif ($extractedKeyword === 'casket') {
+																$image_name = "images/Caskets/$intValue.jpg";
+															} 
+															elseif ($extractedKeyword === 'urn') {
+																$image_name = "images/Urns/$intValue.jpg";
+															}
+
+															//echo "Image path: " . $image_name;
+														} 
+														
+														else {
+															echo "No matching record found.";
+														}
+
+														$stmtRow->close();
+													} 
+													else {
+														echo "No recognized keyword found in service name.";
+													}
+
+
+													//$intValue = (int) preg_replace('/\D/', '', $service_id);
+
+													/*if ($intValue < 10) {
 														$image_name = "0" . $intValue;
 													}
 
 													else {
 														$image_name = $intValue;
-													}
+													}*/
 
 													?>
 													
@@ -360,7 +421,7 @@
 
 														<td class="product-thumbnail">
 															<a href="shop-product-right.php">
-																<img width="180" height="180" src="images/shop/<?php echo $image_name?>.jpg" class="" alt="<?php echo $service_name; ?>">
+																<img width="180" height="180" src="<?php echo $image_name?>" class="" alt="<?php echo $service_name; ?>">
 															</a>
 														</td>
 
