@@ -204,9 +204,9 @@
 													<a href="plan-ahead.php">Plan Ahead</a>
 												</li>
 
-												<li>
+												<!--<li>
 													<a href="pricing.php">Pricing</a>
-												</li>
+												</li>-->
 
 												<!-- shop -->
 												<li>
@@ -217,25 +217,16 @@
 															<ul>
 
 																<li>
+																	<a href="shop-account-dashboard.php">Dashboard</a>
+																</li>
+																<li>
 																	<a href="shop-account-details.php">Account details</a>
 																</li>
 																<li>
 																	<a href="shop-account-addresses.php">Addresses</a>
 																</li>
 																<li>
-																	<a href="shop-account-address-edit.php">Edit Address</a>
-																</li>
-																<li>
 																	<a href="shop-account-orders.php">Orders</a>
-																</li>
-																<li>
-																	<a href="shop-account-order-single.php">Single Order</a>
-																</li>
-																<li>
-																	<a href="shop-account-downloads.php">Downloads</a>
-																</li>
-																<li>
-																	<a href="shop-account-password-reset.php">Password Reset</a>
 																</li>
 																<li>
 																	<a href="shop-account-login.php">Login/Logout</a>
@@ -244,29 +235,20 @@
 															</ul>
 														</li>
 														<li>
-															<a href="shop-right.php">Right Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-left.php">Left Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-product-right.php">Product Right Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-product-left.php">Product Left Sidebar</a>
+															<a href="shop-right.php">Catalog</a>
 														</li>
 														<li>
 															<a href="shop-cart.php">Cart</a>
 														</li>
-														<li>
-															<a href="shop-checkout.php">Checkout</a>
-														</li>
-														<li>
-															<a href="shop-order-received.php">Order Received</a>
-														</li>
 
 													</ul>
 												</li>
+
+												<!-- virutal-tour -->
+												<li>
+													<a href="virtual-tour.html">Virtual Tour</a>
+												</li>
+												<!-- eof virtual-tour -->
 
 												<!-- events -->
 												<li>
@@ -274,7 +256,7 @@
 												</li>
 												<!-- eof events -->
 
-												<li>
+												<!--<li>
 													<a href="team.php">Team</a>
 													<ul>
 														<li>
@@ -284,9 +266,9 @@
 															<a href="team-single.php">Team Member</a>
 														</li>
 													</ul>
-												</li>
+												</li>-->
 
-												<!-- gallery -->
+												<!-- gallery
 												<li>
 													<a href="gallery-regular.php">Gallery</a>
 												</li>
@@ -294,13 +276,14 @@
 												<li>
 													<a href="comingsoon.php">Comingsoon</a>
 												</li>
+												-->
 
 												<li>
 													<a href="faq2.php">FAQ</a>
 												</li>
-												<li>
+												<!--<li>
 													<a href="404.php">404</a>
-												</li>
+												</li>-->
 
 											</ul>
 										</li>
@@ -391,8 +374,8 @@
 												</div>
 
 												<div class="intro_layer slider-buttons" data-animation="fadeInDown">
-													<a href="#" class="btn btn-big btn-maincolor">Learn More</a>
-													<a href="#" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
+													<a href="home-blocks.php" class="btn btn-big btn-maincolor">Learn More</a>
+													<a href="contact.php" class="btn btn-big btn-outline-darkgrey">Contact Us</a>
 												</div>
 											</div> <!-- eof .intro_layers -->
 										</div> <!-- eof .intro_layers_wrapper -->
@@ -669,7 +652,7 @@
 										<div class="divider-43 d-none d-lg-block"></div>
 										<a href="contact.php" class="btn btn-maincolor">Contact Us</a>
 										<span>or</span>
-										<a href="#" class="btn-link">Learn More</a>
+										<a href="home-blocks.php" class="btn-link">Learn More</a>
 										<div class="divider-5 d-none d-lg-block"></div>
 										<div class="divider-45 d-block d-lg-none"></div>
 									</div>
@@ -689,7 +672,7 @@
 									</div>
 									<div class="card-body">
 										<h6 class="card-title">
-											<a href="#">Martha R. Foster</a>
+											<a href="#">Maria A. Santos</a>
 										</h6>
 										<p class="card-text">
 											October 7, 1927 - March 18, 2024
@@ -705,7 +688,7 @@
 									</div>
 									<div class="card-body">
 										<h6 class="card-title">
-											<a href="#">Jason V. Little</a>
+											<a href="#">Juan S. Dela Cruz</a>
 										</h6>
 										<p class="card-text">
 											October 7, 1946 - March 14, 2024
@@ -721,7 +704,7 @@
 									</div>
 									<div class="card-body">
 										<h6 class="card-title">
-											<a href="#">Yvette L. Fallon</a>
+											<a href="#">Priscilla F. Santos</a>
 										</h6>
 										<p class="card-text">
 											October 7, 1952 - March 05, 2024
@@ -744,8 +727,8 @@
 							<div class="divider-60 d-none d-lg-block"></div>
 							<p>Cherubim of Heaven Memorial Park is proud to offer services that honor not only the departed but also the values they cherished. With serene burial plots, thoughtfully designed columbarium spaces, and digital time capsules, we help families create meaningful tributes while fostering a legacy of remembrance for future generations.</p>
 							<div class="divider-40 d-none d-lg-block"></div>
-							<a href="#" class="btn btn-maincolor mr-2">Shedule ceremony</a>
-							<a href="#" class="btn btn-outline-maincolor">Learn More</a>
+							<a href="shop-right-funeral.php" class="btn btn-maincolor mr-2">Shedule ceremony</a>
+							<a href="home-blocks.php" class="btn btn-outline-maincolor">Learn More</a>
 						</div>
 					</div>
 				</div>

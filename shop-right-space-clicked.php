@@ -137,537 +137,129 @@
 
 									<!-- main nav start -->
 									<nav class="top-nav">
-										<ul class="nav sf-menu">
-											<li class="active">
-												<a href="index-2.php">Home</a>
-												<ul>
-													<li>
-														<a href="index-2.php">MultiPage</a>
-													</li>
-													<li>
-														<a href="index_static.php">Static Intro</a>
-													</li>
-													<li>
-														<a href="index_singlepage.php">Single Page</a>
-													</li>
-												</ul>
-											</li>
+									<ul class="nav sf-menu">
+										<li class="active">
+											<a href="index.php">Home</a>
+										</li>
 
-											<li>
-												<a href="home-blocks.php">Home Blocks</a>
-											</li>
-											<li>
-												<a href="about.php">Pages</a>
-												<ul>
-													<li>
-														<a href="about.php">About</a>
-													</li>
+										<li>
+											<a href="home-blocks.php">Contents</a>
+										</li>
+										<li>
+											<a href="about.php">Pages</a>
+											<ul>
+												<li>
+													<a href="about.php">About</a>
+												</li>
 
-													<li>
-														<a href="services.php">Our Services</a>
-														<ul>
-															<li>
-																<a href="services.php">Services 1</a>
-															</li>
-															<li>
-																<a href="services2.php">Services 2</a>
-															</li>
-															<li>
-																<a href="services3.php">Services 3</a>
-															</li>
-															<li>
-																<a href="service-single.php">Single Service</a>
-															</li>
-														</ul>
-													</li>
+												<li>
+													<a href="services.php">Our Services</a>
+												</li>
 
-													<li>
-														<a href="plan-ahead.php">Plan Ahead</a>
-													</li>
+												<li>
+													<a href="plan-ahead.php">Plan Ahead</a>
+												</li>
 
-													<li>
-														<a href="pricing.php">Pricing</a>
-													</li>
+												<!--<li>
+													<a href="pricing.php">Pricing</a>
+												</li>-->
 
-													<!-- shop -->
-													<li>
-														<a href="shop-right.php">Shop</a>
-														<ul>
-															<li>
-																<a href="shop-account-dashboard.php">Account</a>
-																<ul>
-
-																	<li>
-																		<a href="shop-account-details.php">Account details</a>
-																	</li>
-																	<li>
-																		<a href="shop-account-addresses.php">Addresses</a>
-																	</li>
-																	<li>
-																		<a href="shop-account-address-edit.php">Edit Address</a>
-																	</li>
-																	<li>
-																		<a href="shop-account-orders.php">Orders</a>
-																	</li>
-																	<li>
-																		<a href="shop-account-order-single.php">Single Order</a>
-																	</li>
-																	<li>
-																		<a href="shop-account-downloads.php">Downloads</a>
-																	</li>
-																	<li>
-																		<a href="shop-account-password-reset.php">Password Reset</a>
-																	</li>
-																	<li>
-																		<a href="shop-account-login.php">Login/Logout</a>
-																	</li>
-
-																</ul>
-															</li>
-															<li>
-																<a href="shop-right.php">Right Sidebar</a>
-															</li>
-															<li>
-																<a href="shop-left.php">Left Sidebar</a>
-															</li>
-															<li>
-																<a href="shop-product-right.php">Product Right Sidebar</a>
-															</li>
-															<li>
-																<a href="shop-product-left.php">Product Left Sidebar</a>
-															</li>
-															<li>
-																<a href="shop-cart.php">Cart</a>
-															</li>
-															<li>
-																<a href="shop-checkout.php">Checkout</a>
-															</li>
-															<li>
-																<a href="shop-order-received.php">Order Received</a>
-															</li>
-
-														</ul>
-													</li>
-													<!-- eof shop -->
-
-													<!-- features -->
-													<li>
-														<a href="shortcodes_iconbox.php">Shortcodes</a>
-														<ul>
-															<li>
-																<a href="shortcodes_typography.php">Typography</a>
-															</li>
-															<li>
-																<a href="shortcodes_buttons.php">Buttons</a>
-															</li>
-															<li>
-																<a href="shortcodes_iconbox.php">Icon Boxes</a>
-															</li>
-															<li>
-																<a href="shortcodes_progress.php">Progress</a>
-															</li>
-															<li>
-																<a href="shortcodes_tabs.php">Tabs &amp; Collapse</a>
-															</li>
-															<li>
-																<a href="shortcodes_bootstrap.php">Bootstrap Elements</a>
-															</li>
-															<li>
-																<a href="shortcodes_animation.php">Animation</a>
-															</li>
-															<li>
-																<a href="shortcodes_icons.php">Template Icons</a>
-															</li>
-															<li>
-																<a href="shortcodes_socialicons.php">Social Icons</a>
-															</li>
-														</ul>
-													</li>
-													<!-- eof shortcodes -->
-
-													<li>
-														<a href="shortcodes_widgets_default.php">Widgets</a>
-														<ul>
-															<li>
-																<a href="shortcodes_widgets_in_columns.php">All Widgets</a>
-															</li>
-															<li>
-																<a href="shortcodes_widgets_default.php">Default Widgets</a>
-															</li>
-															<li>
-																<a href="shortcodes_widgets_shop.php">Shop Widgets</a>
-															</li>
-															<li>
-																<a href="shortcodes_widgets_custom.php">Custom Widgets</a>
-															</li>
-														</ul>
-
-													</li>
-
-
-													<!-- events -->
-													<li>
-														<a href="events-left.php">Events</a>
-														<ul>
-															<li>
-																<a href="events-left.php">Left Sidebar</a>
-															</li>
-															<li>
-																<a href="events-right.php">Right Sidebar</a>
-															</li>
-															<li>
-																<a href="events-full.php">Full Width</a>
-															</li>
-															<li>
-																<a href="event-single-left.php">Single Event</a>
-																<ul>
-																	<li>
-																		<a href="event-single-left.php">Left Sidebar</a>
-																	</li>
-																	<li>
-																		<a href="event-single-right.php">Right Sidebar</a>
-																	</li>
-																	<li>
-																		<a href="event-single-full.php">Full Width</a>
-																	</li>
-																</ul>
-															</li>
-														</ul>
-													</li>
-													<!-- eof events -->
-
-													<li>
-														<a href="team.php">Team</a>
-														<ul>
-															<li>
-																<a href="team.php">Team List</a>
-															</li>
-															<li>
-																<a href="team-single.php">Team Member</a>
-															</li>
-														</ul>
-													</li>
-
-													<li>
-														<a href="about-founder.php">About Founder</a>
-													</li>
-
-													<!-- gallery -->
-													<li>
-														<a href="gallery-regular.php">Gallery</a>
-														<ul>
-															<!-- Gallery image only -->
-															<li>
-																<a href="gallery-regular.php">Gallery Regular</a>
-																<ul>
-																	<li>
-																		<a href="gallery-regular-2-cols.php">2 columns</a>
-																	</li>
-																	<li>
-																		<a href="gallery-regular.php">3 columns</a>
-																	</li>
-																	<li>
-																		<a href="gallery-regular-4-cols-fullwidth.php">4 columns</a>
-																	</li>
-
-																</ul>
-															</li>
-															<li>
-																<a href="gallery-regular-2.php">Gallery Regular 2</a>
-															</li>
-															<li>
-																<a href="gallery-regular-3.php">Gallery Regular 3</a>
-															</li>
-															<!-- eof Gallery image only -->
-
-															<!-- Gallery with title -->
-															<li>
-																<a href="gallery-title.php">Gallery Title</a>
-																<ul>
-																	<li>
-																		<a href="gallery-title-2-cols.php">2 columns</a>
-																	</li>
-																	<li>
-																		<a href="gallery-title.php">3 column</a>
-																	</li>
-																	<li>
-																		<a href="gallery-title-4-cols-fullwidth.php">4 columns</a>
-																	</li>
-																</ul>
-															</li>
-															<!-- eof Gallery with title -->
-
-															<!-- Gallery with excerpt -->
-															<li>
-																<a href="gallery-excerpt.php">Gallery Excerpt</a>
-																<ul>
-																	<li>
-																		<a href="gallery-excerpt-2-cols.php">2 columns</a>
-																	</li>
-																	<li>
-																		<a href="gallery-excerpt.php">3 column</a>
-																	</li>
-																	<li>
-																		<a href="gallery-excerpt-4-cols-fullwidth.php">4 columns</a>
-																	</li>
-																</ul>
-															</li>
-															<!-- eof Gallery with excerpt -->
-
-
-															<li>
-																<a href="gallery-tiled.php">Tiled Gallery</a>
-															</li>
-															<!-- Gallery item -->
-
-															<li>
-																<a href="gallery-single.php">Gallery Single</a>
-																<ul>
-																	<li>
-																		<a href="gallery-single.php">Gallery Single</a>
-																	</li>
-																	<li>
-																		<a href="gallery-single2.php">Gallery Single 2</a>
-																	</li>
-																</ul>
-															</li>
-															<!-- eof Gallery item -->
-														</ul>
-													</li>
-													<!-- eof Gallery -->
-													<li>
-														<a href="our-story.php">Our Story</a>
-													</li>
-													<li>
-														<a href="careers.php">Careers</a>
-													</li>
-
-													<li>
-														<a href="comingsoon.php">Comingsoon</a>
-													</li>
-
-													<li>
-														<a href="faq.php">FAQ</a>
-														<ul>
-															<li>
-																<a href="faq.php">FAQ</a>
-															</li>
-															<li>
-																<a href="faq2.php">FAQ 2</a>
-															</li>
-														</ul>
-													</li>
-													<li>
-														<a href="404.php">404</a>
-													</li>
-
-												</ul>
-											</li>
-											<!-- eof pages -->
-											<!-- blog -->
-											<li>
-												<a href="blog-right.php">Blog</a>
-												<ul>
-
-													<li>
-														<a href="blog-right.php">Right Sidebar</a>
-													</li>
-													<li>
-														<a href="blog-left.php">Left Sidebar</a>
-													</li>
-													<li>
-														<a href="blog-full.php">Without Sidebar</a>
-													</li>
-													<li>
-														<a href="blog-grid.php">Blog Grid</a>
-													</li>
-
-													<li>
-														<a href="blog-single-right.php">Post</a>
-														<ul>
-															<li>
-																<a href="blog-single-right.php">Right Sidebar</a>
-															</li>
-															<li>
-																<a href="blog-single-left.php">Left Sidebar</a>
-															</li>
-															<li>
-																<a href="blog-single-full.php">No Sidebar</a>
-															</li>
-														</ul>
-													</li>
-
-													<li>
-														<a href="blog-single-video-right.php">Video Post</a>
-														<ul>
-															<li>
-																<a href="blog-single-video-right.php">Right Sidebar</a>
-															</li>
-															<li>
-																<a href="blog-single-video-left.php">Left Sidebar</a>
-															</li>
-															<li>
-																<a href="blog-single-video-full.php">No Sidebar</a>
-															</li>
-														</ul>
-													</li>
-
-												</ul>
-											</li>
-											<!-- eof blog -->
-
-											<li>
-												<a href="#">Features</a>
-												<div class="mega-menu">
-													<ul class="mega-menu-row">
-														<li class="mega-menu-col">
-															<a href="#">Headers</a>
+												<!-- shop -->
+												<li>
+													<a href="shop-right.php">Shop</a>
+													<ul>
+														<li>
+															<a href="shop-account-dashboard.php">Account</a>
 															<ul>
+
 																<li>
-																	<a href="header1.php">Header Type 1</a>
+																	<a href="shop-account-dashboard.php">Dashboard</a>
 																</li>
 																<li>
-																	<a href="header2.php">Header Type 2</a>
+																	<a href="shop-account-details.php">Account details</a>
 																</li>
 																<li>
-																	<a href="header3.php">Header Type 3</a>
+																	<a href="shop-account-addresses.php">Addresses</a>
 																</li>
 																<li>
-																	<a href="header4.php">Header Type 4</a>
+																	<a href="shop-account-orders.php">Orders</a>
 																</li>
 																<li>
-																	<a href="header5.php">Header Type 5</a>
+																	<a href="shop-account-login.php">Login/Logout</a>
 																</li>
-																<li>
-																	<a href="header6.php">Header Type 6</a>
-																</li>
+
 															</ul>
 														</li>
-														<li class="mega-menu-col">
-															<a href="#">Side Menus</a>
-															<ul>
-																<li>
-																	<a href="header-side.php">Push Left</a>
-																</li>
-																<li>
-																	<a href="header-side-right.php">Push Right</a>
-																</li>
-																<li>
-																	<a href="header-side-slide.php">Slide Left</a>
-																</li>
-																<li>
-																	<a href="header-side-slide-right.php">Slide Right</a>
-																</li>
-																<li>
-																	<a href="header-side-sticked.php">Sticked Left</a>
-																</li>
-																<li>
-																	<a href="header-side-sticked-right.php">Sticked Right</a>
-																</li>
-															</ul>
+														<li>
+															<a href="shop-right.php">Catalog</a>
 														</li>
-														<li class="mega-menu-col">
-															<a href="title1.php">Title Sections</a>
-															<ul>
-																<li>
-																	<a href="title1.php">Title section 1</a>
-																</li>
-																<li>
-																	<a href="title2.php">Title section 2</a>
-																</li>
-																<li>
-																	<a href="title3.php">Title section 3</a>
-																</li>
-																<li>
-																	<a href="title4.php">Title section 4</a>
-																</li>
-																<li>
-																	<a href="title5.php">Title section 5</a>
-																</li>
-																<li>
-																	<a href="title6.php">Title section 6</a>
-																</li>
-															</ul>
-														</li>
-														<li class="mega-menu-col">
-															<a href="footer1.php#footer">Footers</a>
-															<ul>
-																<li>
-																	<a href="footer1.php#footer">Footer Type 1</a>
-																</li>
-																<li>
-																	<a href="footer2.php#footer">Footer Type 2</a>
-																</li>
-																<li>
-																	<a href="footer3.php#footer">Footer Type 3</a>
-																</li>
-																<li>
-																	<a href="footer4.php#footer">Footer Type 4</a>
-																</li>
-																<li>
-																	<a href="footer5.php#footer">Footer Type 5</a>
-																</li>
-																<li>
-																	<a href="footer6.php#footer">Footer Type 6</a>
-																</li>
-															</ul>
-														</li>
-														<li class="mega-menu-col">
-															<a href="copyright1.php#copyright">Copyright</a>
-
-															<ul>
-																<li>
-																	<a href="copyright1.php#copyright">Copyright 1</a>
-																</li>
-																<li>
-																	<a href="copyright2.php#copyright">Copyright 2</a>
-																</li>
-																<li>
-																	<a href="copyright3.php#copyright">Copyright 3</a>
-																</li>
-																<li>
-																	<a href="copyright4.php#copyright">Copyright 4</a>
-																</li>
-																<li>
-																	<a href="copyright5.php#copyright">Copyright 5</a>
-																</li>
-																<li>
-																	<a href="copyright6.php#copyright">Copyright 6</a>
-																</li>
-															</ul>
+														<li>
+															<a href="shop-cart.php">Cart</a>
 														</li>
 
 													</ul>
-												</div> <!-- eof mega menu -->
-											</li>
-											<!-- eof features -->
-											<!-- contacts -->
-											<li>
-												<a href="contact.php">Contacts</a>
-												<ul>
-													<li>
-														<a href="contact.php">Contact 1</a>
-													</li>
-													<li>
-														<a href="contact2.php">Contact 2</a>
-													</li>
-													<li>
-														<a href="contact3.php">Contact 3</a>
-													</li>
-													<li>
-														<a href="contact4.php">Contact 4</a>
-													</li>
-													<li>
-														<a href="contact5.php">Contact 5</a>
-													</li>
-												</ul>
-											</li>
+												</li>
 
-											<!-- eof contacts -->
-										</ul>
+												<!-- virutal-tour -->
+												<li>
+													<a href="virtual-tour.html">Virtual Tour</a>
+												</li>
+												<!-- eof virtual-tour -->
+
+												<!-- events -->
+												<li>
+													<a href="events-full.php">Events</a>
+												</li>
+												<!-- eof events -->
+
+												<!--<li>
+													<a href="team.php">Team</a>
+													<ul>
+														<li>
+															<a href="team.php">Team List</a>
+														</li>
+														<li>
+															<a href="team-single.php">Team Member</a>
+														</li>
+													</ul>
+												</li>-->
+
+												<!-- gallery
+												<li>
+													<a href="gallery-regular.php">Gallery</a>
+												</li>
+
+												<li>
+													<a href="comingsoon.php">Comingsoon</a>
+												</li>
+												-->
+
+												<li>
+													<a href="faq2.php">FAQ</a>
+												</li>
+												<!--<li>
+													<a href="404.php">404</a>
+												</li>-->
+
+											</ul>
+										</li>
+										<!-- eof pages -->
+										<!-- blog -->
+										<li>
+											<a href="blog-right.php">Blog</a>
+										</li>
+										<!-- eof blog -->
+
+										<!-- contacts -->
+										<li>
+											<a href="contact.php">Contacts</a>
+										</li>
+
+										<!-- eof contacts -->
+									</ul>
 
 
-									</nav>
+								</nav>
 									<!-- eof main nav -->
 
 									<!--hidding includes on small devices. They are duplicated in topline-->

@@ -139,7 +139,7 @@
 								<div class="nav-wrap">
 
 										<!-- main nav start -->
-								<nav class="top-nav">
+										<nav class="top-nav">
 									<ul class="nav sf-menu">
 										<li class="active">
 											<a href="index.php">Home</a>
@@ -163,9 +163,9 @@
 													<a href="plan-ahead.php">Plan Ahead</a>
 												</li>
 
-												<li>
+												<!--<li>
 													<a href="pricing.php">Pricing</a>
-												</li>
+												</li>-->
 
 												<!-- shop -->
 												<li>
@@ -176,25 +176,16 @@
 															<ul>
 
 																<li>
+																	<a href="shop-account-dashboard.php">Dashboard</a>
+																</li>
+																<li>
 																	<a href="shop-account-details.php">Account details</a>
 																</li>
 																<li>
 																	<a href="shop-account-addresses.php">Addresses</a>
 																</li>
 																<li>
-																	<a href="shop-account-address-edit.php">Edit Address</a>
-																</li>
-																<li>
 																	<a href="shop-account-orders.php">Orders</a>
-																</li>
-																<li>
-																	<a href="shop-account-order-single.php">Single Order</a>
-																</li>
-																<li>
-																	<a href="shop-account-downloads.php">Downloads</a>
-																</li>
-																<li>
-																	<a href="shop-account-password-reset.php">Password Reset</a>
 																</li>
 																<li>
 																	<a href="shop-account-login.php">Login/Logout</a>
@@ -203,29 +194,20 @@
 															</ul>
 														</li>
 														<li>
-															<a href="shop-right.php">Right Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-left.php">Left Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-product-right.php">Product Right Sidebar</a>
-														</li>
-														<li>
-															<a href="shop-product-left.php">Product Left Sidebar</a>
+															<a href="shop-right.php">Catalog</a>
 														</li>
 														<li>
 															<a href="shop-cart.php">Cart</a>
 														</li>
-														<li>
-															<a href="shop-checkout.php">Checkout</a>
-														</li>
-														<li>
-															<a href="shop-order-received.php">Order Received</a>
-														</li>
 
 													</ul>
 												</li>
+
+												<!-- virutal-tour -->
+												<li>
+													<a href="virtual-tour.html">Virtual Tour</a>
+												</li>
+												<!-- eof virtual-tour -->
 
 												<!-- events -->
 												<li>
@@ -233,7 +215,7 @@
 												</li>
 												<!-- eof events -->
 
-												<li>
+												<!--<li>
 													<a href="team.php">Team</a>
 													<ul>
 														<li>
@@ -243,9 +225,9 @@
 															<a href="team-single.php">Team Member</a>
 														</li>
 													</ul>
-												</li>
+												</li>-->
 
-												<!-- gallery -->
+												<!-- gallery
 												<li>
 													<a href="gallery-regular.php">Gallery</a>
 												</li>
@@ -253,13 +235,14 @@
 												<li>
 													<a href="comingsoon.php">Comingsoon</a>
 												</li>
+												-->
 
 												<li>
 													<a href="faq2.php">FAQ</a>
 												</li>
-												<li>
+												<!--<li>
 													<a href="404.php">404</a>
-												</li>
+												</li>-->
 
 											</ul>
 										</li>

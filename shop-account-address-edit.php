@@ -100,7 +100,7 @@
 								<div class="nav-wrap">
 
 											<!-- main nav start -->
-								<nav class="top-nav">
+											<nav class="top-nav">
 									<ul class="nav sf-menu">
 										<li class="active">
 											<a href="index.php">Home</a>
@@ -124,12 +124,10 @@
 													<a href="plan-ahead.php">Plan Ahead</a>
 												</li>
 
-												<li>
+												<!--<li>
 													<a href="pricing.php">Pricing</a>
-												</li>
+												</li>-->
 
-												<!-- shop -->
-												
 												<!-- shop -->
 												<li>
 													<a href="shop-right.php">Shop</a>
@@ -137,10 +135,10 @@
 														<li>
 															<a href="shop-account-dashboard.php">Account</a>
 															<ul>
+
 																<li>
 																	<a href="shop-account-dashboard.php">Dashboard</a>
 																</li>
-
 																<li>
 																	<a href="shop-account-details.php">Account details</a>
 																</li>
@@ -166,6 +164,11 @@
 													</ul>
 												</li>
 
+												<!-- virutal-tour -->
+												<li>
+													<a href="virtual-tour.html">Virtual Tour</a>
+												</li>
+												<!-- eof virtual-tour -->
 
 												<!-- events -->
 												<li>
@@ -173,7 +176,7 @@
 												</li>
 												<!-- eof events -->
 
-												<li>
+												<!--<li>
 													<a href="team.php">Team</a>
 													<ul>
 														<li>
@@ -183,9 +186,9 @@
 															<a href="team-single.php">Team Member</a>
 														</li>
 													</ul>
-												</li>
+												</li>-->
 
-												<!-- gallery -->
+												<!-- gallery
 												<li>
 													<a href="gallery-regular.php">Gallery</a>
 												</li>
@@ -193,13 +196,14 @@
 												<li>
 													<a href="comingsoon.php">Comingsoon</a>
 												</li>
+												-->
 
 												<li>
 													<a href="faq2.php">FAQ</a>
 												</li>
-												<li>
+												<!--<li>
 													<a href="404.php">404</a>
-												</li>
+												</li>-->
 
 											</ul>
 										</li>
