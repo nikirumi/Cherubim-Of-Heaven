@@ -229,7 +229,7 @@
 												</div>
 
 												<div class="intro_layer" data-animation="fadeInDown">
-													<p class="intro_after_featured_word">Honoring each life with personalized care because every <br> story is unique.</p>
+													<p class="intro_after_featured_word">Honoring each life with personalized care, because every <br> story is unique.</p>
 												</div>
 
 												<div class="intro_layer slider-buttons" data-animation="fadeInDown">
