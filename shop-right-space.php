@@ -41,18 +41,11 @@
         }
     }
 
-  
-    $ID1 = "S-031"; 
-    $ID2 = "S-032"; 
-    $ID3 = "S-033"; 
-    $ID4 = "S-034"; 
-
-    $firstRow = displayAssoc($ID1); 
-    $secondRow = displayAssoc($ID2); 
-    $thirdRow = displayAssoc($ID3); 
-    $fourthRow = displayAssoc($ID4); 
-
-
+	$rows = [];
+	for ($i = 31; $i <= 34; $i++) {
+		$ID = sprintf("S-%03d", $i); // Generate IDs from S-001 to S-009
+		$rows[] = displayAssoc($ID); // Store each row in an array
+	}
 ?>
 
 
@@ -82,7 +75,7 @@
 	</div>
 
 	<!-- search modal -->
-	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
+	<!-- <div class="modal" tabindex="-1" role="dialog" aria-labelledby="search_modal" id="search_modal">
 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		</button>
@@ -94,7 +87,7 @@
 				<button type="submit" class="btn">Search</button>
 			</form>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Unyson messages modal -->
 	<div class="modal fade" tabindex="-1" role="dialog" id="messages_modal">
@@ -299,114 +292,40 @@
 					<div class="row">
 						<main class="col-lg-8 col-xl-9">
 							<div class="columns-3">
-								<ul class="products">
-							                                  
+							<ul class="products">
+								<?php for ($i = 0; $i < count($rows); $i++): ?>
+
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/mausoleum.jpg" alt="">
+											<img src="images/Spaces/<?php echo ($i + 1); ?>.jpg" alt="">
+
 											<div class="media-links">
-                                                
-												<a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $firstRow['Service_ID'] ?>"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($rows[$i]['Service_ID']); ?>'"></a>
 											</div>
+
 											<div class="item-content">
-												<h2><?php  echo  $firstRow['Service_Name']   ?></h2>
+												<h2><?php echo $rows[$i]['Service_Name']; ?></h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>₱ </span><?php  echo  $firstRow['Service_Price']   ?>
-
+															<span>PHP </span><span>₱ </span><?php echo number_format($rows[$i]['Service_Price']); ?>
 														</span>
 													</del>
-													
 												</span>
 											</div>
+
 											<div class="shop-btn">
-												<a href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>" class="add-to-card btn btn-maincolor">Purchase</a>
+												<a href="shop-product-right.php?id=<?php echo $rows[$i]['Service_ID'] ?>" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/openair.png" alt="">
-											<div class="media-links">
-                                            <a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>"></a>
+									<?php endfor; ?>
 
-											</div>
-											<div class="item-content">
-                                             <h2><?php  echo  $secondRow['Service_Name']   ?></h2>
-
-												<span class="price">
-													<del>
-														<span>
-                                                            <span>₱ </span><?php  echo  $secondRow['Service_Price']   ?>
-															
-														</span>
-													</del>
-										
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>" class="add-to-card btn btn-maincolor">Purchase</a>
-											</div>
-										</div>
-									</li>
-
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/apt.jpg" alt="">
-											<div class="media-links">
-                                            <a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $fourthRow['Service_ID'] ?>"></a>
-
-											</div>
-											<div class="item-content">
-                                            <h2><?php  echo  $fourthRow['Service_Name']   ?></h2>
-                                            <span class="price">
-													<del>
-														<span>
-                                                             <span>₱ </span><?php  echo  $fourthRow['Service_Price']   ?>
-
-														</span>
-													</del>									
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>" class="add-to-card btn btn-maincolor">Purchase</a>
-											</div>
-										</div>
-									</li>
-									
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/lawnm.jpg" alt="">
-											<div class="media-links">
-                                            <a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo $thirdRow['Service_ID'] ?>"></a>
-
-											</div>
-											<div class="item-content">
-                                             <h2><?php  echo  $thirdRow['Service_Name']   ?></h2>
-												<span class="price">
-													<del>
-														<span>
-                                                        <span>₱ </span><?php  echo  $thirdRow['Service_Price']   ?>
-
-														</span>
-													</del>
-													
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-right-space-clicked.php?id=<?php echo $secondRow['Service_ID'] ?>" class="add-to-card btn btn-maincolor">Purchase</a>
-											</div>
-										</div>
-									</li>
-
-									
-								
 								</ul>
 							</div>
 							<!-- columns 2 -->
 
-							<nav class="woocommerce-pagination">
+							<!-- <nav class="woocommerce-pagination">
 								<ul class="page-numbers">
 									<li>
 										<span class="page-numbers current">1</span>
@@ -424,12 +343,12 @@
 										<a class="next page-numbers" href="shop-right.php"><i class="fa fa-angle-right"></i></a>
 									</li>
 								</ul>
-							</nav>
+							</nav> -->
 
 						</main>
 
 						<aside class="col-lg-4 col-xl-3">
-							<div class="bg-maincolor py-50 px-30 cs">
+							<!-- <div class="bg-maincolor py-50 px-30 cs">
 								<div class="widget widget_product_search">
 
 									<h3 class="widget-title">Search</h3>
@@ -444,7 +363,7 @@
 										<input type="submit" value="Search">
 									</form>
 								</div>
-							</div>
+							</div> -->
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
@@ -465,15 +384,11 @@
 									</li>
 
 									<li class="cat-item cat-parent">
-										 <a href="shop-right.php" class="active">Spaces</a> 
-										<ul class="children">
-											<li class="cat-item">
-												<a href="shop-right-funeral.php">Funeral</a>
-											</li>
-											<li class="cat-item">
-												<a href="shop-right-space.php">Memorial Space</a> 
-											</li>
-										</ul>
+										 <a href="shop-right-funeral.php" class="active">Funeral</a> 
+									</li>
+									
+									<li class="cat-item cat-parent">
+										 <a href="shop-right-space.php" class="active">Memorial Space</a> 
 									</li>
 									
 								</ul>
@@ -482,13 +397,13 @@
 
 							<div class="widget woocommerce widget_recently_viewed_products">
 
-								<h5 class="widget-title">Viewed Products</h5>
+								<h5 class="widget-title">Most Purchased</h5>
 
 								<ul class="product_list_widget">
 									<li>
-										<a href="shop-product-right.php">
-											<img src="images/Caskets/9.jpg" alt="">
-											<span class="product-title">Oak Casket</span>
+										<a href="shop-product-right.php?id='S-018'">
+											<img src="images/Spaces/1.jpg" alt="">
+											<span class="product-title"><?php echo ($rows[0]['Service_Name']); ?></span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -497,16 +412,16 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-										</div>
+											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
+											</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>34
+											<span class="woocommerce-Price-currencySymbol">₱</span><?php echo  number_format($rows[2]['Service_Price']); ?>
 										</span>
 									</li>
 									<li>
 										<a href="shop-product-right.php">
-											<img src="images/Caskets/2.jpg" alt="">
-											<span class="product-title">Dark Brown Casket</span>
+											<img src="images/Spaces/4.jpg" alt="">
+											<span class="product-title"><?php echo ($rows[3]['Service_Name']); ?></span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -515,50 +430,22 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
-										<del>
+										
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
-												55
+												<span class="woocommerce-Price-currencySymbol">PHP</span>
+												<?php echo  number_format($rows[3]['Service_Price']); ?>
 											</span>
-										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
-											34
-										</span>
+										
+										
 									</li>
 
-									<li>
-										<a href="shop-product-right.php">
-											<img src="images/Caskets/4.jpg" alt="">
-											<span class="product-title">White Casket</span>
-										</a>
-										<div class="d-flex justify-content-between rating-product">
-											<div class="star-rating">
-												<span style="width:80%">Rated
-													<strong class="rating">5.00 </strong>
-													out of 5
-												</span>
-											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-										</div>
-										<del>
-											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
-												55
-											</span>
-										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
-											34
-										</span>
-									</li>
+									
 								</ul>
 							</div>
 
 
-							<div class="widget woocommerce widget_price_filter">
+							<!-- <div class="widget woocommerce widget_price_filter">
 
 								<h5 class="widget-title">Price Filter</h5>
 
@@ -587,7 +474,7 @@
 										</div>
 									</div>
 								</form>
-							</div>
+							</div> -->
 
 
 						</aside>

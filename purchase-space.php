@@ -606,8 +606,6 @@
 										<?php 
                                             include("connect.php");
 
-                                                        
-
                                             // Query to fetch the memorial space details based on the service_ID
                                             $findSpaces = "SELECT 
                                                             ms.MS_service_ID, 

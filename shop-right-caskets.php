@@ -5,25 +5,49 @@
 
 	include("check_session.php");
 
-	$sql = "SELECT Service_ID FROM memorial_services WHERE service_name LIKE '%Casket%'";
-	$result = $conn->query($sql);
+	function displayAssoc($ID) {
+		global $conn;
+		
+		$findGoods = "SELECT 
+                 mg.MG_Service_ID, 
+                 mg.Quantity, 
+                 mg.Size, 
+                 ms.Service_ID, 
+                 ms.Service_Name, 
+                 ms.Service_Description, 
+                 ms.Service_Price, 
+                 ms.Service_Type
+              FROM MEMORIAL_GOODS mg
+              JOIN MEMORIAL_SERVICES ms 
+              ON mg.MG_Service_ID = ms.Service_ID
+              WHERE mg.MG_Service_ID = ?"; // Filter by MG_Service_ID
 
-	$serviceIdArray = array();
 
-	if ($result->num_rows > 0) {
-		while ($row = $result->fetch_assoc()) {
-			$serviceIdArray[] = $row;
-		}
-		//var_dump($serviceIdArray[0]['Service_ID']);
-		//echo htmlspecialchars($serviceIdArray[0]['Service_ID']);
-		//var_dump(htmlspecialchars($serviceIdArray[0]['Service_ID']));
-	} 
-	
-	else {
-		echo "No casket services found.";
+		if ($stmt = $conn->prepare($findGoods)) {
+            $stmt->bind_param("s", $ID); 
+            $stmt->execute();
+            $goodsResult = $stmt->get_result();
+
+            if ($goodsResult->num_rows > 0) {
+                
+                return $goodsResult->fetch_assoc();
+
+            } else {
+                return null;
+            }
+
+            $stmt->close();
+        } else {
+            echo "Error preparing statement.<br>";
+            return null;
+        }
+
 	}
-
-	$conn->close();
+	$rows = [];
+	for ($i = 10; $i <= 18; $i++) {
+		$ID = sprintf("S-%03d", $i); // Generate IDs from S-009 to S-018
+		$rows[] = displayAssoc($ID); // Store each row in an array
+	}
 
 ?>
 
@@ -275,251 +299,45 @@
 			<section class="ls s-pt-60 s-pb-70 s-py-lg-100 s-py-xl-150">
 				<div class="container">
 					<div class="row">
-						<main class="col-lg-8 col-xl-9">
-							<div class="columns-3">
-								<ul class="products">
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/1.jpg" alt="">
-											<div class="media-links">
-											<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[0]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>Silver Casket</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>64,999
-														</span>
-													</del>
-													<span>₱ </span>74,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[0]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/2.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[1]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>Dark Brown Casket</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>34,999
-														</span>
-													</del>
-													<span>₱ </span>54,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[1]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/3.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[2]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>Azure Casket</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>69,999
-														</span>
-													</del>
-													<span>₱ </span>84,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[2]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/4.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[3]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>White Casket</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>59,999
-														</span>
-													</del>
-													<span>₱ </span>74,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[3]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/5.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[4]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>Wooden Brown</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>34,999
-														</span>
-													</del>
-													<span>₱ </span>54,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[4]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/6.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[5]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>Black Casket</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>79,999
-														</span>
-													</del>
-													<span>₱ </span>94,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[5]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/7.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[6]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>Mahogany Casket</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>49,999
-														</span>
-													</del>
-													<span>₱ </span>59,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[6]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/8.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[7]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>Maroon Casket</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>29,999
-														</span>
-													</del>
-													<span>₱ </span>49,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[7]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-									<li class="product vertical-item content-padding">
-										<div class="product-inner box-shadow">
-											<img src="images/Caskets/9.jpg" alt="">
-											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[8]['Service_ID']); ?>'"></a>
-											</div>
-											<div class="item-content">
-												<h2>Oak Casket</h2>
-												<span class="price">
-													<del>
-														<span>
-															<span>₱ </span>34,999
-														</span>
-													</del>
-													<span>₱ </span>49,999
-												</span>
-											</div>
-											<div class="shop-btn">
-												<a href="shop-product-right.php?id='<?php echo urlencode($serviceIdArray[8]['Service_ID']); ?>'" class="add-to-card btn btn-maincolor">View</a>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<!-- columns 2 -->
 
-							<!--<nav class="woocommerce-pagination">
-								<ul class="page-numbers">
-									<li>
-										<span class="page-numbers current">1</span>
+						<main class="col-lg-8 col-xl-9">						
+							<div class="columns-3">
+
+							<ul class="products">
+								<?php for ($i = 0; $i < count($rows); $i++): ?>
+
+									<li class="product vertical-item content-padding">
+										<div class="product-inner box-shadow">
+											<img src="images/Caskets/<?php echo ($i + 1); ?>.jpg" alt="">
+
+											<div class="media-links">
+												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($rows[$i]['Service_ID']); ?>'"></a>
+											</div>
+											<div class="item-content">
+												<h2><?php echo $rows[$i]['Service_Name']; ?></h2>
+												<span class="price">
+													<del>
+														<span>
+															<span>PHP </span><span>₱ </span><?php echo number_format($rows[$i]['Service_Price']); ?>
+														</span>
+													</del>
+												</span>
+											</div>
+
+											<div class="shop-btn">
+												<a href="shop-product-right.php?id=<?php echo $rows[$i]['Service_ID'] ?>" class="add-to-card btn btn-maincolor">View</a>
+											</div>
+										</div>
 									</li>
-									<li>
-										<a class="page-numbers" href="shop-right.php">2</a>
-									</li>
-									<li>
-										<a class="page-numbers dots" href="shop-right.php">...</a>
-									</li>
-									<li>
-										<a class="page-numbers" href="shop-right.php">5</a>
-									</li>
-									<li>
-										<a class="next page-numbers" href="shop-right.php"><i class="fa fa-angle-right"></i></a>
-									</li>
+									<?php endfor; ?>
+
 								</ul>
-							</nav>-->
+							</div>						
 
 						</main>
 
 						<aside class="col-lg-4 col-xl-3">
-							<!--<div class="bg-maincolor py-50 px-30 cs">
-								<div class="widget widget_product_search">
-
-									<h3 class="widget-title">Search</h3>
-
-									<form role="search" class="woocommerce-product-search" action="#">
-
-										<label class="screen-reader-text" for="woocommerce-product-search-field-widget">
-											Search for:
-										</label>
-
-										<input type="search" id="woocommerce-product-search-field-widget" class="search-field" placeholder="Search" value="" name="search">
-										<input type="submit" value="Search">
-									</form>
-								</div>
-							</div>-->
-
+					
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
@@ -553,13 +371,14 @@
 
 							<div class="widget woocommerce widget_recently_viewed_products">
 
-								<h5 class="widget-title">Best Sellers</h5>
+								<h5 class="widget-title">Most Purchased</h5>
 
 								<ul class="product_list_widget">
+
 									<li>
 										<a href="shop-product-right.php?id='S-018'">
 											<img src="images/Caskets/9.jpg" alt="">
-											<span class="product-title">Oak Casket</span>
+											<span class="product-title"><?php echo ($rows[8]['Service_Name']); ?></span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -571,39 +390,14 @@
 											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
 											</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>34,999
-										</span>
-									</li>
-									<li>
-										<a href="shop-product-right.php?id='S-011'">
-											<img src="images/Caskets/2.jpg" alt="">
-											<span class="product-title">Dark Brown Casket</span>
-										</a>
-										<div class="d-flex justify-content-between rating-product">
-											<div class="star-rating">
-												<span style="width:80%">Rated
-													<strong class="rating">5.00 </strong>
-													out of 5
-												</span>
-											</div>
-											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
-										</div>
-										<!--<del>
-											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
-												34,999
-											</span>
-										</del>-->
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
-											34,999
+											<span class="woocommerce-Price-currencySymbol">₱</span><?php echo number_format($rows[8]['Service_Price']); ?>
 										</span>
 									</li>
 
 									<li>
-										<a href="shop-product-right.php?id='S-013'">
-											<img src="images/Caskets/4.jpg" alt="">
-											<span class="product-title">White Casket</span>
+										<a href="shop-product-right.php?id='S-018'">
+											<img src="images/Caskets/6.jpg" alt="">
+											<span class="product-title"><?php echo ($rows[5]['Service_Name']); ?></span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -613,23 +407,18 @@
 												</span>
 											</div>
 											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
-										</div>
-										<<!--del>
-											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
-												55
-											</span>
-										</del>-->
+											</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
-											59,999
+											<span class="woocommerce-Price-currencySymbol">₱</span><?php echo number_format($rows[5]['Service_Price']); ?>
 										</span>
 									</li>
+
+							
 								</ul>
 							</div>
 
 
-							<div class="widget woocommerce widget_price_filter">
+							<!-- <div class="widget woocommerce widget_price_filter">
 
 								<h5 class="widget-title">Price Filter</h5>
 
@@ -658,7 +447,7 @@
 										</div>
 									</div>
 								</form>
-							</div>
+							</div> -->
 
 
 						</aside>

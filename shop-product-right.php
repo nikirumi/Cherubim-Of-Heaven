@@ -16,6 +16,7 @@
 
 	// Get the product ID from the URL
 	$product_id = isset($_GET['id']) ? ($_GET['id']) : 0;
+	echo $product_id;
 
 	// Fetch product details from the database
 	$stmt = $conn->prepare("SELECT 
@@ -26,9 +27,9 @@
 							g.Quantity 
 							FROM memorial_services s
 							JOIN Memorial_goods g ON s.Service_ID = g.MG_Service_ID 
-							WHERE s.Service_ID = $product_id");
+							WHERE s.Service_ID = ?");
 
-	//$stmt->bind_param("s", $product_id); 
+	$stmt->bind_param("s", $product_id); 
 	$stmt->execute();
 	$result = $stmt->get_result();
 

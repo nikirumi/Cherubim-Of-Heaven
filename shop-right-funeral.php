@@ -313,7 +313,7 @@
 							</div>
 							<!-- columns 2 -->
 
-							<nav class="woocommerce-pagination">
+							<!-- <nav class="woocommerce-pagination">
 								<ul class="page-numbers">
 									<li>
 										<span class="page-numbers current">1</span>
@@ -331,12 +331,12 @@
 										<a class="next page-numbers" href="shop-right.php"><i class="fa fa-angle-right"></i></a>
 									</li>
 								</ul>
-							</nav>
+							</nav> -->
 
 						</main>
 
 						<aside class="col-lg-4 col-xl-3">
-							<div class="bg-maincolor py-50 px-30 cs">
+							<!-- <div class="bg-maincolor py-50 px-30 cs">
 								<div class="widget widget_product_search">
 
 									<h3 class="widget-title">Search</h3>
@@ -351,7 +351,7 @@
 										<input type="submit" value="Search">
 									</form>
 								</div>
-							</div>
+							</div> -->
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
@@ -372,15 +372,11 @@
 									</li>
 
 									<li class="cat-item cat-parent">
-										 <a href="shop-right.php" class="active">Spaces</a> 
-										<ul class="children">
-											<li class="cat-item">
-												<a href="shop-right-funeral.php">Funeral</a>
-											</li>
-											<li class="cat-item">
-												<a href="shop-right-space.php">Memorial Space</a> 
-											</li>
-										</ul>
+										 <a href="shop-right-funeral.php" class="active">Funeral</a> 
+									</li>
+									
+									<li class="cat-item cat-parent">
+										 <a href="shop-right-space.php" class="active">Memorial Space</a> 
 									</li>
 									
 								</ul>
@@ -389,13 +385,13 @@
 
 							<div class="widget woocommerce widget_recently_viewed_products">
 
-								<h5 class="widget-title">Viewed Products</h5>
+								<h5 class="widget-title">Most Purchased</h5>
 
 								<ul class="product_list_widget">
 									<li>
 										<a href="shop-product-right.php">
-											<img src="images/shop/05.jpg" alt="">
-											<span class="product-title">Bouquet "Charm"</span>
+											<img src="images/Funeral_Venues/v1.png" alt="">
+											<span class="product-title">Venue 1</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -404,16 +400,15 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>34
+											<span class="woocommerce-Price-currencySymbol">₱ </span>15,000
 										</span>
 									</li>
 									<li>
 										<a href="shop-product-right.php">
 											<img src="images/shop/08.jpg" alt="">
-											<span class="product-title">51 white and pink</span>
+											<span class="product-title">Venue 2</span>
 										</a>
 										<div class="d-flex justify-content-between rating-product">
 											<div class="star-rating">
@@ -422,50 +417,18 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
 										</div>
-										<del>
-											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
-												55
-											</span>
-										</del>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
-											34
+											<span class="woocommerce-Price-currencySymbol">₱ </span>25,000
 										</span>
 									</li>
 
-									<li>
-										<a href="shop-product-right.php">
-											<img src="images/shop/01.jpg" alt="">
-											<span class="product-title">Bouquet 25 red roses</span>
-										</a>
-										<div class="d-flex justify-content-between rating-product">
-											<div class="star-rating">
-												<span style="width:80%">Rated
-													<strong class="rating">5.00 </strong>
-													out of 5
-												</span>
-											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-										</div>
-										<del>
-											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
-												55
-											</span>
-										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
-											34
-										</span>
-									</li>
+									
 								</ul>
 							</div>
 
 
-							<div class="widget woocommerce widget_price_filter">
+							<!-- <div class="widget woocommerce widget_price_filter">
 
 								<h5 class="widget-title">Price Filter</h5>
 
@@ -494,7 +457,7 @@
 										</div>
 									</div>
 								</form>
-							</div>
+							</div> -->
 
 
 						</aside>
