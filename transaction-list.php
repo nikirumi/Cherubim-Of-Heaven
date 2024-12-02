@@ -72,6 +72,25 @@
                 $search_query .= " WHERE CONCAT(c.Fname, ' ', c.Lname) LIKE '%$client_Name%'";
             }
         }
+
+        $fromDate = isset($_POST['fromDate']) ? filter_var($_POST['fromDate'], FILTER_SANITIZE_SPECIAL_CHARS) : null;
+        $toDate = isset($_POST['toDate']) ? filter_var($_POST['toDate'], FILTER_SANITIZE_SPECIAL_CHARS) : null;
+
+        if (!empty($fromDate)) {
+            if (strpos($search_query, 'WHERE') !== false) {
+                $search_query .= " AND t.Transaction_date >= '$fromDate'";
+            } else {
+                $search_query .= " WHERE t.Transaction_date >= '$fromDate'";
+            }
+        }
+        
+        if (!empty($toDate)) {
+            if (strpos($search_query, 'WHERE') !== false) {
+                $search_query .= " AND t.Transaction_date <= '$toDate'";
+            } else {
+                $search_query .= " WHERE t.Transaction_date <= '$toDate'";
+            }
+        }
     }
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['filter'])) {
@@ -125,7 +144,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Transaction Reports </title>
-        <link rel="stylesheet" href="css/traansactions-lists.css" class="color-switcher-link">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="js/report.js"></script>
+        <link rel="stylesheet" href="css/transaction-lists.css" class="color-switcher-link">
     </head>
 
     <body> 
@@ -154,8 +175,6 @@
                             <p>TRANSACTIONS: </p>
                             <p><?php  echo  $total_transaction ;?></p>
                         </div>
-
-                 
 
                         <div class="block"> 
                             <p>PAID: </p>
@@ -203,15 +222,41 @@
                     <div id="delete-row">
 
                         <p>Enter ID and toggle status:</p>
-                        <div>
+                    
+                        <div class="tabi">
 
-                        <input class="boxDesign" type="text" class="form-control" name="transaction_ID2" id="transaction_ID" value="" placeholder="Transaction ID">
+                            <div>
+                                <input class="boxDesign" type="text" class="form-control" name="transaction_ID2" id="transaction_ID" value="" placeholder="Transaction ID">
+                                <input class="boxDesign" type="text" class="form-control" name="client_Name" id="transaction_ID" value="" placeholder="Client Name">
+                            </div>
 
-                        <input class="boxDesign" type="text" class="form-control" name="client_Name" id="transaction_ID" value="" placeholder="Client Name">
-                                                  
-                        <button id="toggle" type="submit" class="woocommerce-Button btn btn-maincolor" name="search">Search</button>
+                            <div class="patong">
+                                <div id="fromDate">
+                                    FROM:
+                                    <input class="boxDesign4" type="date" name="fromDate" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div id="toDate">
+                                    TO:
+                                    <input class="boxDesign4" type="date" name="toDate" placeholder="YYYY-MM-DD">
+                                </div>
+                            </div>
+
+                            
+                            
 
                         </div>
+                        
+                       
+
+                        <div id="searchButton">
+                        
+                        </div>
+
+
+                    </div>
+
+                    <div id="searchDIV">
+                        <button id="toggle" type="submit" class="woocommerce-Button btn btn-maincolor" name="search">Search</button>
 
                     </div>
 
@@ -281,8 +326,6 @@
                                     echo "<td>" . $row['Service_Status'] . "</td>";
                                     echo "</tr>";
                                 }
-
-                        
                          ?>
 
                             <!-- FIRST TABLE - sinave ko lang jic -->
@@ -330,7 +373,111 @@
                             
                         </tbody>
                     </table>
-                </div>             
+                </div>  
+
+                <div id="form-preview" class="hidden">
+                    <div class="paper">
+                    <div id="nav">
+                        <div id="nav-elements">
+                            <img src="images/logo.png">
+                            <div>
+                                <h4 class="logo-text color-main">Cherubim Of Heaven</h4>
+                                <span class="logo-subtext">Funeral Service</span>
+                            </div>
+                        </div>
+                    </div>
+                        <form>
+                            <label for="name">TRANSACTION REPORT</label>
+                            <div class="tabi1">
+                                <p><b>Date Generated: </b> <?php echo date('Y-m-d H:i:s'); ?></p>
+                            </div>
+                    
+                            <!-- Transaction report table -->
+                            <table id="report-table">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction ID</th>
+                                        <th>Client Name</th>
+                                        <th>Purchased Service</th>
+                                        <th>Transaction Date</th>
+                                        <th>Total Amount</th>
+                                        <th>Payment Method</th>
+                                        <th>Payment Status</th>
+                                        <th>Service Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="report-body">
+                                    <!-- Dynamic rows will be added here -->
+                                </tbody>
+                                
+                            </table>
+
+                            <div class="tabi1">
+                                <button type="button" id="download-pdf" class="btn">Download PDF</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <div id="genReport">
+                        <button id="download" class="woocommerce-Button btn btn-maincolor" >Download Report</button>              
+                </div>
+
+
+                <script>
+
+                    document.getElementById('download').addEventListener('click', () => {
+                        document.getElementById('form-preview').classList.remove('hidden');
+                    });
+
+                    document.getElementById('form-preview').addEventListener('click', (event) => {
+                        if (!event.target.closest('.paper')) {
+                            document.getElementById('form-preview').classList.add('hidden');
+                        }
+                    });
+
+                    document.getElementById('download').addEventListener('click', function() {
+                        const reportTableBody = document.getElementById('report-body');
+                        
+                        // Clear previous content in the popup table body
+                        reportTableBody.innerHTML = '';  
+
+                        // Retrieve current data from the main table (even if filtered)
+                        const rows = document.querySelectorAll('#table tbody tr');
+
+                        // Loop through each row in the main table
+                        rows.forEach(function(row) {
+                            const newRow = document.createElement('tr');
+
+                            // Loop through each cell in the row and add it to the new row in the popup
+                            const cells = row.querySelectorAll('td');
+                            cells.forEach(function(cell) {
+                                const newCell = document.createElement('td');
+                                newCell.innerHTML = cell.innerHTML;  // Copy cell content
+                                newRow.appendChild(newCell);
+                            });
+
+                            // Append the new row to the report table in the popup
+                            reportTableBody.appendChild(newRow);
+                        });
+
+                        // Display the popup by removing the 'hidden' class
+                        document.getElementById('form-preview').classList.remove('hidden');
+                    });
+
+
+                    document.getElementById('form-preview').addEventListener('click', (event) => {
+                        if (!event.target.closest('.paper')) {
+                            document.getElementById('form-preview').classList.add('hidden');
+                        }
+                    });
+
+                </script>
+
+
+
             </div>
         </div>   
         
@@ -343,7 +490,8 @@
                     return false; 
                 }
             };
-         </script>
+        </script>
+
     </body>
 </html>
 
