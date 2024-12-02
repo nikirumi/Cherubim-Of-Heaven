@@ -7,6 +7,18 @@
 	include ("check_session.php");
 	$conn->close();
 
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start(); // Start the session only if it's not already active
+	}
+	
+	// Check if client_id is set in the session
+	if (isset($_SESSION['client_id'])) {
+		$client_id = $_SESSION['client_id'];
+	} else {
+		//echo "No client logged in";
+		//exit();
+	}
+
 ?>
 
 <head>
@@ -321,7 +333,7 @@
 									</a>
 								</span>
 
-								<a href="#" class="d-none d-md-block btn btn-small btn-outline-maincolor mr-2">Time Capsule </a>
+								<a href="time-capsule.php" class="d-none d-md-block btn btn-small btn-outline-maincolor mr-2">Time Capsule </a>
 								
 								<?php
 

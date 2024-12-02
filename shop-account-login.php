@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Password verification (use password_verify for hashed passwords)
         if (password_verify($password, $Client['Password'])) {
             // Successful login, set session and redirect
+			$_SESSION['client_id'] = $Client['Client_ID'];
             $_SESSION["username"] = $username;
 			$_SESSION["loginSuccess"] = true;
             header("Location: index.php");
