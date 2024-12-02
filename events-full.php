@@ -224,7 +224,7 @@
 										<a href="#">Pages</a>
 									</li>
 									<li class="breadcrumb-item active">
-										Events Fullwidth
+										Events
 									</li>
 								</ol>
 							</div>
@@ -259,7 +259,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">Helping close a Friend in Grief Get Started with a Beautiful Template</a>
+												<a href="event-single-full.php">How to Offer Support to Someone Experiencing Loss</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -274,7 +274,7 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Mar 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
@@ -286,7 +286,7 @@
 												</span>
 											</div>
 											<p>
-												A friend has experienced the death of someone loved. You want to help, but you are not sure how to go about it. This article will guide you in ways to turn your cares and concerns into positive actions.
+											Learn practical ways to show empathy and care for a grieving friend or family member.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -313,7 +313,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+												<a href="event-single-full.php">How to Organize a Memorial Fundraiser</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -328,19 +328,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">29 Apr 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															67
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Donec vehicula sit amet mi eget tincidunt. In mauris eros, tempor eget ex a, dignissim consequat turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque pulvinar neque sit amet velit placerat.
+											Step-by-step guidance on hosting a fundraiser to support a cause in memory of your loved one.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -367,7 +367,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">Pellentesque egestas luctus felis, in pellentesque risus interdum</a>
+												<a href="event-single-full.php">Customizing Funeral Services for Personal Significance</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -382,19 +382,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">30 May 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															25
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Vestibulum pharetra faucibus odio, eget auctor metus cursus et. Nulla sit amet dolor sodales, convallis orci quis, feugiat urna. Donec gravida, nisl et iaculis euismod, mi mauris varius ex, id pharetra.
+											Tips for tailoring a service to reflect the unique values, culture, and personality of the deceased.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -421,7 +421,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">Sed sed dolor pretium, molestie urna nec, rutrum risus</a>
+												<a href="event-single-full.php">The Healing Power of Rituals in Grief</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -436,19 +436,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">27 Jun 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															38
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Ut eu finibus nibh, a porta nunc. Vivamus enim lectus, commodo vitae lectus in, consectetur posuere tellus. Sed imperdiet hendrerit nulla, at pellentesque justo hendrerit eget. Pellentesque id varius arcu luctus.
+											Discover the comforting role that rituals, both traditional and modern, can play in the grieving process.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -475,7 +475,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php"> Etiam lacus mauris, cursus sed odio vitae, molestie malesuada metus</a>
+												<a href="event-single-full.php">Navigating Difficult Conversations About Death</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -490,19 +490,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">29 Jul 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															28
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Integer tincidunt, neque ut iaculis finibus, nulla purus porta lorem, vitae maximus ipsum est in est. Nunc faucibus congue justo, vitae pretium risus dictum sit amet. Duis aliquet lectus nisi, non auctor tortor dapibus sed.
+											Guidance on discussing loss with children, friends, or colleagues in sensitive and constructive ways.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -529,7 +529,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">Morbi lorem quam, lacinia vel condimentum vitae, consectetur in purus</a>
+												<a href="event-single-full.php">Creating Digital Tributes and Memory Boards</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -544,19 +544,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">03 Aug 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+														89
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Aliquam eget scelerisque sapien. Vivamus tincidunt est a nisl rutrum sagittis. Suspendisse fermentum ut purus vel ornare. Nullam lacus ex, dictum ut vehicula in, volutpat vitae leo. Nullam vestibulum venenatis.
+											Learn to craft beautiful online tributes and digital memory boards to celebrate a loved one's life.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -583,7 +583,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">ras egestas suscipit purus, vitae efficitur nibh consectetur nec</a>
+												<a href="event-single-full.php">The Role of Community in Grief Recovery</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -598,19 +598,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">25 Sep 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															99
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Fusce nec felis mauris. Vivamus quis tincidunt massa. Nunc tempus eros gravida ipsum semper sagittis. Suspendisse accumsan, elit id semper iaculis, ligula nulla lobortis dolor, in sagittis dolor nisi at nisi.
+											How building a supportive community can provide comfort and resilience during times of loss.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -637,7 +637,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">Aenean a eros vitae lacus rhoncus tincidunt. Pellentesque turpis justo</a>
+												<a href="event-single-full.php">Caring for Yourself While Supporting Others</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -652,19 +652,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">29 Oct 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															74
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Nullam venenatis ex quis tellus posuere, ac pretium nisi pharetra. Nam sodales risus quis est hendrerit, congue blandit felis tempus. Sed massa sem, dapibus quis lacus quis, mollis malesuada est. Vestibulum est.
+											Tips for maintaining emotional health while helping others cope with grief.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -692,7 +692,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">Nam lacinia tellus turpis, et consectetur justo accumsan non</a>
+												<a href="event-single-full.php">Planning a Celebration of Life Ceremony</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -707,19 +707,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">06 Nov 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															45
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Suspendisse in nunc ante. Aliquam erat volutpat. Nam quis metus eget lacus ullamcorper rhoncus. Donec aliquet porttitor eleifend. Maecenas dapibus ullamcorper dolor, nec maximus turpis posuere ut aliquam erat volutpat.
+											Explore ideas and templates for planning a personalized ceremony to honor your loved one’s unique life story.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -746,7 +746,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-full.php">Mauris at vehicula nisl, sed aliquet dui hasellus risus</a>
+												<a href="event-single-full.php">The Importance of Memorializing Loved Ones</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -761,19 +761,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">10 Dec 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															38
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Donec sed ipsum vel enim elementum hendrerit. Aenean in sem volutpat, viverra felis eu, bibendum orci. Proin sollicitudin orci vitae sollicitudin consequat. Nulla dapibus eget augue in interdum nteger ac eligula.
+											Discover how creating a meaningful memorial can aid in the healing process for those left behind.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>

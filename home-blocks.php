@@ -832,7 +832,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-%40%40type.php">Helping close a Friend in Grief Get Started with a Beautiful Template</a>
+												<a href="event-single-%40%40type.php">How to Offer Support to Someone Experiencing Loss</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -859,7 +859,7 @@
 												</span>
 											</div>
 											<p>
-												A friend has experienced the death of someone loved. You want to help, but you are not sure how to go about it. This article will guide you in ways to turn your cares and concerns into positive actions.
+											Learn practical ways to show empathy and care for a grieving friend or family member.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -886,7 +886,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-%40%40type.php">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+												<a href="event-single-%40%40type.php">How to Offer Support to Someone Experiencing Loss</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -901,19 +901,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">17 Aug 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															56
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Donec vehicula sit amet mi eget tincidunt. In mauris eros, tempor eget ex a, dignissim consequat turpis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque pulvinar neque.
+											Learn practical ways to show empathy and care for a grieving friend or family member.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
@@ -940,7 +940,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-%40%40type.php">Pellentesque egestas luctus felis, in pellentesque risus interdum</a>
+												<a href="event-single-%40%40type.php">The Importance of Memorializing Loved Ones</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -955,19 +955,19 @@
 														<span class="screen-reader-text">Posted on</span>
 														<a href="blog-single-right.php" rel="bookmark">
 															<i class="color-main fs-14 fa fa-calendar"></i>
-															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">23 Apr 2024</time>
+															<time class="entry-date published updated" datetime="2024-04-23T15:15:12+00:00">09 Feb 2024</time>
 														</a>
 													</span>
 													<span class="comment-count">
 														<a class="grey-link" href="#">
 															<i class="color-main fs-14 color-main ico-comment-alt"></i>
-															23
+															35
 														</a>
 													</span>
 												</span>
 											</div>
 											<p>
-												Vestibulum pharetra faucibus odio, eget auctor metus cursus et. Nulla sit amet dolor sodales, convallis orci quis, feugiat urna. Donec gravida, nisl et iaculis euismod, mi mauris varius ex, id pharetra.
+											Discover how creating a meaningful memorial can aid in the healing process for those left behind.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>

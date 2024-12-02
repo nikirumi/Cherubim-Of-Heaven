@@ -582,7 +582,7 @@
 								</div>
 								<div class="vertical-item box-shadow content-padding padding-small text-center">
 									<div class="item-media">
-										<img src="images/team/04.jpg" alt="">
+										<img src="images/eunice.jpg" alt="">
 										<div class="media-links">
 											<a class="abs-link" title="" href="team-single.php"></a>
 										</div>
