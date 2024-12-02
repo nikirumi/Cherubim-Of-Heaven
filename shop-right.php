@@ -22,7 +22,6 @@
               ON mg.MG_Service_ID = ms.Service_ID
               WHERE mg.MG_Service_ID = ?"; // Filter by MG_Service_ID
 
-
 		if ($stmt = $conn->prepare($findGoods)) {
             $stmt->bind_param("s", $ID); 
             $stmt->execute();
@@ -89,6 +88,11 @@
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
+	<style>
+		.product-inner {
+			height: 450px;
+		}
+	</style>
 </head>
 
 <body>
@@ -323,7 +327,7 @@
 											<img src="images/Flowers/<?php echo ($i + 1); ?>.png" alt="">
 
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($rows[$i]['Service_ID']); ?>'"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id=<?php echo $rows[$i]['Service_ID'] ?>"></a>
 											</div>
 
 											<div class="item-content">
@@ -348,7 +352,7 @@
 							</div>
 							<!-- columns 2 -->
 
-							<nav class="woocommerce-pagination">
+							<!-- <nav class="woocommerce-pagination">
 								<ul class="page-numbers">
 									<li>
 										<span class="page-numbers current">1</span>
@@ -366,7 +370,7 @@
 										<a class="next page-numbers" href="shop-right.php"><i class="fa fa-angle-right"></i></a>
 									</li>
 								</ul>
-							</nav>
+							</nav> -->
 
 						</main>
 
@@ -423,7 +427,7 @@
 
 								<ul class="product_list_widget">
 									<li>
-										<a href="shop-product-right.php?id='S-018'">
+										<a href="shop-product-right.php?id=S-001">
 											<img src="images/Flowers/1.png" alt="">
 											<span class="product-title"><?php echo ($rows[0]['Service_Name']); ?></span>
 										</a>
@@ -440,8 +444,10 @@
 											<span class="woocommerce-Price-currencySymbol">₱</span><?php echo  number_format($rows[0]['Service_Price']); ?>
 										</span>
 									</li>
+
+
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.php?id=S-005">
 											<img src="images/Flowers/5.png" alt="">
 											<span class="product-title"><?php echo ($rows[4]['Service_Name']); ?></span>
 										</a>

@@ -22,7 +22,6 @@
               ON mg.MG_Service_ID = ms.Service_ID
               WHERE mg.MG_Service_ID = ?"; // Filter by MG_Service_ID
 
-
 		if ($stmt = $conn->prepare($findGoods)) {
             $stmt->bind_param("s", $ID); 
             $stmt->execute();
@@ -45,8 +44,8 @@
 	}
 	$rows = [];
 	for ($i = 19; $i <= 26; $i++) {
-		$ID = sprintf("S-%03d", $i); // Generate IDs from S-009 to S-018
-		$rows[] = displayAssoc($ID); // Store each row in an array
+		$ID = sprintf("S-%03d", $i); 
+		$rows[] = displayAssoc($ID); 
 	}
 
 ?>
@@ -302,6 +301,7 @@
 							<div class="columns-3">
 
 							<ul class="products">
+
 								<?php for ($i = 0; $i < count($rows); $i++): ?>
 
 									<li class="product vertical-item content-padding">
@@ -309,7 +309,7 @@
 											<img src="images/Urns/<?php echo ($i + 1); ?>.jpg" alt="">
 
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($rows[$i]['Service_ID']); ?>'"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id=<?php echo($rows[$i]['Service_ID']); ?>"></a>
 											</div>
 											<div class="item-content">
 												<h2><?php echo $rows[$i]['Service_Name']; ?></h2>
@@ -327,7 +327,7 @@
 											</div>
 										</div>
 									</li>
-									<?php endfor; ?>
+								<?php endfor; ?>
 
 								</ul>
 							</div>
@@ -410,7 +410,7 @@
 								<ul class="product_list_widget">
 								<ul class="product_list_widget">
 									<li>
-										<a href="shop-product-right.php?id='S-018'">
+										<a href="shop-product-right.php?id=S-019">
 											<img src="images/Urns/1.jpg" alt="">
 											<span class="product-title"><?php echo ($rows[0]['Service_Name']); ?></span>
 										</a>
@@ -428,7 +428,7 @@
 										</span>
 									</li>
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.php?id=S-024">
 										<img src="images/Urns/6.jpg" alt="">
 										<span class="product-title"><?php echo ($rows[5]['Service_Name']); ?></span>
 										</a>

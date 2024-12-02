@@ -311,7 +311,7 @@
 											<img src="images/Caskets/<?php echo ($i + 1); ?>.jpg" alt="">
 
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($rows[$i]['Service_ID']); ?>'"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id=<?php echo urlencode($rows[$i]['Service_ID']); ?>"></a>
 											</div>
 											<div class="item-content">
 												<h2><?php echo $rows[$i]['Service_Name']; ?></h2>
@@ -376,7 +376,7 @@
 								<ul class="product_list_widget">
 
 									<li>
-										<a href="shop-product-right.php?id='S-018'">
+										<a href="shop-product-right.php?id=S-018">
 											<img src="images/Caskets/9.jpg" alt="">
 											<span class="product-title"><?php echo ($rows[8]['Service_Name']); ?></span>
 										</a>
@@ -395,7 +395,7 @@
 									</li>
 
 									<li>
-										<a href="shop-product-right.php?id='S-018'">
+										<a href="shop-product-right.php?id=S-015">
 											<img src="images/Caskets/6.jpg" alt="">
 											<span class="product-title"><?php echo ($rows[5]['Service_Name']); ?></span>
 										</a>

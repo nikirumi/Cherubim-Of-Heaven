@@ -29,22 +29,31 @@
         $row = $result->fetch_assoc();
     }
 
-	$img_link = "";
+	$findRowSpaces = "SELECT * FROM MEMORIAL_SPACE";
+	$result = mysqli_query($conn, $findRowSpaces);
+	$numRows = mysqli_num_rows($result);
+
 	
+
+
+	$imgBasePath = "images/Spaces/"; 
+	$imageExtension = "jpg"; 
+	$intValue = 0;
+
 	if ($service_ID == "S-031"){
-		$img_link = "images/mausoleum.jpg";
+		$imgLink = $imgBasePath . ($intValue + 1) . "." . $imageExtension;
 	}
 	else if ($service_ID == "S-032"){
-		$img_link = "images/openair.png";
+		$imgLink = $imgBasePath . ($intValue + 2) . "." . $imageExtension;
 	}
 	else if ($service_ID == "S-033"){
-		$img_link = "images/lawnm.jpg";
+		$imgLink = $imgBasePath . ($intValue + 3) . "." . $imageExtension;
 	}
 	else if ($service_ID == "S-034"){
-		$img_link = "images/apt.jpg";
+		$imgLink = $imgBasePath . ($intValue + 4) . "." . $imageExtension;
 	}
 
-    
+	echo $imgLink;
 ?>
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
@@ -311,8 +320,10 @@
 
 							<div class="images" data-columns="5">
 								<figure>
-									<a href="<?php echo $img_link; ?>">
-									<img src="<?php echo $img_link; ?>" alt="Memorial Image">
+
+								
+									<a href="<?php echo $imgLink; ?>">
+									<img src="<?php echo $imgLink; ?>" alt="Memorial Image">
 									</a>
 								</figure>
 							</div>

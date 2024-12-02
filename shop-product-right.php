@@ -16,7 +16,6 @@
 
 	// Get the product ID from the URL
 	$product_id = isset($_GET['id']) ? ($_GET['id']) : 0;
-	echo $product_id;
 
 	// Fetch product details from the database
 	$stmt = $conn->prepare("SELECT 
@@ -54,6 +53,7 @@
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
 <head>
+	
 	<title>Memento - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
 	<!--[if IE]>
@@ -71,6 +71,21 @@
 	<link rel="stylesheet" href="css/main.css" class="color-switcher-link">
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<style>
+		mg {
+			display: block;
+			margin: 0 auto;
+		}
+
+		div[data-thumb] {
+			text-align: center;
+		}
+
+		.product-inner {
+			height: 330px;
+		}
+
+	</style>
 
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
@@ -374,6 +389,7 @@
 											$imgBasePath = "images/Urns/";
 											$imageExtension = "jpg";
 										}
+										
 
 										$img1 = $imgBasePath . $intValue . "." . $imageExtension;
 										$img2 = $imgBasePath . ($intValue + 1) . "." . $imageExtension;
@@ -385,27 +401,27 @@
 
 										<div data-thumb='$img1'>
 											<a href='$img1'>
-												<img src='$img1' alt='' data-caption='' data-src='$img1' data-large_image='$img1' data-large_image_width='1000' data-large_image_height='1000'>
+												<img src='$img1'  data-caption='' data-src='$img1' data-large_image='$img1' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
 										<div data-thumb='$img2'>
 											<a href='$img2'>
-												<img src='$img2' alt='' data-caption='' data-src='$img2' data-large_image='$img2' data-large_image_width='1000' data-large_image_height='1000'>
+												<img src='$img2'  data-caption='' data-src='$img2' data-large_image='$img2' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
 										<div data-thumb='$img3'>
 											<a href='$img3'>
-												<img src='$img3' alt='' data-caption='' data-src='$img3' data-large_image='$img3' data-large_image_width='1000' data-large_image_height='1000'>
+												<img src='$img3'  data-caption='' data-src='$img3' data-large_image='$img3' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
 										<div data-thumb='$img4'>
 											<a href='$img4'>
-												<img src='$img4' alt='' data-caption='' data-src='$img4' data-large_image='$img4' data-large_image_width='1000' data-large_image_height='1000'>
+												<img src='$img4'  data-caption='' data-src='$img4' data-large_image='$img4' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
 										<div data-thumb='$img5'>
 											<a href='$img5'>
-												<img src='$img5' alt='' data-caption='' data-src='$img5' data-large_image='$img5' data-large_image_width='1000' data-large_image_height='1000'>
+												<img src='$img5'  data-caption='' data-src='$img5' data-large_image='$img5' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
 
@@ -609,223 +625,14 @@
 											</div>
 										</div>
 									</div>
-
-								</div>
-
-
-								<section class="up-sells upsells products">
-									<div class="col-12 mb-60">
-										<p class="subtitle text-center">today, tomorrow and beyond.</p>
-										<h2 class="special-heading"><span class="color-main">Our Top </span>Sellers</h2>
-									</div>
-									<ul class="products">
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/01.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>Bouquet 25 red roses</h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/02.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>Bouquet Romantic</h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/03.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>51 multicolored tulips</h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/04.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>Bouquet Spring</h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/05.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>Bouquet "Charm"</h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/06.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>Spring bouquet </h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/07.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>Romantic bouquet</h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/08.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>51 white and pink</h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-										<li class="product vertical-item content-padding">
-											<div class="product-inner box-shadow">
-												<img src="images/shop/09.jpg" alt="">
-												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php"></a>
-												</div>
-												<div class="item-content">
-													<h2>Bouquet "Silver"</h2>
-													<span class="price">
-														<del>
-															<span>
-																<span>₱ </span>34
-															</span>
-														</del>
-														<span>₱ </span>55
-													</span>
-												</div>
-												<div class="shop-btn">
-													<a href="#" class="add-to-card btn btn-maincolor">Add to cart</a>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</section>
+								</div>								
 							</div>
 
 
 						</main>
 
 						<aside class="col-lg-5 col-xl-3">
-							<div class="bg-maincolor py-50 px-30 cs">
+							<!-- <div class="bg-maincolor py-50 px-30 cs">
 								<div class="widget widget_product_search">
 
 									<h3 class="widget-title">Search</h3>
@@ -840,7 +647,7 @@
 										<input type="submit" value="Search">
 									</form>
 								</div>
-							</div>
+							</div> -->
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
@@ -860,15 +667,11 @@
 									</li>
 
 									<li class="cat-item cat-parent">
-										 <a href="shop-right.php" class="active">Spaces</a> 
-										<ul class="children">
-											<li class="cat-item">
-												<a href="shop-right-funeral.php">Funeral</a>
-											</li>
-											<li class="cat-item">
-												<a href="shop-right-space.php">Memorial Space</a> 
-											</li>
-										</ul>
+										 <a href="shop-right-funeral.php" class="active">Funeral</a> 
+									</li>
+									
+									<li class="cat-item cat-parent">
+										 <a href="shop-right-space.php" class="active">Memorial Space</a> 
 									</li>
 								</ul>
 							</div>
@@ -876,113 +679,8 @@
 
 							<div class="widget woocommerce widget_recently_viewed_products">
 
-								<h5 class="widget-title">Viewed Products</h5>
-
-								<ul class="product_list_widget">
-									<li>
-										<a href="shop-product-right.php">
-											<img src="images/shop/05.jpg" alt="">
-											<span class="product-title">Bouquet "Charm"</span>
-										</a>
-										<div class="d-flex justify-content-between rating-product">
-											<div class="star-rating">
-												<span style="width:80%">Rated
-													<strong class="rating">5.00 </strong>
-													out of 5
-												</span>
-											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-										</div>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>34
-										</span>
-									</li>
-									<li>
-										<a href="shop-product-right.php">
-											<img src="images/shop/08.jpg" alt="">
-											<span class="product-title">51 white and pink</span>
-										</a>
-										<div class="d-flex justify-content-between rating-product">
-											<div class="star-rating">
-												<span style="width:80%">Rated
-													<strong class="rating">5.00 </strong>
-													out of 5
-												</span>
-											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-										</div>
-										<del>
-											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
-												55
-											</span>
-										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
-											34
-										</span>
-									</li>
-
-									<li>
-										<a href="shop-product-right.php">
-											<img src="images/shop/01.jpg" alt="">
-											<span class="product-title">Bouquet 25 red roses</span>
-										</a>
-										<div class="d-flex justify-content-between rating-product">
-											<div class="star-rating">
-												<span style="width:80%">Rated
-													<strong class="rating">5.00 </strong>
-													out of 5
-												</span>
-											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-										</div>
-										<del>
-											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">₱</span>
-												55
-											</span>
-										</del>
-										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>
-											34
-										</span>
-									</li>
-								</ul>
+								
 							</div>
-
-
-							<div class="widget woocommerce widget_price_filter">
-
-								<h5 class="widget-title">Price Filter</h5>
-
-								<form method="get" action="https://html.modernwebtemplates.com/">
-									<div class="price_slider_wrapper">
-
-										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="">
-											<span class="from">₱20.00</span>
-											<div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 14%; width: 65%;">
-											</div>
-											<span class="to">₱700.00</span>
-											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 12%;">
-
-											</span>
-											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 80%;">
-
-											</span>
-										</div>
-										<div class="price_slider_amount">
-
-											<input type="text" id="min_price" name="min_price" value="" data-min="20" placeholder="Min price" style="display: none;">
-
-											<input type="text" id="max_price" name="max_price" value="" data-max="30" placeholder="Max price" style="display: none;">
-
-											<div class="clear"></div>
-										</div>
-									</div>
-								</form>
-							</div>
-
 
 						</aside>
 					</div>

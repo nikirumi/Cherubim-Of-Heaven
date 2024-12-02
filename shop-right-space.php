@@ -300,7 +300,7 @@
 											<img src="images/Spaces/<?php echo ($i + 1); ?>.jpg" alt="">
 
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id='<?php echo urlencode($rows[$i]['Service_ID']); ?>'"></a>
+												<a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo urlencode($rows[$i]['Service_ID']); ?>"></a>
 											</div>
 
 											<div class="item-content">
@@ -315,7 +315,7 @@
 											</div>
 
 											<div class="shop-btn">
-												<a href="shop-product-right.php?id=<?php echo $rows[$i]['Service_ID'] ?>" class="add-to-card btn btn-maincolor">View</a>
+												<a href="shop-right-space-clicked.php?id=<?php echo $rows[$i]['Service_ID'] ?>" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -400,8 +400,9 @@
 								<h5 class="widget-title">Most Purchased</h5>
 
 								<ul class="product_list_widget">
+
 									<li>
-										<a href="shop-product-right.php?id='S-018'">
+										<a href="shop-right-space-clicked.php?id=S-031">
 											<img src="images/Spaces/1.jpg" alt="">
 											<span class="product-title"><?php echo ($rows[0]['Service_Name']); ?></span>
 										</a>
@@ -418,8 +419,10 @@
 											<span class="woocommerce-Price-currencySymbol">₱</span><?php echo  number_format($rows[2]['Service_Price']); ?>
 										</span>
 									</li>
+
 									<li>
-										<a href="shop-product-right.php">
+									<a href="shop-right-space-clicked.php?id=S-034">
+
 											<img src="images/Spaces/4.jpg" alt="">
 											<span class="product-title"><?php echo ($rows[3]['Service_Name']); ?></span>
 										</a>
