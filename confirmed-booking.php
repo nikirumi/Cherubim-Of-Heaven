@@ -125,7 +125,7 @@
         header("Location: shop-account-login.php");
     }
 
-    conn->close();
+    $conn->close();
     
 
 ?>

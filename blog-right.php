@@ -251,12 +251,12 @@
 										<span class="cat-links">
 											<span class="screen-reader-text">Categories</span>
 											<a href="blog-right.php" rel="category tag">
-												Delivery
+												Article
 											</a>
 										</span>
 										<h3 class="entry-title">
 											<a href="blog-single-right.php" rel="bookmark">
-												Helping close a Friend in Grief Get Started with a Beautiful Template
+												Supporting a Grieving Friend with Care and Compassion
 											</a>
 										</h3>
 										<div class="entry-meta">
@@ -265,7 +265,7 @@
 													<span class="screen-reader-text">Author </span>
 													<a class="url fn n" href="blog-right.php">
 														<i class="color-main fs-14 fa fa-user"></i>
-														Admin
+														Eunice Loren Pelonio
 													</a>
 												</span>
 												<span>
@@ -287,7 +287,7 @@
 									</header>
 									<!-- .entry-header -->
 									<div class="entry-content">
-										<p>A friend has experienced the death of someone loved. You want to help, but you are not sure how to go about it. This article will guide you in ways to turn your cares and concerns</p>
+										<p>Cherubim of Heaven Memorial Park is dedicated to providing a serene and compassionate space for families and friends during their time of grief. Nestled in a peaceful setting, Cherubim of Heaven offers more than just a final resting place</p>
 										<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor2">Read more</a>
 									</div><!-- .entry-content -->
 								</div><!-- .item-content -->
@@ -296,7 +296,7 @@
 							<article class="text-center text-md-left vertical-item content-padding post type-post status-publish format-video has-post-thumbnail">
 								<div class="item-media post-thumbnail">
 									<div class="embed-responsive embed-responsive-3by2">
-										<a href="https://www.youtube.com/embed/mHaynL_uW3k" class="embed-placeholder">
+										<a href="https://www.youtube.com/embed/Q1VQzxXW5FI?si=hvdw0Mq-FzZhsdid" class="embed-placeholder">
 											<img src="images/blog/02.jpg" alt="">
 										</a>
 									</div>
@@ -306,12 +306,12 @@
 										<span class="cat-links">
 											<span class="screen-reader-text">Categories</span>
 											<a href="blog-right.php" rel="category tag">
-												Delivery
+												Article
 											</a>
 										</span>
 										<h3 class="entry-title">
 											<a href="blog-single-right.php" rel="bookmark">
-												Helping close a Friend in Grief Get Started with a Beautiful Template
+												Supporting Someone Through Grief: A Compassionate Guide to Getting Started
 											</a>
 										</h3>
 										<div class="entry-meta">
@@ -320,7 +320,7 @@
 													<span class="screen-reader-text">Author </span>
 													<a class="url fn n" href="blog-right.php">
 														<i class="color-main fs-14 fa fa-user"></i>
-														Admin
+														Ivan Jethro Velasco
 													</a>
 												</span>
 												<span>
@@ -367,12 +367,12 @@
 										<span class="cat-links">
 											<span class="screen-reader-text">Categories</span>
 											<a href="blog-right.php" rel="category tag">
-												Delivery
+												Article
 											</a>
 										</span>
 										<h3 class="entry-title">
 											<a href="blog-single-right.php" rel="bookmark">
-												Helping close a Friend in Grief Get Started with a Beautiful Template
+												Finding Comfort in Grief: A Gentle Guide to Getting Started
 											</a>
 										</h3>
 										<div class="entry-meta">
@@ -381,7 +381,7 @@
 													<span class="screen-reader-text">Author </span>
 													<a class="url fn n" href="blog-right.php">
 														<i class="color-main fs-14 fa fa-user"></i>
-														Admin
+														Nathaniel Angelo Gatchalian
 													</a>
 												</span>
 												<span>
@@ -403,7 +403,7 @@
 									</header>
 									<!-- .entry-header -->
 									<div class="entry-content">
-										<p>A friend has experienced the death of someone loved. You want to help, but you are not sure how to go about it. This article will guide you in ways to turn your cares and concerns</p>
+										<p>Navigating grief can feel overwhelming, but taking the first step toward healing is an important part of the journey. This guide offers compassionate support, helping you understand how to begin processing emotions and finding comfort during difficult times. With the symbolic</p>
 										<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor2">Read more</a>
 									</div><!-- .entry-content -->
 								</div><!-- .item-content -->
@@ -420,7 +420,7 @@
 
 									<h3 class="entry-title">
 										<a href="blog-single-right.php" rel="bookmark">
-											Sample Post Format: Status Helping close a Friend
+											Pepito Velasquez
 										</a>
 									</h3>
 
@@ -428,14 +428,14 @@
 								<!-- .entry-header -->
 
 								<div class="entry-content">
-									<p>A friend has experienced the death of someone loved. You want to help, but you are not sure how to go about it. This article will guide you in ways to turn your cares and con</p>
+									<p>A loved one has passed, and your friend is left grieving. You want to offer support, but you're unsure how. This guide will provide compassionate ways to turn your care into meaningful action, helping you be there for them during their time of need.</p>
 									<div class="entry-meta">
 										<span class="byline">
 											<span class="author vcard">
 												<span class="screen-reader-text">Author </span>
 												<a class="url fn n" href="blog-right.php">
 													<i class="color-main fs-14 fa fa-user"></i>
-													Admin
+													Pepito Velasquez
 												</a>
 											</span>
 											<span>
@@ -463,12 +463,12 @@
 										<span class="cat-links text-left">
 											<span class="screen-reader-text">Categories</span>
 											<a href="blog-right.php" rel="category tag">
-												Delivery
+												Article
 											</a>
 										</span>
 										<h3 class="entry-title">
 											<a href="blog-single-right.php" rel="bookmark">
-												Helping close a Friend in Grief Get Started with
+												Offering Support to Someone in Grief: A Guide to Getting Started
 											</a>
 										</h3>
 										<div class="entry-meta">
@@ -477,14 +477,14 @@
 													<span class="screen-reader-text">Author </span>
 													<a class="url fn n" href="blog-right.php">
 														<i class="color-main fs-14 fa fa-user"></i>
-														Admin
+														Lowie Josh Roque
 													</a>
 												</span>
 												<span>
 													<span class="screen-reader-text">Posted on</span>
 													<a href="blog-single-right.php" rel="bookmark">
 														<i class="color-main fs-14 fa fa-calendar"></i>
-														<time class="entry-date published updated" datetime="2019-04-23T15:15:12+00:00">23 Apr 2019</time>
+														<time class="entry-date published updated" datetime="2019-04-23T15:15:12+00:00">23 Apr 2024</time>
 													</a>
 												</span>
 												<span class="comment-count">
@@ -499,7 +499,7 @@
 									</header>
 									<!-- .entry-header -->
 									<div class="entry-content">
-										<p><a class="fs-20" href="https://themeforest.net/">https://themeforest.net/</a></p>
+										<!--<p><a class="fs-20" href="https://themeforest.net/">https://themeforest.net/</a></p>-->
 										<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor2">Read more</a>
 									</div><!-- .entry-content -->
 								</div><!-- .item-content -->
@@ -517,12 +517,12 @@
 										<span class="cat-links">
 											<span class="screen-reader-text">Categories</span>
 											<a href="blog-right.php" rel="category tag">
-												Delivery
+												Article
 											</a>
 										</span>
 										<h3 class="entry-title">
 											<a href="blog-single-right.php" rel="bookmark">
-												Helping close a Friend in Grief Get Started with a Beautiful Template
+												Providing Comfort and Support During Grief: A Guide to Helping Those in Need
 											</a>
 										</h3>
 										<div class="entry-meta">
@@ -531,7 +531,7 @@
 													<span class="screen-reader-text">Author </span>
 													<a class="url fn n" href="blog-right.php">
 														<i class="color-main fs-14 fa fa-user"></i>
-														Admin
+														Jerryco Adriano
 													</a>
 												</span>
 												<span>
@@ -552,12 +552,12 @@
 										<!-- .entry-meta -->
 									</header>
 									<!-- .entry-header -->
-									<div class="entry-content">
+									<!--<div class="entry-content">
 										<p><strong>Steave:</strong> Lorem ipsum dolor sit amet</p>
 										<p><strong>Anna:</strong> Etiam condimentum nisi nulla, eget fermentum nibh hendrerit et</p>
 										<p><strong>Steave</strong> Nullam arcu turpis, commodo eu nulla imperdiet, molestie cursus purus. Praesent sed arcu in, bibendum nulla.</p>
 										<p><strong>Anna:</strong> Curabitur sit amet gravida enim. Vestibulum a enim est.</p>
-									</div><!-- .entry-content -->
+									</div>--><!-- .entry-content -->
 								</div><!-- .item-content -->
 							</article><!-- #post-## -->
 
@@ -576,11 +576,11 @@
 
 								<div class="entry-content">
 									<blockquote>
-										<p>A friend has experienced the death of someone loved. You want to help, but you are not sure how to go about it. This article will guide you in ways to turn your cares and concerns into positive actions.
+										<p>When a friend faces the loss of a loved one, it's hard to know what to say or do. This guide will offer thoughtful ways to show your support and turn your empathy into meaningful comfort.
 										</p>
 										<p class="name">
 											<a href="blog-single-right.php" rel="bookmark">
-												<i class="ico-user"></i>Marie P. Ross
+												<i class="ico-user"></i>Jack Dhaniel Perez
 											</a>
 										</p>
 									</blockquote>
@@ -593,12 +593,12 @@
 										<span class="cat-links text-left">
 											<span class="screen-reader-text">Categories</span>
 											<a href="blog-right.php" rel="category tag">
-												Delivery
+												Article
 											</a>
 										</span>
 										<h3 class="entry-title">
 											<a href="blog-single-right.php" rel="bookmark">
-												Helping close a Friend in Grief Get Started with a Beautiful Template
+												Guiding Someone Through Grief: A Simple Approach to Offering Support
 											</a>
 										</h3>
 										<div class="entry-meta">
@@ -607,7 +607,7 @@
 													<span class="screen-reader-text">Author </span>
 													<a class="url fn n" href="blog-right.php">
 														<i class="color-main fs-14 fa fa-user"></i>
-														Admin
+														Lemuel Natividad
 													</a>
 												</span>
 												<span>
@@ -629,7 +629,7 @@
 									</header>
 									<!-- .entry-header -->
 									<div class="entry-content">
-										<p>A friend has experienced the death of someone loved. You want to help, but you are not sure how to go about it. This article will guide you in ways to turn your cares and concerns</p>
+										<p>A friend is grieving the loss of a loved one, and you want to offer support but aren't sure how. This article will help you transform your empathy and concerns into meaningful actions that truly help.</p>
 									</div><!-- .entry-content -->
 								</div><!-- .item-content -->
 							</article>

@@ -251,11 +251,11 @@
 										<span class="cat-links">
 											<span class="screen-reader-text">Categories</span>
 											<a href="blog-right.php" rel="category tag">
-												Delivery
+												Article
 											</a>,
 										</span>
 										<h3 class="entry-title">
-											Helping close a Friend in Grief Get Started with a Beautiful Template
+											Supporting a Grieving Friend with Care and Compassion
 										</h3>
 										<div class="entry-meta">
 											<span class="byline">
@@ -270,7 +270,7 @@
 													<span class="screen-reader-text">Posted on</span>
 													<a href="blog-single-right.php" rel="bookmark">
 														<i class="color-main fs-14 fa fa-calendar"></i>
-														<time class="entry-date published updated" datetime="2019-04-23T15:15:12+00:00">23 Apr 2019</time>
+														<time class="entry-date published updated" datetime="2019-04-23T15:15:12+00:00">23 Apr 2024</time>
 													</a>
 												</span>
 												<span class="comment-count">
@@ -287,29 +287,24 @@
 
 									<div class="entry-content">
 										<p>
-											Having established itself long ago as San Diego’s most prestigious funeral home and cemetery, Greenwood Memorial Park, Mortuary and Crematory is truly a place like no other.
+											Cherubim of Heaven Memorial Park is dedicated to providing a serene and compassionate space for families and friends during their time of grief. Nestled in a peaceful setting, Cherubim of Heaven offers more than just a final resting place; it offers a haven of comfort and support. Our commitment is to ensure that every family feels embraced as part of our own, treated with care and respect throughout their journey.
 										</p>
+										
 										<p>
-											Built in 1907 on a slight hill with an ocean view, Greenwood’s appeal began with its location. Over the years, it has expanded to include several chapels, a mortuary, crematory, three mausoleums, a collection of international and rare vegetation and statuary.s we comfort families in times of loss, we work tirelessly to ensure they’re all treated with compassion and respect.
-										</p>
-										<p>
-											Many prominent San Diego residents are laid to rest here and many of the markers tell a fascinating story. For those unfamiliar with Belle Benchley, for example, it might come as a surprise to stumble across a grave marker depicting the face of a gorilla. Known as The Zoo Lady, Benchley was the director of the San Diego Zoo from 1927 to 1953, and guided its expansion from a small collection of animals to an innovative, world-class zoo.
-										</p>
-										<p>
-											At Greenwood, we understand that losing someone you love is one of life’s most difficult experiences, and that’s why it’s so important to us that our clients feel like an extension of our own family. Our incredible team of professionals have many years of experience, and as we comfort families in times of loss, we work tirelessly to ensure they’re all treated with compassion and respect.
+											With thoughtfully designed memorial spaces and a deep respect for each unique story, Cherubim of Heaven helps families honor their loved ones with grace. Our experienced team works tirelessly to guide grieving families, offering heartfelt support as they navigate this difficult time with dignity and compassion.
 										</p>
 
 										<blockquote>
 
 											<p>
 												<img class="mark" src="images/quote-mark.png" alt="">
-												Sem justo facilisi, pulvinar feugiat sed cursus donec vestibulum, rutrum mauris montes felis, quam metus sed in. In curabitur, ut in auctor ut, egestas nunc elit lectus sed sed.
+												Though our loved ones may no longer walk beside us, their memories will forever guide us, lighting our path with love and peace.
 											</p>
-											<footer><span class="fs-20 fw-500 name">Brett Connor </span>Support Manager</footer>
+											<footer><span class="fs-20 fw-500 name">Lowie Josh Roque </span>Support Manager</footer>
 
 										</blockquote>
-										<p>Many prominent San Diego residents are laid to rest here and many of the markers tell a fascinating story. For those unfamiliar with Belle Benchley, for example, it might come as a surprise to stumble across a grave marker depicting the face of a gorilla. Known as The Zoo Lady, Benchley was the director of the San Diego Zoo from 1927 to 1953, and guided its expansion from a small collection of animals to an innovative, world-class zoo.
-											<p>At Greenwood, we understand that losing someone you love is one of life’s most difficult experiences, and that’s why it’s so important to us that our clients feel like an extension of our own family. Our incredible team of professionals have many years of experience, and as we comfort families in times of loss, we work tirelessly to ensure they’re all treated with compassion and respect.</p>
+										<p>At Cherubim of Heaven Memorial Park, we believe that each life is a story worth remembering. Every memorial, carefully crafted to reflect the essence of a loved one, serves as a lasting tribute to the love, joy, and impact they shared with the world. We understand that honoring their legacy is not just about the ceremony but about creating a meaningful connection that continues beyond the moments of loss.</p>
+										<p>Our commitment goes beyond the physical space we provide; it’s about offering a place where families can find peace, reflect, and feel supported by a compassionate community. We walk alongside you during this difficult journey, offering guidance, comfort, and the strength needed to heal. At Cherubim of Heaven, we cherish the privilege of helping you preserve the memories of those you hold dear.</p>
 									</div>
 									<!-- .entry-content -->
 								</div>
