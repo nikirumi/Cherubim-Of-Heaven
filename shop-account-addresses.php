@@ -4,7 +4,7 @@
 <?php include("check_session.php");?>
 
 <head>
-	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
+	<title>Cherubim Of Heaven - Multipurpose Funeral Service - Account</title>
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

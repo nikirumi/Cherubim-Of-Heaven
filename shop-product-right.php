@@ -54,7 +54,7 @@
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
 <head>
 	
-	<title>Memento - Multipurpose Funeral Service HTML template</title>
+	<title>Cherubim Of Heaven - Multipurpose Funeral Service - Products</title>
 	<meta charset="utf-8">
 	<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
