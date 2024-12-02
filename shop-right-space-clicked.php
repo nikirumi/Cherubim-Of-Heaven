@@ -756,31 +756,27 @@
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php" class="active">Funeral</a>
+								<li class="cat-item cat-parent">
+										<a href="shop-right.php" class="active">Memorial Products</a>
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.php">Eco Funeral</a>
+												<a href="shop-right.php"> Flowers</a>
 											</li>
 											<li class="cat-item">
-												<a href="shop-right.php">Memmorial Park</a>
+												<a href="shop-right-caskets.php">Caskets</a> 	
+											</li>
+											<li class="cat-item">
+												<a href="shop-right-urns.php">Urns </a>
 											</li>
 										</ul>
 									</li>
+
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Mortuary</a>
+										 <a href="shop-right-funeral.php" class="active">Funeral</a> 
 									</li>
+									
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Cremations</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Burrial</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right-space.php">Space / Lot</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Ship Outs</a>
+										 <a href="shop-right-space.php" class="active">Memorial Space</a> 
 									</li>
 								</ul>
 							</div>
