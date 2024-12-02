@@ -51,7 +51,7 @@
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
 <head>
-	<title>Funeral Venue 2</title>
+	<title>Cherubim of Heaven - Funeral Booking</title>
 	<meta charset="utf-8">
 	<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -635,7 +635,7 @@
 								</div>
 
 
-								<section class="up-sells upsells products">
+								<!--<section class="up-sells upsells products">
 									<div class="col-12 mb-60">
 										<p class="subtitle text-center">today, tomorrow and beyond.</p>
 										<h2 class="special-heading"><span class="color-main">Our Top </span>Sellers</h2>
@@ -840,14 +840,14 @@
 											</div>
 										</li>
 									</ul>
-								</section>
+								</section>-->
 							</div>
 
 
 						</main>
 
 						<aside class="col-lg-5 col-xl-3">
-							<div class="bg-maincolor py-50 px-30 cs">
+							<!--<div class="bg-maincolor py-50 px-30 cs">
 								<div class="widget widget_product_search">
 
 									<h3 class="widget-title">Search</h3>
@@ -862,7 +862,7 @@
 										<input type="submit" value="Search">
 									</form>
 								</div>
-							</div>
+							</div>-->
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
@@ -895,7 +895,7 @@
 							</div>
 
 
-							<div class="widget woocommerce widget_recently_viewed_products">
+							<!--<div class="widget woocommerce widget_recently_viewed_products">
 
 								<h5 class="widget-title">Viewed Products</h5>
 
@@ -996,7 +996,7 @@
 										</div>
 									</div>
 								</form>
-							</div>
+							</div>-->
 
 
 						</aside>

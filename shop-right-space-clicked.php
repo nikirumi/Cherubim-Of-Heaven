@@ -58,7 +58,7 @@
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->
 <head>
-	<title>Memorial Space</title>
+	<title>Cherubim of Heaven - Memorial Space</title>
 	<meta charset="utf-8">
 	<!--[if IE]>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -525,7 +525,7 @@
 								</div>
 
 
-								<section class="up-sells upsells products">
+								<!--<section class="up-sells upsells products">
 									<div class="col-12 mb-60">
 										<p class="subtitle text-center">today, tomorrow and beyond.</p>
 										<h2 class="special-heading"><span class="color-main">Our Top </span>Sellers</h2>
@@ -730,13 +730,13 @@
 											</div>
 										</li>
 									</ul>
-								</section>
+								</section>-->
 							</div>
 
 
 						</main>
 
-						<aside class="col-lg-5 col-xl-3">
+						<!--<aside class="col-lg-5 col-xl-3">
 							<div class="bg-maincolor py-50 px-30 cs">
 								<div class="widget widget_product_search">
 
@@ -752,41 +752,37 @@
 										<input type="submit" value="Search">
 									</form>
 								</div>
-							</div>
+							</div>-->
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php" class="active">Funeral</a>
+								<li class="cat-item cat-parent">
+										<a href="shop-right.php" class="active">Memorial Products</a>
 										<ul class="children">
 											<li class="cat-item">
-												<a href="shop-right.php">Eco Funeral</a>
+												<a href="shop-right.php"> Flowers</a>
 											</li>
 											<li class="cat-item">
-												<a href="shop-right.php">Memmorial Park</a>
+												<a href="shop-right-caskets.php">Caskets</a> 	
+											</li>
+											<li class="cat-item">
+												<a href="shop-right-urns.php">Urns </a>
 											</li>
 										</ul>
 									</li>
+
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Mortuary</a>
+										 <a href="shop-right-funeral.php" class="active">Funeral</a> 
 									</li>
+									
 									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Cremations</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Burrial</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right-space.php">Space / Lot</a>
-									</li>
-									<li class="cat-item cat-parent">
-										<a href="shop-right.php">Ship Outs</a>
+										 <a href="shop-right-space.php" class="active">Memorial Space</a> 
 									</li>
 								</ul>
 							</div>
 
 
-							<div class="widget woocommerce widget_recently_viewed_products">
+							<!--<div class="widget woocommerce widget_recently_viewed_products">
 
 								<h5 class="widget-title">Viewed Products</h5>
 
@@ -893,7 +889,7 @@
 										</div>
 									</div>
 								</form>
-							</div>
+							</div>-->
 
 
 						</aside>
