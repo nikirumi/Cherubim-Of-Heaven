@@ -3,7 +3,7 @@
 include('connect.php');
 
 // Start the session if not already started
-if (session_status() == PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE) {
     session_start(); // Start the session only if it's not already active
 }
 
@@ -387,7 +387,7 @@ if (isset($_FILES['files'])) {
 
     <?php
     // Start the session
-    session_start();
+    //session_start();
     include('connect.php');
 
     // Check if the user is logged in
