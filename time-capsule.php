@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
 // Check if the user is logged in
 if (!isset($_SESSION['client_id'])) {
-    echo "You must be logged in to upload files.";
+    header("Location: shop-account-login.php");
     exit();
 }
 
@@ -171,7 +171,7 @@ if (isset($_FILES['files'])) {
                         <div class="container-fluid">
                             <div class="row align-items-center">
                                 <div class="col-xl-3 col-lg-4 col-md-5 col-11">
-                                    <a href="index.html" class="logo">
+                                    <a href="index.php" class="logo">
                                         <img src="images/logo.png" alt="">
                                         <div class="d-flex flex-column">
                                             <h4 class="logo-text color-main">Cherubim Of Heaven</h4>
@@ -312,7 +312,7 @@ if (isset($_FILES['files'])) {
                                         <!--hidding includes on small devices. They are duplicated in topline-->
                                         <ul class="top-includes d-none d-xl-block">
                                             <li>
-                                                <i class="ico-phone color-main fs-14"></i> <span class="color-dark">1-800-123-45-67</span>
+                                                <i class="ico-phone color-main fs-14"></i> <span class="color-dark">(044) 762 4284</span>
                                             </li>
                                         </ul>
 
@@ -338,7 +338,7 @@ if (isset($_FILES['files'])) {
                                             <a href="#">Cherubim of Heaven</a>
                                         </li>
                                         <li class="breadcrumb-item">
-                                            <a href="index.html">Time Capsule</a>
+                                            <a href="index.php">Time Capsule</a>
                                         </li>
                                     </ol>
                                 </div>
