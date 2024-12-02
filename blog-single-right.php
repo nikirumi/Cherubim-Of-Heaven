@@ -495,7 +495,7 @@
 						</main>
 
 						<aside class="col-lg-5 col-xl-4">
-							<div class="bg-maincolor py-50 px-30 cs">
+							<!--<div class="bg-maincolor py-50 px-30 cs">
 								<div class="widget widget_search">
 									<h5 class="widget-title">Searchs</h5>
 									<form role="search" method="get" class="search-form" action="#">
@@ -543,7 +543,7 @@
 										<a href="blog-right.php">Ship Outs</a>
 									</li>
 								</ul>
-							</div>
+							</div>-->
 
 
 							<div class="widget widget_portfolio">

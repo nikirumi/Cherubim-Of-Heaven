@@ -43,6 +43,15 @@
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
+	<style>
+
+		.product-inner {
+			height: 330px;
+		}
+
+	</style>
+
+
 </head>
 
 <body>
@@ -471,7 +480,7 @@
 							</div>
 							<!-- columns 2 -->
 
-							<nav class="woocommerce-pagination">
+							<!--<nav class="woocommerce-pagination">
 								<ul class="page-numbers">
 									<li>
 										<span class="page-numbers current">1</span>
@@ -489,12 +498,12 @@
 										<a class="next page-numbers" href="shop-right.php"><i class="fa fa-angle-right"></i></a>
 									</li>
 								</ul>
-							</nav>
+							</nav>-->
 
 						</main>
 
 						<aside class="col-lg-4 col-xl-3">
-							<div class="bg-maincolor py-50 px-30 cs">
+							<!--<div class="bg-maincolor py-50 px-30 cs">
 								<div class="widget widget_product_search">
 
 									<h3 class="widget-title">Search</h3>
@@ -509,7 +518,8 @@
 										<input type="submit" value="Search">
 									</form>
 								</div>
-							</div>
+							</div>-->
+
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
@@ -530,28 +540,24 @@
 									</li>
 
 									<li class="cat-item cat-parent">
-										 <a href="shop-right.php" class="active">Spaces</a> 
-										<ul class="children">
-											<li class="cat-item">
-												<a href="shop-right-funeral.php">Funeral</a>
-											</li>
-											<li class="cat-item">
-												<a href="shop-right-space.php">Memorial Space</a> 
-											</li>
-										</ul>
+										 <a href="shop-right-funeral.php" class="active">Funeral</a> 
 									</li>
 									
+									<li class="cat-item cat-parent">
+										 <a href="shop-right-space.php" class="active">Memorial Space</a> 
+									</li>
+
 								</ul>
 							</div>
 
 
 							<div class="widget woocommerce widget_recently_viewed_products">
 
-								<h5 class="widget-title">Viewed Products</h5>
+								<h5 class="widget-title">Best Sellers</h5>
 
 								<ul class="product_list_widget">
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.php?id='S-018'">
 											<img src="images/Caskets/9.jpg" alt="">
 											<span class="product-title">Oak Casket</span>
 										</a>
@@ -562,14 +568,14 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
-										</div>
+											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
+											</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">₱</span>34
+											<span class="woocommerce-Price-currencySymbol">₱</span>34,999
 										</span>
 									</li>
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.php?id='S-011'">
 											<img src="images/Caskets/2.jpg" alt="">
 											<span class="product-title">Dark Brown Casket</span>
 										</a>
@@ -580,22 +586,22 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
+											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
 										</div>
-										<del>
+										<!--<del>
 											<span class="woocommerce-Price-amount amount">
 												<span class="woocommerce-Price-currencySymbol">₱</span>
-												55
+												34,999
 											</span>
-										</del>
+										</del>-->
 										<span class="woocommerce-Price-amount amount">
 											<span class="woocommerce-Price-currencySymbol">₱</span>
-											34
+											34,999
 										</span>
 									</li>
 
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.php?id='S-013'">
 											<img src="images/Caskets/4.jpg" alt="">
 											<span class="product-title">White Casket</span>
 										</a>
@@ -606,17 +612,17 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
+											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
 										</div>
-										<del>
+										<<!--del>
 											<span class="woocommerce-Price-amount amount">
 												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
-										</del>
+										</del>-->
 										<span class="woocommerce-Price-amount amount">
 											<span class="woocommerce-Price-currencySymbol">₱</span>
-											34
+											59,999
 										</span>
 									</li>
 								</ul>

@@ -43,6 +43,14 @@
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
+	<style>
+
+		.product-inner {
+			height: 330px;
+		}
+
+	</style>
+
 </head>
 
 <body>
@@ -471,7 +479,7 @@
 							</div>
 							<!-- columns 2 -->
 
-							<nav class="woocommerce-pagination">
+							<!--<nav class="woocommerce-pagination">
 								<ul class="page-numbers">
 									<li>
 										<span class="page-numbers current">1</span>
@@ -489,12 +497,12 @@
 										<a class="next page-numbers" href="shop-right.php"><i class="fa fa-angle-right"></i></a>
 									</li>
 								</ul>
-							</nav>
+							</nav>-->
 
 						</main>
 
 						<aside class="col-lg-4 col-xl-3">
-							<div class="bg-maincolor py-50 px-30 cs">
+							<!--<div class="bg-maincolor py-50 px-30 cs">
 								<div class="widget widget_product_search">
 
 									<h3 class="widget-title">Search</h3>
@@ -509,7 +517,7 @@
 										<input type="submit" value="Search">
 									</form>
 								</div>
-							</div>
+							</div>-->
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">
@@ -530,15 +538,11 @@
 									</li>
 
 									<li class="cat-item cat-parent">
-										 <a href="shop-right.php" class="active">Spaces</a> 
-										<ul class="children">
-											<li class="cat-item">
-												<a href="shop-right-funeral.php">Funeral</a>
-											</li>
-											<li class="cat-item">
-												<a href="shop-right-space.php">Memorial Space</a> 
-											</li>
-										</ul>
+										 <a href="shop-right-funeral.php" class="active">Funeral</a> 
+									</li>
+									
+									<li class="cat-item cat-parent">
+										 <a href="shop-right-space.php" class="active">Memorial Space</a> 
 									</li>
 									
 								</ul>
@@ -547,11 +551,11 @@
 
 							<div class="widget woocommerce widget_recently_viewed_products">
 
-								<h5 class="widget-title">Viewed Products</h5>
+								<h5 class="widget-title">Best Sellers</h5>
 
 								<ul class="product_list_widget">
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.php?id='S-019'">
 											<img src="images/Urns/1.jpg" alt="">
 											<span class="product-title">Radiant Gold Urn</span>
 										</a>
@@ -562,14 +566,14 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
+											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
 										</div>
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>34
+											<span class="woocommerce-Price-currencySymbol">₱</span>9,999
 										</span>
 									</li>
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.php?id='S-021'">
 											<img src="images/Urns/3.jpg" alt="">
 											<span class="product-title">Cobal Mosaic Urn</span>
 										</a>
@@ -580,22 +584,22 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
+											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
 										</div>
-										<del>
+										<!--<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
+												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
-										</del>
+										</del>-->
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
-											34
+											<span class="woocommerce-Price-currencySymbol">₱</span>
+											6,999
 										</span>
 									</li>
 
 									<li>
-										<a href="shop-product-right.php">
+										<a href="shop-product-right.php?id='S-027'">
 											<img src="images/Urns/9.jpg" alt="">
 											<span class="product-title">Blue Noir Urn</span>
 										</a>
@@ -606,17 +610,17 @@
 													out of 5
 												</span>
 											</div>
-											<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>
+											<!--<a href="#" class="remove" aria-label="Remove this item" data-product_id="73" data-product_sku=""><i class="fs-14 ico-trash color-main"></i></a>-->
 										</div>
-										<del>
+										<!--<del>
 											<span class="woocommerce-Price-amount amount">
-												<span class="woocommerce-Price-currencySymbol">$</span>
+												<span class="woocommerce-Price-currencySymbol">₱</span>
 												55
 											</span>
-										</del>
+										</del>-->
 										<span class="woocommerce-Price-amount amount">
-											<span class="woocommerce-Price-currencySymbol">$</span>
-											34
+											<span class="woocommerce-Price-currencySymbol">₱</span>
+											8,999
 										</span>
 									</li>
 								</ul>
@@ -631,10 +635,10 @@
 									<div class="price_slider_wrapper">
 
 										<div class="price_slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="">
-											<span class="from">$20.00</span>
+											<span class="from">₱20.00</span>
 											<div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 14%; width: 65%;">
 											</div>
-											<span class="to">$700.00</span>
+											<span class="to">₱700.00</span>
 											<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 12%;">
 
 											</span>
