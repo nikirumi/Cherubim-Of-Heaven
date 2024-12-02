@@ -371,16 +371,15 @@
 												<div class="intro_layer" data-animation="fadeInDown">
 													<div class="d-inline-block">
 														<h2 class="intro_featured_word">
-															<span class="color-main">Guiding</span> you<br> with
-															knowledge
+															A<span class="color-main"> Beautiful</span> Place<br> to
+															Remember
 														</h2>
 													</div>
 												</div>
 
 												<div class="intro_layer" data-animation="fadeInDown">
-													<p class="intro_after_featured_word">We understand every funeral is
-														different because every person is<br> unique and each family
-														situation is different.</p>
+													<p class="intro_after_featured_word">Honoring each life with personalized care, because every <br>story is unique.
+														 </p>
 												</div>
 
 												<div class="intro_layer slider-buttons" data-animation="fadeInDown">
