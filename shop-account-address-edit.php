@@ -5,6 +5,11 @@
 
 	include("check_session.php");
 
+	if (!$username) {
+		header("Location: shop-account-login.php");
+		exit();
+	}
+
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		
 		$barangay = htmlspecialchars(trim($_POST['shipping_barangay']));

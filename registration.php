@@ -335,14 +335,31 @@
 													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="barangay" id="barangay" value="" placeholder="Barangay" required>
 												</p> -->
 
-												<select  class="leftMargin woocommerce-form-row form-row-wide"  name="barangay" id="barangay">
-													<option class="boxDesign" value="" disabled selected>Select a barangay around Hagonoy, Bulacan</option>
-													<option class="boxDesign" value="Barangay1">Barangay1</option>
-													<option class="boxDesign" value="Barangay2">Barangay2</option>
-													<option class="boxDesign" value="Barangay3">Barangay3</option>
-													<option class="boxDesign" value="Barangay4">Barangay4</option>
-													<option class="boxDesign" value="Barangay5">Barangay5</option>
-													
+												<select style="margin-bottom: 25px;" class="leftMargin woocommerce-form-row form-row-wide"  name="barangay" id="barangay">
+														<option value="">Select a barangay around Hagonoy, Bulacan...</option>
+														<option value="Abulalas">Abulalas</option>
+														<option value="Balagtas">Balagtas</option>
+														<option value="Carillo">Carillo</option>
+														<option value="Calizon">Calizon</option>
+														<option value="Daang Bakal">Daang Bakal</option>
+														<option value="Iba">Iba</option>
+														<option value="Mercado">Mercado</option>
+														<option value="Pugad">Pugad</option>
+														<option value="Palapat">Palapat</option>
+														<option value="Pantay">Pantay</option>
+														<option value="San Agustin">San Agustin</option>
+														<option value="San Juan">San Juan</option>
+														<option value="San Miguel">San Miguel</option>
+														<option value="San Pascual">San Pascual</option>
+														<option value="San Roque">San Roque</option>
+														<option value="San Sebastian">San Sebastian</option>
+														<option value="Santa Cruz">Santa Cruz</option>
+														<option value="Santo Niño">Santo Niño</option>
+														<option value="Sapalibutad">Sapalibutad</option>
+														<option value="Tampok">Tampok</option>
+														<option value="Tibaguin">Tibaguin</option>
+														<option value="Santiago">Santiago</option>
+														<option value="Sagrada Familia">Sagrada Familia</option>						
 												</select>
 
 												<p class="woocommerce-form-row  form-row form-row-wide">
@@ -354,13 +371,13 @@
 												<p class="woocommerce-form-row  form-row form-row-wide">
 												<label for="account_last_name"> <span class="required">*</span>
 													</label>
-													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="h_num" id="h_num" value="" placeholder="House Number" required>
+													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="h_num" id="h_num" value="" placeholder="House Number / Unit" required>
 												</p>
 
 												<p class="woocommerce-form-row form-row form-row-wide">
 												<label for="account_last_name"> <span class="required">*</span>
 													</label>
-													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="s_name" id="s_name" value="" placeholder="Street Name" required>
+													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="s_name" id="s_name" value="" placeholder="Street Name / Subdivision / Building" required>
 												</p>
 
 												<div class="clear">
