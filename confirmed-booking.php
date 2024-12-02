@@ -102,6 +102,7 @@
                 }
 
                 else {
+                $_SESSION['isBooked'] = true;
                 header("Location: index.php");
                 }
             }  

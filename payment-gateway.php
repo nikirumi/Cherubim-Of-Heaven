@@ -317,7 +317,7 @@
     </style>
 </head>
 <body>
-    <form method = "post">
+    <form method="post" onsubmit="return processPayment(event)">
         <div class="container">
             <h2>PayFlow</h2>
 
@@ -328,24 +328,24 @@
             </div>
 
             <label for="payment-method">Select Payment Method:</label>
-            <select id="payment-method" onchange="togglePaymentInfo()">
+            <select required id="payment-method" onchange="togglePaymentInfo()">
                 <option value="">--Choose Payment Method--</option>
                 <option value="gcash">GCash</option>
                 <option value="paypal">PayPal</option>
                 <option value="bank">Bank Transfer</option>
             </select>
 
-            <div id="gcash-info" class="payment-info">
+            <div id="gcash-info" class="payment-info" style="display: none;">
                 <label for="gcash-number">GCash Number:</label>
                 <input type="text" id="gcash-number" placeholder="Enter GCash Number">
             </div>
 
-            <div id="paypal-info" class="payment-info">
+            <div id="paypal-info" class="payment-info" style="display: none;">
                 <label for="paypal-email">PayPal Email:</label>
                 <input type="email" id="paypal-email" placeholder="Enter PayPal Email">
             </div>
 
-            <div id="bank-info" class="payment-info">
+            <div id="bank-info" class="payment-info" style="display: none;">
                 <label for="bank-account">Bank Account Number:</label>
                 <input type="text" id="bank-account" placeholder="Enter Bank Account Number">
                 
@@ -353,24 +353,17 @@
                 <input type="text" id="bank-name" placeholder="Enter Bank Name">
             </div>
 
-            <button onclick="processPayment()">Proceed to Payment</button>
+            <button type="submit">Proceed to Payment</button>
         </div>
     </form>
 
     <script>
-        // Assuming the total amount is coming from a variable or session
-        const totalAmount = 1000; // Replace with actual total calculation
-        document.getElementById("total-amount").textContent = totalAmount.toFixed(2);
-
         function togglePaymentInfo() {
             const paymentMethod = document.getElementById("payment-method").value;
-            
-            // Hide all payment info sections
             document.getElementById("gcash-info").style.display = 'none';
             document.getElementById("paypal-info").style.display = 'none';
             document.getElementById("bank-info").style.display = 'none';
             
-            // Show the selected payment method info
             if (paymentMethod === "gcash") {
                 document.getElementById("gcash-info").style.display = 'block';
             } else if (paymentMethod === "paypal") {
@@ -380,24 +373,39 @@
             }
         }
 
-        function processPayment() {
+        function processPayment(event) {
+            event.preventDefault();
             const paymentMethod = document.getElementById("payment-method").value;
-            let paymentInfo = "";
-            
+            let isValid = true;
+
             if (paymentMethod === "gcash") {
-                paymentInfo = document.getElementById("gcash-number").value;
+                const gcashNumber = document.getElementById("gcash-number").value;
+                if (!gcashNumber) {
+                    alert("Please enter your GCash number.");
+                    isValid = false;
+                }
             } else if (paymentMethod === "paypal") {
-                paymentInfo = document.getElementById("paypal-email").value;
+                const paypalEmail = document.getElementById("paypal-email").value;
+                if (!paypalEmail) {
+                    alert("Please enter your PayPal email.");
+                    isValid = false;
+                }
             } else if (paymentMethod === "bank") {
-                paymentInfo = `Bank Account: ${document.getElementById("bank-account").value}, Bank Name: ${document.getElementById("bank-name").value}`;
+                const bankAccount = document.getElementById("bank-account").value;
+                const bankName = document.getElementById("bank-name").value;
+                if (!bankAccount || !bankName) {
+                    alert("Please enter both your bank account number and bank name.");
+                    isValid = false;
+                }
             }
 
-            if (!paymentInfo) {
-                alert("Please fill in the required payment details.");
-            } else {
-                alert(`Payment info submitted: ${paymentInfo}`);
+            if (isValid) {
+                alert("Payment info submitted successfully!");
+                // Add form submission logic here if needed
+                document.querySelector("form").submit();
             }
         }
     </script>
+
 </body>
 </html>

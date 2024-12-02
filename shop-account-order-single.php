@@ -370,13 +370,10 @@
 
 
 										<div class="woocommerce-MyAccount-content">
-											<p>Order #<?php echo $service_id ?>
-												<mark class="order-number"></mark>
+											<p>
+												Order #<?php echo $service_id ?>
 												was placed on <?php echo $formatted_date ?>
-												<mark class="order-date"> </mark>
-												and is currently
-												<mark class="order-status"><?php echo $service_status; ?></mark>
-												.
+												 and is currently <?php echo $service_status; ?>.
 											</p>
 
 
@@ -439,11 +436,9 @@
 
 												</table>
 
-
 												<p class="order-again">
-													<a href="#" class="btn btn-maincolor"><span>Order again</span></a>
+													<a href="shop-right.php" class="btn btn-maincolor"><span>View Catalog</span></a>
 												</p>
-
 
 												<section class="woocommerce-customer-details">
 

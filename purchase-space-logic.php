@@ -109,6 +109,7 @@
                     $stmt2->close();
                      //haha           
                     echo "<script>alert('SA WAKAS NAGSUBMIT NA');</script>";
+                    $_SESSION['isSpace'] = true;
                     header("Location: index.php");
                 }  
                 else {

@@ -80,19 +80,29 @@
 
 <body>
 
-<div id="popup" class="popup-overlay" style="display: <?php echo (isset($_SESSION["loginSuccess"]) || isset($_SESSION["checkoutSuccess"])) ? 'block' : 'none'; ?>">
+<div id="popup" class="popup-overlay" style="display: <?php echo (isset($_SESSION["loginSuccess"]) || isset($_SESSION["checkoutSuccess"]) || isset($_SESSION["isBooked"]) || isset($_SESSION["isSpace"])) ? 'block' : 'none'; ?>">
     <div class="popup-content">
         <span id="closePopup" class="close-btn">&times;</span>
             <?php 
                 if (isset($_SESSION["loginSuccess"])) {
 					echo "<h2>Hello, $username.</h2>";
-                    echo "<p>Logged in successfully.</p>";
+                    echo "<p><br>Logged in successfully.</p>";
                     unset($_SESSION["loginSuccess"]);
                 } 
 				elseif (isset($_SESSION["checkoutSuccess"])) {
 					echo "<h2>Thank you for you purchase!</h2>";
-                    echo "<p>Checkout completed successfully.</p>";
+                    echo "<p><br>Checkout completed successfully.</p>";
                     unset($_SESSION["checkoutSuccess"]);
+                }
+				elseif (isset($_SESSION["isBooked"])) {
+					echo "<h2>Thank you for you purchase!</h2>";
+                    echo "<p><br>You have successfully booked a venue.</p>";
+                    unset($_SESSION["isBooked"]);
+                }
+				elseif (isset($_SESSION["isSpace"])) {
+					echo "<h2>Thank you for you purchase!</h2>";
+                    echo "<p><br>You have successfully purchased a memorial space.</p>";
+                    unset($_SESSION["isSpace"]);
                 }
             ?>
         <!--<button id="closeButton">Okay</button>-->

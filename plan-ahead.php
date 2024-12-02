@@ -346,7 +346,7 @@
 							<p class="subtitle special-subtitle">today, tomorrow and beyond.</p>
 							<h3 class="special-heading"><span class="color-main">Types of </span>Funding Options</h3>
 							<div class="divider-55 d-none d-lg-block"></div>
-							<ul class="nav nav-tabs special-nav" role="tablist">
+							<ul class="nav nav-tabs special-nav" role="tablist" style="justify-content: left; gap: 30px;">
 								<li class="nav-item">
 									<a class="nav-link active" id="tab01" data-toggle="tab" href="#tab01_pane" role="tab" aria-controls="tab01_pane" aria-expanded="true">
 										<h6>Cash & Checks</h6>
@@ -354,14 +354,14 @@
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" id="tab02" data-toggle="tab" href="#tab02_pane" role="tab" aria-controls="tab02_pane">
-										<h6>Credit Cards</h6>
+										<h6>Other Payment Methods</h6>
 									</a>
 								</li>
-								<li class="nav-item">
+								<!--<li class="nav-item">
 									<a class="nav-link" id="tab03" data-toggle="tab" href="#tab03_pane" role="tab" aria-controls="tab03_pane">
 										<h6>Specialized Funeral Loans</h6>
 									</a>
-								</li>
+								</li>-->
 							</ul>
 							<div class="tab-content special-tab">
 								<div class="tab-pane fade show active" id="tab01_pane" role="tabpanel" aria-labelledby="tab01">
@@ -369,13 +369,18 @@
 										Paying with cash or check at the time of need is how most people deal with paying for a funeral. Although many within the funeral industry will encourage us to pre-plan and purchase.
 									</p>
 									<p>
-										Funeral directors are caring, compassionate professionals but they are also business people. Purchasing a funeral is a consumer transaction just like any other consumer purchase you make.
-									</p>
-									<p>
-										Do not disclose what your actual finances or budget is. Make sure you know comparable prices from local funeral homes.
+										For those who prefer flexibility, Cash on Delivery (COD) is often available for memorial services, allowing payment upon service completion or product delivery. When considering this option, ensure you're familiar with comparable pricing from local memorial service providers to make informed decisions without disclosing your exact financial situation or budget.
 									</p>
 								</div>
 								<div class="tab-pane fade" id="tab02_pane" role="tabpanel" aria-labelledby="tab02">
+									<p>					
+										Memorial service providers now offer digital payments like GCash for quick mobile transactions and PayPal for secure international payments. Both provide a cashless, hassle-free experience, easing the process during difficult times.
+									</p>
+									<p>
+										Bank transfer is another secure option, ideal for larger payments or those preferring direct transactions through their financial institutions. These digital options ensure safe, efficient payments, allowing families to focus on honoring their loved ones without financial stress.
+									</p>
+								</div>
+								<!--<div class="tab-pane fade" id="tab03_pane" role="tabpanel" aria-labelledby="tab03">
 									<p>
 										Paying with cash or check at the time of need is how most people deal with paying for a funeral. Although many within the funeral industry will encourage us to pre-plan and purchase.
 									</p>
@@ -385,18 +390,7 @@
 									<p>
 										Do not disclose what your actual finances or budget is. Make sure you know comparable prices from local funeral homes.
 									</p>
-								</div>
-								<div class="tab-pane fade" id="tab03_pane" role="tabpanel" aria-labelledby="tab03">
-									<p>
-										Paying with cash or check at the time of need is how most people deal with paying for a funeral. Although many within the funeral industry will encourage us to pre-plan and purchase.
-									</p>
-									<p>
-										Funeral directors are caring, compassionate professionals but they are also business people. Purchasing a funeral is a consumer transaction just like any other consumer purchase you make.
-									</p>
-									<p>
-										Do not disclose what your actual finances or budget is. Make sure you know comparable prices from local funeral homes.
-									</p>
-								</div>
+								</div>-->
 							</div>
 							<a href="shop-right.php" class="btn btn-maincolor">View Services</a>
 						</div>
