@@ -223,13 +223,13 @@
 												<div class="intro_layer" data-animation="fadeInDown">
 													<div class="d-inline-block">
 														<h2 class="intro_featured_word">
-															<span class="color-main">Guiding</span> you<br> with knowledge
+															A <span class="color-main">Beautiful</span> Place<br> to Remember
 														</h2>
 													</div>
 												</div>
 
 												<div class="intro_layer" data-animation="fadeInDown">
-													<p class="intro_after_featured_word">We understand every funeral is different because every person is<br> unique and each family situation is different.</p>
+													<p class="intro_after_featured_word">Honoring each life with personalized care because every <br> story is unique.</p>
 												</div>
 
 												<div class="intro_layer slider-buttons" data-animation="fadeInDown">
@@ -558,57 +558,62 @@
 							<div class="tab-content vertical-tab-content border-0">
 								<div class="tab-pane fade active show" id="tab01_pane" role="tabpanel" aria-labelledby="tab01">
 									<ul class="products">
+
+										
 										<li class="product vertical-item content-padding">
 											<div style="background-color: white;" class="product-inner box-shadow">
-												<img src="images/Flowers/1.png" alt="">
+												<img src="images/Flowers/6.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php?id='S-001'"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-006"></a>
 												</div>
 												<div class="item-content">
-													<h2>Spirited Funeral <br>Flowers</h2>
+													<h2>Angel's Kiss Flowers<br>Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>6,499
+																<span>₱ </span>4,799
 															</span>
 														</del>
 														<!--<span>₱ </span>8,999-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-product-right.php?id='S-001'" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-006" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
+
 										<li class="product vertical-item content-padding">
 											<div style="background-color: white;" class="product-inner box-shadow">
-												<img src="images/Flowers/2.png" alt="">
+												<img src="images/Flowers/4.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-006"></a>
 												</div>
-												<div style="height: 210px;" class="item-content">
-													<h2>Infinity Funeral & <br>Condolence Flowers</h2>
+												<div class="item-content">
+													<h2>Memory Lane<br>Flowers</h2>
 													<span class="price">
 														<del>
 															<span>
-																<span>₱ </span>9,100
+																<span>₱ </span>5,299
 															</span>
 														</del>
-														<!--<span>₱  </span>55-->
+														<!--<span>₱ </span>8,999-->
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-product-right.php?id='S-002'" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-006" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
+
+
 									</ul>
 								</div>
 								<div class="tab-pane" id="tab02_pane" role="tabpanel" aria-labelledby="tab01">
 									<ul class="products">
 										<li class="product vertical-item content-padding">
 											<div style="background-color: white;" class="product-inner box-shadow">
-												<img src="images/Caskets/1.jpg" alt="">
+												<img src="images/Caskets/6.jpg" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-right-caskets.php"></a>
 												</div>
