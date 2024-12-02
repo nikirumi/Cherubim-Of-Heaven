@@ -436,10 +436,29 @@
 
 												</table>
 
-												<p class="order-again">
-													<a href="shop-right.php" class="btn btn-maincolor"><span>View Catalog</span></a>
-												</p>
+												<form action="order-generate-pdf.php" method="POST" target ="_blank">
+													<input type="hidden" name="service_id" value="<?php echo $service_id; ?>">
+													<input type="hidden" name="formatted_date" value="<?php echo $formatted_date; ?>">
+													<input type="hidden" name="service_status" value="<?php echo $service_status; ?>">
+													<!-- Serialize the transaction data array before passing it -->
+													<input type="hidden" name="transaction_data" value="<?php echo htmlspecialchars(serialize($transaction_data)); ?>">
+													<input type="hidden" name="totalAmount" value="<?php echo $totalAmount; ?>">
+													<input type="hidden" name="email" value="<?php echo $email; ?>">
+													<input type="hidden" name="phone" value="<?php echo $phone; ?>">
+													<input type="hidden" name="p_method" value="<?php echo $p_method; ?>">
+													<input type="hidden" name="barangay" value="<?php echo $barangay; ?>">
+													<input type="hidden" name="purok" value="<?php echo $purok; ?>">
+													<input type="hidden" name="h_num" value="<?php echo $h_num; ?>">
+													<input type="hidden" name="s_name" value="<?php echo $s_name; ?>">
+													<p class="order-again">
+														<button type="submit" class="btn btn-maincolor">
+															<span>Generate PDF</span>
+														</button>
+													</p>
 
+												</form>
+
+											
 												<section class="woocommerce-customer-details">
 
 													<h6>Customer details</h6>
