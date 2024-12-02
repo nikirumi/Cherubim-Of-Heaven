@@ -628,26 +628,10 @@
 								</div>								
 							</div>
 
-
 						</main>
 
 						<aside class="col-lg-5 col-xl-3">
-							<!-- <div class="bg-maincolor py-50 px-30 cs">
-								<div class="widget widget_product_search">
-
-									<h3 class="widget-title">Search</h3>
-
-									<form role="search" class="woocommerce-product-search" action="https://html.modernwebtemplates.com/">
-
-										<label class="screen-reader-text" for="woocommerce-product-search-field-widget">
-											Search for:
-										</label>
-
-										<input type="search" id="woocommerce-product-search-field-widget" class="search-field" placeholder="Search" value="" name="search">
-										<input type="submit" value="Search">
-									</form>
-								</div>
-							</div> -->
+							
 							<div class="widget woocommerce widget_product_categories">
 								<h5 class="widget-title">Categories</h5>
 								<ul class="product-categories">

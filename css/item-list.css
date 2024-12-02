@@ -186,6 +186,10 @@ label{
     margin-right: 20px;
 }
 
+input{
+    background-color: #f9f9f9;
+}
+
 
 .input-row{
     width: 95%;

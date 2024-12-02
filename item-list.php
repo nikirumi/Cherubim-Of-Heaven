@@ -9,6 +9,7 @@
         exit();
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,7 +20,6 @@
         <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
     </head>
 
-    
     <body>
         <div id="nav">
             <div id="nav-elements">
@@ -42,7 +42,7 @@
 
                 <form action="" method="post">          
                     <div>
-                        <h1>ITEM LIST</h1>
+                        <h1>Service List</h1>
                     </div>
 
                     <div class="input-row">
