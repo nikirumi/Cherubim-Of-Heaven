@@ -4,6 +4,7 @@ h1{
     margin: 0%;
     margin-top: 15px;
     margin-bottom: 15px;
+
 }
 
 
@@ -45,12 +46,13 @@ a {
     align-items: center;
     padding: 10px 10px;
     margin: 20px 10px;
-    background-color: #141e3c;
+   
     color: #baad7b; /* Text color */
     text-decoration: none; 
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    background-color: #141e3c;
     box-shadow: 4px 4px 1px rgba(0, 0, 0, 1), -1px -1px 1px rgba(233, 233, 233, 0.7); /* Subtle inset shadow */
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -125,19 +127,45 @@ label{
     height: 30px;
 }
 
-.normal{
-    background-color: transparent;
+.boxDesign{
+    background-color:#ffffff;
     padding: 5px 20px;
     border: none;
     box-shadow: inset 5px 5px 4px 0 rgb(0, 0, 0), inset -1px -1px 8px 0 rgb(175, 175, 175);
     box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
-    width: 150px;
+    width: 200px;
     height: 30px;
     color: #486173;
-	font-size: 13px;
+	font-size: 16px;
     margin-right: 20px;
-    
 }
+
+.boxDesign2{
+    background-color:#ffffff;
+    padding: 5px 20px;
+    border: none;
+    box-shadow: inset 5px 5px 4px 0 rgb(0, 0, 0), inset -1px -1px 8px 0 rgb(175, 175, 175);
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
+    width: 250px;
+    height: 30px;
+    color: #486173;
+	font-size: 16px;
+    margin-right: 20px;
+}
+
+.boxDesign3{
+    background-color:#ffffff;
+    padding: 5px 20px;
+    border: none;
+    box-shadow: inset 5px 5px 4px 0 rgb(0, 0, 0), inset -1px -1px 8px 0 rgb(175, 175, 175);
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
+    width: 170px;
+    height: 30px;
+    color: #486173;
+	font-size: 14px;
+    margin-right: 20px;
+}
+
 
 .btn {
 	border-radius: 50px;
@@ -146,7 +174,7 @@ label{
     color: #ffffff;
     background-color: #baad7b;
 	letter-spacing: 0;
-	min-width: 100px;
+	min-width: 170px;
 	padding: 11px 39px;
 	text-transform: none;
     border: none;
@@ -158,49 +186,12 @@ label{
     display: flex;
     width: 100%;
     flex-direction: column;
-}
-
-.long{
-    background-color: transparent;
-    padding: 5px 20px;
-    border: none;
-    box-shadow: inset 5px 5px 4px 0 rgb(0, 0, 0), inset -1px -1px 8px 0 rgb(175, 175, 175);
-    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
-    width: 286px;
-    height: 30px;
-    color: #486173;
-	font-size: 13px;
-    margin-right: 20px;
-}
-
-.longer{
-    background-color: transparent;
-    padding: 5px 20px;
-    border: none;
-    box-shadow: inset 5px 5px 4px 0 rgb(0, 0, 0), inset -1px -1px 8px 0 rgb(175, 175, 175);
-    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, 0.15);
-    width: 500px;
-    height: 30px;
-    color: #486173;
-	font-size: 13px;
-    margin-right: 20px;
-}
-
-input{
-    background-color: #f9f9f9;
-}
-
-
-.input-row{
-    width: 95%;
-    display: flex;
-    align-items: start;
     justify-content: center;
-    flex-direction: column;
-    padding: 0px;
-    margin: 0%;
-    height: 50px;
+    
+    
 }
+
+
 
 #delete-row{
     width: 95%;
@@ -225,16 +216,16 @@ form{
 
 #delete{
     background-color: rgb(184, 24, 24);
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
-#update{
+#toggle{
     background-color: rgb(34, 153, 44);
-    border-radius: 5px;
-    margin-right: 15px;
+    border-radius: 7px;
 }
 
 #table{
+    margin: 0;
     padding: 20px;
 }
 
@@ -242,7 +233,7 @@ table {
     
     width: 100%;
     border-collapse: collapse;
-    margin: 0px 0;
+    margin: 0;
 }
 
 th, td {
@@ -259,3 +250,66 @@ th {
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+#title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#report-blocks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    height: 80px;
+    border-color: #141e3c;
+    border-bottom: solid 3px #39576d ;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(224, 213, 213);
+    border-radius: 15px;
+    padding: 5px; 
+    box-shadow: inset 2px 2px 1px rgba(146, 146, 146, 0.7), inset -4px -4px 8px rgba(255, 255, 255, 0.5); /* Stronger inset shadow */
+}
+
+.block p {
+    font-weight: bolder;
+    color: #39576d ;
+
+}
+
+
+
+
+
+#filter{
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+}
+
+#refresh{
+    margin: 0;
+    width: 20px;
+}
+
+#refreshh {
+    background: none;  /* Remove background */
+    border: none;      /* Remove border */
+    padding: 0;        /* Remove padding */
+    cursor: pointer;   /* Make it look clickable */
+}
+

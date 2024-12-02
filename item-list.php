@@ -8,6 +8,21 @@
         header('Location: admin-login.php');
         exit();
     }
+
+    $total_item = 0;
+
+    $query = "SELECT COUNT(MG_Service_ID) AS total_item FROM memorial_goods";
+
+    $result = mysqli_query($conn, $query);
+
+    if (!$result) {
+        die("Error fetching data: " . mysqli_error($conn));
+    }
+
+    if ($row = mysqli_fetch_assoc($result)) {
+        $total_item = $row['total_item'];
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +31,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Item List </title>
-        <link rel="stylesheet" href="css/item-list.css" class="color-switcher-link">
+        <link rel="stylesheet" href="css/item-lists.css" class="color-switcher-link">
         <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
     </head>
 
@@ -41,9 +56,19 @@
             <div id="base">
 
                 <form action="" method="post">          
-                    <div>
-                        <h1>Service List</h1>
+                    
+                    <div id="title">
+                        <h1>ITEM LIST</h1>
                     </div>
+
+                    <div id="report-blocks">
+                        <div class="block"> 
+                            <p>ITEMS: </p>
+                            <p><?php  echo  $total_item ;?></p>
+                            
+                        </div>                     
+                    </div>
+                    
 
                     <div class="input-row">
                         <div>
@@ -118,7 +143,7 @@
                                 // echo "<td>" . $row['MG_Service_ID'] . "</td>"; 
                                 echo "<td>" . $row['Service_Name'] . "</td>"; 
                                 echo "<td>" . $row['Service_Description'] . "</td>"; 
-                                echo "<td>" . $row['Service_Price'] . "</td>"; 
+                                echo "<td> ₱" . number_format($row['Service_Price'], 2) . "</td>";
                                 echo "<td>" . $row['Quantity'] . "</td>";
                                 echo "<td>" . $row['Size'] . "</td>"; 
                             }

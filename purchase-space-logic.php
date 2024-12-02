@@ -22,8 +22,13 @@
                 $billing_sname = isset($_POST['billing_sname']) ? $_POST['billing_sname'] : '';
                 $payment_method = isset($_POST['payment_method']) ? $_POST['payment_method'] : '';
                 $retrieval_method = "test";
-                $payment_status = "Pending";
-                $service_status = "On Going";
+                $payment_status = "Paid";
+                $service_status = "Completed";
+
+                if ($payment_method === "COD") {
+                    $payment_status = "Pending";
+                    $service_status = "On Going";
+                }
 
                 $gen_add =  $billing_hnum . " " . $billing_sname . ", " . $billing_purok . " " . $billing_barangay . ", Hagonoy, Bulacan"; 
                     
@@ -115,11 +120,6 @@
                 else {
                     echo "Error: " . $stmt->error;
                 }
-
-
-
-
-
 
                 // auto generation ng beneficiary ID ----------
                 $ben_id = '';

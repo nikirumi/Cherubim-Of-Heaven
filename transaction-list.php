@@ -125,7 +125,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Transaction Reports </title>
-        <link rel="stylesheet" href="css/trransaction-lists.css" class="color-switcher-link">
+        <link rel="stylesheet" href="css/traansactions-lists.css" class="color-switcher-link">
     </head>
 
     <body> 
@@ -320,7 +320,7 @@
                                     echo "<td>" . $row['Transaction_ID'] . "</td>";  
                                     echo "<td>" . $row['Client_ID'] . "</td>"; 
                                     echo "<td>" . $row['Transaction_date'] . "</td>";  
-                                    echo "<td>" . $row['Total_amount'] . "</td>";  
+                                    echo "<td>" . number_format($row['Total_amount']) . "</td>";  
                                     echo "<td>" . $row['Payment_method'] . "</td>"; 
                                     echo "<td>" . $row['Payment_status'] . "</td>";  
                                     echo "<td>" . $row['Service_status'] . "</td>";

@@ -99,7 +99,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Account List </title>
-        <link rel="stylesheet" href="css/trransaction-lists.css" class="color-switcher-link">
+        <link rel="stylesheet" href="css/accounts-lists.css" class="color-switcher-link">
         <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
     </head>
 
@@ -133,22 +133,16 @@
                         </div> 
                     </div>
 
-
                     <div id="delete-row">
                         <p>Enter Client ID and click delete to remove:</p>
                         <div>
                             <input type="text" class="boxDesign" name="client_ID" id="client_ID" value="" placeholder="Client ID">
                              <input class="boxDesign" type="text" class="form-control" name="client_Name" id="transaction_ID" value="" placeholder="Client Name">
                              <input class="boxDesign" type="text" class="form-control" name="username" id="transaction_ID" value="" placeholder="Username">
-
-
-                            <button id="delete" type="submit" class="woocommerce-Button btn btn-maincolor" name="login">Delete</button>
                             <button id="toggle" type="submit" class="woocommerce-Button btn btn-maincolor" name="search">Search</button>
-
                         </div>
                     </div>
-                
-                    
+                                 
                 </form>
 
                 <div id="table">
