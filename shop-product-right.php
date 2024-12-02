@@ -72,7 +72,7 @@
 	<link rel="stylesheet" href="css/shop.css" class="color-switcher-link">
 	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	<style>
-		mg {
+		img {
 			display: block;
 			margin: 0 auto;
 		}
@@ -402,26 +402,6 @@
 										<div data-thumb='$img1'>
 											<a href='$img1'>
 												<img src='$img1'  data-caption='' data-src='$img1' data-large_image='$img1' data-large_image_width='1000' data-large_image_height='1000'>
-											</a>
-										</div>
-										<div data-thumb='$img2'>
-											<a href='$img2'>
-												<img src='$img2'  data-caption='' data-src='$img2' data-large_image='$img2' data-large_image_width='1000' data-large_image_height='1000'>
-											</a>
-										</div>
-										<div data-thumb='$img3'>
-											<a href='$img3'>
-												<img src='$img3'  data-caption='' data-src='$img3' data-large_image='$img3' data-large_image_width='1000' data-large_image_height='1000'>
-											</a>
-										</div>
-										<div data-thumb='$img4'>
-											<a href='$img4'>
-												<img src='$img4'  data-caption='' data-src='$img4' data-large_image='$img4' data-large_image_width='1000' data-large_image_height='1000'>
-											</a>
-										</div>
-										<div data-thumb='$img5'>
-											<a href='$img5'>
-												<img src='$img5'  data-caption='' data-src='$img5' data-large_image='$img5' data-large_image_width='1000' data-large_image_height='1000'>
 											</a>
 										</div>
 
