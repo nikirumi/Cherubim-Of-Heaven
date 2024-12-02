@@ -270,7 +270,7 @@
 											October 7, 1927 - March 18, 2024
 										</p>
 										<div class="divider-35"></div>
-										<a href="#" class="btn-link read-more with-icon">read more <i class="ico-arrow-circle"></i></a>
+										<!--<a href="#" class="btn-link read-more with-icon">read more <i class="ico-arrow-circle"></i></a>-->
 									</div>
 								</div>
 								<div class="card ds ms">
@@ -288,7 +288,7 @@
 											October 7, 1946 - March 14, 2024
 										</p>
 										<div class="divider-35"></div>
-										<a href="#" class="btn-link read-more with-icon">read more <i class="ico-arrow-circle"></i></a>
+										<!--<a href="#" class="btn-link read-more with-icon">read more <i class="ico-arrow-circle"></i></a>-->
 									</div>
 								</div>
 								<div class="card ds ms">
@@ -306,7 +306,7 @@
 											October 7, 1952 - March 05, 2024
 										</p>
 										<div class="divider-35"></div>
-										<a href="#" class="btn-link read-more with-icon">read more <i class="ico-arrow-circle"></i></a>
+										<!--<a href="#" class="btn-link read-more with-icon">read more <i class="ico-arrow-circle"></i></a>-->
 									</div>
 								</div>
 								<div class="card ds ms">
@@ -324,7 +324,7 @@
 											October 7, 1946 - March 14, 2024
 										</p>
 										<div class="divider-35"></div>
-										<a href="#" class="btn-link read-more with-icon">read more <i class="ico-arrow-circle"></i></a>
+										<!--<a href="#" class="btn-link read-more with-icon">read more <i class="ico-arrow-circle"></i></a>-->
 									</div>
 								</div>
 							</div>
@@ -752,7 +752,7 @@
 									<ul class="products">
 										<li class="product vertical-item content-padding">
 											<div style="background-color: white;" class="product-inner box-shadow">
-												<img src="images/mausoleum.jpg" alt="">
+												<img src="images/Spaces/1.jpg" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-right-space.php"></a>
 												</div>
@@ -768,13 +768,13 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-space" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-right-space.php" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
 										<li class="product vertical-item content-padding">
 											<div style="background-color: white;" class="product-inner box-shadow">
-												<img src="images/openair.png" alt="">
+												<img src="images/Spaces/2.jpg" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-right-space.php"></a>
 												</div>
