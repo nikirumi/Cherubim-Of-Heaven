@@ -215,7 +215,7 @@
 						<div class="row">
 
 							<div class="col-md-12 text-center text-lg-left">
-								<h1 class="color-main">Events Fullwidth</h1>
+								<h1 class="color-main">Events</h1>
 								<ol class=" breadcrumb">
 									<li class="breadcrumb-item">
 										<a href="index.php">Home</a>
