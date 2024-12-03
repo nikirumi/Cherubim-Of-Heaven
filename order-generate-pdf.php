@@ -113,9 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pdf->SetFont('montserrat', 'B', 10);
 
     $pdf->SetFillColor(20, 30, 60);  
-
     $pdf->SetDrawColor(200, 200, 200);
-
     $pdf->SetTextColor(186, 173, 123);  
 
     $pdf->Cell(100, 10, 'Service Name', 1, 0, 'C', true);
@@ -133,10 +131,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $quantity_label = 'Quantity';
         $quantity_value = $transaction['Number_of_Orders'];
 
+        // Special handling for Venue services
         if (stripos($transaction['Service_Name'], 'Venue') !== false) {
+            // Retrieve start and end dates from POST data
+            $sdate = isset($_POST['sdate']) ? $_POST['sdate'] : null;
+            $edate = isset($_POST['edate']) ? $_POST['edate'] : null;
+
             $quantity_label = 'Days';
-            $quantity_value = $totalAmount / $transaction['Service_Price'];
-            $mult = $totalAmount;
+            
+            // If dates exist, calculate days difference
+            if ($sdate && $edate) {
+                $startDatetime = new DateTime($sdate);
+                $endDatetime = new DateTime($edate);
+                $interval = $startDatetime->diff($endDatetime);
+                $quantity_value = $interval->days + 1; // Add 1 to include start and end days
+                $mult = $transaction['Service_Price'] * $quantity_value;
+            }
         }
 
         if ($totalAmount > 99999) {
@@ -151,6 +161,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pdf->SetFont('montserrat', 'B', $price_size);
         $pdf->Cell(30, 8, 'PHP ' . number_format($transaction['Service_Price'], 2), 1, 0, 'C');
         $pdf->Cell(30, 8, 'PHP ' . number_format($mult, 2), 1, 1, 'C');
+
+        // Add service period row for Venue services
+        if (stripos($transaction['Service_Name'], 'Venue') !== false && $sdate && $edate) {
+            $pdf->SetFont('montserrat', 'B', 10);
+            $pdf->Cell(100, 8, 'Service Period', 1, 0, 'L');
+            $pdf->Cell(60, 8, $sdate . ' to ' . $edate, 1, 0, 'C');
+            $pdf->Cell(30, 8, '', 1, 1, 'C'); // Empty cell to maintain table structure
+        }
     }
 
     $pdf->Ln(5);

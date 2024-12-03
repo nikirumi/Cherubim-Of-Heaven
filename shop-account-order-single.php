@@ -48,7 +48,9 @@
 					'Service_Type' => $row['Service_Type'],
 					'Service_Description' => $row['Service_Description'],
 					'Number_of_Orders' => (int)$row['Quantity'],
-					'Service_Price' => (float)$row['Service_Price']
+					'Service_Price' => (float)$row['Service_Price'],
+					'Start_Datetime' => $row['Start_Datetime'],
+					'End_Datetime' => $row['End_Datetime']
 				);
 
 			}
@@ -393,24 +395,48 @@
 
 													<tbody>
 														
-														<?php foreach ($transaction_data as $transaction): ?>
+													<?php foreach ($transaction_data as $transaction): ?>
+														<?php 
+															$mult = $transaction['Service_Price'] * $transaction['Number_of_Orders']; 
+															$qtyType = "Quantity";
+															$qtyOrDays = $transaction['Number_of_Orders'];
 
-															<?php $mult = $transaction['Service_Price'] * $transaction['Number_of_Orders']; ?>
+															// Check if the service name contains "Venue" and calculate the days difference
+															if (stripos($transaction['Service_Name'], 'Venue') !== false) {
+																$qtyType = "Days";
 
-															<tr>
-																<td class="woocommerce-table__product-name product-name">
-																	<b>Name:</b> <?php echo htmlspecialchars($transaction['Service_Name']); ?><br>
-																	<b>Type:</b> <?php echo htmlspecialchars($transaction['Service_Type']); ?><br>
-																	<b>Description:</b> <?php echo htmlspecialchars($transaction['Service_Description']); ?><br>
-																	<b>Quantity:</b> <?php echo $transaction['Number_of_Orders']; ?><br>
-																</td>
-																<td class="woocommerce-table__product-total product-total">
-																	<span class="woocommerce-Price-amount amount">
-																		<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $mult; ?>
-																	</span>
-																</td>
-															</tr>
-														<?php endforeach; ?>
+																// Convert start and end datetime strings to DateTime objects
+																$startDatetime = new DateTime($transaction['Start_Datetime']);
+																$endDatetime = new DateTime($transaction['End_Datetime']);
+
+																// Calculate the difference in days
+																$interval = $startDatetime->diff($endDatetime);
+																$daysDifference = $interval->days+1;
+
+																$sdate=$startDatetime->format('d-m-Y');
+																$edate=$endDatetime->format('d-m-Y');
+																echo $sdate;
+																echo $edate;
+
+																$qtyOrDays = $daysDifference;
+																$mult = $transaction['Service_Price'] * $daysDifference;
+															}
+														?>
+														<tr>
+															<td class="woocommerce-table__product-name product-name">
+																<b>Name:</b> <?php echo htmlspecialchars($transaction['Service_Name']); ?><br>
+																<b>Type:</b> <?php echo htmlspecialchars($transaction['Service_Type']); ?><br>
+																<b>Description:</b> <?php echo htmlspecialchars($transaction['Service_Description']); ?><br>
+																<b><?php echo $qtyType . ': '; ?></b> <?php echo $qtyOrDays; ?><br>
+															</td>
+															<td class="woocommerce-table__product-total product-total">
+																<span class="woocommerce-Price-amount amount">
+																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo number_format($mult, 2); ?>
+																</span>
+															</td>
+														</tr>
+													<?php endforeach; ?>
+
 
 													</tbody>
 													<tfoot>
@@ -418,7 +444,7 @@
 															<th scope="row">Subtotal:</th>
 															<td>
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol"></span></span><?php echo "₱$totalAmount"; ?></span>
+																	<span class="woocommerce-Price-currencySymbol"></span>₱</span><?php echo number_format($totalAmount, 2); ?></span>
 															</td>
 														</tr>
 														<tr>
@@ -429,7 +455,7 @@
 															<th scope="row">Total:</th>
 															<td>
 																<span class="woocommerce-Price-amount amount">
-																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo $totalAmount; ?>
+																	<span class="woocommerce-Price-currencySymbol">₱</span><?php echo number_format($totalAmount, 2); ?>
 																</span>
 															</td>
 														</tr>
@@ -475,6 +501,8 @@
 													<input type="hidden" name="purok" value="<?php echo $purok; ?>">
 													<input type="hidden" name="h_num" value="<?php echo $h_num; ?>">
 													<input type="hidden" name="s_name" value="<?php echo $s_name; ?>">
+													<input type="hidden" name="sdate" value="<?php echo $sdate; ?>">
+													<input type="hidden" name="edate" value="<?php echo $edate; ?>">
 													<p class="order-again">
 														<button type="submit" class="btn btn-maincolor">
 															<span>Generate PDF</span>
