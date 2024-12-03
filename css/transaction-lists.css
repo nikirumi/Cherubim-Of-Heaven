@@ -252,6 +252,7 @@ pre{
     justify-content: end;
     align-items: center;
     margin-bottom: 30px;
+    
 }
 
 #delete-row{
@@ -285,7 +286,7 @@ form{
     border-radius: 7px;
 }
 
-#toggle2{
+#download{
     background-color: rgb(34, 153, 44);
     border-radius: 7px;
 }

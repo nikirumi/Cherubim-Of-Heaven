@@ -186,6 +186,13 @@
                             <p><?php  echo  $total_pending_count ;?></p>                      
                         </div>
 
+                       
+                            <button id="download" class="woocommerce-Button btn btn-maincolor" 
+                            style=" border-radius:15px;
+                            background-color: #1f2f5e; 
+                            color: white;">Download Report</button>
+                        
+
                         
                     </div>
 
@@ -248,16 +255,13 @@
                         
                        
 
-                        <div id="searchButton">
                         
-                        </div>
 
 
                     </div>
 
-                    <div id="searchDIV">
-                        <button id="toggle" type="submit" class="woocommerce-Button btn btn-maincolor" name="search">Search</button>
-
+                    <div id="searchDIV" >
+                        <button id="toggle" type="submit" class="woocommerce-Button btn btn-maincolor" name="search" style=" margin-right:15px">Search</button>
                     </div>
 
                     <div id="filter">
@@ -290,6 +294,8 @@
                 
                     
                 </form>
+
+                
 
                 <div id="table">
 
@@ -372,7 +378,13 @@
                             ?> -->
                             
                         </tbody>
+                        
                     </table>
+
+                   
+
+                    
+
                 </div>  
 
                 <div id="form-preview" class="hidden">
@@ -415,15 +427,17 @@
                             <div class="tabi1">
                                 <button type="button" id="download-pdf" class="btn">Download PDF</button>
                             </div>
+                            
                         </form>
                     </div>
+
+                    
                 </div>
 
+                
 
+                
 
-                <div id="genReport">
-                        <button id="download" class="woocommerce-Button btn btn-maincolor" >Download Report</button>              
-                </div>
 
 
                 <script>
