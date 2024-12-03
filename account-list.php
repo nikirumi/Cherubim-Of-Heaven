@@ -52,7 +52,7 @@
         // Search Username
         if (!empty($username)) {
             if (strpos($search_query, 'WHERE') !== false) { // If WHERE already exists
-                $search_query .= " WHERE Username LIKE '%$username%'";
+                $search_query .= " AND Username LIKE '%$username%'";
             } else {
                 $search_query .= " WHERE Username LIKE '%$username%'";
             }
