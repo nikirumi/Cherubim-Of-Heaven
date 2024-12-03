@@ -9,7 +9,10 @@ if (session_status() == PHP_SESSION_NONE) {
 
 // Check if the user is logged in
 if (!isset($_SESSION['client_id'])) {
-    echo "You must be logged in to upload files.";
+    echo "<script>
+            alert('You must be logged in to upload files.');
+            window.location.href = 'login.php'; // Redirect to login page if necessary
+          </script>";
     exit();
 }
 
@@ -29,7 +32,10 @@ if (isset($_FILES['files'])) {
 
         // Check for upload errors
         if ($files['error'][$i] !== UPLOAD_ERR_OK) {
-            echo "Error uploading file: " . $files['error'][$i];
+            echo "<script>
+                    alert('Error uploading file: " . $files['error'][$i] . "');
+                    window.location.href = 'time-capsule.php'; // Redirect back to upload page
+                  </script>";
             exit();
         }
 
@@ -51,21 +57,33 @@ if (isset($_FILES['files'])) {
 
                 if (mysqli_query($conn, $query)) {
                     echo "<script>
-                        alert('File uploaded successfully!');
-                        window.location.href = 'time-capsule.php';
-                    </script>";
-                    exit();
-                }
-                 else {
-                    echo "Error inserting file into the database: " . mysqli_error($conn);
+                            alert('File uploaded and inserted into database successfully.');
+                            window.location.href = 'time-capsule.php'; // Redirect back to upload page
+                          </script>";
+                } else {
+                    echo "<script>
+                            alert('Error inserting file into the database: " . mysqli_error($conn) . "');
+                            window.location.href = 'time-capsule.php';
+                          </script>";
                 }
             } else {
-                echo "Error moving the file.";
+                echo "<script>
+                        alert('Error moving the file.');
+                        window.location.href = 'time-capsule.php';
+                      </script>";
             }
         } else {
-            echo "Invalid file type. Only images, videos, and audio files are allowed.";
+            echo "<script>
+                    alert('Invalid file type. Only images, videos, and audio files are allowed.');
+                    window.location.href = 'time-capsule.php';
+                  </script>";
         }
     }
+} else {
+    echo "<script>
+            alert('No files were uploaded.');
+            window.location.href = 'time-capsule.php';
+          </script>";
 }
 ?>
 
