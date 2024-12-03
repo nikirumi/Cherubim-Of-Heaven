@@ -1,5 +1,6 @@
 <?php 
 	include("connect.php");
+	include("check_session.php");
 
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
@@ -436,7 +437,31 @@
 
 												</table>
 
+												<?php
+												
+												$sql = "SELECT Fname, Mname, Lname FROM CLIENT WHERE username = ?";
+												$stmt = $conn->prepare($sql);
+												$stmt->bind_param("s", $username);
+
+												$stmt->execute();
+												$result = $stmt->get_result();
+
+												if ($result->num_rows > 0) {
+
+													while($row = $result->fetch_assoc()) {
+														$fullName = $row["Fname"] . " " . $row["Mname"] . " " . $row["Lname"];
+														//echo "Full Name: " . $fullName . "<br><br>";
+													}
+
+												} 
+												else {
+													echo "No results found.";
+												}
+
+												?>
+
 												<form action="order-generate-pdf.php" method="POST" target ="_blank">
+													<input type="hidden" name="full_name" value="<?php echo $fullName; ?>">
 													<input type="hidden" name="service_id" value="<?php echo $service_id; ?>">
 													<input type="hidden" name="formatted_date" value="<?php echo $formatted_date; ?>">
 													<input type="hidden" name="service_status" value="<?php echo $service_status; ?>">
