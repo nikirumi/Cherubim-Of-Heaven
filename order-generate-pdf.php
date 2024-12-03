@@ -40,6 +40,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pdf->SetFont('Arial', 'I', 12);
     $pdf->SetTextColor(0, 0, 0);
     $pdf->Cell(0, 10, 'Cherubim of Heaven Memorial Park, Inc.', 0, 1, 'C');
+
+    // Adding address and contact details
+    $pdf->SetFont('Arial', '', 10);
+    $pdf->Cell(0, 7, 'Purok 4, San Pedro, Hagonoy, Bulacan, Philippines', 0, 1, 'C');
+    $pdf->Cell(0, 7, 'Phone: +63 932 713 1818 | Tel: (044) 762 4284', 0, 1, 'C');
+
+    $pdf->Ln(10); // Adds 10mm vertical space
     
     // Invoice Details
     $pdf->SetFont('Arial', '', 10);
