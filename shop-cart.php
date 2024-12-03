@@ -403,13 +403,13 @@
 														</td>
 
 														<td class="product-thumbnail">
-															<a href="shop-product-right.php">
+															<a href="shop-product-right.php?id=<?php echo $service_id; ?>">
 																<img width="180" height="180" src="<?php echo $image_name?>" class="" alt="<?php echo $service_name; ?>">
 															</a>
 														</td>
 
 														<td class="product-name" data-title="Product">
-															<a href="shop-product-right.php"><?php echo $service_name; ?></a>
+															<a href="shop-product-right.php?id=<?php echo $service_id; ?>"><?php echo $service_name; ?></a>
 														</td>
 
 														<td class="product-price" data-title="Price">
