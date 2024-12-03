@@ -878,119 +878,69 @@
 				</div>
 			</section>
 
-			<section id="contact-us" class="ls ms page-map">
-				<div class="row c-gutter-0 align-items-center">
-					<div class="col-md-6 page_map">
-						<div class="marker">
-							<div class="marker-address">sydney, australia, Liverpool street, 66</div>
-							<div class="marker-title">First Marker</div>
-							<div class="marker-description">
-
-								<ul class="list-unstyled">
-									<li>
-										<span class="icon-inline">
-											<span class="icon-styled color-main">
-												<i class="fa fa-map-marker"></i>
-											</span>
-
-											<span>
-												Sydney, Australia, Liverpool street, 66
-											</span>
-										</span>
-									</li>
-
-									<li>
-										<span class="icon-inline">
-											<span class="icon-styled color-main">
-												<i class="fa fa-phone"></i>
-											</span>
-
-											<span>
-												1 (800) 123-45-67
-											</span>
-										</span>
-									</li>
-									<li>
-										<span class="icon-inline">
-											<span class="icon-styled color-main">
-												<i class="fa fa-envelope"></i>
-											</span>
-
-											<span>
-												<a href="#"
-													class="__cf_email__"
-													data-cfemail="0469656d6844617c65697468612a676b69">[email&#160;protected]</a>
-											</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-
-							<img class="marker-icon" src="images/map_marker_icon.png" alt="">
-						</div>
-						<!-- .marker -->
-
+			<section id="contact-us" class="ls ms page-map" style="margin: 0; height: 125vh;">
+				<div class="row c-gutter-0 align-items-stretch" style="margin: 0; height: 100%;">
+					<!-- Google Map Section -->
+					<div class="col-md-6 page_map" style="padding: 0; height: 100%;">
+					<div class="map-container">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3856.777019181071!2d120.75738387522401!3d14.837767485677233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339651b2e23997f1%3A0x1a749ea23a78ad29!2sCherubim%20Of%20Heaven%20Memorial%20Park%202024!5e0!3m2!1sen!2sph!4v1733194376253!5m2!1sen!2sph" 
+						style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+						</iframe>
 					</div>
+					</div>
+					<!-- Contact Form Section -->
 					<div class="col-md-6 text-center text-md-left animate" data-animation="moveFromRight">
 						<div class="divider-55 d-none-d-lg-block"></div>
-						<div class=" centered-content">
+						<div class="centered-content">
 							<p class="subtitle">Today, Tomorrow and Beyond.</p>
 							<h3 class="special-heading"><span class="color-main">Contact </span>Us</h3>
 							<div class="divider-60 d-none d-lg-block"></div>
-							<h6 class="d-inline-block mt-0 mb-13">Email:</h6><span class=""> <a
-									href="#"
-									class="__cf_email__"
-									data-cfemail="5e333b333b302a311e3b263f332e323b703d3133">[email&#160;protected]</a></span><br>
-							<h6 class="d-inline-block mt-0 mb-13">Phone:</h6><span class=""> 1-800-123-45-67</span><br>
-							<h6 class="d-inline-block mt-0">Hours:</h6><span class=""> Mon - Fr 9am-5pm</span>
+							<h6 class="d-inline-block mt-0 mb-13">Email:</h6><span class=""> <a href="#"
+									class="__cf_email__" data-cfemail="5e333b333b302a311e3b263f332e323b703d3133">[email&#160;protected]</a></span><br>
+							<h6 class="d-inline-block mt-0 mb-13">Phone:</h6><span class=""> (044) 762 4284</span><br>
+							<h6 class="d-inline-block mt-0">Hours:</h6><span class=""> Mon - Fri 7:30am-5:30pm<br>
+							&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSun 8:00am-6:00pm</span>
 							<div class="divider-30 d-none d-lg-block"></div>
-							<form class="mt-20 contact-form small-form c-mb-10" method="post"
-								action="#">
+
+							<!-- Contact Form -->
+							<form class="mt-20 contact-form small-form c-mb-10" method="post" action="#" style="margin: 0;">
 								<div class="row c-gutter-10">
 									<div class="col-xl-6">
 										<div class="form-group has-placeholder">
 											<label for="name">Full Name <span class="required">*</span></label>
 											<i class="ico-user"></i>
-											<input type="text" aria-required="true" size="30" value="" name="name"
-												id="name" class="form-control" placeholder="Full Name">
+											<input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full Name">
 										</div>
-
 									</div>
 
 									<div class="col-xl-6">
 										<div class="form-group has-placeholder">
 											<label for="phone">Phone Number<span class="required">*</span></label>
 											<i class="fa fa-phone"></i>
-											<input type="text" aria-required="true" size="30" value="" name="phone"
-												id="phone" class="form-control" placeholder="Phone Number">
+											<input type="text" aria-required="true" size="30" value="" name="phone" id="phone" class="form-control" placeholder="Phone Number">
 										</div>
 									</div>
 									<div class="col-sm-12">
 										<div class="form-group has-placeholder">
 											<label for="email">Email address<span class="required">*</span></label>
 											<i class="fa fa-envelope"></i>
-											<input type="email" aria-required="true" size="30" value="" name="email"
-												id="email" class="form-control" placeholder="Email Address">
+											<input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email Address">
 										</div>
 									</div>
 									<div class="col-sm-12">
 										<div class="form-group has-placeholder">
 											<label for="message">Message</label>
 											<i class="ico-pen"></i>
-											<textarea aria-required="true" rows="6" cols="45" name="message"
-												id="message" class="form-control" placeholder="Your Message"></textarea>
+											<textarea aria-required="true" rows="6" cols="45" name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
 										</div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-sm-12 mt-20">
 										<div class="form-group">
-											<button type="submit" id="contact_form_submit" name="contact_submit"
-												class="btn btn-maincolor">Submit
-											</button>
+											<button type="submit" id="contact_form_submit" name="contact_submit" class="btn btn-maincolor">Submit</button>
 										</div>
 									</div>
-
 								</div>
 							</form>
 						</div>
@@ -998,6 +948,69 @@
 					</div>
 				</div>
 			</section>
+
+			<style>
+				.page_map {
+					padding: 0;
+					height: 100%; /* Full height of the screen */
+					display: flex;
+					flex-direction: row; /* Side by side on large screens */
+				}
+
+				.map-container {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					display: flex;
+				}
+
+				.map-container iframe {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%; /* Ensure iframe takes full height */
+					border: none;
+				}
+
+				/* For smaller screens, adjust layout */
+				@media (max-width: 768px) {
+					.page_map {
+						flex-direction: column; /* Stack map and contact form vertically */
+						height: auto; /* Allow content to determine height */
+					}
+
+					.map-container {
+						width: 100%; /* Full width for map */
+						height: 50%; /* Map takes 50% of the container height */
+					}
+
+					.contact-form-container {
+						width: 100%; /* Full width for contact form */
+						padding: 20px;
+						box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+						height: 50%; /* Contact form takes the remaining 50% */
+						overflow: auto; /* Allow scrolling if content overflows */
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-start;
+					}
+
+					.map-container iframe {
+						height: 100%; /* Ensure iframe takes full height */
+					}
+
+					/* Prevent form content from overflowing */
+					.contact-form-container form {
+						display: flex;
+						flex-direction: column;
+						justify-content: flex-start;
+						overflow: auto; /* Enable scroll if form content overflows */
+					}
+				}
+
+			</style>
+
 
 			<footer
 				class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
@@ -1149,8 +1162,8 @@
 	<script src="js/main.js"></script>
 
 	<!-- Google Map Script -->
-	<script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&amp;callback=initGoogleMap"></script>
+	<!--<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&amp;callback=initGoogleMap"></script>-->
 
 </body>
 
