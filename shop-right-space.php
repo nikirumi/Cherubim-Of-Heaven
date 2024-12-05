@@ -2,7 +2,7 @@
     include("connect.php");
 
     // Function to get memorial space details based on ID and return it as an associative array
-    function displayAssoc($ID) {
+    function displayAssoc($serviceType) {
         global $conn; // Ensure the database connection is accessible
 
         // SQL query to join MEMORIAL_SPACE and MEMORIAL_SERVICES tables based on MS_Service_ID and Service_ID
@@ -18,17 +18,17 @@
                         FROM MEMORIAL_SPACE ms 
                         JOIN MEMORIAL_SERVICES msr 
                         ON ms.MS_Service_ID = msr.Service_ID
-                        WHERE ms.MS_Service_ID = ?"; // Filtering by MS_Service_ID
+                        WHERE  msr.Service_Type = ?"; // Filtering by MS_Service_ID
 
         
         if ($stmt = $conn->prepare($findSpaces)) {
-            $stmt->bind_param("s", $ID); 
+			$stmt->bind_param("s", $serviceType); // Bind the service type to the query
             $stmt->execute();
             $spaceResult = $stmt->get_result();
-
+			
             if ($spaceResult->num_rows > 0) {
                 
-                return $spaceResult->fetch_assoc();
+				return $spaceResult->fetch_all(MYSQLI_ASSOC);
 
             } else {
                 return null;
@@ -41,11 +41,8 @@
         }
     }
 
-	$rows = [];
-	for ($i = 31; $i <= 34; $i++) {
-		$ID = sprintf("S-%03d", $i); // Generate IDs from S-001 to S-009
-		$rows[] = displayAssoc($ID); // Store each row in an array
-	}
+	$serviceType = 'Space';
+    $rows = displayAssoc($serviceType); // Fetch all rows of Service_Type 'Space'
 ?>
 
 
@@ -293,36 +290,41 @@
 						<main class="col-lg-8 col-xl-9">
 							<div class="columns-3">
 							<ul class="products">
-								<?php for ($i = 0; $i < count($rows); $i++): ?>
 
+							<?php if ($rows): //if true or may laman ?> 
+								<?php foreach ($rows as $index => $row): // ?>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/Spaces/<?php echo ($i + 1); ?>.jpg" alt="">
+											<img src="images/Spaces/<?php echo ($index + 1); ?>.jpg" alt="">
 
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo urlencode($rows[$i]['Service_ID']); ?>"></a>
+												<a class="abs-link" title="" href="shop-right-space-clicked.php?id=<?php echo urlencode($row['Service_ID']); ?>"></a>
 											</div>
 
 											<div class="item-content">
-												<h2><?php echo $rows[$i]['Service_Name']; ?></h2>
+												<h2><?php echo $row['Service_Name']; ?></h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>PHP </span><span>₱ </span><?php echo number_format($rows[$i]['Service_Price']); ?>
+															<span>PHP </span><span>₱ </span><?php echo number_format($row['Service_Price']); ?>
 														</span>
 													</del>
 												</span>
 											</div>
 
 											<div class="shop-btn">
-												<a href="shop-right-space-clicked.php?id=<?php echo $rows[$i]['Service_ID'] ?>" class="add-to-card btn btn-maincolor">View</a>
+												<a href="shop-right-space-clicked.php?id=<?php echo $row['Service_ID']; ?>" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
-									<?php endfor; ?>
+								<?php endforeach; ?>
+							<?php else: ?>
+								<p>No spaces available.</p>
+							<?php endif; ?>
 
 								</ul>
 							</div>
+
 							<!-- columns 2 -->
 
 							<!-- <nav class="woocommerce-pagination">

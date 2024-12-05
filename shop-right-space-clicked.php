@@ -52,8 +52,6 @@
 	else if ($service_ID == "S-034"){
 		$imgLink = $imgBasePath . ($intValue + 4) . "." . $imageExtension;
 	}
-
-	echo $imgLink;
 ?>
 
 <!-- Mirrored from html.modernwebtemplates.com/memento/shop-product-right.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 14 Nov 2024 06:47:26 GMT -->

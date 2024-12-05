@@ -5,10 +5,10 @@
 
 	include("check_session.php");
 
-	function displayAssoc($ID) {
+	function displayAssoc($serviceType) {
 		global $conn;
 		
-		$findGoods = "SELECT 
+		$findGoodsUrns = "SELECT 
                  mg.MG_Service_ID, 
                  mg.Quantity, 
                  mg.Size, 
@@ -20,16 +20,22 @@
               FROM MEMORIAL_GOODS mg
               JOIN MEMORIAL_SERVICES ms 
               ON mg.MG_Service_ID = ms.Service_ID
-              WHERE mg.MG_Service_ID = ?"; // Filter by MG_Service_ID
+              WHERE ms.Service_Type = ? AND ms.Service_Name LIKE ?"; // Filter by MG_Service_ID
 
-		if ($stmt = $conn->prepare($findGoods)) {
-            $stmt->bind_param("s", $ID); 
+			  $goodsType = '%flower%';
+
+		if ($stmt = $conn->prepare($findGoodsUrns)) {
+            $stmt->bind_param("ss", $serviceType, $goodsType); 
             $stmt->execute();
             $goodsResult = $stmt->get_result();
 
             if ($goodsResult->num_rows > 0) {
                 
-                return $goodsResult->fetch_assoc();
+              	// pang 1 row lang
+                // return $goodsResult->fetch_assoc();
+
+				return $goodsResult->fetch_all(MYSQLI_ASSOC);
+
 
             } else {
                 return null;
@@ -42,35 +48,13 @@
         }
 
 	}
-
-	$rows = [];
-	for ($i = 1; $i <= 9; $i++) {
-		$ID = sprintf("S-%03d", $i); // Generate IDs from S-001 to S-009
-		$rows[] = displayAssoc($ID); // Store each row in an array
-	}
-
-
-	// $sql = "SELECT Service_ID FROM memorial_services WHERE service_name LIKE '%Flower%'";
-	// $result = $conn->query($sql);
-
-	// $serviceIdArray = array();
-
-	// if ($result->num_rows > 0) {
-	// 	while ($row = $result->fetch_assoc()) {
-	// 		$serviceIdArray[] = $row;
-	// 	}
-	// 	//var_dump($serviceIdArray[0]['Service_ID']);
-	// 	//echo htmlspecialchars($serviceIdArray[0]['Service_ID']);
-	// 	//var_dump(htmlspecialchars($serviceIdArray[0]['Service_ID']));
-	// } 
-	
-	// else {
-	// 	echo "No floral services found.";
-	// }
+	$serviceType = 'Goods';
+    $rows = displayAssoc($serviceType); // Fetch all rows of Service_Type 'Space'
 
 	$conn->close();
 
 ?>
+
 
 <head>
 	<title>Cherubim Of Heaven - Multipurpose Funeral Service - Catalog</title>
@@ -320,33 +304,37 @@
 							<div class="columns-3">
 
 								<ul class="products">
-								<?php for ($i = 0; $i < count($rows); $i++): ?>
-
+								<?php if ($rows): ?>
+								<?php foreach ($rows as $index => $row): ?>
 									<li class="product vertical-item content-padding">
 										<div class="product-inner box-shadow">
-											<img src="images/Flowers/<?php echo ($i + 1); ?>.png" alt="">
+											<img src="images/Flowers/<?php echo ($index + 1); ?>.png" alt="">
 
 											<div class="media-links">
-												<a class="abs-link" title="" href="shop-product-right.php?id=<?php echo $rows[$i]['Service_ID'] ?>"></a>
+												<a class="abs-link" title="" href="shop-product-right.php?id=<?php echo urlencode($row['Service_ID']); ?>"></a>
 											</div>
 
 											<div class="item-content">
-												<h2><?php echo $rows[$i]['Service_Name']; ?></h2>
+												<h2><?php echo $row['Service_Name']; ?></h2>
 												<span class="price">
 													<del>
 														<span>
-															<span>PHP </span><span>₱ </span><?php echo number_format($rows[$i]['Service_Price']); ?>
+															<span>PHP </span><span>₱ </span><?php echo number_format($row['Service_Price']); ?>
 														</span>
 													</del>
 												</span>
 											</div>
 
 											<div class="shop-btn">
-												<a href="shop-product-right.php?id=<?php echo $rows[$i]['Service_ID'] ?>" class="add-to-card btn btn-maincolor">View</a>
+												<a href="shop-product-right.php?id=<?php echo $row['Service_ID']; ?>" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
-									<?php endfor; ?>
+								<?php endforeach; ?>
+							<?php else: ?>
+								<p>No goods available.</p>
+							<?php endif; ?>
+
 
 								</ul>
 							</div>

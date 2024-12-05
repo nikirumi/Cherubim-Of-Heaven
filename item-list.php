@@ -188,7 +188,24 @@
 
         //ad
         if( isset($_POST['add']) ){
-            $service_ID = filter_var($_POST['service_ID'], FILTER_SANITIZE_SPECIAL_CHARS);
+
+            $checkLastID =$conn->prepare("SELECT Service_ID  FROM memorial_services  ORDER BY Service_ID DESC LIMIT 1;"); 
+
+            if ($checkLastID->execute()) {
+                $result = $checkLastID->get_result();
+                $row = $result->fetch_assoc();
+                $lastID = $row['Service_ID'];
+                $lastNumericID = (int) substr($lastID,2);
+                $nextNumericID = ++$lastNumericID;
+                $nextServiceID = 'S-'. str_pad($nextNumericID, 3,'0',STR_PAD_LEFT);
+            }
+            else{
+                $nextServiceID = 'S-001';
+            }
+
+            $checkLastID->close();
+
+            $service_ID = $nextServiceID;
             $service_name = filter_var($_POST['service_name'], FILTER_SANITIZE_SPECIAL_CHARS);
             $description = filter_var($_POST['description'], FILTER_SANITIZE_SPECIAL_CHARS);
             $price = filter_var($_POST['price'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
