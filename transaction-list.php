@@ -232,7 +232,7 @@
 
 				<div id="delete-row">
 
-					<p>Enter ID and toggle status:</p>
+					<p>Search using one of the following:</p>
 
 					<div class="tabi">
 

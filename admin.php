@@ -33,8 +33,8 @@
                 <div id="aaa">          
                     <h1>Hello, Admin!</h1>
 
-                    <a class="aa" href="account-list.php" >ACCOUNT LIST</a>
-                    <a class="aa" href="item-list.php" >ITEM LIST</a>
+                    <a class="aa" href="account-list.php" >ACCOUNTS LIST</a>
+                    <a class="aa" href="item-list.php" >ITEMS LIST</a>
                     <a class="aa" href="transaction-list.php" >TRANSACTION REPORTS</a>
 
                     <form action="admin.php" method="post">

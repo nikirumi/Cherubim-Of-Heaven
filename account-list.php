@@ -98,7 +98,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Account List </title>
+        <title>Accounts List </title>
         <link rel="stylesheet" href="css/accounts-lists.css" class="color-switcher-link">
         <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
     </head>
@@ -134,7 +134,7 @@
                     </div>
 
                     <div id="delete-row">
-                        <p>Enter Client ID and click delete to remove:</p>
+                        <p>Search using one of the following::</p>
                         <div>
                             <input type="text" class="boxDesign" name="client_ID" id="client_ID" value="" placeholder="Client ID">
                              <input class="boxDesign" type="text" class="form-control" name="client_Name" id="transaction_ID" value="" placeholder="Client Name">

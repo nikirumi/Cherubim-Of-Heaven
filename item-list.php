@@ -30,7 +30,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Item List </title>
+        <title>Items List </title>
         <link rel="stylesheet" href="css/item-lists.css" class="color-switcher-link">
         <!-- <link rel="stylesheet" href="css/main.css" class="color-switcher-link"> -->
     </head>
@@ -58,7 +58,7 @@
                 <form action="" method="post">          
                     
                     <div id="title">
-                        <h1>ITEM LIST</h1>
+                        <h1>ITEMS LIST</h1>
                     </div>
 
                     <div id="report-blocks">
