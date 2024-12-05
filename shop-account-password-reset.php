@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-	<title>Cherubim Of Heaven - Multipurpose Funeral Service - Account</title>
+	<title>Cherubim Of Heaven - Multipurpose Funeral Service HTML template</title>
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -235,7 +235,7 @@
 				<div class="container">
 					<div class="row">
 						<main class="col-lg-12">
-							<form method="post" class="woocommerce-ResetPassword lost_reset_password text-center">
+							<form method="post" class="woocommerce-ResetPassword lost_reset_password text-center" action='reset.php'>
 
 								<p>Lost your password? Please enter your username or email address. You will receive a link to create a new password
 									via email.</p>
@@ -259,7 +259,6 @@
 					</div>
 				</div>
 			</section>
-
 			<footer class="page_footer text-center text-md-left page_footer ds s-pt-55 s-pb-0 s-pt-lg-95 s-pb-lg-30 s-pt-xl-145 s-pb-xl-80 c-gutter-50">
 				<div class="container">
 					<div class="row">
