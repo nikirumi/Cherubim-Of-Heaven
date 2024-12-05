@@ -337,7 +337,7 @@
 
             <div id="gcash-info" class="payment-info" style="display: none;">
                 <label for="gcash-number">GCash Number:</label>
-                <input type="text" id="gcash-number" placeholder="Enter GCash Number">
+                <input type="tel" id="gcash-number" placeholder="Enter GCash Number" maxlength="11">
             </div>
 
             <div id="paypal-info" class="payment-info" style="display: none;">
