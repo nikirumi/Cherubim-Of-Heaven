@@ -356,6 +356,27 @@ $conn->close();
 												</label>
 												<input class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" placeholder="Password">
 											</p>
+											<p>
+												<input type="checkbox" id="showPassword"> Show Password
+											</p>
+
+											<script>
+													const showPasswordCheckbox = document.getElementById('showPassword');
+													const password = document.getElementById('password');
+
+													showPasswordCheckbox.addEventListener('change', function() {
+														
+														if (showPasswordCheckbox.checked) {
+															password.type = 'text'; 
+														} else {
+															password.type = 'password'; 
+														}
+													});
+
+											</script>
+
+											
+
 											<div class="divider-40"></div>
 											<p class="form-row text-center">
 												<button type="submit" class="woocommerce-Button btn btn-maincolor" name="login">Login</button>

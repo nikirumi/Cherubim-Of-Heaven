@@ -515,7 +515,7 @@
 									<div class="item-media">
 										<img src="images/nat.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="team-single.php"></a>
+											
 										</div>
 										<span class="social-icons content-hover">
 											<a href="#" class="fa fa-facebook" title="facebook"></a>
@@ -527,7 +527,7 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Nathaniel Angelo Gatchalian</a>
+											Nathaniel Angelo Gatchalian
 										</h6>
 										<p class="letter-spacing">
 											Developer
@@ -538,7 +538,7 @@
 									<div class="item-media">
 										<img src="images/ivan.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="team-single.php"></a>
+											
 										</div>
 										<span class="social-icons content-hover">
 											<a href="#" class="fa fa-facebook" title="facebook"></a>
@@ -550,7 +550,7 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Ivan Jethro Velasco</a>
+											Ivan Jethro Velasco
 										</h6>
 										<p class="letter-spacing">
 											Developer
@@ -561,7 +561,7 @@
 									<div class="item-media">
 										<img src="images/jerryco.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="team-single.php"></a>
+											
 										</div>
 										<span class="social-icons content-hover">
 											<a href="#" class="fa fa-facebook" title="facebook"></a>
@@ -573,7 +573,7 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Jerryco Adriano</a>
+											Jerryco Adriano
 										</h6>
 										<p class="letter-spacing">
 											Developer
@@ -584,7 +584,7 @@
 									<div class="item-media">
 										<img src="images/eunice.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="team-single.php"></a>
+											
 										</div>
 										<span class="social-icons content-hover">
 											<a href="#" class="fa fa-facebook" title="facebook"></a>
@@ -596,7 +596,7 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Eunice Loren Pelonio</a>
+											Eunice Loren Pelonio
 										</h6>
 										<p class="letter-spacing">
 											UI/UX Designer
@@ -607,7 +607,7 @@
 									<div class="item-media">
 										<img src="images/lowie.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="team-single.php"></a>
+										
 										</div>
 										<span class="social-icons content-hover">
 											<a href="#" class="fa fa-facebook" title="facebook"></a>
@@ -619,7 +619,7 @@
 									</div>
 									<div class="item-content">
 										<h6 class="team-name">
-											<a href="team-single.php">Lowie Josh Roque</a>
+											Lowie Josh Roque
 										</h6>
 										<p class="letter-spacing">
 											Support / Tester

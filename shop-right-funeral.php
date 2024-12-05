@@ -265,7 +265,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="funeral-venue1.php" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -287,7 +287,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="funeral-venue2.php" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>
@@ -309,7 +309,7 @@
 												</span>
 											</div>
 											<div class="shop-btn">
-												<a href="#" class="add-to-card btn btn-maincolor">View</a>
+												<a href="funeral-venue3.php" class="add-to-card btn btn-maincolor">View</a>
 											</div>
 										</div>
 									</li>

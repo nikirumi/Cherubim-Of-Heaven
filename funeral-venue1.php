@@ -419,25 +419,32 @@
 
 								<script>
 									jQuery(document).ready(function($) {
-
 										var disabledDates = <?php echo json_encode($disabledDates); ?>;
 
 										$("#datepicker").datepicker({
 											dateFormat: "mm/dd/yy",
-											minDate: 0, 
+											minDate: 0,
 											showAnim: "slideDown",
 											beforeShowDay: function(date) {
 												var string = $.datepicker.formatDate('mm/dd/yy', date);
-												return [disabledDates.indexOf(string) == -1]; 
+												return [disabledDates.indexOf(string) == -1];
 											},
 											onSelect: function(selectedDate) {
 												var selectedStartDate = $.datepicker.parseDate('mm/dd/yy', selectedDate);
-												
-												// Make end datepicker editable after selecting start date
-												$("#end_datepicker").prop("readonly", false); 
-												$("#end_datepicker").prop("disabled", false);
-												$("#end_datepicker").datepicker("option", "minDate", selectedStartDate);
-												updateEndDatePicker(selectedStartDate);
+												var nextDay = new Date(selectedStartDate);
+												nextDay.setDate(nextDay.getDate() + 1);
+												var nextDayString = $.datepicker.formatDate('mm/dd/yy', nextDay);
+
+												if (disabledDates.indexOf(nextDayString) != -1) {
+													alert("The day after your selected date is unavailable. End date is limited to the start date.");
+													$("#end_datepicker").datepicker("option", "minDate", selectedStartDate);
+													$("#end_datepicker").datepicker("option", "maxDate", selectedStartDate);
+													$("#end_datepicker").prop("disabled", false);
+												} else {
+													$("#end_datepicker").datepicker("option", "minDate", selectedStartDate);
+													$("#end_datepicker").prop("disabled", false);
+													updateEndDatePicker(selectedStartDate);
+												}
 											}
 										});
 
@@ -451,23 +458,21 @@
 											}
 										});
 
-										$("#end_datepicker").prop("disabled", true);  // Initially disabled
-										$("#end_datepicker").prop("readonly", true);  // Make it non-typeable
+										$("#end_datepicker").prop("disabled", true);
+										$("#end_datepicker").prop("readonly", true);
 
 										function updateEndDatePicker(startDate) {
-											var endDatepicker = $("#end_datepicker");
-											var maxBookingDuration = 6;  // Limit of 6 days
+											var maxBookingDuration = 6;
 											var maxEndDate = new Date(startDate);
-											maxEndDate.setDate(maxEndDate.getDate() + maxBookingDuration); 
+											maxEndDate.setDate(maxEndDate.getDate() + maxBookingDuration);
 
-											endDatepicker.datepicker("option", "maxDate", maxEndDate);
-
-											endDatepicker.datepicker("option", "beforeShowDay", function(date) {
+											$("#end_datepicker").datepicker("option", "maxDate", maxEndDate);
+											$("#end_datepicker").datepicker("option", "beforeShowDay", function(date) {
 												var string = $.datepicker.formatDate('mm/dd/yy', date);
 												if (disabledDates.indexOf(string) != -1 || date > maxEndDate) {
-													return [false];  // Disable unavailable dates
+													return [false];
 												}
-												return [true];  // Enable available dates
+												return [true];
 											});
 										}
 									});
@@ -877,15 +882,11 @@
 									</li>
 
 									<li class="cat-item cat-parent">
-										 <a href="shop-right.php" class="active">Spaces</a> 
-										<ul class="children">
-											<li class="cat-item">
-												<a href="shop-right-funeral.php">Funeral</a>
-											</li>
-											<li class="cat-item">
-												<a href="shop-right-space.php">Memorial Space</a> 
-											</li>
-										</ul>
+										 <a href="shop-right-funeral.php" class="active">Funeral</a> 
+									</li>
+									
+									<li class="cat-item cat-parent">
+										 <a href="shop-right-space.php" class="active">Memorial Space</a> 
 									</li>
 							</div>
 

@@ -503,6 +503,35 @@
 														<label for="password_2">Confirm new password</label>
 														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" placeholder="Confirm new password">
 													</p>
+
+													<p>
+														<input type="checkbox" id="showPassword"> Show Password
+													</p>
+
+													<script>
+															const showPasswordCheckbox = document.getElementById('showPassword');
+															const password = document.getElementById('password_current');
+															const newpassword = document.getElementById('password_1');
+															const confirmpassword = document.getElementById('password_2');
+
+
+															showPasswordCheckbox.addEventListener('change', function() {
+																
+																if (showPasswordCheckbox.checked) {
+																	password.type = 'text'; 
+																	newpassword.type = 'text'; 
+																	confirmpassword.type = 'text'; 
+																} else {
+																	password.type = 'password'; 
+																	newpassword.type = 'password'; 
+																	confirmpassword.type = 'password'; 
+																}
+															});
+
+													</script>
+
+
+													
 												</fieldset>
 												<div class="clear"></div>
 												<div class="divider-20"></div>

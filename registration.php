@@ -307,7 +307,7 @@
                                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
 													<label for="account_last_name">Contact Number <span class="required">*</span>
 													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="contact_number" id="contact_number" value="" placeholder="Contact Number" required>
+													<input type="tel" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="contact_number"  maxlength="11" pattern="[0-9]{11}"id="contact_number" value="" placeholder="Contact Number e.g. 09123456789" min required>
 												</p>
 
 												<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
@@ -317,9 +317,15 @@
 												</p>
 
                                                 <p class="woocommerce-form-row woocommerce-form-row--last form-row form-row-last">
-													<label for="account_last_name">Gender <span class="required">*</span>
-													</label>
-													<input type="text" class="form-control woocommerce-Input woocommerce-Input--text input-text" name="gender" id="gender" value="" placeholder="Gender" required>
+													<label for="gender">Gender <span class="required">*</span></label>
+													<select class="form-control woocommerce-Input woocommerce-Input--text input-text" 
+															name="gender" 
+															id="gender" 
+															required>
+														<option value="" disabled selected>Select Gender</option>
+														<option value="Male">Male</option>
+														<option value="Female">Female</option>
+													</select>
 												</p>
 
 												<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
@@ -363,19 +369,19 @@
 												</select>
 
 												<p class="woocommerce-form-row  form-row form-row-wide">
-												<label for="account_last_name"> <span class="required">*</span>
+												<label for="account_last_name"> <span class="required">Purok</span>
 													</label>
 													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="purok" id="purok" value="" placeholder="Purok" required>
 												</p>
 
 												<p class="woocommerce-form-row  form-row form-row-wide">
-												<label for="account_last_name"> <span class="required">*</span>
+												<label for="account_last_name"> <span class="required">House Number</span>
 													</label>
 													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="h_num" id="h_num" value="" placeholder="House Number / Unit" required>
 												</p>
 
 												<p class="woocommerce-form-row form-row form-row-wide">
-												<label for="account_last_name"> <span class="required">*</span>
+												<label for="account_last_name"> <span class="required">Street Name</span>
 													</label>
 													<input type="text" class="leftMargin woocommerce-form-row form-row-wide" name="s_name" id="s_name" value="" placeholder="Street Name / Subdivision / Building" required>
 												</p>
@@ -395,13 +401,67 @@
 													
 													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_current">Password</label>
-														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password" id="password" placeholder="Password" required>
+														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="password" id="password" placeholder="Password" minlength="8" required >
 													</p>
 													
 													<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 														<label for="password_2">Confirm Password</label>
 														<input type="password" class="form-control woocommerce-Input woocommerce-Input--password input-text" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
 													</p>
+
+													<p>
+														<input type="checkbox" id="showPassword"> Show Password
+													</p>
+
+													<script>
+															const showPasswordCheckbox = document.getElementById('showPassword');
+															const password = document.getElementById('password');
+															const confirmpassword = document.getElementById('confirm_password');
+
+															showPasswordCheckbox.addEventListener('change', function() {
+																
+																if (showPasswordCheckbox.checked) {
+																	password.type = 'text'; 
+																	confirmpassword.type = 'text'; 
+																} else {
+																	password.type = 'password'; 
+																	confirmpassword.type = 'password'; 
+																}
+															});
+
+													</script>
+
+													<p id="error-message" style="color: red; display: none;">Passwords must be at least 8 characters long and contain at least one special character.</p>
+
+													<script>
+														document.getElementById('password').addEventListener('input', function() {
+															const password = this.value;
+															const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+
+															if (password.length < 8 || !specialCharPattern.test(password)) {
+																document.getElementById('error-message').style.display = 'block';
+																this.setCustomValidity("Password must be at least 8 characters long and contain at least one special character.");
+															} else {
+																document.getElementById('error-message').style.display = 'none';
+																this.setCustomValidity(""); // Clear error
+															}
+														});
+
+														document.getElementById('confirm_password').addEventListener('input', function() {
+															const password = document.getElementById('password').value;
+															const confirmPassword = this.value;
+
+															if (password !== confirmPassword) {
+																this.setCustomValidity("Passwords do not match.");
+															} else {
+																this.setCustomValidity(""); // Clear error
+															}
+														});
+
+													</script>
+
+													
+
 												</fieldset>
 												<div class="clear"></div>
 												<div class="divider-20"></div>
@@ -566,8 +626,11 @@
 	</div><!-- eof #canvas -->
 
 
-	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/compressed.js"></script>
+	<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script src="js/compressed.js"></script>
 	<script src="js/main.js"></script>
+
+	
 
 </body>
 </html>
@@ -602,25 +665,33 @@
         if ($row) {
              $lastID = intval(substr($row['Client_ID'], 2));
              $newID = 'C-' . str_pad($lastID + 1, 3, '0', STR_PAD_LEFT);
-        } 
-        
+        }      
 		else {
              $newID = 'C-001';
         }
-
         $Client_ID = $newID;
+
+		$stmt1 = $conn->prepare("SELECT Email_Address FROM client WHERE Email_Address = ?");
+		$stmt1->bind_param("s", $email);
+		$stmt1->execute();
+		$stmt1->store_result();
+
+		if ($stmt1->num_rows > 0) {
+			echo "<script>alert('Email Address is already taken. Please use a different email.');</script>";
+			$stmt1->close();
+			exit();
+		}
         
 		if ($password !== $confirm_password) {
             echo "Passwords do not match!";
         } 
-		
+	
 		else{
             $hash = password_hash($password, PASSWORD_DEFAULT);
 
 			$stmt = $conn->prepare("INSERT INTO client (Client_ID, Username, Password, Fname, Mname, Lname, Age, Gender, 
 														Contact_Number, Email_Address, Barangay, Purok, H_num, S_name) 
-    								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-");
+    								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
 			$stmt->bind_param("ssssssisssssss", $Client_ID, $username, $hash, $first_name, $middle_name, $last_name, $age, $gender, $contact_number, $email, $barangay, $purok, $h_num, $s_name);
 			
@@ -630,8 +701,8 @@
 
 			try {
 				$stmt->execute();
+				echo "<script>alert('Registration Successful');window.location.href='shop-account-login.php'; </script>";
 				echo "<script>window.location.href='shop-account-login.php';</script>";
-				//header("Location: shop-account-login.php");
 				exit(); // make sure the script stops after redirection
 			} 
 			
@@ -643,3 +714,28 @@
 	}
 	$conn->close();
 ?>
+
+<script>
+	document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const formData = new FormData(this);
+
+    fetch('validate.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const messageDiv = document.getElementById('message');
+        if (data.status === "error") {
+            messageDiv.style.color = "red";
+            messageDiv.textContent = data.message;
+        } else if (data.status === "success") {
+            messageDiv.style.color = "green";
+            messageDiv.textContent = data.message;
+        }
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>

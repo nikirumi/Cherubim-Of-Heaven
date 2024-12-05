@@ -677,7 +677,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-urns" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-right-urns.php" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
