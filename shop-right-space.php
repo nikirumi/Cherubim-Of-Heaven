@@ -166,7 +166,7 @@
 																	<a href="shop-account-orders.php">Orders</a>
 																</li>
 																<li>
-																	<a href="shop-account-login.php">Login/Logout</a>
+																	<a href="logout.php">Login/Logout</a>
 																</li>
 
 															</ul>

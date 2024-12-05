@@ -124,7 +124,7 @@
 																	<a href="shop-account-password-reset.php">Password Reset</a>
 																</li>
 																<li>
-																	<a href="shop-account-login.php">Login/Logout</a>
+																	<a href="logout.php.php">Login/Logout</a>
 																</li>
 
 															</ul>
