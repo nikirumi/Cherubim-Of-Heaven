@@ -561,7 +561,7 @@
 
 										
 										<li class="product vertical-item content-padding">
-											<div style="background-color: white;" class="product-inner box-shadow">
+											<div style="background-color: white; height: 454px;" class="product-inner box-shadow">
 												<img src="images/Flowers/6.png" alt="">
 												<div class="media-links">
 													<a class="abs-link" title="" href="shop-product-right.php?id=S-006"></a>
@@ -886,7 +886,7 @@
 												</a>
 											</div>
 											<h6 class="entry-title">
-												<a href="event-single-%40%40type.php">How to Offer Support to Someone Experiencing Loss</a>
+												<a href="event-single-%40%40type.php">How to Organize a Memorial Fundraiser</a>
 											</h6>
 											<div class="entry-meta">
 												<span class="byline">
@@ -913,7 +913,7 @@
 												</span>
 											</div>
 											<p>
-											Learn practical ways to show empathy and care for a grieving friend or family member.
+											Step-by-step guidance on hosting a fundraiser to support a cause in memory of your loved one.
 											</p>
 											<a href="blog-single-right.php" class="read-more btn-small btn btn-maincolor">Read more</a>
 										</div>
