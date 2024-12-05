@@ -701,8 +701,7 @@
 
 			try {
 				$stmt->execute();
-				echo "<script>alert('Registration Successful');window.location.href='shop-account-login.php'; </script>";
-				echo "<script>window.location.href='shop-account-login.php';</script>";
+				echo "<script>window.location.href='RegistrationNotif.html';</script>";
 				exit(); // make sure the script stops after redirection
 			} 
 			
