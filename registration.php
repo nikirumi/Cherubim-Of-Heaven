@@ -617,7 +617,10 @@
 		else{
             $hash = password_hash($password, PASSWORD_DEFAULT);
 
-			$stmt = $conn->prepare("INSERT INTO client VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,? ,? ,?)" );
+			$stmt = $conn->prepare("INSERT INTO client (Client_ID, Username, Password, Fname, Mname, Lname, Age, Gender, 
+														Contact_Number, Email_Address, Barangay, Purok, H_num, S_name) 
+    								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+");
 
 			$stmt->bind_param("ssssssisssssss", $Client_ID, $username, $hash, $first_name, $middle_name, $last_name, $age, $gender, $contact_number, $email, $barangay, $purok, $h_num, $s_name);
 			
