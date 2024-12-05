@@ -117,7 +117,7 @@ if (isset($_POST["save_account_details"])) {
                             <p>Dear $clientName,</p>
                             <p>We received a request to reset your password. If you did not make this request, please ignore this email.</p>
                             <p>To reset your password, please click the button below:</p>
-                            <a href='http://localhost/Cherubim-Of-Heaven-main/reset_psw.php?token=$token' class='button'>Reset Password</a>
+                            <a href='http://localhost/Cherubim-Of-Heaven/reset_psw.php?token=$token' class='button'>Reset Password</a>
                         </div>
                     </div>
                 </body>
