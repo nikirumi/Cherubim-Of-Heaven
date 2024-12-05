@@ -6,11 +6,8 @@
     include("connect.php");
 	include ("check_session.php"); 
 
-
-
     //$quantity = $_POST['quantity'];
     
-
     //echo $quantity . "<br>";
 
     $service_ID = $_POST['service_ID'];
@@ -555,27 +552,33 @@
                                                 <!-- script action para sa datepicker -->
                                                 <script>
 													jQuery(document).ready(function($) {
-														// Initialize the datepickers
+														
 														$("#datepicker").datepicker({
 															dateFormat: "mm/dd/yy",
-															showAnim: "slideDown"
+															showAnim: "slideDown",
+															changeMonth: true, 
+															changeYear: true,  
+															yearRange: "-100:+0" 
 														});
 
 														$("#end_datepicker").datepicker({
 															dateFormat: "mm/dd/yy",
-															showAnim: "slideDown"
+															showAnim: "slideDown",
+															changeMonth: true, 
+															changeYear: true,  
+															yearRange: "-100:+0" 
 														});
 
-														$("#end_datepicker").prop("disabled", true); // Initially disabled
+														$("#end_datepicker").prop("disabled", true); 
 
-														// Disable/Enable Date of Death input based on Beneficiary Status
+														
 														$("input[name='b_status']").on("change", function() {
 															if ($(this).val() === "alive") {
-																// If "Alive" is selected, disable the Date of Death field
-																$("#end_datepicker").val("").prop("disabled", true); // Clear and disable
+																
+																$("#end_datepicker").val("").prop("disabled", true); 
 															} else if ($(this).val() === "dead") {
-																// If "Dead" is selected, enable the Date of Death field
-																$("#end_datepicker").prop("disabled", false); // Enable
+																
+																$("#end_datepicker").prop("disabled", false); 
 															}
 														});
 													});
