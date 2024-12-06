@@ -688,12 +688,12 @@
 									<div class="item-media">
 										<img src="images/team/obituaries-01.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="#"></a>
+											<a class="abs-link" title=""></a>
 										</div>
 									</div>
 									<div class="card-body">
 										<h6 class="card-title">
-											<a href="#">Maria A. Santos</a>
+											<a>Maria A. Santos</a>
 										</h6>
 										<p class="card-text">
 											October 7, 1927 - March 18, 2024
@@ -704,12 +704,12 @@
 									<div class="item-media">
 										<img src="images/team/obituaries-03.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="#"></a>
+											<a class="abs-link" title=""></a>
 										</div>
 									</div>
 									<div class="card-body">
 										<h6 class="card-title">
-											<a href="#">Juan S. Dela Cruz</a>
+											<a>Juan S. Dela Cruz</a>
 										</h6>
 										<p class="card-text">
 											October 7, 1946 - March 14, 2024
@@ -720,12 +720,12 @@
 									<div class="item-media">
 										<img src="images/team/obituaries-02.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="#"></a>
+											<a class="abs-link" title=""></a>
 										</div>
 									</div>
 									<div class="card-body">
 										<h6 class="card-title">
-											<a href="#">Priscilla F. Santos</a>
+											<a>Priscilla F. Santos</a>
 										</h6>
 										<p class="card-text">
 											October 7, 1952 - March 05, 2024

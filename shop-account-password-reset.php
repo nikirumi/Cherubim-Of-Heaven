@@ -242,7 +242,7 @@
 
 								<p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first mt-20">
 									<label for="user_login">Username or email</label>
-									<input class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" type="text" name="user_login" id="user_login" placeholder="Username or email">
+									<input class="form-control text-center woocommerce-Input woocommerce-Input--text input-text" type="text" name="user_login" id="user_login" placeholder="E-mail Address">
 								</p>
 
 								<div class="clear"></div>

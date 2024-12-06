@@ -259,12 +259,12 @@
 									<div class="item-media">
 										<img src="images/team/09.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="#"></a>
+											<a class="abs-link" title=""></a>
 										</div>
 									</div>
 									<div class="card-body">
 										<h5 class="card-title">
-											<a href="#">Maria A. Santos</a>
+											<a>Maria A. Santos</a>
 										</h5>
 										<p class="card-text">
 											October 7, 1927 - March 18, 2024
@@ -277,12 +277,12 @@
 									<div class="item-media">
 										<img src="images/team/10.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="#"></a>
+											<a class="abs-link" title=""></a>
 										</div>
 									</div>
 									<div class="card-body">
 										<h5 class="card-title">
-											<a href="#">Juan S. Dela Cruz</a>
+											<a>Juan S. Dela Cruz</a>
 										</h5>
 										<p class="card-text">
 											October 7, 1946 - March 14, 2024
@@ -295,12 +295,12 @@
 									<div class="item-media">
 										<img src="images/team/08.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="#"></a>
+											<a class="abs-link" title=""></a>
 										</div>
 									</div>
 									<div class="card-body">
 										<h5 class="card-title">
-											<a href="#">Priscilla F. Santos</a>
+											<a>Priscilla F. Santos</a>
 										</h5>
 										<p class="card-text">
 											October 7, 1952 - March 05, 2024
@@ -313,12 +313,12 @@
 									<div class="item-media">
 										<img src="images/team/10.jpg" alt="">
 										<div class="media-links">
-											<a class="abs-link" title="" href="#"></a>
+											<a class="abs-link" title=""></a>
 										</div>
 									</div>
 									<div class="card-body">
 										<h5 class="card-title">
-											<a href="#">Juan S. Dela Cruz</a>
+											<a>Juan S. Dela Cruz</a>
 										</h5>
 										<p class="card-text">
 											October 7, 1946 - March 14, 2024
@@ -587,7 +587,7 @@
 											<div style="background-color: white;" class="product-inner box-shadow">
 												<img src="images/Flowers/4.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php?id=S-006"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-004"></a>
 												</div>
 												<div class="item-content">
 													<h2>Memory Lane<br>Flowers</h2>
@@ -601,7 +601,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-product-right.php?id=S-006" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-004" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -615,7 +615,7 @@
 											<div style="background-color: white;" class="product-inner box-shadow">
 												<img src="images/Caskets/6.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-right-caskets.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-010"></a>
 												</div>
 												<div class="item-content">
 													<h2>Silver Casket</h2>
@@ -629,7 +629,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-caskets.php" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-010" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -637,7 +637,7 @@
 											<div style="background-color: white;" class="product-inner box-shadow">
 												<img src="images/Caskets/2.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-right-caskets.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-011"></a>
 												</div>
 												<div class="item-content">
 													<h2>Dark Brown Casket</h2>
@@ -651,7 +651,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-caskets.php" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-011" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -663,7 +663,7 @@
 											<div style="background-color: white;" class="product-inner box-shadow">
 												<img src="images/Urns/1.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-right-urns.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-019"></a>
 												</div>
 												<div class="item-content">
 													<h2>Radiant Gold Urn</h2>
@@ -677,7 +677,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-urns.php" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-019" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -685,7 +685,7 @@
 											<div style="background-color: white; width: 220px; height: 325px;" class="product-inner box-shadow">
 												<img src="images/Urns/2.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-right-urns.php"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-020"></a>
 												</div>
 												<div class="item-content">
 													<h2>Vintage Warm <br>Oak Urn </h2>
@@ -699,7 +699,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-urns.php" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-020" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -711,7 +711,7 @@
 											<div style="background-color: white;" class="product-inner box-shadow">
 												<img src="images/Funeral_Venues/v1.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-right-funeral.php"></a>
+													<a class="abs-link" title="" href="funeral-venue1.php?id=S-028"></a>
 												</div>
 												<div class="item-content">
 													<h2>Venue 1</h2>
@@ -725,7 +725,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-funeral" class="add-to-card btn btn-maincolor">View</a>
+													<a href="funeral-venue1.php?id=S-028" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -733,7 +733,7 @@
 											<div style="background-color: white;" class="product-inner box-shadow">
 												<img style="width: 400px; height: 180px;" src="images/Funeral_Venues/v2.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-right-funeral.php"></a>
+													<a class="abs-link" title="" href="funeral-venue2.php?id=S-029"></a>
 												</div>
 												<div class="item-content">
 													<h2>Venue 2</h2>
@@ -747,7 +747,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-funeral.php" class="add-to-card btn btn-maincolor">View</a>
+													<a href="funeral-venue2.php?id=S-029" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -759,7 +759,7 @@
 											<div style="background-color: white;" class="product-inner box-shadow">
 												<img src="images/Spaces/1.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-right-space.php"></a>
+													<a class="abs-link" title="" href="shop-right-space-clicked.php?id=S-031"></a>
 												</div>
 												<div class="item-content">
 													<h2>Mausoleum Space</h2>
@@ -773,7 +773,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-space.php" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-right-space-clicked.php?id=S-031" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -781,7 +781,7 @@
 											<div style="background-color: white;" class="product-inner box-shadow">
 												<img src="images/Spaces/2.jpg" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-right-space.php"></a>
+													<a class="abs-link" title="" href="shop-right-space-clicked.php?id=S-032"></a>
 												</div>
 												<div class="item-content">
 													<h2>Open-Air Space</h2>
@@ -795,7 +795,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-right-space.php" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-right-space-clicked.php?id=S-032" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>

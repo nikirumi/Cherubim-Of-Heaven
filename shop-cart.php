@@ -473,7 +473,7 @@
 											<div class="product-inner box-shadow">
 												<img src="images/Flowers/1.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php?id='S-001'"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-001"></a>
 												</div>
 												<div class="item-content">
 													<h2>Spirited Funeral</h2>
@@ -487,7 +487,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-product-right.php?id='S-001'" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-001" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -495,7 +495,7 @@
 											<div class="product-inner box-shadow">
 												<img src="images/Flowers/2.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php?id='S-002'"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-002"></a>
 												</div>
 												<div class="item-content">
 													<h2>Infinity Funeral & Condolence Flowers</h2>
@@ -509,7 +509,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-product-right.php?id='S-002'" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-002" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -517,7 +517,7 @@
 											<div class="product-inner box-shadow">
 												<img src="images/Flowers/3.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php?id='S-003'"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-003"></a>
 												</div>
 												<div class="item-content">
 													<h2>Scented Dreams Flowers</h2>
@@ -531,7 +531,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-product-right.php?id='S-003'" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-003" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -539,7 +539,7 @@
 											<div class="product-inner box-shadow">
 												<img src="images/Flowers/4.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php?id='S-004'"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-004"></a>
 												</div>
 												<div class="item-content">
 													<h2>Memory Lane Flowers</h2>
@@ -553,7 +553,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-product-right.php?id='S-004'" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-004" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>
@@ -561,7 +561,7 @@
 											<div class="product-inner box-shadow">
 												<img src="images/Flowers/5.png" alt="">
 												<div class="media-links">
-													<a class="abs-link" title="" href="shop-product-right.php?id='S-005'"></a>
+													<a class="abs-link" title="" href="shop-product-right.php?id=S-005"></a>
 												</div>
 												<div class="item-content">
 													<h2>Forever Funeral & Condolence Flowers</h2>
@@ -575,7 +575,7 @@
 													</span>
 												</div>
 												<div class="shop-btn">
-													<a href="shop-product-right.php?id='S-005'" class="add-to-card btn btn-maincolor">View</a>
+													<a href="shop-product-right.php?id=S-005" class="add-to-card btn btn-maincolor">View</a>
 												</div>
 											</div>
 										</li>

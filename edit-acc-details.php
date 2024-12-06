@@ -18,8 +18,8 @@
                 $stmt->bind_param("ss", $hashedPassword, $username);
                 
                 if ($stmt->execute()) {
-                    echo "Password updated successfully!";
-                    header("Location: shop-account-details.php");
+                    echo "<script>window.location.href='RegistrationNotif.html';</script>";
+                    header("Location: changedetailsNotif.php");
                 } 
                 else {
                     echo "Error updating password. Please try again.";
